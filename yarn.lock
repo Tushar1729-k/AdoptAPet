@@ -3268,7 +3268,7 @@ __metadata:
     eslint-plugin-react: ^7.26.0
     prettier: 2.4.1
     react: ^17.0.2
-    react-bootstrap: next
+    react-bootstrap: ^2.0.0-rc.0
     react-dom: ^17.0.2
     react-scripts: 4.0.3
     typescript: ^4.1.2
@@ -4515,13 +4515,10 @@ __metadata:
   linkType: hard
 
 "caniuse-lite@npm:^1.0.0, caniuse-lite@npm:^1.0.30000981, caniuse-lite@npm:^1.0.30001109, caniuse-lite@npm:^1.0.30001125, caniuse-lite@npm:^1.0.30001181":
-  version: 1.0.30001260
-  resolution: "caniuse-lite@npm:1.0.30001260"
-  dependencies:
-    nanocolors: ^0.1.0
-  checksum: a3a61073204636e02bc3972bfdcd8b3c3a2fb56f29b5ffa95fad7e5a01e2eece2ed92f1246728185992618a04f9221cbd83ddd96d2ef68083353d55ffe660e29
   version: 1.0.30001191
   resolution: "caniuse-lite@npm:1.0.30001191"
+  dependencies:
+    nanocolors: ^0.1.0
   checksum: e61445fbf696c5f60d4bc4e6f6585e167ad8c9ee34d26d3410455c3f596fc8d3622cbe5065a020a04ada84935782a3ff1a2a0641bc5b51ee232f6e8dfa6be128
   languageName: node
   linkType: hard
@@ -12767,7 +12764,7 @@ fsevents@^1.2.7:
   languageName: node
   linkType: hard
 
-"react-bootstrap@npm:next":
+"react-bootstrap@npm:^2.0.0-rc.0":
   version: 2.0.0-rc.0
   resolution: "react-bootstrap@npm:2.0.0-rc.0"
   dependencies:
