@@ -35,7 +35,7 @@ https://gitlab.com/10am-group-8/adopt-a-pet/-/pipelines
 
 ## Website Link
 
-adoptapet.me
+www.adoptapet.me
 
 ## Estimated Completion Time for Each Member
 
