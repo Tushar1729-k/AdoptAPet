@@ -6,7 +6,8 @@ SHELL         := bash
 docker:
 	docker run \
 		-it \
-		-p 127.0.0.1:5000:5000 \
+		--rm \
+		-p 5000:5000 \
 		aap-react
 
 # get git status
