@@ -3,10 +3,12 @@ import { Navbar, Container, Nav} from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom";
 import HomePage from "./HomePage"
 import InstancePage from "../InstancePages/InstancePageTemplate"
+import Button from 'react-bootstrap/Button'
 
 const MainSite = () => {
     return (
         <div>
+            <Button>Test Button</Button>
             <Navbar bg="primary" variant="dark" fixed="top">
                 <Container>
                 <Navbar.Brand href="/">Adopt A Pet</Navbar.Brand>
@@ -14,6 +16,7 @@ const MainSite = () => {
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="#pets">Pets</Nav.Link>
                 <Nav.Link href="#centers">Adoption Centers</Nav.Link>
+                <Nav.Link href="#about">About</Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>
@@ -40,6 +43,9 @@ const MainSite = () => {
                 </Switch>
             </Router>
         </div>
+        // <div>
+        //     <Button>Test Button</Button>
+        // </div>
     )
 }
 

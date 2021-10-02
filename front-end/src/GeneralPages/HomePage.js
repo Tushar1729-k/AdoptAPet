@@ -6,7 +6,7 @@ const HomePage = () => {
     return (
         <div>
             <Card className="bg-dark text-white">
-                {/* <Card.Img src="../Images/dog_home_page.jpg" alt="Card image" /> */}
+                <Card.Img src="../Images/dog_home_page.jpg" alt="Card image" />
                 <Card.ImgOverlay>
                     <Card.Title>Adopt a Pet</Card.Title>
                     <Card.Text>
