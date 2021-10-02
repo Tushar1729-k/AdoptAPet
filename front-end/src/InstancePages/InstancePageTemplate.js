@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { Container, Row, Col, Card, Modal, Button, ListGroup } from 'react-bootstrap'
+import { Container, Row, Col, Card, Modal, Button, ListGroup, Image } from 'react-bootstrap'
 import PropTypes from 'prop-types'
 
 const InstancePageTemplate = ({ attributes, medicalHistory }) => {
@@ -14,7 +14,12 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
     }
     return (
         <div>
-            <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: '10vh'}}>
+            <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
+                <Row>
+                    <Image src={attributes.imgSrc} fluid style={{width: '100%', height: '750px'}}/>
+                </Row>
+            </div>
+            <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
             <Card style={{ width: '60vw' }}>
             <Card.Body>
                 <Card.Title style={{fontSize: '8vh'}}>{attributes.breed}</Card.Title>
@@ -23,15 +28,19 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                     <Container>
                         <Row>
                             <ListGroup variant="flush">
-                                <ListGroup.Item>Weight : {attributes.weight} lbs</ListGroup.Item>
+                                <ListGroup.Item>Size : {attributes.size}</ListGroup.Item>
                                 <ListGroup.Item>Age : {attributes.age}</ListGroup.Item>
                                 <ListGroup.Item>Color : {attributes.color}</ListGroup.Item>
                                 <ListGroup.Item>Sex : {attributes.sex}</ListGroup.Item>
                             </ListGroup>
                         </Row>
+                        <Row style={{paddingTop: '2vh'}}>
+                            <h4>Description</h4>
+                            <p>{attributes.description}</p>
+                        </Row>
                     </Container>
                 </Card.Text>
-                <Card.Link href="#">Adoption Center</Card.Link>
+                <Row style={{paddingBottom: "2vh"}}>
                 <Button variant="primary" onClick={showHandler}>
                     Medical History
                 </Button>
@@ -46,6 +55,8 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                     </Button>
                     </Modal.Footer>
                 </Modal>
+                </Row>
+                <Card.Link href="#">Adoption Center</Card.Link>
             </Card.Body>
             </Card>
             </div>
@@ -55,7 +66,8 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
 
 // Set defaults of props here.
 InstancePageTemplate.defaultProps = {
-    attributes: { breed: '', name: '', weight: '', age: '', color: '', sex: ''},
+    attributes: { breed: '', name: '', size: '', age: '', color: '', sex: '',
+                  description: 'No description avaialable :(', imgSrc: ''},
     medicalHistory: 'Insert medical history'
 }
 // Set type of the prop here.
