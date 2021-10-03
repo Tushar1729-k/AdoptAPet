@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Container, Row, Col, Card, Modal, Button, ListGroup, Image } from 'react-bootstrap'
+import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
 
 const InstancePageTemplate = ({ attributes, medicalHistory }) => {
@@ -46,9 +47,13 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                 </Button>
                 <Modal show={showModal} onHide={hideHandler}>
                     <Modal.Header closeButton>
-                    <Modal.Title>Medical History</Modal.Title>
+                        <Modal.Title>Medical History</Modal.Title>
                     </Modal.Header>
-                    <Modal.Body>{medicalHistory}</Modal.Body>
+                    <Modal.Body>Allergies: {medicalHistory.allergies != "" ? medicalHistory.allergies : 'NA'}</Modal.Body>
+                    <Modal.Body>Diet: {medicalHistory.diet != "" ? medicalHistory.diet : 'NA'}</Modal.Body>
+                    <Modal.Body>Ongoing Medical Issues: {medicalHistory.issues != "" ? medicalHistory.issues : 'NA'}</Modal.Body>
+                    <Modal.Body>Hearing: {medicalHistory.hearing != "" ? medicalHistory.hearing : 'NA'}</Modal.Body>
+                    <Modal.Body>Sight: {medicalHistory.sight != "" ? medicalHistory.sight : 'NA'}</Modal.Body>
                     <Modal.Footer>
                     <Button variant="secondary" onClick={hideHandler}>
                         Close
@@ -56,7 +61,18 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                     </Modal.Footer>
                 </Modal>
                 </Row>
-                <Card.Link href="#">Adoption Center</Card.Link>
+                <Row style={{paddingTop: '2vh'}}>
+                    <h4>Adoption Center Information</h4>
+                    <p></p>
+                </Row>
+                <Row>
+                    <Col>
+                        <Link to="/sbmodel" style={{textDecoration: 'none'}}>Find other Breeds</Link>
+                    </Col>
+                    <Col>
+                        <Link to="/acmodel" style={{textDecoration: 'none'}}>Find adoption centers near you</Link>
+                    </Col>
+                </Row>
             </Card.Body>
             </Card>
             </div>
@@ -68,12 +84,14 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
 InstancePageTemplate.defaultProps = {
     attributes: { breed: '', name: '', size: '', age: '', color: '', sex: '',
                   description: 'No description avaialable :(', imgSrc: ''},
-    medicalHistory: 'Insert medical history'
+    medicalHistory: { allergies: 'Not available', diet: 'Not available', 
+                      issues: 'Not available', hearing: 'Not available',
+                      sight: 'Not available' }
 }
 // Set type of the prop here.
 InstancePageTemplate.propTypes = {
     attributes: PropTypes.object,
-    medicalHistory: PropTypes.string
+    medicalHistory: PropTypes.object
 }
 
 export default InstancePageTemplate

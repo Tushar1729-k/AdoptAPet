@@ -17,6 +17,8 @@ const MainSite = () => {
                 <Navbar.Brand href="/">Adopt A Pet</Navbar.Brand>
                 <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
+                <Nav.Link href="/">About</Nav.Link>
+                <Nav.Link href="/sbmodel">Breeds</Nav.Link>
                 <Nav.Link href="/apmodel">Pets</Nav.Link>
                 <Nav.Link href="/acmodel">Adoption Centers</Nav.Link>
                 </Nav>
@@ -26,6 +28,9 @@ const MainSite = () => {
             <Router>
                 <Switch>
                     <Route exact path="/">
+                        <HomePage />
+                    </Route>
+                    <Route exact path="/about">
                         <HomePage />
                     </Route>
                     <Route exact path="/sbmodel">
@@ -48,15 +53,15 @@ const MainSite = () => {
                                 attributes={{ breed: pet.breed, name: pet.name, size: pet.size, 
                                               age: pet.age, color: pet.color, sex: pet.sex,
                                               description: pet.descriptionPlain, imgSrc: pet.pictures[0].originalUrl }}
+                                medicalHistory={{ allergies: pet.allergies, diet: pet.diet, 
+                                                  issues: pet.ongoingMedical, hearing: pet.hearingImpaired,
+                                                  sight: pet.sightImpaired }}
                             />
                         </Route>
                     )}
                 </Switch>
             </Router>
         </div>
-        // <div>
-        //     <Button>Test Button</Button>
-        // </div>
     )
 }
 

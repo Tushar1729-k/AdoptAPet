@@ -1,13 +1,11 @@
 import React from 'react';
 import './App.css';
-import HomePage from "./GeneralPages/MainSite";
-import Button from 'react-bootstrap/Button'
+import MainSite from "./GeneralPages/MainSite";
 
 function App() {
   return (
     <div className="App">
-      {/* <Button>Test Button</Button> */}
-      <HomePage />
+      <MainSite />
     </div>
   );
 }

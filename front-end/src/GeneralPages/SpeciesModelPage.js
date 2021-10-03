@@ -1,25 +1,31 @@
 import React from 'react'
-import { Row, Col, Card, } from 'react-bootstrap'
+import { Row, Table } from 'react-bootstrap'
+import breeds from '../Data/Breeds.json'
 
 const SpeciesModelPage = () => {
     return (
-        <div>
-            <Row xs={1} md={2} className="g-4">
-                {Array.from({ length: 6 }).map((_, idx) => (
-                    <Col key={idx}>
-                    <Card>
-                        {/* <Card.Img variant="top" src="holder.js/100px160" /> */}
-                        <Card.Body>
-                        <Card.Title>Card title</Card.Title>
-                        <Card.Text>
-                            This is a longer card with supporting text below as a natural
-                            lead-in to additional content. This content is a little bit longer.
-                        </Card.Text>
-                        </Card.Body>
-                    </Card>
-                    </Col>
-                ))}
+        <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
+            <Row>
+                <h2>Breeds</h2>
             </Row>
+            <div style={{ paddingTop: '2vh'}}>
+            <Table striped bordered hover size="sm">
+                <thead>
+                    <tr>
+                    <th>Breeds</th>
+                    <th>Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                {Array.from({ length: 100 }).map((_, index) => (
+                    <tr key={index}>
+                    <td>{breeds.data[index].attributes.name}</td>
+                    <td>{breeds.data[index].relationships.species.links.self}</td>
+                    </tr>
+                ))}
+                </tbody>
+                </Table>
+                </div>
         </div>
     )
 }
