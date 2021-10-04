@@ -7,6 +7,7 @@ import SpeciesModelPage from './SpeciesModelPage'
 import PetsModelPage from './PetsModelPage'
 import AdoptCentersPage from './AdoptCentersPage'
 import pets from '../Data/AnimalsData.json'
+import AboutPage from "./AboutPage"
 
 const MainSite = () => {
     return (
@@ -17,7 +18,7 @@ const MainSite = () => {
                 <Navbar.Brand href="/">Adopt A Pet</Navbar.Brand>
                 <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/">About</Nav.Link>
+                <Nav.Link href="/about">About</Nav.Link>
                 <Nav.Link href="/sbmodel">Species</Nav.Link>
                 <Nav.Link href="/apmodel">Pets</Nav.Link>
                 <Nav.Link href="/acmodel">Adoption Centers</Nav.Link>
@@ -31,7 +32,7 @@ const MainSite = () => {
                         <HomePage />
                     </Route>
                     <Route exact path="/about">
-                        <HomePage />
+                        <AboutPage />
                     </Route>
                     <Route exact path="/sbmodel">
                         <SpeciesModelPage />
