@@ -31,7 +31,7 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                             <ListGroup variant="flush">
                                 <ListGroup.Item>Size : {attributes.size}</ListGroup.Item>
                                 <ListGroup.Item>Age : {attributes.age}</ListGroup.Item>
-                                <ListGroup.Item>Color : {attributes.color}</ListGroup.Item>
+                                <ListGroup.Item>Color : {attributes.color != "" ? attributes.color : 'NA'}</ListGroup.Item>
                                 <ListGroup.Item>Sex : {attributes.sex}</ListGroup.Item>
                             </ListGroup>
                         </Row>
@@ -62,8 +62,7 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                 </Modal>
                 </Row>
                 <Row style={{paddingTop: '2vh'}}>
-                    <h4>Adoption Center Information</h4>
-                    <p></p>
+                    <Link to={`/acmodel/${attributes.orgId}`} style={{textDecoration: 'none'}}><h5>Adoption Center Link</h5></Link>
                 </Row>
                 <Row>
                     <Col>
@@ -86,7 +85,7 @@ InstancePageTemplate.defaultProps = {
                   description: 'No description avaialable :(', imgSrc: ''},
     medicalHistory: { allergies: 'Not available', diet: 'Not available', 
                       issues: 'Not available', hearing: 'Not available',
-                      sight: 'Not available' }
+                      sight: 'Not available', orgId: '198' }
 }
 // Set type of the prop here.
 InstancePageTemplate.propTypes = {

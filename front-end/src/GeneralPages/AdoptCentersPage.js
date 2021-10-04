@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Table } from 'react-bootstrap'
 import adoptionCenters from '../Data/AdoptionCenters.json'
+import { Link } from "react-router-dom"
 
 const AdopCentersPage = () => {
     return (
@@ -20,9 +21,11 @@ const AdopCentersPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {Array.from({ length: 100 }).map((_, index) => (
+                {Array.from({ length: 3 }).map((_, index) => (
                     <tr key={index}>
-                    <td>{adoptionCenters[index].name}</td>
+                    <Link to={`/acmodel/${adoptionCenters[index].orgID}`} style={{ textDecoration: 'none'}}>
+                        <td>{adoptionCenters[index].name}</td>
+                    </Link>
                     <td>{adoptionCenters[index].city}</td>
                     <td>{adoptionCenters[index].state}</td>
                     <td>{adoptionCenters[index].zip}</td>
