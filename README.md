@@ -1,6 +1,6 @@
 # AdoptAPet
 
-## authors
+## Authors
 
 * Sean-Matthew Aujong, sha567, seanaujong
 
@@ -35,7 +35,7 @@ https://gitlab.com/10am-group-8/adopt-a-pet/-/pipelines
 
 ## Website Link
 
-www.adoptapet.me
+https://adoptapet.me
 
 ## Estimated Completion Time for Each Member
 
