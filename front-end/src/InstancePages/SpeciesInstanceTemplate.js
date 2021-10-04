@@ -54,14 +54,11 @@ const SpeciesInstanceTemplate = ({attributes}) => {
                     </Container>
                 </Card.Text>
                 <Row style={{paddingTop: '2vh'}}>
-                    <Link to={`/apmodel/${attributes.petId}`} style={{textDecoration: 'none'}}><h5>Recommended Pet</h5></Link>
-                </Row>
-                <Row>
                     <Col>
-                        <Link to="/apmodel" style={{textDecoration: 'none'}}>Find an adoptable pet</Link>
+                        <Link to={`/apmodel/${attributes.petId}`} style={{textDecoration: 'none'}}><h5>Recommended Pet</h5></Link>
                     </Col>
                     <Col>
-                        <Link to="/acmodel" style={{textDecoration: 'none'}}>Find an adoption center with this breed</Link>
+                        <Link to={`/acmodel/${attributes.orgId}`} style={{textDecoration: 'none'}}><h5>Adoption Center that carries this breed</h5></Link>
                     </Col>
                 </Row>
             </Card.Body>
@@ -75,7 +72,7 @@ const SpeciesInstanceTemplate = ({attributes}) => {
 SpeciesInstanceTemplate.defaultProps = {
     attributes: { breed: '', species: '', height: 'NA', weight: 'NA', color: 'NA',
                   energy: 'NA', lifespan: '', temperament: 'NA', shedding: 'NA',
-                  health: 'NA', description: 'NA', petId: '', imgSrv: []}
+                  health: 'NA', description: 'NA', petId: '', orgId: '', imgSrv: []}
 }
 // Set type of the prop here.
 SpeciesInstanceTemplate.propTypes = {

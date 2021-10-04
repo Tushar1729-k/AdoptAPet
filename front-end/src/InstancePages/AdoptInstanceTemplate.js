@@ -33,12 +33,12 @@ const AdoptInstanceTemplate = ({attributes}) => {
                         </Row>
                     </Container>
                 </Card.Text>
-                <Row>
+                <Row style={{paddingTop: '2vh'}}>
                     <Col>
-                        <Link to="/sbmodel" style={{textDecoration: 'none'}}>Look through species and breeds</Link>
+                        <Link to={`/apmodel/${attributes.petId}`} style={{textDecoration: 'none'}}><h5>Look at an available pet</h5></Link>
                     </Col>
                     <Col>
-                        <Link to="/apmodel" style={{textDecoration: 'none'}}>Find an adoptable pet</Link>
+                        <Link to={`/sbmodel/${attributes.sbId}`} style={{textDecoration: 'none'}}><h5>See one of our common breeds</h5></Link>
                     </Col>
                 </Row>
             </Card.Body>
@@ -52,7 +52,7 @@ const AdoptInstanceTemplate = ({attributes}) => {
 AdoptInstanceTemplate.defaultProps = {
     attributes: { name: '', address: '', city: '', state: '', zip: '',
                   phone: '', email: '', type: '', site: 'NA', species: '',
-                  services: ''}
+                  services: '', petId: '', sbId: ''}
 }
 // Set type of the prop here.
 AdoptInstanceTemplate.propTypes = {

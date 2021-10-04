@@ -52,12 +52,12 @@ const teamContribution = [
 	},
 	{
 		name: "Nandu Vudumala",
-		username: "",
+		username: "nandukrv",
 		picture_path: "",
-		email: "",
-		role: "",
-		bio:
-			"",
+		email: "nandukrv@gmail.com",
+		role: "Front End",
+		bio: `I am a fourth year majoring in CS, and am from the San Francisco Bay Area, California.
+			  I like youtube, working out, supporting the 49ers and Warriors, and binge watching/reading.`,
 		commits: 0,
 		issues: 0,
 		tests: 0,

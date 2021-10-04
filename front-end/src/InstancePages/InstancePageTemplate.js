@@ -62,14 +62,11 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                 </Modal>
                 </Row>
                 <Row style={{paddingTop: '2vh'}}>
-                    <Link to={`/acmodel/${attributes.orgId}`} style={{textDecoration: 'none'}}><h5>Adoption Center Link</h5></Link>
-                </Row>
-                <Row>
                     <Col>
-                        <Link to="/sbmodel" style={{textDecoration: 'none'}}>Find other Breeds</Link>
+                        <Link to={`/sbmodel/${attributes.sbId}`} style={{textDecoration: 'none'}}><h5>Breed Information Page</h5></Link>
                     </Col>
                     <Col>
-                        <Link to="/acmodel" style={{textDecoration: 'none'}}>Find adoption centers near you</Link>
+                        <Link to={`/acmodel/${attributes.orgId}`} style={{textDecoration: 'none'}}><h5>Adoption Center Link</h5></Link>
                     </Col>
                 </Row>
             </Card.Body>
@@ -85,7 +82,7 @@ InstancePageTemplate.defaultProps = {
                   description: 'No description avaialable :(', imgSrc: ''},
     medicalHistory: { allergies: 'Not available', diet: 'Not available', 
                       issues: 'Not available', hearing: 'Not available',
-                      sight: 'Not available', orgId: '198' }
+                      sight: 'Not available', orgId: '198', sbId: '' }
 }
 // Set type of the prop here.
 InstancePageTemplate.propTypes = {

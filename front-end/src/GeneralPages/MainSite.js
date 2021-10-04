@@ -66,7 +66,7 @@ const MainSite = () => {
                                 attributes={{ breed: pets[idx].breed, name: pets[idx].name, size: pets[idx].size, 
                                               age: pets[idx].age, color: pets[idx].color, sex: pets[idx].sex,
                                               description: pets[idx].descriptionPlain, imgSrc: pets[idx].pictures[0].originalUrl,
-                                              orgId: adoptionCenters[idx].orgID }}
+                                              orgId: adoptionCenters[idx].orgID, sbId: idx + 1 }}
                                 medicalHistory={{ allergies: pets[idx].allergies, diet: pets[idx].diet, 
                                                   issues: pets[idx].ongoingMedical, hearing: pets[idx].hearingImpaired,
                                                   sight: pets[idx].sightImpaired }}
@@ -81,7 +81,7 @@ const MainSite = () => {
                                               zip: adoptionCenters[idx].zip, phone: adoptionCenters[idx].phone, 
                                               email: adoptionCenters[idx].email, type: adoptionCenters[idx].orgType, 
                                               site: adoptionCenters[idx].orgurl, species: adoptionCenters[idx].orgSpecies,
-                                              services: adoptionCenters[idx].services }}
+                                              services: adoptionCenters[idx].services, petId: pets[idx].animalID, sbId: idx + 1 }}
                             />
                         </Route>
                     ))}
@@ -105,7 +105,7 @@ const MainSite = () => {
                             description: `As a working cat, American Shorthairs have a stocky, muscular build. Their muscular legs
                                      lend themselves to the American’s agility and endurance. They have a large head and full face, medium-sized
                                      ears and large, wide eyes.`,
-                            petId: '17275209', imgSrc: [cat1, cat2, cat3] }}
+                            petId: '17275209', imgSrc: [cat1, cat2, cat3], orgId: '198' }}
                         />
                     </Route>
                     <Route exact path='/sbmodel/2'>
@@ -121,7 +121,7 @@ const MainSite = () => {
                             Although energetic, your Beagle's specific exercise needs will depend on their age and health. Over time, you'll get to know your dog and whether
                             they prefer lots of exercise or lounging on the couch. They are known escape artists, so watch them outside. When on walks, it's important to keep him on a leash, as his instincts are to run off and track if he catches a compelling scent.
                             As trackers, they love to follow their nose and chase balls or their favorite people. They also love to play, so teaching tricks and playing games are always hit with this breed.`,
-                            petId: '17283929', imgSrc: [beagle1, beagle3, beagle2]}}
+                            petId: '17283929', imgSrc: [beagle1, beagle3, beagle2], orgId: '314'}}
                         />
                     </Route>
                     <Route exact path='/sbmodel/3'>
@@ -134,7 +134,7 @@ const MainSite = () => {
                             health: `While kidney and heart issues can be associated with the breed, responsible breeders test for these issues, and should test puppies for potential hearing issues.`,
                             description: `This robust Terrier group breed is muscular and big-boned, with a unique, egg-shaped head accentuated by pointed ears and small, mischievous eyes. Powerful and agile, they walk with a cheerful gait that showcases their outgoing personality. 
                             A happy Bull Terrier is one who receives early socialization with dogs and people, loving but firm training, lots of exercise and of course, time with his favorite people. A properly nurtured Bull Terrier is the most loving, loyal companion a family could want. `,
-                            petId: '17275248', imgSrc: [terrier1, terrier2, terrier3]}}
+                            petId: '17275248', imgSrc: [terrier1, terrier2, terrier3], orgId: '356'}}
                         />
                     </Route>
                 </Switch>
