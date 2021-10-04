@@ -31,9 +31,9 @@ const HomePage = () => {
                     <Link to="/sbmodel" style={{ textDecoration: 'none'}}>
                         <Card.Img variant="top" src={SpeciesBreedHomePage} />
                         <Card.Body>
-                        <Card.Title><h2>Species | Breeds</h2></Card.Title>
+                        <Card.Title><h2>Species</h2></Card.Title>
                         <Card.Text>
-                            Look through different species and breeds of pets
+                            Look through different species of pets
                         </Card.Text>
                         </Card.Body>
                     </Link>

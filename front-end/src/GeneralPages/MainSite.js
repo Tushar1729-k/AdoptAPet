@@ -1,11 +1,11 @@
 import React from 'react'
-import { Navbar, Container, Nav} from 'react-bootstrap'
-import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { Navbar, Container, Nav } from 'react-bootstrap'
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import HomePage from "./HomePage"
 import InstancePage from "../InstancePages/InstancePageTemplate"
 import SpeciesModelPage from './SpeciesModelPage'
 import PetsModelPage from './PetsModelPage'
-import AdopCentersPage from './AdopCentersPage'
+import AdoptCentersPage from './AdoptCentersPage'
 import pets from '../Data/AnimalsData.json'
 
 const MainSite = () => {
@@ -18,7 +18,7 @@ const MainSite = () => {
                 <Nav className="me-auto">
                 <Nav.Link href="/">Home</Nav.Link>
                 <Nav.Link href="/">About</Nav.Link>
-                <Nav.Link href="/sbmodel">Breeds</Nav.Link>
+                <Nav.Link href="/sbmodel">Species</Nav.Link>
                 <Nav.Link href="/apmodel">Pets</Nav.Link>
                 <Nav.Link href="/acmodel">Adoption Centers</Nav.Link>
                 </Nav>
@@ -40,7 +40,7 @@ const MainSite = () => {
                         <PetsModelPage />
                     </Route>
                     <Route exact path="/acmodel">
-                        <AdopCentersPage />
+                        <AdoptCentersPage />
                     </Route>
                     <Route path="/dog">
                         <InstancePage 
