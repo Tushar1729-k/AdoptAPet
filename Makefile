@@ -4,7 +4,11 @@ SHELL         := bash
 # run docker
 # -it -v $(PWD):/usr/python -w /usr/python gpdowning/python
 docker:
-	docker run
+	docker run \
+		-it \
+		--rm \
+		-p 5000:5000 \
+		aap-react
 
 # get git status
 status:
@@ -15,8 +19,8 @@ status:
 	git status
 
 # files to check for existence
-CFILES :=
-	.gitignore
+CFILES := \
+	.gitignore \
 	.gitlab-ci.yml
 
 # check if CFILES exists
