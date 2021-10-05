@@ -3,7 +3,7 @@ import { Row, Table } from 'react-bootstrap'
 import adoptionCenters from '../Data/AdoptionCenters.json'
 import { Link } from "react-router-dom"
 
-const AdopCentersPage = () => {
+const AdoptCentersPage = () => {
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
@@ -39,4 +39,4 @@ const AdopCentersPage = () => {
     )
 }
 
-export default AdopCentersPage
+export default AdoptCentersPage

@@ -18,6 +18,7 @@ const AdoptInstanceTemplate = ({attributes}) => {
             <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
             <Card style={{ width: '60vw' }}>
             <Card.Body>
+                <Card.Img src={'../rescuemeinc.png'}  />
                 <Card.Title style={{fontSize: '6vh'}}>{attributes.name}</Card.Title>
                 <Card.Subtitle style={{fontSize: '4vh'}} className="mb-2 text-muted">{attributes.type}</Card.Subtitle>
                 <Card.Text>
