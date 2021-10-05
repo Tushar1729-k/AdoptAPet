@@ -6,6 +6,8 @@ import pets from '../Data/AnimalsData.json'
 const PetsModelPage = () => {
     return (
         <div style={{padding: '4vw'}}>
+            <h2>Adoptable Pets</h2>
+            <h6>126 adoptable pets, page 1/1</h6>
             <Row xs={1} md={2} className="g-4">
                 {Array.from({ length: 100 }).map((_, idx) => (
                     <Link key={idx} to={`/apmodel/${pets[idx].animalID}`} style={{ textDecoration: 'none'}}>

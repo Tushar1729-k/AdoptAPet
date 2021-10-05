@@ -9,6 +9,7 @@ const AdoptCentersPage = () => {
             <Row>
                 <h2>Adoption Centers</h2>
             </Row>
+            <h6>3 adoption centers, page 1/1</h6>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm">
                 <thead>
