@@ -56,10 +56,10 @@ const teamContribution = [
 		tests: 0,
 	},
 	{
-		name: "Nandu Vudumala",
+		name: "Nandu Vudumula",
 		username: "nandukrv",
-		picture_path: "",
 		email: "nandukrv@gmail.com",
+		picture: NanduVudumulaImg,
 		role: "Front End",
 		bio: `I am a fourth year majoring in CS, and am from the San Francisco Bay Area, California.
 			  I like youtube, working out, supporting the 49ers and Warriors, and binge watching/reading.`,
@@ -205,13 +205,13 @@ const About = () => {
 
 			<h1>APIs Used</h1>
 			<a href="https://gitlab.com/api/v4/projects/29831002/repository/contributors" target="_blank" rel="noopener noreferrer">Git Repo Contributor API</a>
-			<br>
+			<br />
 			<a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>
-			<br>
+			<br />
 			<a href="https://docs.thecatapi.com/" target="_blank" rel="noopener noreferrer">The Cat API</a>
-			<br>
+			<br />
 			<a href="https://docs.thedogapi.com/" target="_blank" rel="noopener noreferrer">The Dog API</a>
-			<br>
+			<br />
 			<a href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps API</a>
 			
 
