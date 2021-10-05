@@ -2,6 +2,8 @@
 
 **NOTE:** .gitignore file is in the front-end folder
 
+**NOTE:** Only the first three pets on on the Pets Model Page lead to instance pages, as per the requirements
+
 ## Authors
 
 * Sean-Matthew Aujong, sha567, seanaujong
@@ -16,7 +18,7 @@
 
 ## Git SHA
 
-95c7d9960cc14d6b6bd5eeb64e0fa847cf4091b2
+225c776284f4a2dc434cfc0740724cd0c34a6490
 
 ## Project Leader
 
