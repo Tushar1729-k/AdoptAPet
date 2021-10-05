@@ -3,7 +3,7 @@ import { Row, Col, Card, ListGroup } from 'react-bootstrap'
 import TusharKohliImg from "./images/TusharKohliImg.jpg"
 import NanduVudumulaImg from "./images/NanduVudumulaImg.jpg"
 import SeanAujongImg from "./images/SeanAujongImg.jpg"
-import SohumKapoorImg from "./images/SohumKapoorImg.jpeg"
+import SohumKapoorImg from "./images/SohumKapoorImg.jpg"
 import EdwardChambleeImg from "./images/EdwardChambleeImg.png"
 
 const teamContribution = [
