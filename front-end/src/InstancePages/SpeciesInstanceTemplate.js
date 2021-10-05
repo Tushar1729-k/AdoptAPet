@@ -18,6 +18,9 @@ const SpeciesInstanceTemplate = ({attributes}) => {
                 <Row>
                     <Image src={attributes.imgSrc[2]} fluid style={{width: '100%'}}/>
                 </Row>
+                <Row>
+                    {attributes.video}
+                </Row>
             </div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
             <Card style={{ width: '60vw' }}>
@@ -72,7 +75,8 @@ const SpeciesInstanceTemplate = ({attributes}) => {
 SpeciesInstanceTemplate.defaultProps = {
     attributes: { breed: '', species: '', height: 'NA', weight: 'NA', color: 'NA',
                   energy: 'NA', lifespan: '', temperament: 'NA', shedding: 'NA',
-                  health: 'NA', description: 'NA', petId: '', orgId: '', imgSrv: []}
+                  health: 'NA', description: 'NA', petId: '', orgId: '', imgSrv: [],
+                  video: <div></div>}
 }
 // Set type of the prop here.
 SpeciesInstanceTemplate.propTypes = {

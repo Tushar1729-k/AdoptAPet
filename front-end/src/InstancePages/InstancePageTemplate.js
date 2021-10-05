@@ -61,6 +61,10 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                     </Modal.Footer>
                 </Modal>
                 </Row>
+                <Row>
+                    <h4>Adoption Center Location</h4>
+                    <Image src={attributes.mapSrc} fluid style={{width: '100%'}}/>
+                </Row>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
                         <Link to={`/sbmodel/${attributes.sbId}`} style={{textDecoration: 'none'}}><h5>Breed Information Page</h5></Link>
@@ -79,7 +83,7 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
 // Set defaults of props here.
 InstancePageTemplate.defaultProps = {
     attributes: { breed: '', name: '', size: '', age: '', color: '', sex: '',
-                  description: 'No description avaialable :(', imgSrc: ''},
+                  description: 'No description avaialable :(', imgSrc: '', mapSrc: ''},
     medicalHistory: { allergies: 'Not available', diet: 'Not available', 
                       issues: 'Not available', hearing: 'Not available',
                       sight: 'Not available', orgId: '198', sbId: '' }

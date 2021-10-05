@@ -7,9 +7,13 @@ const AdoptInstanceTemplate = ({attributes}) => {
     return (
         <div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
-                {/* <Row>
-                    <Image src={attributes.imgSrc} fluid style={{width: '100%', height: '750px'}}/>
-                </Row> */}
+                <Row>
+                    <Image src={attributes.imgSrc} fluid style={{width: '100%'}}/>
+                </Row>
+                <Row>
+                    <h4>Google Maps</h4>
+                    <Image src={attributes.mapSrc} fluid style={{width: '100%'}}/>
+                </Row>
             </div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
             <Card style={{ width: '60vw' }}>
@@ -52,7 +56,7 @@ const AdoptInstanceTemplate = ({attributes}) => {
 AdoptInstanceTemplate.defaultProps = {
     attributes: { name: '', address: '', city: '', state: '', zip: '',
                   phone: '', email: '', type: '', site: 'NA', species: '',
-                  services: '', petId: '', sbId: ''}
+                  services: '', petId: '', sbId: '', mapSrc: '', imgSrc: ''}
 }
 // Set type of the prop here.
 AdoptInstanceTemplate.propTypes = {
