@@ -217,6 +217,8 @@ const About = () => {
 			<p>Total Issues: {groupIssues}</p>
 			<p>Total Tests: {groupTests}</p>
 			{/* <br /> */}
+			<a href="https://gitlab.com/10am-group-8/adopt-a-pet" target="_blank" rel="noopener noreferrer"><h1>GitLab Repo</h1></a>
+			<br></br>
 			<a href="https://documenter.getpostman.com/view/17710041/UUy38kte" target="_blank" rel="noopener noreferrer"><h1>API Documentation</h1></a>
 			<br />
 			<h1>APIs Used</h1>
