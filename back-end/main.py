@@ -15,3 +15,5 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("AWS_DB_KEY")
 
 db = SQLAlchemy(app)
+
+print(db)
