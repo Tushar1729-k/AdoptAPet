@@ -1,19 +1,26 @@
 from flask import Flask
-from flask_sqlalchemy import SQLAlchemy
-from sqlalchemy import create_engine, Column, String, Integer
-import urllib
-import json
-from dotenv import load_dotenv
-import os
+# from flask_sqlalchemy import SQLAlchemy
+# from sqlalchemy import create_engine, Column, String, Integer
+# import urllib
+# import json
+# from dotenv import load_dotenv
+# import os
 
 app = Flask(__name__)
-app.debug = True
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.debug = True
+# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
-# Schema: "postgres+psycopg2://<USERNAME>:<PASSWORD>@<IP_ADDRESS>:<PORT>/<DATABASE_NAME>"
+# # Schema: "postgres+psycopg2://<USERNAME>:<PASSWORD>@<IP_ADDRESS>:<PORT>/<DATABASE_NAME>"
 
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("AWS_DB_KEY")
+# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("AWS_DB_KEY")
 
-db = SQLAlchemy(app)
+# db = SQLAlchemy(app)
 
-print(db)
+# print(db)
+
+@app.route("/")
+def hello_world() :
+	return "<p>Hello, World!</p>"
+
+if __name__ == "__main__" :
+	app.run(host="0.0.0.0", port=80, debug=True)
