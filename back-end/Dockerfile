@@ -8,7 +8,6 @@
 
 # # Installs python packages
 # RUN pip install -r ./requirements.txt
-# RUN pip install psycopg2-binary
 
 # # Need to write npm run build
 # # RUN cd ../frontend && npm install && npm run build
@@ -38,12 +37,14 @@ WORKDIR /usr/src/backend
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
+RUN pip3 install psycopg2
 
 EXPOSE 80
 EXPOSE 5000
 
 # RUN chmod +x ./main.py
 # ENTRYPOINT [ "python3" ]
+# ENTRYPOINT [ "/bin/sh" ] for command line interface - something like this /bin/sh ?
 # CMD [ "./main.py" ]
 # CMD [ "flask", "run", "--host", "0.0.0.0", "-p", "5000" ]
 ENTRYPOINT python main.py
