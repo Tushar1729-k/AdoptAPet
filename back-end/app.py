@@ -39,10 +39,10 @@ class AdoptablePet(db.Model) :
 	pet_color = db.Column(db.String())
 	pet_desc = db.Column(db.String())
 	pet_allergies = db.Column(db.String())
-	pet_diet = db.Column(db.String())
-	pet_issues = db.Column(db.String())
-	pet_hearing = db.Column(db.String())
-	pet_sight = db.Column(db.String())
+	# pet_diet = db.Column(db.String())
+	# pet_issues = db.Column(db.String())
+	# pet_hearing = db.Column(db.String())
+	# pet_sight = db.Column(db.String())
 
 # Adoption Center model
 class AdoptionCenter(db.Model) :
@@ -75,7 +75,6 @@ class Breed(db.Model) :
 	breed_desc = db.Column(db.String())
 	breed_temperament = db.Column(db.String())
 	breed_shedding = db.Column(db.String())
-
 
 
 if __name__ == "__main__" :
