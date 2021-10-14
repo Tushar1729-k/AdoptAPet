@@ -1,13 +1,13 @@
 black
 python-dotenv
-flask
+# flask
 flask-cors
-flask-marshmallow
+# flask-marshmallow
 flask-restful
 flask-restless
 flask-SQLAlchemy
 marshmallow-sqlalchemy
-marshmallow
+# marshmallow
 # psycopg2
 requests
 SQLAlchemy
@@ -16,5 +16,6 @@ flask-marshmallow==0.14.0
 marshmallow==3.13.0
 Flask==1.1.2
 uWSGI==2.0.19.1
+psycopg2-binary
 
 

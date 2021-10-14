@@ -17,9 +17,10 @@ WORKDIR /usr/src/backend
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
+# RUN pip install psycopg2
 
 EXPOSE 80
 
 COPY nginx.conf /etc/nginx
 RUN chmod +x ./start.sh
-CMD ["./start.sh"]
+ENTRYPOINT ./start.sh

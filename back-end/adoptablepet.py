@@ -67,7 +67,7 @@ db.create_all()
 ### Table for Adoptable Pet ###
 
 # Get API request
-request = urllib.request.Request('https://api.rescuegroups.org/v5/public/animals')
+request = urllib.request.Request('https://api.rescuegroups.org/v5/public/animals?limit=250')
 request.add_header("Authorization", "wmUYpgAP")
 r = urllib.request.urlopen(request)
 data = json.loads(r.read())
@@ -89,5 +89,6 @@ for item in data['data'] :
 													pet_age=pet_age, pet_color=pet_color, pet_desc=pet_desc)
 	pet_list.append(new_pet)
 # print(pet_list)
+# flush script
 db.session.add_all(pet_list)
 db.session.commit()

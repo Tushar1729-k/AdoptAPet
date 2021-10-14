@@ -4,6 +4,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 # COPY ./badproxy /etc/apt/apt.conf.d/99fixbadproxy
 
 # RUN apt-get clean && apt-get update
+RUN apt-get update -y
 RUN apt-get install -y python3
 RUN apt-get install -y python3-pip python3-dev build-essential vim
 RUN apt-get install -y libmysqlclient-dev libpq-dev postgresql
@@ -15,6 +16,7 @@ WORKDIR /usr/src/backend
 
 RUN pip3 install --upgrade pip
 RUN pip3 install -r requirements.txt
+RUN pip3 install psycopg2
 
 EXPOSE 5000
 
