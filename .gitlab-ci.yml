@@ -2,6 +2,7 @@ image: node:latest
 
 stages:
   - build
+  - deploy
 
 cache:
   paths:
@@ -13,3 +14,18 @@ build_front_end:
     - cd front-end
     - npm install
     - CI=false npm run-script build
+
+# deploy_develop: ??? https://github.com/forbesye/cs373/blob/main/Flask_AWS_Deploy.md
+
+deploy_production:
+  image: python:3.6-stretch
+  only:
+    variables:
+      - $CI_COMMIT_BRANCH == "main"
+  stage: deploy
+  before_script:
+    - pip install awsebcli --upgrade --user
+    - git checkout main
+  script:
+    - cd back-end
+    - /root/.local/bin/eb deploy adoptapet-api-prod
