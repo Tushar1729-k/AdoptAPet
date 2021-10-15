@@ -25,7 +25,8 @@ deploy_production:
   stage: deploy
   before_script:
     - pip install awsebcli --upgrade --user
-    - chmod +x ./back-end/eb-config.sh
+    - chmod +x ./.eb-config.sh
+    - ./.eb-config.sh
     - git checkout main
   script:
     - cd back-end
