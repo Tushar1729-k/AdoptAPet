@@ -32,7 +32,7 @@ path = "./datasets"
 
 # Create tables
 class AdoptablePet(db.Model) :
-	pet_id = db.Column(db.Integer, primary_key=True)
+	id = db.Column(db.Integer, primary_key=True)
 	pet_name = db.Column(db.String())
 	pet_breed = db.Column(db.String())
 	pet_sex = db.Column(db.String())

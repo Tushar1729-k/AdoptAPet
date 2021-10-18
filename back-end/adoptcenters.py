@@ -42,7 +42,7 @@ path = "./datasets"
 
 # Adoption Center Model
 class AdoptionCenter(db.Model) :
-	center_id = db.Column(db.Integer, primary_key=True)
+	id = db.Column(db.Integer, primary_key=True)
 	name = db.Column(db.String())
 	city = db.Column(db.String())
 	state = db.Column(db.String())
