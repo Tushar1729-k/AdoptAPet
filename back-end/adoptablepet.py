@@ -12,7 +12,7 @@ from sqlalchemy import create_engine
 import flask_restless
 # import pandas as pd
 # import numpy as np
-import requests
+# import requests
 from time import sleep
 import flask_marshmallow as ma
 from flask_marshmallow import Marshmallow
@@ -62,33 +62,42 @@ def __init__(self, pet_name="NaN", pet_breed="NaN", pet_sex="NaN", pet_age="NaN"
 	# self.pet_hearing = pet_hearing
 	# self.pet_sight = pet_sight
 
-db.create_all()
+# db.create_all()
 
 ### Table for Adoptable Pet ###
 
-# Get API request
-request = urllib.request.Request('https://api.rescuegroups.org/v5/public/animals?limit=250')
-request.add_header("Authorization", "wmUYpgAP")
-r = urllib.request.urlopen(request)
-data = json.loads(r.read())
-# print(data)
-pet_list = []
-for item in data['data'] :
-	pet_name = item['attributes']['name'] if 'name' in item['attributes'] else ""
-	pet_breed = item['attributes']['breedString'] if 'breedString' in item['attributes'] else ""
-	pet_sex = item['attributes']['sex'] if 'sex' in item['attributes'] else ""
-	pet_age = item['attributes']['ageGroup'] if 'ageGroup' in item['attributes'] else ""
-	pet_color = item['attributes']['colorDetails'] if 'colorDetails' in item['attributes'] else ""
-	pet_desc = item['attributes']['descriptionHtml'] if 'descriptionHtml' in item['attributes'] else ""
-	# new_pet = AdoptablePet(pet_name=item['attributes']["name"], pet_breed=item['attributes']["breedString"], 
-	# 						pet_sex=item['attributes']["sex"], pet_age=item['attributes']["ageGroup"], 
-	# 						pet_color=item['attributes']['colorDetails'],
-	# 						pet_desc=item['attributes']['descriptionHtml'])
-	# pet_list.append(new_pet)
-	new_pet = AdoptablePet(pet_name=pet_name, pet_breed=pet_breed, pet_sex=pet_sex, 
-													pet_age=pet_age, pet_color=pet_color, pet_desc=pet_desc)
-	pet_list.append(new_pet)
-# print(pet_list)
-# flush script
-db.session.add_all(pet_list)
-db.session.commit()
+def populate_pets() :
+	# Get API request
+	request = urllib.request.Request('https://api.rescuegroups.org/v5/public/animals?limit=250')
+	request.add_header("Authorization", "wmUYpgAP")
+	r = urllib.request.urlopen(request)
+	data = json.loads(r.read())
+	# print(data)
+	pet_list = []
+	for item in data['data'] :
+		pet_name = item['attributes']['name'] if 'name' in item['attributes'] else ""
+		pet_breed = item['attributes']['breedString'] if 'breedString' in item['attributes'] else ""
+		pet_sex = item['attributes']['sex'] if 'sex' in item['attributes'] else ""
+		pet_age = item['attributes']['ageGroup'] if 'ageGroup' in item['attributes'] else ""
+		pet_color = item['attributes']['colorDetails'] if 'colorDetails' in item['attributes'] else ""
+		pet_desc = item['attributes']['descriptionHtml'] if 'descriptionHtml' in item['attributes'] else ""
+		# new_pet = AdoptablePet(pet_name=item['attributes']["name"], pet_breed=item['attributes']["breedString"], 
+		# 						pet_sex=item['attributes']["sex"], pet_age=item['attributes']["ageGroup"], 
+		# 						pet_color=item['attributes']['colorDetails'],
+		# 						pet_desc=item['attributes']['descriptionHtml'])
+		# pet_list.append(new_pet)
+		new_pet = AdoptablePet(pet_name=pet_name, pet_breed=pet_breed, pet_sex=pet_sex, 
+														pet_age=pet_age, pet_color=pet_color, pet_desc=pet_desc)
+		pet_list.append(new_pet)
+	# print(pet_list)
+	# flush script db.reset
+	# loop through all pages api returns
+	# db.drop_all()
+	# db.create_all()
+	db.session.add_all(pet_list)
+	db.session.commit()
+
+if __name__ == "__main__" :
+	db.drop_all()
+	db.create_all()
+	populate_pets()
