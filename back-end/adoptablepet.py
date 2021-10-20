@@ -10,7 +10,7 @@ import os
 import json
 from sqlalchemy import create_engine
 import flask_restless
-# import pandas as pd
+# import pandas as pdp
 # import numpy as np
 # import requests
 from time import sleep
