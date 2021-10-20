@@ -10,15 +10,15 @@ db = init_db(app)
 ma = Marshmallow(app)
 
 # Association table between politicians and elections, many-to-many relationship
-link_species_centers = db.Table(
-	"link_species_centers",
-	db.Column(
-		"species_id", db.Integer, db.ForeignKey("center.id"), primary_key=True
-	),
-	db.Column(
-		"center_id", db.Integer, db.ForeignKey("species.id"), primary_key=True
-	)
-)
+# link_species_centers = db.Table(
+# 	"link_species_centers",
+# 	db.Column(
+# 		"species_id", db.Integer, db.ForeignKey("center.id"), primary_key=True
+# 	),
+# 	db.Column(
+# 		"center_id", db.Integer, db.ForeignKey("species.id"), primary_key=True
+# 	)
+# )
 
 # Create tables
 class AdoptablePet(db.Model) :
@@ -63,6 +63,11 @@ class BreedsSpecies(db.Model) :
 	# issues = db.Column(db.String())
 	# color = db.Column(db.String())
 	# patterns = db.Column(db.String())
+
+def __init__(self, species="NaN", breed="NaN", youth_name="NaN") :
+	self.species = species
+	self.breed = breed
+	self.youth_name = youth_name
 
 # def __repr__(self) :
 #   return "<Breeds %s>" % self.name

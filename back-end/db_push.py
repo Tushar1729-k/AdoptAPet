@@ -2,7 +2,7 @@ from app import db
 # import os
 import json
 # import csv
-from models import AdoptablePet, AdoptionCenter, BreedsSpecies
+from models import *
 import urllib
 import requests
 
@@ -37,6 +37,18 @@ def populate_pets() :
 	db.session.add_all(pet_list)
 	db.session.commit()
 
+def __init__(self, pet_name="NaN", pet_breed="NaN", pet_sex="NaN", pet_age="NaN", 
+							pet_color="NaN", pet_desc="NaN" 
+							# pet_allergies="NaN", pet_diet="NaN",
+							# pet_issues="NaN", pet_hearing="NaN", pet_sight="NaN"
+							) :
+	self.pet_name = pet_name
+	self.pet_breed = pet_breed
+	self.pet_sex = pet_sex
+	self.pet_age = pet_age
+	self.pet_color = pet_color
+	self.pet_desc = pet_desc
+
 def populate_centers() :
 	url = "https://api.rescuegroups.org/v5/public/orgs?limit=250"
 	querystring = {"format": "json"}
@@ -58,6 +70,14 @@ def populate_centers() :
 
 	db.session.add_all(org_list)
 	db.session.commit()
+
+def __init__(self, api_id=0, name="NaN", city="NaN", state="NaN", zipcode="NaN", services="NaN") :
+	self.api_id = api_id
+	self.name = name
+	self.city = city
+	self.state = state
+	self.zipcode = zipcode
+	self.services = services
 
 # cache
 species_id_to_name = {}
@@ -118,12 +138,12 @@ def populate_breeds() :
 #     )
 
 def reset_db() :
-  db.session.remove()
+  # db.session.remove()
   db.drop_all()
   db.create_all()
 
 if __name__ == "__main__" :
   reset_db()
-  # populate_pets()
-  # populate_centers()
+  populate_pets()
+  populate_centers()
   populate_breeds()

@@ -30,51 +30,51 @@ def hello_world() :
 # Define table/data models
 
 # Adoptable Pet model
-class AdoptablePet(db.Model) :
-	pet_id = db.Column(db.Integer, primary_key=True)
-	pet_name = db.Column(db.String())
-	pet_breed = db.Column(db.String())
-	pet_sex = db.Column(db.String())
-	pet_age = db.Column(db.String())
-	pet_color = db.Column(db.String())
-	pet_desc = db.Column(db.String())
-	pet_allergies = db.Column(db.String())
+# class AdoptablePet(db.Model) :
+# 	pet_id = db.Column(db.Integer, primary_key=True)
+# 	pet_name = db.Column(db.String())
+# 	pet_breed = db.Column(db.String())
+# 	pet_sex = db.Column(db.String())
+# 	pet_age = db.Column(db.String())
+# 	pet_color = db.Column(db.String())
+# 	pet_desc = db.Column(db.String())
+	# pet_allergies = db.Column(db.String())
 	# pet_diet = db.Column(db.String())
 	# pet_issues = db.Column(db.String())
 	# pet_hearing = db.Column(db.String())
 	# pet_sight = db.Column(db.String())
 
 # Adoption Center model
-class AdoptionCenter(db.Model) :
-	adoptioncenter_id = db.Column(db.Integer, primary_key=True)
-	adoptioncenter_name = db.Column(db.String())
-	adoptioncenter_city = db.Column(db.String())
-	adoptioncenter_state = db.Column(db.String())
-	adoptioncenter_zip = db.Column(db.String())
-	adoptioncenter_services = db.Column(db.String())
-	adoptioncenter_type = db.Column(db.String())
-	adoptioncenter_species = db.Column(db.String())
-	adoptioncenter_address = db.Column(db.String())
-	adoptioncenter_phone = db.Column(db.String())
-	adoptioncenter_email = db.Column(db.String())
-	adoptioncenter_website = db.Column(db.String())
+# class AdoptionCenter(db.Model) :
+# 	adoptioncenter_id = db.Column(db.Integer, primary_key=True)
+# 	adoptioncenter_name = db.Column(db.String())
+# 	adoptioncenter_city = db.Column(db.String())
+# 	adoptioncenter_state = db.Column(db.String())
+# 	adoptioncenter_zip = db.Column(db.String())
+# 	adoptioncenter_services = db.Column(db.String())
+# 	adoptioncenter_type = db.Column(db.String())
+# 	adoptioncenter_species = db.Column(db.String())
+# 	adoptioncenter_address = db.Column(db.String())
+# 	adoptioncenter_phone = db.Column(db.String())
+# 	adoptioncenter_email = db.Column(db.String())
+# 	adoptioncenter_website = db.Column(db.String())
 
 # Breed(/species) model
-class Breed(db.Model) :
-	breed_id = db.Column(db.Integer, primary_key=True)
-	breed_name = db.Column(db.String())
-	breed_species = db.Column(db.String())
-	breed_lifeexp = db.Column(db.String())
-	breed_size = db.Column(db.String())
-	breed_issues = db.Column(db.String())
-	breed_height = db.Column(db.String())
-	breed_weight = db.Column(db.String())
-	breed_colors = db.Column(db.String())
-	breed_energy = db.Column(db.String())
-	breed_lifespan = db.Column(db.String())
-	breed_desc = db.Column(db.String())
-	breed_temperament = db.Column(db.String())
-	breed_shedding = db.Column(db.String())
+# class Breed(db.Model) :
+# 	breed_id = db.Column(db.Integer, primary_key=True)
+# 	breed_name = db.Column(db.String())
+# 	breed_species = db.Column(db.String())
+# 	breed_lifeexp = db.Column(db.String())
+# 	breed_size = db.Column(db.String())
+# 	breed_issues = db.Column(db.String())
+# 	breed_height = db.Column(db.String())
+# 	breed_weight = db.Column(db.String())
+# 	breed_colors = db.Column(db.String())
+# 	breed_energy = db.Column(db.String())
+# 	breed_lifespan = db.Column(db.String())
+# 	breed_desc = db.Column(db.String())
+# 	breed_temperament = db.Column(db.String())
+# 	breed_shedding = db.Column(db.String())
 
 
 if __name__ == "__main__" :
