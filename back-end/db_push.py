@@ -1,3 +1,4 @@
+from os import name
 from app import db
 # import os
 import json
@@ -15,19 +16,20 @@ def populate_pets() :
 	# print(data)
 	pet_list = []
 	for item in data['data'] :
-		pet_name = item['attributes']['name'] if 'name' in item['attributes'] else ""
-		pet_breed = item['attributes']['breedString'] if 'breedString' in item['attributes'] else ""
-		pet_sex = item['attributes']['sex'] if 'sex' in item['attributes'] else ""
-		pet_age = item['attributes']['ageGroup'] if 'ageGroup' in item['attributes'] else ""
-		pet_color = item['attributes']['colorDetails'] if 'colorDetails' in item['attributes'] else ""
-		pet_desc = item['attributes']['descriptionHtml'] if 'descriptionHtml' in item['attributes'] else ""
+		api_id = item['id']
+		name = item['attributes']['name'] if 'name' in item['attributes'] else ""
+		breed = item['attributes']['breedString'] if 'breedString' in item['attributes'] else ""
+		sex = item['attributes']['sex'] if 'sex' in item['attributes'] else ""
+		age = item['attributes']['ageGroup'] if 'ageGroup' in item['attributes'] else ""
+		color = item['attributes']['colorDetails'] if 'colorDetails' in item['attributes'] else ""
+		desc = item['attributes']['descriptionHtml'] if 'descriptionHtml' in item['attributes'] else ""
 		# new_pet = AdoptablePet(pet_name=item['attributes']["name"], pet_breed=item['attributes']["breedString"], 
 		# 						pet_sex=item['attributes']["sex"], pet_age=item['attributes']["ageGroup"], 
 		# 						pet_color=item['attributes']['colorDetails'],
 		# 						pet_desc=item['attributes']['descriptionHtml'])
 		# pet_list.append(new_pet)
-		new_pet = AdoptablePet(pet_name=pet_name, pet_breed=pet_breed, pet_sex=pet_sex, 
-														pet_age=pet_age, pet_color=pet_color, pet_desc=pet_desc)
+		new_pet = AdoptablePet(api_id=api_id, name=name, breed=breed, sex=sex, 
+														age=age, color=color, desc=desc)
 		pet_list.append(new_pet)
 	# print(pet_list)
 	# flush script db.reset
@@ -37,17 +39,18 @@ def populate_pets() :
 	db.session.add_all(pet_list)
 	db.session.commit()
 
-def __init__(self, pet_name="NaN", pet_breed="NaN", pet_sex="NaN", pet_age="NaN", 
-							pet_color="NaN", pet_desc="NaN" 
+def __init__(self, api_id=0, name="NaN", breed="NaN", sex="NaN", age="NaN", 
+							color="NaN", desc="NaN" 
 							# pet_allergies="NaN", pet_diet="NaN",
 							# pet_issues="NaN", pet_hearing="NaN", pet_sight="NaN"
 							) :
-	self.pet_name = pet_name
-	self.pet_breed = pet_breed
-	self.pet_sex = pet_sex
-	self.pet_age = pet_age
-	self.pet_color = pet_color
-	self.pet_desc = pet_desc
+	self.api_id = api_id
+	self.name = name
+	self.breed = breed
+	self.sex = sex
+	self.age = age
+	self.color = color
+	self.desc = desc
 
 def populate_centers() :
 	url = "https://api.rescuegroups.org/v5/public/orgs?limit=250"
@@ -60,12 +63,13 @@ def populate_centers() :
 	org_list = []
 	# print(orgs_list)
 	for item in data['data'] :
+		api_id = item['id']
 		name = item['attributes']['name'] if 'name' in item['attributes'] else ''
 		city = item['attributes']['city'] if 'city' in item['attributes'] else ''
 		state = item['attributes']['state'] if 'state' in item['attributes'] else ''
 		zipcode = item['attributes']['postalcode'] if 'postalcode' in item['attributes'] else ''
 		services = item['attributes']['services'] if 'services' in item['attributes'] else ''
-		new_center = AdoptionCenter(name=name, city=city, state=state, zipcode=zipcode, services=services)
+		new_center = AdoptionCenter(api_id=api_id, name=name, city=city, state=state, zipcode=zipcode, services=services)
 		org_list.append(new_center)
 
 	db.session.add_all(org_list)
@@ -90,6 +94,7 @@ def populate_breeds() :
 	breeds_data = breeds_response.json()
 	breed_list = []
 	for item in breeds_data['data'] :
+		api_id = item['id']
 		breed = item['attributes']['name']
 		species_id = item['relationships']['species']['data'][0]['id']
 		if (species_id in species_id_to_name) :
@@ -102,7 +107,7 @@ def populate_breeds() :
 			species_name = species_data['data'][0]['attributes']['singular']
 			species_youth_name = species_data['data'][0]['attributes']['youngSingular']
 			species_id_to_name[species_id] = [species_name, species_youth_name]
-		new_breed = BreedsSpecies(species=species_name, breed=breed, youth_name=species_youth_name)
+		new_breed = BreedsSpecies(api_id=api_id, species=species_name, breed=breed, youth_name=species_youth_name)
 		breed_list.append(new_breed)
 
 	num_pages = breeds_data['meta']['pages']
@@ -129,21 +134,25 @@ def populate_breeds() :
 	db.session.add_all(breed_list)
 	db.session.commit()
 
-# def link_pets_centers() :
-#   pets = db.session.query(AdoptablePet).all()
-#   for pet in pets :
-#     temp_center = (
-#       db.session.query(AdoptionCenter)
-#       .filter_by(number=)
-#     )
+def link_pets_centers() :
+	pets = db.session.query(AdoptablePet).all()
+	for pet in pets :
+		temp_center = (
+			db.session.query(AdoptionCenter)
+			.filter_by(api_id=pet.center_id, name=pet.center)
+			.first()
+		)
+		pet.center = temp_center
+	db.session.commit()
 
 def reset_db() :
-  # db.session.remove()
-  db.drop_all()
-  db.create_all()
+	# db.session.remove()
+	db.drop_all()
+	db.create_all()
 
 if __name__ == "__main__" :
-  reset_db()
-  populate_pets()
-  populate_centers()
-  populate_breeds()
+	reset_db()
+	populate_pets()
+	populate_centers()
+	populate_breeds()
+	link_pets_centers()
