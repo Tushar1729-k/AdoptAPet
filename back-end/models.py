@@ -11,20 +11,23 @@ ma = Marshmallow(app)
 
 # Association table between politicians and elections, many-to-many relationship
 link_species_centers = db.Table("link_species_centers",
-	db.Column("species_id", db.Integer, db.ForeignKey("adoption_center.id"), primary_key=True),
-	db.Column("center_id", db.Integer, db.ForeignKey("breeds_species.id"), primary_key=True)
+	db.Column("breeds_species_id", db.Integer, db.ForeignKey("adoption_center.id"), primary_key=True),
+	db.Column("adoption_center_id", db.Integer, db.ForeignKey("breeds_species.id"), primary_key=True)
 )
 
 # Create tables
 class AdoptablePet(db.Model) :
 	__tablename__ = "adoptable_pet"
 	id = db.Column(db.Integer, primary_key=True)
+	api_id = db.Column(db.Integer)
 	# Foreign key for associated center, one-to-many relationship
 	center_id = db.Column(db.Integer, db.ForeignKey('adoption_center.id'), nullable=True)
-	center = db.Column(db.String())
-	api_id = db.Column(db.Integer)
+	# Foreign key for associated species/breed, one-to-many relationship
+	species_breed_id = db.Column(db.Integer, db.ForeignKey('breeds_species.id'), nullable=True)
+	center_number = db.Column(db.Integer)
+	breed_number = db.Column(db.Integer)
 	name = db.Column(db.String())
-	breed = db.Column(db.String())
+	# breed = db.Column(db.String())
 	sex = db.Column(db.String())
 	age = db.Column(db.String())
 	color = db.Column(db.String())
@@ -46,22 +49,26 @@ class AdoptionCenter(db.Model) :
 	# All associated pets, one-to-many relationship
 	pets = db.relationship("AdoptablePet", backref="center")
 	# All associated species, many-to-many relationship
-	# species = db.relationship("BreedsSpecies", backref="center")
+	species_breeds = db.relationship("BreedsSpecies", 
+											secondary=link_species_centers, 
+											backref=db.backref("center", lazy="dynamic"))
 	name = db.Column(db.String())
 	city = db.Column(db.String())
 	state = db.Column(db.String())
 	zipcode = db.Column(db.String())
 	services = db.Column(db.String())
-	pets = db.relationship('AdoptablePet', backref='adoptioncenter', lazy=True)
 
 # def __repr__(self) :
 #   return "<Adoption Center %s %s>" % (self.type_name, self.number)
 
 # Breeds/Species Model
 class BreedsSpecies(db.Model) :
+	__tablename__ = "breeds_species"
 	id = db.Column(db.Integer, primary_key=True)
 	centers = db.relationship('AdoptionCenter', secondary=link_species_centers, 
 										lazy='subquery', backref=db.backref('species', lazy=True))
+	# All associated pets, one-to-many relationship
+	pets = db.relationship("AdoptablePet", backref="species_breed")
 	api_id = db.Column(db.Integer)
 	species = db.Column(db.String())
 	breed = db.Column(db.String())

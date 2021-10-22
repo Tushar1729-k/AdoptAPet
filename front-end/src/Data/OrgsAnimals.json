@@ -1,0 +1,4849 @@
+{
+  "meta": {
+    "count": 374,
+    "countReturned": 25,
+    "pageReturned": 1,
+    "limit": 25,
+    "pages": 15,
+    "transactionId": "ivUTeBFSjRFK"
+  },
+  "data": [
+    {
+      "type": "animals",
+      "id": "1019366",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageString": "14 Years",
+        "birthDate": "2006-10-07T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Long Hair \/ Mixed (long coat)",
+        "breedPrimary": "Domestic Long Hair",
+        "breedPrimaryId": 24,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Long",
+        "colorDetails": "Black\/white",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "Handsome Boy is about&nbsp;4 years old. He loves to be petted but freaks if you try to pick him up. FELV\/FIV negative, shots, altered. Adoption fee, vet reference required. For more information contact Fran at kurthfran2@aol.com or 410-685-8145.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1019366\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Handsome Boy is about&nbsp;4 years old. He loves to be petted but freaks if you try to pick him up. FELV\/FIV negative, shots, altered. Adoption fee, vet reference required. For more information contact Fran at kurthfran2@aol.com or 410-685-8145.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 7,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Handsome Boy",
+        "newPeopleReaction": "Cautious",
+        "ownerExperience": "None",
+        "pictureCount": 1,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019366\/2197103_100x95.jpg",
+        "sex": "Male",
+        "sizeGroup": "Large",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-handsome-boy-domestic-long-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1019366",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1019366",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2008-11-05T20:25:34Z",
+        "updatedDate": "2012-11-28T16:21:09Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "24"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "6"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2197103"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1019369",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageString": "12 Years 7 Months",
+        "birthDate": "2008-03-10T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Tabby - Brown \/ Mixed (short coat)",
+        "breedPrimary": "Tabby",
+        "breedPrimaryId": 63,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Light brown tabby",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "Hulagan is a super friendly young cat.  About 7-8 months old.  Light brown tabby.  FELV\/FIV negative, shots, neutered, microchipped.  Adoption fee and vet reference required.  For more information contact Fran at kurthfran2@aol.com or 410-685-8145.  Hula is currently at CHAT to go in the adoption cage so you should be able to visit him there any time.  www.catdoc.com  <img src=\"https:\/\/tracker.rescuegroups.org\/pet?1019369\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Hulagan is a super friendly young cat.  About 7-8 months old.  Light brown tabby.  FELV\/FIV negative, shots, neutered, microchipped.  Adoption fee and vet reference required.  For more information contact Fran at kurthfran2@aol.com or 410-685-8145.  Hula is currently at CHAT to go in the adoption cage so you should be able to visit him there any time.  www.catdoc.com  ",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Hulagan",
+        "newPeopleReaction": "Friendly",
+        "ownerExperience": "None",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313200_100x150.jpg",
+        "sex": "Male",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-hulagan-tabby-cat",
+        "isSponsorable": false,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1019369",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1019369",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2008-11-05T20:28:29Z",
+        "updatedDate": "2008-12-12T20:25:31Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "63"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "9"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2313200"
+            },
+            {
+              "type": "pictures",
+              "id": "2313201"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "104592",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "14 Years 2 Months",
+        "birthDate": "2006-08-06T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Tabby - Orange \/ Domestic Short Hair - orange \/ Mixed (short coat)",
+        "breedPrimary": "Tabby",
+        "breedPrimaryId": 63,
+        "breedSecondary": "Domestic Short Hair",
+        "breedSecondaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Orange classic tabby",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "Scotty is a drop dead gorgeous orange\/red classic tabby.  \"Classic\" refers to those gorgeous circular spiral swirls of color.    He is a timid young man and will need lots of time, quiet and patience.  We'll be happy to help you work through it. <br>He's actually made a lot of progress.  Everyone who met him at the vet talks about sweet he is.  He even likes belly rubs.  But still he's a little guy that should start off in a room by himself, with a hidey hole, food, water and litter all to himself while he bonds with his forever purrson.  Not a good choice for a home with chidren or dogs.  FELV\/FIV negative, shots, altered.  Will be microchipped prior to adoption.  Adoption fee includes registering the microchip.  For more information call Lil at 410-679-2125 or email her at lildecker1@aol.com (but be patient, Lil isn't an email person and doesn't check email every 15 minutes like some of us).<img src=\"https:\/\/tracker.rescuegroups.org\/pet?104592\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Scotty is a drop dead gorgeous orange\/red classic tabby.  \"Classic\" refers to those gorgeous circular spiral swirls of color.    He is a timid young man and will need lots of time, quiet and patience.  We'll be happy to help you work through it. He's actually made a lot of progress.  Everyone who met him at the vet talks about sweet he is.  He even likes belly rubs.  But still he's a little guy that should start off in a room by himself, with a hidey hole, food, water and litter all to himself while he bonds with his forever purrson.  Not a good choice for a home with chidren or dogs.  FELV\/FIV negative, shots, altered.  Will be microchipped prior to adoption.  Adoption fee includes registering the microchip.  For more information call Lil at 410-679-2125 or email her at lildecker1@aol.com (but be patient, Lil isn't an email person and doesn't check email every 15 minutes like some of us).",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 1,
+        "indoorOutdoor": "Indoor Only",
+        "isKidsOk": false,
+        "name": "Scotty",
+        "newPeopleReaction": "Cautious",
+        "ownerExperience": "Breed",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185006_100x70.jpg",
+        "sex": "Male",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-scotty-tabby-cat",
+        "isSponsorable": false,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?104592",
+        "url": "https:\/\/\/animals\/detail?AnimalID=104592",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2007-02-02T15:21:20Z",
+        "updatedDate": "2009-02-07T23:28:10Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "63"
+            },
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "16"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "185006"
+            },
+            {
+              "type": "pictures",
+              "id": "185007"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "10530165",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Adult",
+        "ageString": "11 Years 1 Month",
+        "birthDate": "2009-09-06T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Applehead Siamese \/ Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Applehead Siamese",
+        "breedPrimaryId": 6,
+        "breedSecondary": "Domestic Short Hair",
+        "breedSecondaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Blue point on white",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Pretty Boy came from one of our colonies. &nbsp;Some of these photos were while he was still outside &nbsp;The vet estimates he's 4-8 years old. &nbsp;He's a big, solid boy. &nbsp;I call him lilac point on white. &nbsp;Light blue, quite crossed, Siamese eyes. He's been outside awhile, we don't know how long. &nbsp;But we've promised him an indoor forever home! &nbsp;He's FELV\/FIV negative, neutered, vaccinated and microchipped. &nbsp;He also had extensive dental work. &nbsp;So he's completely vetted and ready to roll! &nbsp; He's not a youngster but has looks and purrsonality to spare. &nbsp;Every time I'd go to feed the colony he'd run up to greet me and \"escort\" me back to the feeding station. I just couldn't leave him out there. Excellent vet references and adoption fee required. &nbsp;For more information email catresuceofmd@mindspring.com.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?10530165\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Pretty Boy came from one of our colonies. &nbsp;Some of these photos were while he was still outside &nbsp;The vet estimates he's 4-8 years old. &nbsp;He's a big, solid boy. &nbsp;I call him lilac point on white. &nbsp;Light blue, quite crossed, Siamese eyes. He's been outside awhile, we don't know how long. &nbsp;But we've promised him an indoor forever home! &nbsp;He's FELV\/FIV negative, neutered, vaccinated and microchipped. &nbsp;He also had extensive dental work. &nbsp;So he's completely vetted and ready to roll! &nbsp; He's not a youngster but has looks and purrsonality to spare. &nbsp;Every time I'd go to feed the colony he'd run up to greet me and \"escort\" me back to the feeding station. I just couldn't leave him out there. Excellent vet references and adoption fee required. &nbsp;For more information email catresuceofmd@mindspring.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 1,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Pretty Boy",
+        "pictureCount": 4,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/40829056_100x79.jpg",
+        "sex": "Male",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-pretty-boy-applehead-siamese-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?10530165",
+        "url": "https:\/\/\/animals\/detail?AnimalID=10530165",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2016-09-04T17:01:46Z",
+        "updatedDate": "2017-02-25T18:57:43Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "6"
+            },
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "616"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "12"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "40829056"
+            },
+            {
+              "type": "pictures",
+              "id": "38791101"
+            },
+            {
+              "type": "pictures",
+              "id": "38662195"
+            },
+            {
+              "type": "pictures",
+              "id": "38662194"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "10530168",
+      "attributes": {
+        "activityLevel": "Slightly Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "6 Years 1 Month",
+        "birthDate": "2014-09-05T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Tabby \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "breedSecondary": "Tabby",
+        "breedSecondaryId": 63,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Brown tabby",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">I picked up (literally, no trap required) Indy on July 3 so named her for Independence Day. &nbsp;She had been outside at least a year. &nbsp;When I started feeding these colonies (as a substitute for a woman who is quite ill) Indy is the ONLY cat who was more interested in attention from me than in the food &nbsp;(although she likes food, too). &nbsp;She had cherry eye (if you have a strong stomach and want to see it in color, check google). &nbsp;We had her to the opthalmologist who did surgery and all indications are the surgery was successful. &nbsp;She's also spayed, vaccinated and micrcochipped. &nbsp;She's probably about 2 years old. &nbsp;She is tiny and quiet and timid but just loves her chin rubbed and sitting on laps. &nbsp;She will be best suited for someone with a relatively quiet household, I think. &nbsp;Indoor only, of course. &nbsp;She has suffered through her last snowstorm outside! &nbsp;Excellent vet references and adoption fee required. &nbsp;For more information contact catrescueofmd@mindspring.com<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?10530168\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "I picked up (literally, no trap required) Indy on July 3 so named her for Independence Day. &nbsp;She had been outside at least a year. &nbsp;When I started feeding these colonies (as a substitute for a woman who is quite ill) Indy is the ONLY cat who was more interested in attention from me than in the food &nbsp;(although she likes food, too). &nbsp;She had cherry eye (if you have a strong stomach and want to see it in color, check google). &nbsp;We had her to the opthalmologist who did surgery and all indications are the surgery was successful. &nbsp;She's also spayed, vaccinated and micrcochipped. &nbsp;She's probably about 2 years old. &nbsp;She is tiny and quiet and timid but just loves her chin rubbed and sitting on laps. &nbsp;She will be best suited for someone with a relatively quiet household, I think. &nbsp;Indoor only, of course. &nbsp;She has suffered through her last snowstorm outside! &nbsp;Excellent vet references and adoption fee required. &nbsp;For more information contact catrescueofmd@mindspring.com",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 1,
+        "indoorOutdoor": "Indoor Only",
+        "isKidsOk": false,
+        "name": "Indy (Independence)",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38791142_100x62.jpg",
+        "sex": "Female",
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-indy-independence-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?10530168",
+        "url": "https:\/\/\/animals\/detail?AnimalID=10530168",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2016-09-04T17:04:00Z",
+        "updatedDate": "2016-12-20T01:59:46Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            },
+            {
+              "type": "breeds",
+              "id": "63"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "9"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "38791142"
+            },
+            {
+              "type": "pictures",
+              "id": "38662208"
+            },
+            {
+              "type": "pictures",
+              "id": "38662209"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1077692",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "12 Years 11 Months",
+        "birthDate": "2007-11-06T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Dilute Tortoiseshell \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "breedSecondary": "Dilute Tortoiseshell",
+        "breedSecondaryId": 23,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Dilute tortie",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "Sara is a young, very pretty, dilute tortoiseshell.  She likes people and cats, loves dogs.  Unfortunately she did not do well in the adoption cage - too public - so she has a few strikes against her ability to find a home.  FELV\/FIV negative, shots, spayed, microchipped.  Vet reference and adoption fee required.  For more information contact Lil at 410-966-1503 or lildecker1@aol.com<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1077692\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Sara is a young, very pretty, dilute tortoiseshell.  She likes people and cats, loves dogs.  Unfortunately she did not do well in the adoption cage - too public - so she has a few strikes against her ability to find a home.  FELV\/FIV negative, shots, spayed, microchipped.  Vet reference and adoption fee required.  For more information contact Lil at 410-966-1503 or lildecker1@aol.com",
+        "isDogsOk": true,
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 3,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Sara",
+        "newPeopleReaction": "Friendly",
+        "ownerExperience": "None",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313202_100x72.jpg",
+        "sex": "Female",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-sara-domestic-short-hair-cat",
+        "isSponsorable": false,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1077692",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1077692",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2008-12-05T13:27:17Z",
+        "updatedDate": "2009-01-08T12:38:58Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            },
+            {
+              "type": "breeds",
+              "id": "23"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "20"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2313202"
+            },
+            {
+              "type": "pictures",
+              "id": "2313203"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1077694",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Adult",
+        "ageString": "15 Years 11 Months",
+        "birthDate": "2004-11-06T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Tortoiseshell \/ Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Tortoiseshell",
+        "breedPrimaryId": 71,
+        "breedSecondary": "Domestic Short Hair",
+        "breedSecondaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Traditional tortie",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "Annei is one of the many cats who have lost their home due to the current mortgage crisis. She is about 4 years old. A typical tortie she loves being petted but then wlll swat when she's had enough. Not a good choice for young children. FELV\/FIV negative, shots, altered. Adoption fee and vet reference required. For more information, contact lildecker1@aol.com or 410-966-1503.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1077694\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Annei is one of the many cats who have lost their home due to the current mortgage crisis. She is about 4 years old. A typical tortie she loves being petted but then wlll swat when she's had enough. Not a good choice for young children. FELV\/FIV negative, shots, altered. Adoption fee and vet reference required. For more information, contact lildecker1@aol.com or 410-966-1503.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 4,
+        "indoorOutdoor": "Indoor Only",
+        "isKidsOk": false,
+        "name": "Annie",
+        "newPeopleReaction": "Friendly",
+        "ownerExperience": "None",
+        "pictureCount": 1,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077694\/2313209_100x123.jpg",
+        "sex": "Female",
+        "sizeGroup": "Medium",
+        "slug": "adopt-annie-tortoiseshell-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1077694",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1077694",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2008-12-05T13:34:53Z",
+        "updatedDate": "2009-05-15T15:57:57Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "71"
+            },
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "20"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2313209"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "11116406",
+      "attributes": {
+        "activityLevel": "Slightly Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "6 Years 1 Month",
+        "birthDate": "2014-08-30T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Long Hair \/ Mixed (long coat)",
+        "breedPrimary": "Domestic Long Hair",
+        "breedPrimaryId": 24,
+        "isBreedMixed": true,
+        "coatLength": "Long",
+        "colorDetails": "Black and while domestic long hair",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "<span style=\"font-size: 14pt;\">Elsa is a gorgeous cat and very sweet. &nbsp;It took her a little while to adjust in her foster home but now she can't get enough attention. &nbsp;She most likely would not do well in a house with very young children. &nbsp;She pretty much ignores the other cats in the foster home. &nbsp;FELV\/FIV, shots, spayed, microchipped. &nbsp;Adoption fee and excellent vet reference required. &nbsp;For more information contact Lil at lildecker1@aol.com.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?11116406\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Elsa is a gorgeous cat and very sweet. &nbsp;It took her a little while to adjust in her foster home but now she can't get enough attention. &nbsp;She most likely would not do well in a house with very young children. &nbsp;She pretty much ignores the other cats in the foster home. &nbsp;FELV\/FIV, shots, spayed, microchipped. &nbsp;Adoption fee and excellent vet reference required. &nbsp;For more information contact Lil at lildecker1@aol.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Elsa",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/47359856_100x75.jpg",
+        "sex": "Female",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-elsa-domestic-long-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?11116406",
+        "url": "https:\/\/\/animals\/detail?AnimalID=11116406",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-02-25T19:06:15Z",
+        "updatedDate": "2017-09-16T17:57:36Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "24"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "6"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "12"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "47359856"
+            },
+            {
+              "type": "pictures",
+              "id": "42909935"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1121",
+      "attributes": {
+        "activityLevel": "Highly Active",
+        "adoptedDate": "2004-08-15T00:00:00Z",
+        "isAdoptionPending": false,
+        "ageGroup": "Adult",
+        "ageString": "16 Years 4 Months",
+        "birthDate": "2004-06-01T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "colorDetails": "Black with stripes",
+        "isCourtesyListing": false,
+        "descriptionHtml": "About 10 weeks old as of August 1.  One boy; one girl.  They are black with stripes (I didn't believe it either until I saw them!) FELV\/FIV negative, shots, wormed.  Adoption fee.  Call Steph at 410-967-0301 (cell) or 410-439-3068 (home) or email her at stephanie_keefer@hotmail.com.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1121\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "About 10 weeks old as of August 1.  One boy; one girl.  They are black with stripes (I didn't believe it either until I saw them!) FELV\/FIV negative, shots, wormed.  Adoption fee.  Call Steph at 410-967-0301 (cell) or 410-439-3068 (home) or email her at stephanie_keefer@hotmail.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 1,
+        "name": "Kittens (1 boy, 1 girl)",
+        "ownerExperience": "None",
+        "pictureCount": 0,
+        "sizeUOM": "Pounds",
+        "slug": "adopt-kittens-boy-girl-domestic-short-hair-cat",
+        "isSponsorable": false,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1121",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1121",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2004-07-31T15:40:29Z",
+        "updatedDate": "2007-01-05T20:33:05Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1122",
+      "attributes": {
+        "activityLevel": "Highly Active",
+        "adoptedDate": "2004-08-15T00:00:00Z",
+        "isAdoptionPending": false,
+        "ageGroup": "Adult",
+        "ageString": "16 Years 5 Months",
+        "birthDate": "2004-04-27T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "colorDetails": "Black with stripes",
+        "isCourtesyListing": false,
+        "descriptionHtml": "About 13 weeks old as of August 1.   She is black with stripes (I didn't believe it either until I saw her!) FELV\/FIV negative, shots, wormed.  Adoption fee.  From August 13 to August 20 call Jen at 410-549-6098 or email her at jturner@mcdonogh.org.  Beginning August 21 you can contact Jen or call Steph at 410-967-0301 (cell) or 410-439-3068 (home) or email her at stephanie_keefer@hotmail.com.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1122\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "About 13 weeks old as of August 1.   She is black with stripes (I didn't believe it either until I saw her!) FELV\/FIV negative, shots, wormed.  Adoption fee.  From August 13 to August 20 call Jen at 410-549-6098 or email her at jturner@mcdonogh.org.  Beginning August 21 you can contact Jen or call Steph at 410-967-0301 (cell) or 410-439-3068 (home) or email her at stephanie_keefer@hotmail.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 1,
+        "name": "Girl kitten",
+        "ownerExperience": "None",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1393_100x150.jpg",
+        "sex": "Female",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-girl-kitten-domestic-short-hair-cat",
+        "isSponsorable": false,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1122",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1122",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2004-07-31T15:41:08Z",
+        "updatedDate": "2004-08-15T14:37:23Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "1393"
+            },
+            {
+              "type": "pictures",
+              "id": "1395"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "11428091",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "6 Years 5 Months",
+        "birthDate": "2014-04-22T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Black and white tuxedo",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Rebel was left behind when someone moved. The neighborhood was feeding her but no one took her in. Someone in the neighborhood who'd adopted from us years ago gave us a call. &nbsp;Rebel is a young girl, maybe around 3 years old. &nbsp;On the small side at 9 pounds. &nbsp; She is FELV\/FIV negative, vaccinated, altered and microchipped. &nbsp;Quite friendly, she's more than ready for a forever home. &nbsp;Adoption fee and vet reference required. &nbsp; For more information contact us at catrescueofmd@mindspring.com. &nbsp;<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?11428091\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Rebel was left behind when someone moved. The neighborhood was feeding her but no one took her in. Someone in the neighborhood who'd adopted from us years ago gave us a call. &nbsp;Rebel is a young girl, maybe around 3 years old. &nbsp;On the small side at 9 pounds. &nbsp; She is FELV\/FIV negative, vaccinated, altered and microchipped. &nbsp;Quite friendly, she's more than ready for a forever home. &nbsp;Adoption fee and vet reference required. &nbsp; For more information contact us at catrescueofmd@mindspring.com. &nbsp;",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Rebel (F)",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310860_100x177.jpg",
+        "sex": "Female",
+        "sizeCurrent": 9.399999618530273,
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-rebel-f-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?11428091",
+        "url": "https:\/\/\/animals\/detail?AnimalID=11428091",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-05-21T18:15:44Z",
+        "updatedDate": "2017-07-08T13:28:47Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "6"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "14"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "45310860"
+            },
+            {
+              "type": "pictures",
+              "id": "45310861"
+            },
+            {
+              "type": "pictures",
+              "id": "45310862"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "11928917",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "3 Years 5 Months",
+        "birthDate": "2017-04-28T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Tabby\/calico mix",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 14pt;\">Vera is about 4 months old. &nbsp;She is VERY friendly. &nbsp;Just adorable. &nbsp;FELV\/FIV negative, shots, spayed, microchipped. &nbsp;Adoption fee and vet reference required. &nbsp;Contact Lil at lildecker1@aol.com for more information.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?11928917\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Vera is about 4 months old. &nbsp;She is VERY friendly. &nbsp;Just adorable. &nbsp;FELV\/FIV negative, shots, spayed, microchipped. &nbsp;Adoption fee and vet reference required. &nbsp;Contact Lil at lildecker1@aol.com for more information.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "name": "Vera",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598841_100x124.jpg",
+        "sex": "Female",
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-vera-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?11928917",
+        "url": "https:\/\/\/animals\/detail?AnimalID=11928917",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-08-26T17:59:13Z",
+        "updatedDate": "2017-09-02T11:12:10Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "9"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "48598841"
+            },
+            {
+              "type": "pictures",
+              "id": "48598842"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1194850",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "12 Years 10 Months",
+        "birthDate": "2007-12-01T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Black",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "Kara is a sweet young girl found at one of our colonies. She is friendly and loves to purr. A little cautious - being dumped at a colony can do that to you! FELV\/FIV negative, spayed, distemper and rabies shots, microchipped. Adoption fee includes registering the microchip and all veterinary work done to date. Vet reference required. Kara is currently in the adoption cage at CHAT (www.catdoc.com). Feel free to stop by any time and meet her. Email lildecker1@aol.com for more information.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1194850\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Kara is a sweet young girl found at one of our colonies. She is friendly and loves to purr. A little cautious - being dumped at a colony can do that to you! FELV\/FIV negative, spayed, distemper and rabies shots, microchipped. Adoption fee includes registering the microchip and all veterinary work done to date. Vet reference required. Kara is currently in the adoption cage at CHAT (www.catdoc.com). Feel free to stop by any time and meet her. Email lildecker1@aol.com for more information.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 7,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Kara",
+        "newPeopleReaction": "Friendly",
+        "ownerExperience": "None",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536741_100x89.jpg",
+        "sex": "Female",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-kara-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1194850",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1194850",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2009-01-25T14:37:20Z",
+        "updatedDate": "2009-05-05T15:14:58Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "1"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2536741"
+            },
+            {
+              "type": "pictures",
+              "id": "2536740"
+            },
+            {
+              "type": "pictures",
+              "id": "2536742"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1194854",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "12 Years 10 Months",
+        "birthDate": "2007-12-01T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Tuxedo \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "breedSecondary": "Tuxedo",
+        "breedSecondaryId": 73,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Black and white",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "<SPAN style=\"FONT-SIZE: 14pt\" mce_style=\"font-size: 14pt;\">Marli is&nbsp;generally friendly, but cautious. Had a wound on her head which suggested a possible run in with a human. Found at one of our colonies. FELV\/FIV negative, spayed, distemper and rabies shots, microchipped. Adoption fee includes registering the microchip and all veterinary work done to date. Vet reference required. Marli is currently in the adoption cage at CHAT (www.catdoc.com). Feel free to stop by to see her (check the CHAT web site for directions and hours). Definitely a low pressure way to check out a cat. Email lildecker1@aol.com for more information.<\/SPAN><img src=\"https:\/\/tracker.rescuegroups.org\/pet?1194854\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Marli is&nbsp;generally friendly, but cautious. Had a wound on her head which suggested a possible run in with a human. Found at one of our colonies. FELV\/FIV negative, spayed, distemper and rabies shots, microchipped. Adoption fee includes registering the microchip and all veterinary work done to date. Vet reference required. Marli is currently in the adoption cage at CHAT (www.catdoc.com). Feel free to stop by to see her (check the CHAT web site for directions and hours). Definitely a low pressure way to check out a cat. Email lildecker1@aol.com for more information.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 5,
+        "indoorOutdoor": "Indoor Only",
+        "isKidsOk": false,
+        "name": "Marli",
+        "newPeopleReaction": "Cautious",
+        "ownerExperience": "None",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/2536750_100x188.jpg",
+        "sex": "Female",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-marli-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1194854",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1194854",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2009-01-25T14:42:54Z",
+        "updatedDate": "2010-07-17T11:38:51Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            },
+            {
+              "type": "breeds",
+              "id": "73"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "6"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2536750"
+            },
+            {
+              "type": "pictures",
+              "id": "3396053"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12131760",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageString": "3 Years 3 Months",
+        "birthDate": "2017-06-16T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Gray tabby and white",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Hamilton is about 4 months old.&nbsp;<span>His mother was put outside last December to \"catch rats\".&nbsp; Not spayed, she of course had kittens.&nbsp; She's now in a new home and her kittens are ready for their forever homes.&nbsp;&nbsp;<\/span> Hamilton has been described as a love bug, good with dogs, respecful of cats.&nbsp; He loves to be picked up and petted.&nbsp; He purrs as soon as you pick him up; quite the charmer!&nbsp; &nbsp;FELV\/FIV negative, neutered, rabies and distemper shots.&nbsp; Adoption fee and vet reference required.&nbsp; Contact Helene for more information at hquinn@chubb.com<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12131760\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Hamilton is about 4 months old.&nbsp;His mother was put outside last December to \"catch rats\".&nbsp; Not spayed, she of course had kittens.&nbsp; She's now in a new home and her kittens are ready for their forever homes.&nbsp;&nbsp; Hamilton has been described as a love bug, good with dogs, respecful of cats.&nbsp; He loves to be picked up and petted.&nbsp; He purrs as soon as you pick him up; quite the charmer!&nbsp; &nbsp;FELV\/FIV negative, neutered, rabies and distemper shots.&nbsp; Adoption fee and vet reference required.&nbsp; Contact Helene for more information at hquinn@chubb.com",
+        "isDogsOk": true,
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Hamilton",
+        "pictureCount": 4,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50330131_100x133.jpg",
+        "sex": "Male",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-hamilton-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12131760",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12131760",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-10-14T18:14:48Z",
+        "updatedDate": "2017-10-21T18:23:13Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "13"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "50330131"
+            },
+            {
+              "type": "pictures",
+              "id": "50401647"
+            },
+            {
+              "type": "pictures",
+              "id": "50401648"
+            },
+            {
+              "type": "pictures",
+              "id": "50401649"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12131773",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageString": "3 Years 3 Months",
+        "birthDate": "2017-06-16T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Gray tabby",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Koco is about 4 months old.&nbsp; His mother was put outside last December to \"catch rats\".&nbsp; Not spayed, she of course had kittens.&nbsp; She's now in a new home and her kittens are ready for their forever homes.&nbsp; Koco loves to be petted on his face.&nbsp; He purrs when you pet him.&nbsp; He is getting used to being picked up and snugggled.&nbsp; He is good with dogs, respecful of cats.&nbsp; FELV\/FIV negative, neutered, rabies and distemper shots.&nbsp; Adoption fee and vet reference required.&nbsp; Contact Helene for more information at hquinn@chubb.com<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12131773\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Koco is about 4 months old.&nbsp; His mother was put outside last December to \"catch rats\".&nbsp; Not spayed, she of course had kittens.&nbsp; She's now in a new home and her kittens are ready for their forever homes.&nbsp; Koco loves to be petted on his face.&nbsp; He purrs when you pet him.&nbsp; He is getting used to being picked up and snugggled.&nbsp; He is good with dogs, respecful of cats.&nbsp; FELV\/FIV negative, neutered, rabies and distemper shots.&nbsp; Adoption fee and vet reference required.&nbsp; Contact Helene for more information at hquinn@chubb.com",
+        "isDogsOk": true,
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Koco",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401657_100x133.jpg",
+        "sex": "Male",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-koco-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12131773",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12131773",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-10-14T18:15:47Z",
+        "updatedDate": "2017-10-21T18:23:31Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "13"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "50401657"
+            },
+            {
+              "type": "pictures",
+              "id": "50401656"
+            },
+            {
+              "type": "pictures",
+              "id": "50401658"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12157488",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "4 Years",
+        "birthDate": "2016-10-07T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair (medium coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isCatsOk": true,
+        "coatLength": "Medium",
+        "colorDetails": "Grey tabby",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Pixie is very small.&nbsp; She is about a year old, a little hesitant but quite sweet.&nbsp; Now that she's settled into her foster home we've discovered she LOVES being part of a multiple cat household.&nbsp; Found wandering outside, she's FELV\/FIV negative, and now spayed, vaccinated and microchipped and ready for a home of her own.&nbsp; Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd love to consider your application.&nbsp; Contact Lil at lildecker1@aol.com.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12157488\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Pixie is very small.&nbsp; She is about a year old, a little hesitant but quite sweet.&nbsp; Now that she's settled into her foster home we've discovered she LOVES being part of a multiple cat household.&nbsp; Found wandering outside, she's FELV\/FIV negative, and now spayed, vaccinated and microchipped and ready for a home of her own.&nbsp; Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd love to consider your application.&nbsp; Contact Lil at lildecker1@aol.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Pixie",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611228_100x101.jpg",
+        "sex": "Female",
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-pixie-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12157488",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12157488",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-10-21T18:27:43Z",
+        "updatedDate": "2018-01-01T16:55:58Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "13"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "50611228"
+            },
+            {
+              "type": "pictures",
+              "id": "50611229"
+            },
+            {
+              "type": "pictures",
+              "id": "50611230"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12170208",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "3 Years 3 Months",
+        "birthDate": "2017-06-25T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "coatLength": "Short",
+        "colorDetails": "Gray and white",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Marge is one of three kittens that just showed up at a colony.&nbsp; No mother cat, just kittens.&nbsp; That's a puzzler.&nbsp; At first of course they were terrified but Marge has really come around.&nbsp; She's a cuddler now.&nbsp; She's about 4 months old as I write this in late October.&nbsp; FELV\/FIV negative, vaccinated, microchipped and spayed, she's ready for her forever home.&nbsp; &nbsp;Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd be happy to consider your application.&nbsp; Contact lildecker1@aol.com.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12170208\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Marge is one of three kittens that just showed up at a colony.&nbsp; No mother cat, just kittens.&nbsp; That's a puzzler.&nbsp; At first of course they were terrified but Marge has really come around.&nbsp; She's a cuddler now.&nbsp; She's about 4 months old as I write this in late October.&nbsp; FELV\/FIV negative, vaccinated, microchipped and spayed, she's ready for her forever home.&nbsp; &nbsp;Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd be happy to consider your application.&nbsp; Contact lildecker1@aol.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Marge",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50786584_100x91.jpg",
+        "sex": "Female",
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-marge-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12170208",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12170208",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-10-23T12:02:18Z",
+        "updatedDate": "2017-11-18T12:28:20Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "616"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "12"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "50786584"
+            },
+            {
+              "type": "pictures",
+              "id": "50696514"
+            },
+            {
+              "type": "pictures",
+              "id": "50696515"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12170215",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "3 Years 3 Months",
+        "birthDate": "2017-06-25T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isCatsOk": true,
+        "coatLength": "Short",
+        "colorDetails": "Gray",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Bart is part of a litter of kittens that just showed up at a colony.&nbsp; No mother cat, just kittens.&nbsp; That's a puzzler.&nbsp; At first of course they were terrified but they have really come around although Bart is still a little cautious.&nbsp; &nbsp;He is about 6 months old as I write this on New Year's Day.&nbsp; FELV\/FIV negative, vaccinated, microchipped and neutered, he is ready for his forever home.&nbsp; &nbsp;Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd be happy to consider your application.&nbsp; Contact lildecker1@aol.com.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12170215\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Bart is part of a litter of kittens that just showed up at a colony.&nbsp; No mother cat, just kittens.&nbsp; That's a puzzler.&nbsp; At first of course they were terrified but they have really come around although Bart is still a little cautious.&nbsp; &nbsp;He is about 6 months old as I write this on New Year's Day.&nbsp; FELV\/FIV negative, vaccinated, microchipped and neutered, he is ready for his forever home.&nbsp; &nbsp;Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd be happy to consider your application.&nbsp; Contact lildecker1@aol.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Bart",
+        "pictureCount": 4,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294239_100x66.jpg",
+        "sex": "Male",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-bart-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12170215",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12170215",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2017-10-23T12:09:06Z",
+        "updatedDate": "2018-01-06T02:36:38Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "11"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "11"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "53294239"
+            },
+            {
+              "type": "pictures",
+              "id": "50696740"
+            },
+            {
+              "type": "pictures",
+              "id": "50696741"
+            },
+            {
+              "type": "pictures",
+              "id": "53294114"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12425913",
+      "attributes": {
+        "isAdoptionPending": false,
+        "ageString": "3 Years 3 Months",
+        "birthDate": "2017-07-03T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "coatLength": "Short",
+        "colorDetails": "Black and white",
+        "isCourtesyListing": false,
+        "descriptionHtml": "<span style=\"font-size: 14pt;\">Homer is part of a litter of kittens that just showed up at a colony.&nbsp; No mother cat, just kittens.&nbsp; That's a puzzler.&nbsp; At first of course they were terrified but Homer has really come around.&nbsp; &nbsp;He is about 6 months old as I write this on New Year's Day.&nbsp; FELV\/FIV negative, vaccinated, microchipped and neutered, he is ready for his forever home.&nbsp; &nbsp;Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd be happy to consider your application.&nbsp; Contact lildecker1@aol.com.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12425913\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Homer is part of a litter of kittens that just showed up at a colony.&nbsp; No mother cat, just kittens.&nbsp; That's a puzzler.&nbsp; At first of course they were terrified but Homer has really come around.&nbsp; &nbsp;He is about 6 months old as I write this on New Year's Day.&nbsp; FELV\/FIV negative, vaccinated, microchipped and neutered, he is ready for his forever home.&nbsp; &nbsp;Excellent vet reference and adoption fee required.&nbsp; If your vet will sing your praises, we'd be happy to consider your application.&nbsp; Contact lildecker1@aol.com.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "name": "Homer",
+        "pictureCount": 4,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294249_100x75.jpg",
+        "sex": "Male",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-homer-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12425913",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12425913",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2018-01-01T17:04:29Z",
+        "updatedDate": "2018-01-06T02:36:57Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "6"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "12"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "53294249"
+            },
+            {
+              "type": "pictures",
+              "id": "53294247"
+            },
+            {
+              "type": "pictures",
+              "id": "53294248"
+            },
+            {
+              "type": "pictures",
+              "id": "53294250"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12474573",
+      "attributes": {
+        "isAdoptionPending": false,
+        "ageGroup": "Adult",
+        "ageString": "6 Years 3 Months",
+        "birthDate": "2014-06-19T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Calico \/ Domestic Medium Hair \/ Mixed (medium coat)",
+        "breedPrimary": "Calico",
+        "breedPrimaryId": 15,
+        "breedSecondary": "Domestic Medium Hair",
+        "breedSecondaryId": 29,
+        "isBreedMixed": true,
+        "coatLength": "Medium",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Cinnamon appeared in the general area of one of our former colonies (we check back occasionally).&nbsp; The vet estimates 3-4 years old.&nbsp; She is a total love!&nbsp; She was already spayed.&nbsp; By the time we are done with her she will also (1) have rabies and distemper shots, (2) been microchipped, and (3) have had a complete dental.&nbsp; &nbsp;Adoption fee and vet reference required.&nbsp; If your vet will sing your praises we'd love to hear from you (extra points if they don't have to look you up!).&nbsp; Contact Lil at lildecker@aol.com for more information.<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12474573\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Cinnamon appeared in the general area of one of our former colonies (we check back occasionally).&nbsp; The vet estimates 3-4 years old.&nbsp; She is a total love!&nbsp; She was already spayed.&nbsp; By the time we are done with her she will also (1) have rabies and distemper shots, (2) been microchipped, and (3) have had a complete dental.&nbsp; &nbsp;Adoption fee and vet reference required.&nbsp; If your vet will sing your praises we'd love to hear from you (extra points if they don't have to look you up!).&nbsp; Contact Lil at lildecker@aol.com for more information.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Cinnamon",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758276_100x66.jpg",
+        "sex": "Female",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-cinnamon-calico-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12474573",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12474573",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2018-01-14T20:35:20Z",
+        "updatedDate": "2018-03-24T18:56:30Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "15"
+            },
+            {
+              "type": "breeds",
+              "id": "29"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "10"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "9"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "54758276"
+            },
+            {
+              "type": "pictures",
+              "id": "53720346"
+            },
+            {
+              "type": "pictures",
+              "id": "54758277"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "12852146",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Adult",
+        "ageString": "8 Years 7 Months",
+        "birthDate": "2012-03-09T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Dilute tortoiseshell",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 14pt; font-family: 'times new roman', times;\">Mildred (Millie) was rescued by a sanctuary without an adoption functionality.&nbsp; She is too sweet not to have a forever home so we agreed to help with that.&nbsp; She's small - about 7 pounds.&nbsp; Definitely an adult (5-7 years old most likely).&nbsp; &nbsp;She's spayed, microchipped and vaccinated.&nbsp; FELV\/FIV negative.&nbsp; We are waiting to hear if she needs her teeth cleaned.&nbsp; If she does, we'l take care of that as well.&nbsp; Must be indoor.&nbsp; Adoption fee and vet reference required.&nbsp; If your vet will sing your praises you get bonus points!&nbsp; Email catrescueofmd@mindspring.com for more information.&nbsp;&nbsp;<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?12852146\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Mildred (Millie) was rescued by a sanctuary without an adoption functionality.&nbsp; She is too sweet not to have a forever home so we agreed to help with that.&nbsp; She's small - about 7 pounds.&nbsp; Definitely an adult (5-7 years old most likely).&nbsp; &nbsp;She's spayed, microchipped and vaccinated.&nbsp; FELV\/FIV negative.&nbsp; We are waiting to hear if she needs her teeth cleaned.&nbsp; If she does, we'l take care of that as well.&nbsp; Must be indoor.&nbsp; Adoption fee and vet reference required.&nbsp; If your vet will sing your praises you get bonus points!&nbsp; Email catrescueofmd@mindspring.com for more information.&nbsp;&nbsp;",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Mildred (Millie)",
+        "pictureCount": 2,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56074622_100x201.jpg",
+        "sex": "Female",
+        "sizeCurrent": 7,
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-mildred-millie-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?12852146",
+        "url": "https:\/\/\/animals\/detail?AnimalID=12852146",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2018-04-07T15:28:25Z",
+        "updatedDate": "2018-05-11T09:51:20Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "11"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "10"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "56074622"
+            },
+            {
+              "type": "pictures",
+              "id": "56138196"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "13355518",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "3 Years 8 Months",
+        "birthDate": "2017-01-28T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Calico\/tabby",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "<span style=\"font-size: 14pt;\">Wally was found at a Walmart.&nbsp; Although she appears to have a tipped ear, she isn't feral - in fact, she's quite friendly - and there was no sign of a colony.&nbsp; Passersby were ignoring her or giving her junk food.&nbsp; She's now been tested (negative for FELV and FIV), spayed and vaccinated.&nbsp; She'svery friendly and ready for a new home!<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?13355518\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Wally was found at a Walmart.&nbsp; Although she appears to have a tipped ear, she isn't feral - in fact, she's quite friendly - and there was no sign of a colony.&nbsp; Passersby were ignoring her or giving her junk food.&nbsp; She's now been tested (negative for FELV and FIV), spayed and vaccinated.&nbsp; She'svery friendly and ready for a new home!",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "name": "Wally",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150161_100x158.jpg",
+        "sex": "Female",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-wally-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?13355518",
+        "url": "https:\/\/\/animals\/detail?AnimalID=13355518",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2018-07-29T17:25:15Z",
+        "updatedDate": "2018-08-29T17:00:26Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "9"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "59150161"
+            },
+            {
+              "type": "pictures",
+              "id": "59150160"
+            },
+            {
+              "type": "pictures",
+              "id": "59150162"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "1349742",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "12 Years 7 Months",
+        "birthDate": "2008-03-04T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "Domestic Short Hair \/ Domestic Short Hair \/ Mixed (short coat)",
+        "breedPrimary": "Domestic Short Hair",
+        "breedPrimaryId": 35,
+        "breedSecondary": "Domestic Short Hair",
+        "breedSecondaryId": 35,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "grey tabby with white",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "descriptionHtml": "Paddy was abandoned in the lobby of a local hospital! He is a friendly young man, about 1 year old. And isn't he cute? He's FELV\/FIV negative, neutered, and vaccinated. Vet reference, adoption fee required. For more information contact Maria at Mmanna@lifebridgehealth.org.<img src=\"https:\/\/tracker.rescuegroups.org\/pet?1349742\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Paddy was abandoned in the lobby of a local hospital! He is a friendly young man, about 1 year old. And isn't he cute? He's FELV\/FIV negative, neutered, and vaccinated. Vet reference, adoption fee required. For more information contact Maria at Mmanna@lifebridgehealth.org.",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 3,
+        "indoorOutdoor": "Indoor Only",
+        "isKidsOk": false,
+        "name": "Paddy",
+        "newPeopleReaction": "Friendly",
+        "ownerExperience": "None",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883964_100x75.jpg",
+        "sex": "Male",
+        "sizeGroup": "Medium",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-paddy-domestic-short-hair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?1349742",
+        "url": "https:\/\/\/animals\/detail?AnimalID=1349742",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2009-04-03T17:33:56Z",
+        "updatedDate": "2009-05-05T15:14:19Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "35"
+            },
+            {
+              "type": "breeds",
+              "id": "35"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "13"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "8"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "2883964"
+            },
+            {
+              "type": "pictures",
+              "id": "2883951"
+            },
+            {
+              "type": "pictures",
+              "id": "2883954"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "type": "animals",
+      "id": "13618670",
+      "attributes": {
+        "activityLevel": "Moderately Active",
+        "isAdoptionPending": false,
+        "ageGroup": "Young",
+        "ageString": "3 Years 6 Months",
+        "birthDate": "2017-04-01T00:00:00Z",
+        "isBirthDateExact": false,
+        "breedString": "American Shorthair \/ Mixed (short coat)",
+        "breedPrimary": "American Shorthair",
+        "breedPrimaryId": 3,
+        "isBreedMixed": true,
+        "coatLength": "Short",
+        "colorDetails": "Tortoiseshell and more",
+        "isCourtesyListing": false,
+        "isCurrentVaccinations": true,
+        "isDeclawed": false,
+        "descriptionHtml": "<span style=\"font-size: 12pt;\">Altheana was found wandering in the Eastpoint area.&nbsp; She's very cute and quite sweet.&nbsp; Likes people, not sure yet about other animals.&nbsp; About a year and a half old.&nbsp; FELV\/FIV negative, spayed, and vaccinated.&nbsp; Adoption fee and excellent vet reference required.&nbsp; Contact Lil at lildecker1@aol.com for more information.&nbsp;<\/span><img src=\"https:\/\/tracker.rescuegroups.org\/pet?13618670\" width=\"0\" height=\"0\" alt=\"\" \/>",
+        "descriptionText": "Altheana was found wandering in the Eastpoint area.&nbsp; She's very cute and quite sweet.&nbsp; Likes people, not sure yet about other animals.&nbsp; About a year and a half old.&nbsp; FELV\/FIV negative, spayed, and vaccinated.&nbsp; Adoption fee and excellent vet reference required.&nbsp; Contact Lil at lildecker1@aol.com for more information.&nbsp;",
+        "isNeedingFoster": false,
+        "isFound": false,
+        "priority": 10,
+        "indoorOutdoor": "Indoor Only",
+        "isKidsOk": true,
+        "name": "Altheana",
+        "pictureCount": 3,
+        "pictureThumbnailUrl": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/60992366_100x198.jpg",
+        "sex": "Female",
+        "sizeGroup": "Small",
+        "sizeUOM": "Pounds",
+        "slug": "adopt-altheana-american-shorthair-cat",
+        "isSpecialNeeds": false,
+        "isSponsorable": true,
+        "trackerimageUrl": "https:\/\/tracker.rescuegroups.org\/pet?13618670",
+        "url": "https:\/\/\/animals\/detail?AnimalID=13618670",
+        "videoCount": 0,
+        "videoUrlCount": 0,
+        "createdDate": "2018-10-03T13:26:59Z",
+        "updatedDate": "2018-10-14T01:25:59Z"
+      },
+      "relationships": {
+        "breeds": {
+          "data": [
+            {
+              "type": "breeds",
+              "id": "3"
+            }
+          ]
+        },
+        "colors": {
+          "data": [
+            {
+              "type": "colors",
+              "id": "20"
+            }
+          ]
+        },
+        "patterns": {
+          "data": [
+            {
+              "type": "patterns",
+              "id": "10"
+            }
+          ]
+        },
+        "species": {
+          "data": [
+            {
+              "type": "species",
+              "id": "3"
+            }
+          ]
+        },
+        "statuses": {
+          "data": [
+            {
+              "type": "statuses",
+              "id": "3"
+            }
+          ]
+        },
+        "locations": {
+          "data": [
+            {
+              "type": "locations",
+              "id": "16777215"
+            }
+          ]
+        },
+        "orgs": {
+          "data": [
+            {
+              "type": "orgs",
+              "id": "12"
+            }
+          ]
+        },
+        "pictures": {
+          "data": [
+            {
+              "type": "pictures",
+              "id": "60992366"
+            },
+            {
+              "type": "pictures",
+              "id": "61003989"
+            },
+            {
+              "type": "pictures",
+              "id": "61003990"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "included": [
+    {
+      "type": "breeds",
+      "id": "24",
+      "attributes": {
+        "name": "Domestic Long Hair"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/24"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "6",
+      "attributes": {
+        "name": "Black and White"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/6"
+      }
+    },
+    {
+      "type": "species",
+      "id": "3",
+      "attributes": {
+        "singular": "Cat",
+        "plural": "Cats",
+        "youngSingular": "Kitten",
+        "youngPlural": "Kittens"
+      },
+      "links": {
+        "self": "\/public\/animals\/species\/3"
+      }
+    },
+    {
+      "type": "statuses",
+      "id": "3",
+      "attributes": {
+        "name": "Adopted",
+        "description": "Adopted"
+      },
+      "links": {
+        "self": "\/public\/animals\/statuses\/3"
+      }
+    },
+    {
+      "type": "locations",
+      "id": "16777215",
+      "attributes": {
+        "city": "Catonsville",
+        "state": "MD",
+        "citystate": "Catonsville, MD",
+        "postalcode": "21228",
+        "country": "United States",
+        "lat": 39.2675,
+        "lon": -76.7446,
+        "coordinates": "39.2675, -76.7446"
+      }
+    },
+    {
+      "type": "orgs",
+      "id": "12",
+      "attributes": {
+        "name": "Cat Rescue of Maryland, Inc.",
+        "city": "Baltimore",
+        "state": "MD",
+        "postalcode": "21228",
+        "postalcodePlus4": "3915",
+        "country": "United States",
+        "email": "catrescueofmd@mindspring.com",
+        "url": "http:\/\/www.catrescueofmd.org",
+        "facebookUrl": "None",
+        "type": "Rescue",
+        "lat": 39.26750183105469,
+        "lon": -76.74459838867188,
+        "coordinates": "39.2675, -76.7446",
+        "citystate": "Baltimore, MD"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2197103",
+      "attributes": {
+        "original": {
+          "filesize": 37460,
+          "resolutionX": 500,
+          "resolutionY": 475,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019366\/2197103_500x475.jpg"
+        },
+        "large": {
+          "filesize": 37460,
+          "resolutionX": 500,
+          "resolutionY": 475,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019366\/2197103_500x475.jpg"
+        },
+        "small": {
+          "filesize": 2856,
+          "resolutionX": 100,
+          "resolutionY": 95,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019366\/2197103_100x95.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2008-11-05T20:25:34Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "63",
+      "attributes": {
+        "name": "Tabby"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/63"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "9",
+      "attributes": {
+        "name": "Brown Tabby"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/9"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2313200",
+      "attributes": {
+        "original": {
+          "filesize": 60388,
+          "resolutionX": 500,
+          "resolutionY": 750,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313200_500x750.jpg"
+        },
+        "large": {
+          "filesize": 60388,
+          "resolutionX": 500,
+          "resolutionY": 750,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313200_500x750.jpg"
+        },
+        "small": {
+          "filesize": 5194,
+          "resolutionX": 100,
+          "resolutionY": 150,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313200_100x150.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2008-12-05T13:22:55Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2313201",
+      "attributes": {
+        "original": {
+          "filesize": 50186,
+          "resolutionX": 500,
+          "resolutionY": 691,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313201_500x691.jpg"
+        },
+        "large": {
+          "filesize": 50186,
+          "resolutionX": 500,
+          "resolutionY": 691,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313201_500x691.jpg"
+        },
+        "small": {
+          "filesize": 4174,
+          "resolutionX": 100,
+          "resolutionY": 138,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1019\/1019369\/2313201_100x138.jpg"
+        },
+        "order": 2,
+        "created": null,
+        "updated": "2008-12-05T13:22:55Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "35",
+      "attributes": {
+        "name": "Domestic Short Hair"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/35"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "16",
+      "attributes": {
+        "name": "Red Tabby"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/16"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "185006",
+      "attributes": {
+        "original": {
+          "filesize": 30444,
+          "resolutionX": 500,
+          "resolutionY": 352,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185006_500x352.jpg"
+        },
+        "large": {
+          "filesize": 30444,
+          "resolutionX": 500,
+          "resolutionY": 352,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185006_500x352.jpg"
+        },
+        "small": {
+          "filesize": 2909,
+          "resolutionX": 100,
+          "resolutionY": 70,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185006_100x70.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2007-08-09T21:50:19Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "185007",
+      "attributes": {
+        "original": {
+          "filesize": 26292,
+          "resolutionX": 500,
+          "resolutionY": 320,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185007_500x320.jpg"
+        },
+        "large": {
+          "filesize": 26292,
+          "resolutionX": 500,
+          "resolutionY": 320,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185007_500x320.jpg"
+        },
+        "small": {
+          "filesize": 2487,
+          "resolutionX": 100,
+          "resolutionY": 64,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/104\/104592\/185007_100x64.jpg"
+        },
+        "order": 2,
+        "created": null,
+        "updated": "2007-08-09T21:50:19Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "6",
+      "attributes": {
+        "name": "Applehead Siamese"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/6"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "616",
+      "attributes": {
+        "name": "Gray and White"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/616"
+      }
+    },
+    {
+      "type": "patterns",
+      "id": "12",
+      "attributes": {
+        "name": "Bicolor"
+      },
+      "links": {
+        "self": "\/public\/animals\/patterns\/12"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "40829056",
+      "attributes": {
+        "original": {
+          "filesize": 362002,
+          "resolutionX": 1777,
+          "resolutionY": 1410,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/40829056_1777x1410.jpg"
+        },
+        "large": {
+          "filesize": 31745,
+          "resolutionX": 500,
+          "resolutionY": 396,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/40829056_500x396.jpg"
+        },
+        "small": {
+          "filesize": 2888,
+          "resolutionX": 100,
+          "resolutionY": 79,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/40829056_100x79.jpg"
+        },
+        "order": 1,
+        "created": "2016-12-01T20:32:14Z",
+        "updated": "2016-12-23T16:26:27Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "38791101",
+      "attributes": {
+        "original": {
+          "filesize": 387981,
+          "resolutionX": 2048,
+          "resolutionY": 1536,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38791101_2048x1536.jpg"
+        },
+        "large": {
+          "filesize": 20775,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38791101_500x375.jpg"
+        },
+        "small": {
+          "filesize": 1956,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38791101_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2016-09-09T18:34:41Z",
+        "updated": "2016-12-23T16:26:27Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "38662195",
+      "attributes": {
+        "original": {
+          "filesize": 969853,
+          "resolutionX": 2048,
+          "resolutionY": 1536,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38662195_2048x1536.jpg"
+        },
+        "large": {
+          "filesize": 56070,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38662195_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2770,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38662195_100x75.jpg"
+        },
+        "order": 3,
+        "created": "2016-09-04T17:01:48Z",
+        "updated": "2016-12-23T16:26:27Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "38662194",
+      "attributes": {
+        "original": {
+          "filesize": 710300,
+          "resolutionX": 2048,
+          "resolutionY": 1536,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38662194_2048x1536.jpg"
+        },
+        "large": {
+          "filesize": 49003,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38662194_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2927,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530165\/38662194_100x75.jpg"
+        },
+        "order": 4,
+        "created": "2016-09-04T17:01:46Z",
+        "updated": "2016-12-23T16:26:27Z"
+      }
+    },
+    {
+      "type": "patterns",
+      "id": "8",
+      "attributes": {
+        "name": "Tabby"
+      },
+      "links": {
+        "self": "\/public\/animals\/patterns\/8"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "38791142",
+      "attributes": {
+        "original": {
+          "filesize": 214847,
+          "resolutionX": 1419,
+          "resolutionY": 887,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38791142_1419x887.jpg"
+        },
+        "large": {
+          "filesize": 22429,
+          "resolutionX": 500,
+          "resolutionY": 312,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38791142_500x312.jpg"
+        },
+        "small": {
+          "filesize": 2060,
+          "resolutionX": 100,
+          "resolutionY": 62,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38791142_100x62.jpg"
+        },
+        "order": 1,
+        "created": "2016-09-09T18:36:02Z",
+        "updated": "2016-09-09T18:36:15Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "38662208",
+      "attributes": {
+        "original": {
+          "filesize": 184213,
+          "resolutionX": 1205,
+          "resolutionY": 1375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38662208_1205x1375.jpg"
+        },
+        "large": {
+          "filesize": 28295,
+          "resolutionX": 500,
+          "resolutionY": 570,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38662208_500x570.jpg"
+        },
+        "small": {
+          "filesize": 2617,
+          "resolutionX": 100,
+          "resolutionY": 114,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38662208_100x114.jpg"
+        },
+        "order": 2,
+        "created": "2016-09-04T17:07:52Z",
+        "updated": "2016-09-09T18:36:15Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "38662209",
+      "attributes": {
+        "original": {
+          "filesize": 276300,
+          "resolutionX": 1679,
+          "resolutionY": 1398,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38662209_1679x1398.jpg"
+        },
+        "large": {
+          "filesize": 26372,
+          "resolutionX": 500,
+          "resolutionY": 416,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38662209_500x416.jpg"
+        },
+        "small": {
+          "filesize": 2514,
+          "resolutionX": 100,
+          "resolutionY": 83,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/10530\/10530168\/38662209_100x83.jpg"
+        },
+        "order": 3,
+        "created": "2016-09-04T17:07:54Z",
+        "updated": "2016-09-09T18:36:16Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "23",
+      "attributes": {
+        "name": "Dilute Tortoiseshell"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/23"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "20",
+      "attributes": {
+        "name": "Tortoiseshell"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/20"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2313202",
+      "attributes": {
+        "original": {
+          "filesize": 26012,
+          "resolutionX": 500,
+          "resolutionY": 364,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313202_500x364.jpg"
+        },
+        "large": {
+          "filesize": 26012,
+          "resolutionX": 500,
+          "resolutionY": 364,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313202_500x364.jpg"
+        },
+        "small": {
+          "filesize": 2569,
+          "resolutionX": 100,
+          "resolutionY": 72,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313202_100x72.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2008-12-05T13:27:17Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2313203",
+      "attributes": {
+        "original": {
+          "filesize": 28668,
+          "resolutionX": 500,
+          "resolutionY": 414,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313203_500x414.jpg"
+        },
+        "large": {
+          "filesize": 28668,
+          "resolutionX": 500,
+          "resolutionY": 414,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313203_500x414.jpg"
+        },
+        "small": {
+          "filesize": 2876,
+          "resolutionX": 100,
+          "resolutionY": 82,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077692\/2313203_100x82.jpg"
+        },
+        "order": 2,
+        "created": null,
+        "updated": "2008-12-05T13:27:17Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "71",
+      "attributes": {
+        "name": "Tortoiseshell"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/71"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2313209",
+      "attributes": {
+        "original": {
+          "filesize": 58346,
+          "resolutionX": 500,
+          "resolutionY": 619,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077694\/2313209_500x619.jpg"
+        },
+        "large": {
+          "filesize": 58346,
+          "resolutionX": 500,
+          "resolutionY": 619,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077694\/2313209_500x619.jpg"
+        },
+        "small": {
+          "filesize": 4600,
+          "resolutionX": 100,
+          "resolutionY": 123,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1077\/1077694\/2313209_100x123.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2008-12-05T13:34:53Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "47359856",
+      "attributes": {
+        "original": {
+          "filesize": 468469,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/47359856_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 20785,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/47359856_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2029,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/47359856_100x75.jpg"
+        },
+        "order": 1,
+        "created": "2017-07-23T11:27:27Z",
+        "updated": "2017-07-23T11:27:52Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "42909935",
+      "attributes": {
+        "original": {
+          "filesize": 258694,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/42909935_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 27195,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/42909935_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2567,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11116\/11116406\/42909935_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2017-02-25T19:07:33Z",
+        "updated": "2017-07-23T11:27:52Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "1393",
+      "attributes": {
+        "original": {
+          "filesize": 38881,
+          "resolutionX": 288,
+          "resolutionY": 432,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1393_288x432.jpg"
+        },
+        "large": {
+          "filesize": 38881,
+          "resolutionX": 288,
+          "resolutionY": 432,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1393_288x432.jpg"
+        },
+        "small": {
+          "filesize": 5128,
+          "resolutionX": 100,
+          "resolutionY": 150,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1393_100x150.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2007-08-09T21:50:19Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "1395",
+      "attributes": {
+        "original": {
+          "filesize": 41490,
+          "resolutionX": 288,
+          "resolutionY": 432,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1395_288x432.jpg"
+        },
+        "large": {
+          "filesize": 41490,
+          "resolutionX": 288,
+          "resolutionY": 432,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1395_288x432.jpg"
+        },
+        "small": {
+          "filesize": 5332,
+          "resolutionX": 100,
+          "resolutionY": 150,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1\/1122\/1395_100x150.jpg"
+        },
+        "order": 2,
+        "created": null,
+        "updated": "2007-08-09T21:50:19Z"
+      }
+    },
+    {
+      "type": "patterns",
+      "id": "14",
+      "attributes": {
+        "name": "Tuxedo"
+      },
+      "links": {
+        "self": "\/public\/animals\/patterns\/14"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "45310860",
+      "attributes": {
+        "original": {
+          "filesize": 2092684,
+          "resolutionX": 2988,
+          "resolutionY": 5312,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310860_2988x5312.jpg"
+        },
+        "large": {
+          "filesize": 73827,
+          "resolutionX": 500,
+          "resolutionY": 888,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310860_500x888.jpg"
+        },
+        "small": {
+          "filesize": 6194,
+          "resolutionX": 100,
+          "resolutionY": 177,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310860_100x177.jpg"
+        },
+        "order": 1,
+        "created": "2017-05-21T18:15:44Z",
+        "updated": "2017-05-21T18:15:44Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "45310861",
+      "attributes": {
+        "original": {
+          "filesize": 2535362,
+          "resolutionX": 2988,
+          "resolutionY": 5312,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310861_2988x5312.jpg"
+        },
+        "large": {
+          "filesize": 80581,
+          "resolutionX": 500,
+          "resolutionY": 888,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310861_500x888.jpg"
+        },
+        "small": {
+          "filesize": 4978,
+          "resolutionX": 100,
+          "resolutionY": 177,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310861_100x177.jpg"
+        },
+        "order": 2,
+        "created": "2017-05-21T18:15:52Z",
+        "updated": "2017-05-21T18:15:52Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "45310862",
+      "attributes": {
+        "original": {
+          "filesize": 2525020,
+          "resolutionX": 2988,
+          "resolutionY": 5312,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310862_2988x5312.jpg"
+        },
+        "large": {
+          "filesize": 77349,
+          "resolutionX": 500,
+          "resolutionY": 888,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310862_500x888.jpg"
+        },
+        "small": {
+          "filesize": 4836,
+          "resolutionX": 100,
+          "resolutionY": 177,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11428\/11428091\/45310862_100x177.jpg"
+        },
+        "order": 3,
+        "created": "2017-05-21T18:16:03Z",
+        "updated": "2017-05-21T18:16:03Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "48598841",
+      "attributes": {
+        "original": {
+          "filesize": 251634,
+          "resolutionX": 806,
+          "resolutionY": 1006,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598841_806x1006.jpg"
+        },
+        "large": {
+          "filesize": 28040,
+          "resolutionX": 500,
+          "resolutionY": 624,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598841_500x624.jpg"
+        },
+        "small": {
+          "filesize": 2694,
+          "resolutionX": 100,
+          "resolutionY": 124,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598841_100x124.jpg"
+        },
+        "order": 1,
+        "created": "2017-08-26T17:59:13Z",
+        "updated": "2017-08-26T17:59:13Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "48598842",
+      "attributes": {
+        "original": {
+          "filesize": 156256,
+          "resolutionX": 648,
+          "resolutionY": 531,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598842_648x531.jpg"
+        },
+        "large": {
+          "filesize": 28114,
+          "resolutionX": 500,
+          "resolutionY": 409,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598842_500x409.jpg"
+        },
+        "small": {
+          "filesize": 2584,
+          "resolutionX": 100,
+          "resolutionY": 81,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/11928\/11928917\/48598842_100x81.jpg"
+        },
+        "order": 2,
+        "created": "2017-08-26T17:59:13Z",
+        "updated": "2017-08-26T17:59:13Z"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "1",
+      "attributes": {
+        "name": "Black"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/1"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2536741",
+      "attributes": {
+        "original": {
+          "filesize": 45281,
+          "resolutionX": 500,
+          "resolutionY": 445,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536741_500x445.jpg"
+        },
+        "large": {
+          "filesize": 45281,
+          "resolutionX": 500,
+          "resolutionY": 445,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536741_500x445.jpg"
+        },
+        "small": {
+          "filesize": 3523,
+          "resolutionX": 100,
+          "resolutionY": 89,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536741_100x89.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2009-01-25T14:39:12Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2536740",
+      "attributes": {
+        "original": {
+          "filesize": 19867,
+          "resolutionX": 500,
+          "resolutionY": 228,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536740_500x228.jpg"
+        },
+        "large": {
+          "filesize": 19867,
+          "resolutionX": 500,
+          "resolutionY": 228,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536740_500x228.jpg"
+        },
+        "small": {
+          "filesize": 2180,
+          "resolutionX": 100,
+          "resolutionY": 45,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536740_100x45.jpg"
+        },
+        "order": 2,
+        "created": null,
+        "updated": "2009-01-25T14:39:12Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2536742",
+      "attributes": {
+        "original": {
+          "filesize": 19956,
+          "resolutionX": 500,
+          "resolutionY": 235,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536742_500x235.jpg"
+        },
+        "large": {
+          "filesize": 19956,
+          "resolutionX": 500,
+          "resolutionY": 235,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536742_500x235.jpg"
+        },
+        "small": {
+          "filesize": 1955,
+          "resolutionX": 100,
+          "resolutionY": 47,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194850\/2536742_100x47.jpg"
+        },
+        "order": 3,
+        "created": null,
+        "updated": "2009-01-25T14:39:12Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "73",
+      "attributes": {
+        "name": "Tuxedo"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/73"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2536750",
+      "attributes": {
+        "original": {
+          "filesize": 47295,
+          "resolutionX": 500,
+          "resolutionY": 943,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/2536750_500x943.jpg"
+        },
+        "large": {
+          "filesize": 47295,
+          "resolutionX": 500,
+          "resolutionY": 943,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/2536750_500x943.jpg"
+        },
+        "small": {
+          "filesize": 3852,
+          "resolutionX": 100,
+          "resolutionY": 188,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/2536750_100x188.jpg"
+        },
+        "order": 1,
+        "created": null,
+        "updated": "2009-02-14T14:14:22Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "3396053",
+      "attributes": {
+        "original": {
+          "filesize": 48530,
+          "resolutionX": 500,
+          "resolutionY": 547,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/3396053_500x547.jpg"
+        },
+        "large": {
+          "filesize": 48530,
+          "resolutionX": 500,
+          "resolutionY": 547,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/3396053_500x547.jpg"
+        },
+        "small": {
+          "filesize": 3611,
+          "resolutionX": 100,
+          "resolutionY": 109,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1194\/1194854\/3396053_100x109.jpg"
+        },
+        "order": 2,
+        "created": "2009-06-30T21:33:29Z",
+        "updated": "2009-06-30T21:33:29Z"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "13",
+      "attributes": {
+        "name": "Gray, Blue or Silver Tabby"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/13"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50330131",
+      "attributes": {
+        "original": {
+          "filesize": 43736,
+          "resolutionX": 480,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50330131_480x640.jpg"
+        },
+        "large": {
+          "filesize": 43736,
+          "resolutionX": 480,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50330131_480x640.jpg"
+        },
+        "small": {
+          "filesize": 2795,
+          "resolutionX": 100,
+          "resolutionY": 133,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50330131_100x133.jpg"
+        },
+        "order": 1,
+        "created": "2017-10-14T18:14:48Z",
+        "updated": "2017-10-16T13:53:52Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50401647",
+      "attributes": {
+        "original": {
+          "filesize": 83541,
+          "resolutionX": 580,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401647_580x640.jpg"
+        },
+        "large": {
+          "filesize": 40260,
+          "resolutionX": 500,
+          "resolutionY": 551,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401647_500x551.jpg"
+        },
+        "small": {
+          "filesize": 3613,
+          "resolutionX": 100,
+          "resolutionY": 110,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401647_100x110.jpg"
+        },
+        "order": 2,
+        "created": "2017-10-16T13:54:53Z",
+        "updated": "2017-10-16T13:54:53Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50401648",
+      "attributes": {
+        "original": {
+          "filesize": 100653,
+          "resolutionX": 640,
+          "resolutionY": 578,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401648_640x578.jpg"
+        },
+        "large": {
+          "filesize": 43572,
+          "resolutionX": 500,
+          "resolutionY": 451,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401648_500x451.jpg"
+        },
+        "small": {
+          "filesize": 3584,
+          "resolutionX": 100,
+          "resolutionY": 90,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401648_100x90.jpg"
+        },
+        "order": 3,
+        "created": "2017-10-16T13:54:54Z",
+        "updated": "2017-10-16T13:54:54Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50401649",
+      "attributes": {
+        "original": {
+          "filesize": 89998,
+          "resolutionX": 640,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401649_640x640.jpg"
+        },
+        "large": {
+          "filesize": 38189,
+          "resolutionX": 500,
+          "resolutionY": 500,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401649_500x500.jpg"
+        },
+        "small": {
+          "filesize": 3451,
+          "resolutionX": 100,
+          "resolutionY": 100,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131760\/50401649_100x100.jpg"
+        },
+        "order": 4,
+        "created": "2017-10-16T13:54:54Z",
+        "updated": "2017-10-16T13:54:54Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50401657",
+      "attributes": {
+        "original": {
+          "filesize": 68788,
+          "resolutionX": 480,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401657_480x640.jpg"
+        },
+        "large": {
+          "filesize": 68788,
+          "resolutionX": 480,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401657_480x640.jpg"
+        },
+        "small": {
+          "filesize": 3888,
+          "resolutionX": 100,
+          "resolutionY": 133,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401657_100x133.jpg"
+        },
+        "order": 1,
+        "created": "2017-10-16T13:57:35Z",
+        "updated": "2017-10-16T13:58:02Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50401656",
+      "attributes": {
+        "original": {
+          "filesize": 102325,
+          "resolutionX": 640,
+          "resolutionY": 480,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401656_640x480.jpg"
+        },
+        "large": {
+          "filesize": 43111,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401656_500x375.jpg"
+        },
+        "small": {
+          "filesize": 3098,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401656_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2017-10-16T13:57:35Z",
+        "updated": "2017-10-16T13:58:02Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50401658",
+      "attributes": {
+        "original": {
+          "filesize": 66323,
+          "resolutionX": 454,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401658_454x640.jpg"
+        },
+        "large": {
+          "filesize": 66323,
+          "resolutionX": 454,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401658_454x640.jpg"
+        },
+        "small": {
+          "filesize": 3875,
+          "resolutionX": 100,
+          "resolutionY": 140,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12131\/12131773\/50401658_100x140.jpg"
+        },
+        "order": 3,
+        "created": "2017-10-16T13:57:35Z",
+        "updated": "2017-10-16T13:58:02Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50611228",
+      "attributes": {
+        "original": {
+          "filesize": 196664,
+          "resolutionX": 982,
+          "resolutionY": 1000,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611228_982x1000.jpg"
+        },
+        "large": {
+          "filesize": 37321,
+          "resolutionX": 500,
+          "resolutionY": 509,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611228_500x509.jpg"
+        },
+        "small": {
+          "filesize": 3111,
+          "resolutionX": 100,
+          "resolutionY": 101,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611228_100x101.jpg"
+        },
+        "order": 1,
+        "created": "2017-10-21T18:27:43Z",
+        "updated": "2017-10-21T18:27:43Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50611229",
+      "attributes": {
+        "original": {
+          "filesize": 263093,
+          "resolutionX": 1511,
+          "resolutionY": 918,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611229_1511x918.jpg"
+        },
+        "large": {
+          "filesize": 24984,
+          "resolutionX": 500,
+          "resolutionY": 303,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611229_500x303.jpg"
+        },
+        "small": {
+          "filesize": 2344,
+          "resolutionX": 100,
+          "resolutionY": 60,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611229_100x60.jpg"
+        },
+        "order": 2,
+        "created": "2017-10-21T18:27:43Z",
+        "updated": "2017-10-21T18:27:43Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50611230",
+      "attributes": {
+        "original": {
+          "filesize": 192762,
+          "resolutionX": 1205,
+          "resolutionY": 768,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611230_1205x768.jpg"
+        },
+        "large": {
+          "filesize": 25532,
+          "resolutionX": 500,
+          "resolutionY": 318,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611230_500x318.jpg"
+        },
+        "small": {
+          "filesize": 2382,
+          "resolutionX": 100,
+          "resolutionY": 63,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12157\/12157488\/50611230_100x63.jpg"
+        },
+        "order": 3,
+        "created": "2017-10-21T18:27:44Z",
+        "updated": "2017-10-21T18:27:44Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50786584",
+      "attributes": {
+        "original": {
+          "filesize": 773594,
+          "resolutionX": 2836,
+          "resolutionY": 2607,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50786584_2836x2607.jpg"
+        },
+        "large": {
+          "filesize": 25853,
+          "resolutionX": 500,
+          "resolutionY": 459,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50786584_500x459.jpg"
+        },
+        "small": {
+          "filesize": 2390,
+          "resolutionX": 100,
+          "resolutionY": 91,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50786584_100x91.jpg"
+        },
+        "order": 1,
+        "created": "2017-10-25T16:13:26Z",
+        "updated": "2017-10-25T16:13:40Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50696514",
+      "attributes": {
+        "original": {
+          "filesize": 51516,
+          "resolutionX": 552,
+          "resolutionY": 389,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50696514_552x389.jpg"
+        },
+        "large": {
+          "filesize": 20877,
+          "resolutionX": 500,
+          "resolutionY": 352,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50696514_500x352.jpg"
+        },
+        "small": {
+          "filesize": 2377,
+          "resolutionX": 100,
+          "resolutionY": 70,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50696514_100x70.jpg"
+        },
+        "order": 2,
+        "created": "2017-10-23T12:02:18Z",
+        "updated": "2017-10-25T16:13:40Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50696515",
+      "attributes": {
+        "original": {
+          "filesize": 317567,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50696515_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 31703,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50696515_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2758,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170208\/50696515_100x75.jpg"
+        },
+        "order": 3,
+        "created": "2017-10-23T12:02:18Z",
+        "updated": "2017-10-25T16:13:40Z"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "11",
+      "attributes": {
+        "name": "Gray"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/11"
+      }
+    },
+    {
+      "type": "patterns",
+      "id": "11",
+      "attributes": {
+        "name": "Solid"
+      },
+      "links": {
+        "self": "\/public\/animals\/patterns\/11"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53294239",
+      "attributes": {
+        "original": {
+          "filesize": 97998,
+          "resolutionX": 913,
+          "resolutionY": 603,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294239_913x603.jpg"
+        },
+        "large": {
+          "filesize": 17891,
+          "resolutionX": 500,
+          "resolutionY": 330,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294239_500x330.jpg"
+        },
+        "small": {
+          "filesize": 1713,
+          "resolutionX": 100,
+          "resolutionY": 66,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294239_100x66.jpg"
+        },
+        "order": 1,
+        "created": "2018-01-01T17:03:00Z",
+        "updated": "2018-01-01T17:03:10Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50696740",
+      "attributes": {
+        "original": {
+          "filesize": 117240,
+          "resolutionX": 953,
+          "resolutionY": 728,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/50696740_953x728.jpg"
+        },
+        "large": {
+          "filesize": 23042,
+          "resolutionX": 500,
+          "resolutionY": 381,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/50696740_500x381.jpg"
+        },
+        "small": {
+          "filesize": 2635,
+          "resolutionX": 100,
+          "resolutionY": 76,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/50696740_100x76.jpg"
+        },
+        "order": 2,
+        "created": "2017-10-23T12:09:06Z",
+        "updated": "2018-01-01T17:03:10Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "50696741",
+      "attributes": {
+        "original": {
+          "filesize": 298574,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/50696741_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 27465,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/50696741_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2646,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/50696741_100x75.jpg"
+        },
+        "order": 3,
+        "created": "2017-10-23T12:09:06Z",
+        "updated": "2018-01-01T17:03:10Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53294114",
+      "attributes": {
+        "original": {
+          "filesize": 299369,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294114_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 22649,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294114_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2532,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12170\/12170215\/53294114_100x75.jpg"
+        },
+        "order": 4,
+        "created": "2018-01-01T17:01:03Z",
+        "updated": "2018-01-01T17:03:10Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53294249",
+      "attributes": {
+        "original": {
+          "filesize": 316730,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294249_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 26071,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294249_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2524,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294249_100x75.jpg"
+        },
+        "order": 1,
+        "created": "2018-01-01T17:06:20Z",
+        "updated": "2018-01-01T17:06:53Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53294247",
+      "attributes": {
+        "original": {
+          "filesize": 274056,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294247_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 24520,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294247_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2380,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294247_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2018-01-01T17:06:19Z",
+        "updated": "2018-01-01T17:06:53Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53294248",
+      "attributes": {
+        "original": {
+          "filesize": 121640,
+          "resolutionX": 913,
+          "resolutionY": 603,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294248_913x603.jpg"
+        },
+        "large": {
+          "filesize": 26590,
+          "resolutionX": 500,
+          "resolutionY": 330,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294248_500x330.jpg"
+        },
+        "small": {
+          "filesize": 2447,
+          "resolutionX": 100,
+          "resolutionY": 66,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294248_100x66.jpg"
+        },
+        "order": 3,
+        "created": "2018-01-01T17:06:20Z",
+        "updated": "2018-01-01T17:06:53Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53294250",
+      "attributes": {
+        "original": {
+          "filesize": 299369,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294250_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 22649,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294250_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2532,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12425\/12425913\/53294250_100x75.jpg"
+        },
+        "order": 4,
+        "created": "2018-01-01T17:06:20Z",
+        "updated": "2018-01-01T17:06:53Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "15",
+      "attributes": {
+        "name": "Calico"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/15"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "29",
+      "attributes": {
+        "name": "Domestic Medium Hair"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/29"
+      }
+    },
+    {
+      "type": "colors",
+      "id": "10",
+      "attributes": {
+        "name": "Calico or Dilute Calico"
+      },
+      "links": {
+        "self": "\/public\/animals\/colors\/10"
+      }
+    },
+    {
+      "type": "patterns",
+      "id": "9",
+      "attributes": {
+        "name": "Calico"
+      },
+      "links": {
+        "self": "\/public\/animals\/patterns\/9"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "54758276",
+      "attributes": {
+        "original": {
+          "filesize": 216480,
+          "resolutionX": 1848,
+          "resolutionY": 1224,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758276_1848x1224.jpg"
+        },
+        "large": {
+          "filesize": 20953,
+          "resolutionX": 500,
+          "resolutionY": 331,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758276_500x331.jpg"
+        },
+        "small": {
+          "filesize": 2503,
+          "resolutionX": 100,
+          "resolutionY": 66,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758276_100x66.jpg"
+        },
+        "order": 1,
+        "created": "2018-02-16T14:31:43Z",
+        "updated": "2018-02-16T14:31:59Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "53720346",
+      "attributes": {
+        "original": {
+          "filesize": 393901,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/53720346_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 35826,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/53720346_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2689,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/53720346_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2018-01-14T20:35:20Z",
+        "updated": "2018-02-16T14:31:59Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "54758277",
+      "attributes": {
+        "original": {
+          "filesize": 380603,
+          "resolutionX": 2031,
+          "resolutionY": 1692,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758277_2031x1692.jpg"
+        },
+        "large": {
+          "filesize": 29423,
+          "resolutionX": 500,
+          "resolutionY": 416,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758277_500x416.jpg"
+        },
+        "small": {
+          "filesize": 3032,
+          "resolutionX": 100,
+          "resolutionY": 83,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12474\/12474573\/54758277_100x83.jpg"
+        },
+        "order": 3,
+        "created": "2018-02-16T14:31:43Z",
+        "updated": "2018-02-16T14:31:59Z"
+      }
+    },
+    {
+      "type": "patterns",
+      "id": "10",
+      "attributes": {
+        "name": "Tortie"
+      },
+      "links": {
+        "self": "\/public\/animals\/patterns\/10"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "56074622",
+      "attributes": {
+        "original": {
+          "filesize": 144394,
+          "resolutionX": 616,
+          "resolutionY": 1242,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56074622_616x1242.jpg"
+        },
+        "large": {
+          "filesize": 68005,
+          "resolutionX": 500,
+          "resolutionY": 1008,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56074622_500x1008.jpg"
+        },
+        "small": {
+          "filesize": 5217,
+          "resolutionX": 100,
+          "resolutionY": 201,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56074622_100x201.jpg"
+        },
+        "order": 1,
+        "created": "2018-04-07T15:28:26Z",
+        "updated": "2018-04-07T15:28:26Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "56138196",
+      "attributes": {
+        "original": {
+          "filesize": 656942,
+          "resolutionX": 2790,
+          "resolutionY": 2771,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56138196_2790x2771.jpg"
+        },
+        "large": {
+          "filesize": 27102,
+          "resolutionX": 500,
+          "resolutionY": 496,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56138196_500x496.jpg"
+        },
+        "small": {
+          "filesize": 2097,
+          "resolutionX": 100,
+          "resolutionY": 99,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/12852\/12852146\/56138196_100x99.jpg"
+        },
+        "order": 2,
+        "created": "2018-04-09T22:45:07Z",
+        "updated": "2018-04-09T22:45:07Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "59150161",
+      "attributes": {
+        "original": {
+          "filesize": 119915,
+          "resolutionX": 584,
+          "resolutionY": 925,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150161_584x925.jpg"
+        },
+        "large": {
+          "filesize": 54065,
+          "resolutionX": 500,
+          "resolutionY": 791,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150161_500x791.jpg"
+        },
+        "small": {
+          "filesize": 4625,
+          "resolutionX": 100,
+          "resolutionY": 158,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150161_100x158.jpg"
+        },
+        "order": 1,
+        "created": "2018-07-29T17:25:16Z",
+        "updated": "2018-07-29T17:25:58Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "59150160",
+      "attributes": {
+        "original": {
+          "filesize": 302050,
+          "resolutionX": 1600,
+          "resolutionY": 1200,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150160_1600x1200.jpg"
+        },
+        "large": {
+          "filesize": 26688,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150160_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2723,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150160_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2018-07-29T17:25:16Z",
+        "updated": "2018-07-29T17:25:58Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "59150162",
+      "attributes": {
+        "original": {
+          "filesize": 146585,
+          "resolutionX": 727,
+          "resolutionY": 950,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150162_727x950.jpg"
+        },
+        "large": {
+          "filesize": 46924,
+          "resolutionX": 500,
+          "resolutionY": 653,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150162_500x653.jpg"
+        },
+        "small": {
+          "filesize": 4235,
+          "resolutionX": 100,
+          "resolutionY": 130,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13355\/13355518\/59150162_100x130.jpg"
+        },
+        "order": 3,
+        "created": "2018-07-29T17:25:16Z",
+        "updated": "2018-07-29T17:25:58Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2883964",
+      "attributes": {
+        "original": {
+          "filesize": 30711,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883964_500x375.jpg"
+        },
+        "large": {
+          "filesize": 30711,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883964_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2804,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883964_100x75.jpg"
+        },
+        "order": 1,
+        "created": "2009-04-03T17:37:23Z",
+        "updated": "2009-04-03T17:38:14Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2883951",
+      "attributes": {
+        "original": {
+          "filesize": 32155,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883951_500x375.jpg"
+        },
+        "large": {
+          "filesize": 32155,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883951_500x375.jpg"
+        },
+        "small": {
+          "filesize": 3210,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883951_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2009-04-03T17:33:58Z",
+        "updated": "2009-04-03T17:38:14Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "2883954",
+      "attributes": {
+        "original": {
+          "filesize": 30490,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883954_500x375.jpg"
+        },
+        "large": {
+          "filesize": 30490,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883954_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2748,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/1349\/1349742\/2883954_100x75.jpg"
+        },
+        "order": 3,
+        "created": "2009-04-03T17:33:59Z",
+        "updated": "2009-04-03T17:38:14Z"
+      }
+    },
+    {
+      "type": "breeds",
+      "id": "3",
+      "attributes": {
+        "name": "American Shorthair"
+      },
+      "links": {
+        "self": "\/public\/animals\/breeds\/3"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "60992366",
+      "attributes": {
+        "original": {
+          "filesize": 46816,
+          "resolutionX": 323,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/60992366_323x640.jpg"
+        },
+        "large": {
+          "filesize": 46816,
+          "resolutionX": 323,
+          "resolutionY": 640,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/60992366_323x640.jpg"
+        },
+        "small": {
+          "filesize": 4754,
+          "resolutionX": 100,
+          "resolutionY": 198,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/60992366_100x198.jpg"
+        },
+        "order": 1,
+        "created": "2018-10-03T13:26:59Z",
+        "updated": "2018-10-03T13:26:59Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "61003989",
+      "attributes": {
+        "original": {
+          "filesize": 66306,
+          "resolutionX": 640,
+          "resolutionY": 480,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/61003989_640x480.jpg"
+        },
+        "large": {
+          "filesize": 25861,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/61003989_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2283,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/61003989_100x75.jpg"
+        },
+        "order": 2,
+        "created": "2018-10-03T22:39:08Z",
+        "updated": "2018-10-03T22:39:08Z"
+      }
+    },
+    {
+      "type": "pictures",
+      "id": "61003990",
+      "attributes": {
+        "original": {
+          "filesize": 69926,
+          "resolutionX": 640,
+          "resolutionY": 480,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/61003990_640x480.jpg"
+        },
+        "large": {
+          "filesize": 27694,
+          "resolutionX": 500,
+          "resolutionY": 375,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/61003990_500x375.jpg"
+        },
+        "small": {
+          "filesize": 2183,
+          "resolutionX": 100,
+          "resolutionY": 75,
+          "url": "https:\/\/s3.amazonaws.com\/filestore.rescuegroups.org\/12\/pictures\/animals\/13618\/13618670\/61003990_100x75.jpg"
+        },
+        "order": 3,
+        "created": "2018-10-03T22:39:09Z",
+        "updated": "2018-10-03T22:39:09Z"
+      }
+    }
+  ]
+}
