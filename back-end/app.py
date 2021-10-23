@@ -40,7 +40,7 @@ from query_helpers import *
 # returning json not html, within function u interface with db
 # earlier u had a one off script that populates db
 
-
+# base url: api.adoptapet.me
 # -------------------- Adoptable Pets ---------------------
 
 @app.route("/ap", methods=["GET"])
