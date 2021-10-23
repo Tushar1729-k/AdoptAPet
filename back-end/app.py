@@ -178,7 +178,7 @@ def species_breeds() :
 			if get_query("perPage", queries)
 			else 20
 		)
-		sb = sb_query.pagination(page=page, per_page=per_page)
+		sb = sb_query.paginate(page=page, per_page=per_page)
 		result = breeds_species_schema.dump(sb.items, many=True)
 	else:
 		result = breeds_species_schema.dump(sb_query, many=True)
