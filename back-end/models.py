@@ -32,6 +32,7 @@ class AdoptablePet(db.Model) :
 	age = db.Column(db.String())
 	color = db.Column(db.String())
 	desc = db.Column(db.String())
+	# pic_url = db.Column(db.String)
 
 	# pet_allergies = db.Column(db.String())
 	# pet_diet = db.Column(db.String())
@@ -133,17 +134,18 @@ class AdoptablePetSchema(BaseSchema) :
 	center = fields.Nested(
 		"AdoptionCenterSchema",
 		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services'),
-		required=True, many=True
+		required=True
 	)
 	species_breeds = fields.Nested(
 		"BreedsSpeciesSchema",
 		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
-		required=True, many=True
+		required=True
 	)
 	sex = fields.Str(required=True)
 	age = fields.Str(required=True)
 	color = fields.Str(required=True)
 	desc = fields.Str(required=True)
+	# pic_url = fields.Str(required=True)
 
 class AdoptionCenterSchema(BaseSchema) :
 	id = fields.Int(required=True)
@@ -157,7 +159,9 @@ class AdoptionCenterSchema(BaseSchema) :
 	species_breed = fields.Nested(
 		"BreedsSpeciesSchema",
 		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
-		required=True, many=True
+		required=True, 
+		attribute="species",
+		many=True
 	)
 	city = fields.Str(required=True)
 	state = fields.Str(required=True)
@@ -172,11 +176,15 @@ class BreedsSpeciesSchema(BaseSchema) :
 	centers = fields.Nested(
 		"AdoptionCenterSchema",
 		only=('id', 'api_id', 'name', 'city', 'state', 'zipcode', 'services'), 
-		required=True
+		required=True,
+		attribute="center",
+		many=True
 	)
 	pets = fields.Nested(
 		"AdoptablePetSchema",
-		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
+		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc'),
+		required=True,
+		many=True
 	)
 	youth_name = fields.Str(required=True)
 	temperament = fields.Str(required=True)

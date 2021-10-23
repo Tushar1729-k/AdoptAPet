@@ -86,6 +86,9 @@ def pets() :
 
 	return {"page": result, "count": count}
 
+# @app.route('/ap/<int:id>', methods=["GET"])
+# def ap_id() :
+# 	queries = 
 
 # ---------------------- Adoption Centers ---------------
 
@@ -137,11 +140,8 @@ def centers():
 @app.route("/ac/<int:id>", methods=["GET"])
 def center_id(id):
 	center = db.session.query(AdoptionCenter).filter_by(id=id)
-
 	center = adoption_center_schema.dump(center, many=True)[0]
-
 	# format_center(center)
-
 	return center
 
 

@@ -31,6 +31,7 @@ def populate_pets() :
 				age = animal['attributes']['ageGroup'] if 'ageGroup' in animal['attributes'] else ""
 				color = animal['attributes']['colorDetails'] if 'colorDetails' in animal['attributes'] else ""
 				desc = animal['attributes']['descriptionHtml'] if 'descriptionHtml' in animal['attributes'] else ""
+				# pic_url = 
 				# new_pet = AdoptablePet(pet_name=item['attributes']["name"], pet_breed=item['attributes']["breedString"], 
 				# 						pet_sex=item['attributes']["sex"], pet_age=item['attributes']["ageGroup"], 
 				# 						pet_color=item['attributes']['colorDetails'],
@@ -64,7 +65,7 @@ def __init__(self, api_id=0, center_number=0, breed_number=0, name="NaN", sex="N
 	self.desc = desc
 
 def populate_centers() :
-	url = "https://api.rescuegroups.org/v5/public/orgs?limit=25"
+	url = "https://api.rescuegroups.org/v5/public/orgs?limit=125"
 	querystring = {"format": "json"}
 	headers = {
 		'Authorization': "wmUYpgAP"
