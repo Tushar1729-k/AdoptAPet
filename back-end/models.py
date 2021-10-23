@@ -88,17 +88,27 @@ class BreedsSpecies(db.Model) :
 # def __repr__(self) :
 #   return "<Breeds %s>" % self.name
 
+class BaseSchema(ma.Schema) :
+	SKIP_VALUES = [None]
+
+	@post_dump
+	def remove_skip_values(self, data, **kargs):
+		return {
+			key: value for key, value in data.items() if value not in self.SKIP_VALUES
+		}
+
 class AdoptablePetSchema(BaseSchema) :
 	id = fields.Int(required=True)
 	api_id = fields.Int(required=True)
 	name = fields.Str(required=True)
 	center = fields.Nested(
 		"AdoptionCenterSchema",
-		only=("")
+		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services')
 	)
 	species_breeds = fields.Nested(
 		"BreedsSpeciesSchema",
-		only=(), required=True, many=True
+		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
+		required=True, many=True
 	)
 	sex = fields.Str(required=True)
 	age = fields.Str(required=True)
@@ -111,11 +121,12 @@ class AdoptionCenterSchema(BaseSchema) :
 	name = fields.Str(required=True)
 	pets = fields.Nested(
 		"AdoptablePetSchema",
-		only=("")
+		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
 	)
 	species_breed = fields.Nested(
 		"BreedsSpeciesSchema",
-		only=(), required=True, many=True
+		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
+		required=True, many=True
 	)
 	city = fields.Str(required=True)
 	state = fields.Str(required=True)
@@ -129,11 +140,12 @@ class BreedsSpeciesSchema(BaseSchema) :
 	breed = fields.Str(required=True)
 	centers = fields.Nested(
 		"AdoptionCenterSchema",
-		only=(), required=True, attribute="species"
+		only=('id', 'api_id', 'name', 'city', 'state', 'zipcode', 'services'), 
+		required=True
 	)
 	pets = fields.Nested(
 		"AdoptablePetSchema",
-		only=()
+		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
 	)
 	youth_name = fields.Str(required=True)
 

@@ -1,4 +1,4 @@
-from typing import get_args
+# from typing import get_args
 from models import (
 	AdoptablePet,
 	AdoptionCenter,
@@ -10,6 +10,8 @@ from models import (
 	breeds_species_schema
 )
 
+# from models import *
+
 from flask import Flask, request, make_response, jsonify, send_from_directory
 from format import *
 from flask_sqlalchemy import SQLAlchemy
@@ -19,10 +21,11 @@ import json
 from dotenv import load_dotenv
 import os
 
-from AdoptablePet import *
-from AdoptionCenter import *
-from BreedsSpecies import *
+# from AdoptablePet import *
+# from AdoptionCenter import *
+# from BreedsSpecies import *
 
+from query_helpers import *
 
 # app = Flask(__name__)
 # app.debug = True
@@ -34,11 +37,9 @@ from BreedsSpecies import *
 # db = SQLAlchemy(app)
 # print(db)
 
-@app.route("/")
 # returning json not html, within function u interface with db
 # earlier u had a one off script that populates db
-def hello_world() :
-	return "<p>Hello, World!</p>"
+
 
 # -------------------- Adoptable Pets ---------------------
 
@@ -54,17 +55,17 @@ def pets() :
 		# Convert the given page number into an int
 		page = int(page[0])
 
-	# Searching
-	q = get_query("q", queries)
-	if q :
-		pet_query = search_politicians(q, pet_query)
+	# # Searching
+	# q = get_query("q", queries)
+	# if q :
+	# 	pet_query = search_politicians(q, pet_query)
 
-	# filtering
-	pet_query = filter_politicans(pet_query, queries)
+	# # filtering
+	# pet_query = filter_politicans(pet_query, queries)
 
-	# sorting
-	sort = get_query("sort", queries)
-	pet_query = sort_politicians(sort, pet_query)
+	# # sorting
+	# sort = get_query("sort", queries)
+	# pet_query = sort_politicians(sort, pet_query)
 
 	count = pet_query.count()
 
@@ -80,8 +81,8 @@ def pets() :
 	else:
 		result = adoptable_pet_schema.dump(pet_query, many=True)
 
-	for r in result:
-		format_adoptable_pet(r)
+	# for r in result:
+	# 	format_adoptable_pet(r)
 
 	return {"page": result, "count": count}
 
@@ -101,17 +102,17 @@ def centers():
 		# Conver the given page number into an int
 		page = int(page[0])
 
-	# searching
-	q = get_query("sort", queries)
-	if q:
-		center_query = search_centers(q, center_query)
+	# # searching
+	# q = get_query("sort", queries)
+	# if q:
+	# 	center_query = search_centers(q, center_query)
 
-	# filtering
-	center_query = filter_centers(center_query, queries)
+	# # filtering
+	# center_query = filter_centers(center_query, queries)
 
-	# sorting
-	sort = get_query("sort", queries)
-	center_query = sort_districts(sort, center_query)
+	# # sorting
+	# sort = get_query("sort", queries)
+	# center_query = sort_districts(sort, center_query)
 
 	count = center_query.count()
 
@@ -127,8 +128,8 @@ def centers():
 	else:
 		result = adoption_center_schema.dump(center_query, many=True)
 
-	for r in result:
-		format_center(r)
+	# for r in result:
+	# 	format_center(r)
 
 	return {"page": result, "count": count}
 
@@ -139,14 +140,14 @@ def center_id(id):
 
 	center = adoption_center_schema.dump(center, many=True)[0]
 
-	format_center(center)
+	# format_center(center)
 
 	return center
 
 
 # ----------------- BreedsSpecies -------------------
 
-@app.route("/sb", method=["GET"])
+@app.route("/sb", methods=["GET"])
 def species_breeds() :
 	queries = request.args.to_dict(flat=False)
 	sb_query = db.session.query(BreedsSpecies)
@@ -157,17 +158,17 @@ def species_breeds() :
 		# Convert the given page number into an int
 		page = int(page[0])
 	
-	# searching
-	q = get_query("q", queries)
-	if q:
-		sb_query = search_sb(q, sb_query)
+	# # searching
+	# q = get_query("q", queries)
+	# if q:
+	# 	sb_query = search_sb(q, sb_query)
 
-	# filtering
-	sb_query = filter_sb(sb_query, queries)
+	# # filtering
+	# sb_query = filter_sb(sb_query, queries)
 
-	# sorting
-	sort = get_query("sort", queries)
-	sb_query = sort_sb(sort, sb_query)
+	# # sorting
+	# sort = get_query("sort", queries)
+	# sb_query = sort_sb(sort, sb_query)
 
 	count = sb_query.count()
 
@@ -182,8 +183,8 @@ def species_breeds() :
 	else:
 		result = breeds_species_schema.dump(sb_query, many=True)
 
-	for r in results:
-		format_sb(r)
+	# for r in results:
+	# 	format_sb(r)
 
 	return {"page": result, "count": count}
 
@@ -191,13 +192,28 @@ def species_breeds() :
 def sb_id(id) :
 	sb = db.session.query(BreedsSpecies).filter_by(id=id)
 	sb = breeds_species_schema.dump(sb, many=True)[0]
-	format_sb(sb)
+	# format_sb(sb)
 	return sb
 
+@app.route("/")
+def hello_world() :
+	return "<p>Hello, World!</p>"
+
+@app.route("/favicon.ico")
+def favicon():
+	# return "<p>Hello</p>"
+	return send_from_directory(
+		os.path.join(app.root_path, "static"),
+		"icon.ico",
+		# mimetype="image/vnd.microsoft.icon"
+	)
 
 
+if __name__ == "__main__" :
+	app.run(host="0.0.0.0", port=5000, debug=True)
 
 
+# OLD CODE
 
 ##### MODELS #####
 
@@ -249,7 +265,3 @@ def sb_id(id) :
 # 	breed_desc = db.Column(db.String())
 # 	breed_temperament = db.Column(db.String())
 # 	breed_shedding = db.Column(db.String())
-
-
-if __name__ == "__main__" :
-	app.run(host="0.0.0.0", port=5000, debug=True)
