@@ -117,6 +117,7 @@ def populate_breeds() :
 	breed_list = []
 
 	num_pages = breeds_data['meta']['pages']
+	# print(num_pages)
 
 	for page in range(1, num_pages + 1) :
 		breeds_url = 'https://api.rescuegroups.org/v5/public/animals/breeds?limit=250&page=' + str(page)
@@ -140,104 +141,77 @@ def populate_breeds() :
 					entry['youth_name'] = species_data['data'][0]['attributes']['youngSingular']
 					species_youth_name = species_data['data'][0]['attributes']['youngSingular']
 					species_id_to_name[species_id] = [species_name, species_youth_name]
-					if species_name == 'Cat' :
-						cat_url = 'https://api.thecatapi.com/v1/breeds/search?q=' + breed_name
-						headers_cat = {'x-api-key' : '0934158a-de89-4fad-b996-14cf7f7cb5e7'}
-						cat_response = requests.request("GET", cat_url, headers=headers_cat, params=querystring)
-						cat_data = cat_response.json()
-						if len(cat_data) > 0 :
-							entry['temperament'] = cat_data[0]['temperament']
-							entry['life_span'] = cat_data[0]['life_span']
-							entry['alt_names'] = cat_data[0]['alt_names']
-							entry['wikipedia_url'] = cat_data[0]['wikipedia_url']
-							entry['origin'] = cat_data[0]['origin']
-							entry['weight'] = cat_data[0]['weight']['imperial']
-							entry['country_code'] = cat_data[0]['country_code']
-							entry['hairless'] = cat_data[0]['hairless']
-							entry['natural'] = cat_data[0]['natural']
-							entry['rare'] = cat_data[0]['rare']
-							entry['rex'] = cat_data[0]['rex']
-							entry['suppressed_tail'] = cat_data[0]['suppressed_tail']
-							entry['short_legs'] = cat_data[0]['short_legs']
-							entry['hypoallergenic'] = cat_data[0]['hypoallergenic']
-							entry['adaptability'] = cat_data[0]['adaptability']
-							entry['affection_level'] = cat_data[0]['affection_level']
-							entry['child_friendly'] = cat_data[0]['child_friendly']
-							entry['dog_friendly'] = cat_data[0]['dog_friendly']
-							entry['energy_level'] = cat_data[0]['energy_level']
-							entry['grooming'] = cat_data[0]['grooming']
-							entry['health_issues'] = cat_data[0]['health_issues']
-							entry['intelligence'] = cat_data[0]['intelligence']
-							entry['shedding_level'] = cat_data[0]['shedding_level']
-							entry['social_needs'] = cat_data[0]['social_needs']
-							entry['stranger_friendly'] = cat_data[0]['stranger_friendly']
-							entry['vocalization'] = cat_data[0]['vocalisation']
-					# else if species_name == 'Dog' :
+				
+				if species_name == 'Cat' :
+					cat_url = 'https://api.thecatapi.com/v1/breeds/search?q=' + breed_name
+					headers_cat = {'x-api-key' : '0934158a-de89-4fad-b996-14cf7f7cb5e7'}
+					cat_response = requests.request("GET", cat_url, headers=headers_cat, params=querystring)
+					cat_data = cat_response.json()
+					print(cat_data)
+					if len(cat_data) > 0 :
+						entry['temperament'] = get_query('temperament', cat_data[0])
+						entry['life_span'] = get_query('life_span', cat_data[0])
+						entry['alt_names'] = get_query('alt_names', cat_data[0])
+						entry['wikipedia_url'] = get_query('wikipedia_url', cat_data[0])
+						entry['origin'] = get_query('origin', cat_data[0])
+						entry['weight'] = get_query('weight', cat_data[0])['imperial'] if get_query('weight', cat_data[0]) != None else None
+						entry['country_code'] = get_query('country_code', cat_data[0])
+						entry['hairless'] = get_query('hairless', cat_data[0])
+						entry['natural'] = get_query('natural', cat_data[0])
+						entry['rare'] = get_query('rare', cat_data[0])
+						entry['rex'] = get_query('rex', cat_data[0])
+						entry['suppressed_tail'] = get_query('suppressed_tail', cat_data[0])
+						entry['short_legs'] = get_query('short_legs', cat_data[0])
+						entry['hypoallergenic'] = get_query('hypoallergenic', cat_data[0])
+						entry['adaptability'] = get_query('adaptability', cat_data[0])
+						entry['affection_level'] = get_query('affection_level', cat_data[0])
+						entry['child_friendly'] = get_query('child_friendly', cat_data[0])
+						entry['dog_friendly'] = get_query('dog_friendly', cat_data[0])
+						entry['energy_level'] = get_query('energy_level', cat_data[0])
+						entry['grooming'] = get_query('grooming', cat_data[0])
+						entry['health_issues'] = get_query('health_issues', cat_data[0])
+						entry['intelligence'] = get_query('intelligence', cat_data[0])
+						entry['shedding_level'] = get_query('shedding_level', cat_data[0])
+						entry['social_needs'] = get_query('social_needs', cat_data[0])
+						entry['stranger_friendly'] = get_query('stranger_friendly', cat_data[0])
+						entry['vocalization'] = get_query('vocalisation', cat_data[0])
+				elif species_name == 'Dog' :
+					dog_url = 'https://api.thedogapi.com/v1/breeds/search?q=' + breed_name
+					headers_dog = {'x-api-key' : '57baad70-4ab7-4115-af29-638c7e149024'}
+					dog_response = requests.request("GET", dog_url, headers=headers_dog, params=querystring)
+					dog_data = dog_response.json()
+					print(dog_data)
+					if len(dog_data) > 0 :
+						entry['temperament'] = get_query('temperament', dog_data[0])
+						entry['life_span'] = get_query('life_span', dog_data[0])
+						entry['alt_names'] = get_query('alt_names', dog_data[0])
+						entry['wikipedia_url'] = get_query('wikipedia_url', dog_data[0])
+						entry['origin'] = get_query('origin', dog_data[0])
+						entry['weight'] = get_query('weight', dog_data[0])['imperial'] if get_query('weight', dog_data[0]) != None else None
+						entry['country_code'] = get_query('country_code', dog_data[0])
+						entry['hairless'] = get_query('hairless', dog_data[0])
+						entry['natural'] = get_query('natural', dog_data[0])
+						entry['rare'] = get_query('rare', dog_data[0])
+						entry['rex'] = get_query('rex', dog_data[0])
+						entry['suppressed_tail'] = get_query('suppressed_tail', dog_data[0])
+						entry['short_legs'] = get_query('short_legs', dog_data[0])
+						entry['hypoallergenic'] = get_query('hypoallergenic', dog_data[0])
+						entry['adaptability'] = get_query('adaptability', dog_data[0])
+						entry['affection_level'] = get_query('affection_level', dog_data[0])
+						entry['child_friendly'] = get_query('child_friendly', dog_data[0])
+						entry['dog_friendly'] = get_query('dog_friendly', dog_data[0])
+						entry['energy_level'] = get_query('energy_level', dog_data[0])
+						entry['grooming'] = get_query('grooming', dog_data[0])
+						entry['health_issues'] = get_query('health_issues', dog_data[0])
+						entry['intelligence'] = get_query('intelligence', dog_data[0])
+						entry['shedding_level'] = get_query('shedding_level', dog_data[0])
+						entry['social_needs'] = get_query('social_needs', dog_data[0])
+						entry['stranger_friendly'] = get_query('stranger_friendly', dog_data[0])
+						entry['vocalization'] = get_query('vocalisation', dog_data[0])
 
 				# new_breed = BreedsSpecies(api_id=api_id, species=species_name, breed=breed, youth_name=species_youth_name)
 				new_breed = BreedsSpecies(**entry)
 				breed_list.append(new_breed)
-
-
-
-
-	# center_db_instance = AdoptionCenter(**)
-	for item in breeds_data['data'] :
-		entry = dict()
-		entry['api_id'] = item['id']
-		entry['breed_name'] = item['attributes']['name']
-		breed_name = item['attributes']['name']
-		species_id = item['relationships']['species']['data'][0]['id']
-		if (species_id in species_id_to_name) :
-			entry['species_name'] = species_id_to_name[species_id][0]
-			entry['youth_name'] = species_id_to_name[species_id][1]
-		else :
-			species_url = 'https://api.rescuegroups.org/v5/public/animals/species/' + species_id
-			species_response = requests.request("GET", species_url, headers=headers, params=querystring)
-			species_data = species_response.json()
-			entry['species_name'] = species_data['data'][0]['attributes']['singular']
-			species_name = species_data['data'][0]['attributes']['singular']
-			entry['youth_name'] = species_data['data'][0]['attributes']['youngSingular']
-			species_youth_name = species_data['data'][0]['attributes']['youngSingular']
-			species_id_to_name[species_id] = [species_name, species_youth_name]
-			if species_name == 'Cat' :
-				cat_url = 'https://api.thecatapi.com/v1/breeds/search?q=' + breed_name
-				headers_cat = {'x-api-key' : '0934158a-de89-4fad-b996-14cf7f7cb5e7'}
-				cat_response = requests.request("GET", cat_url, headers=headers_cat, params=querystring)
-				cat_data = cat_response.json()
-				if len(cat_data) > 0 :
-					entry['temperament'] = cat_data[0]['temperament']
-					entry['life_span'] = cat_data[0]['life_span']
-					entry['alt_names'] = cat_data[0]['alt_names']
-					entry['wikipedia_url'] = cat_data[0]['wikipedia_url']
-					entry['origin'] = cat_data[0]['origin']
-					entry['weight'] = cat_data[0]['weight']['imperial']
-					entry['country_code'] = cat_data[0]['country_code']
-					entry['hairless'] = cat_data[0]['hairless']
-					entry['natural'] = cat_data[0]['natural']
-					entry['rare'] = cat_data[0]['rare']
-					entry['rex'] = cat_data[0]['rex']
-					entry['suppressed_tail'] = cat_data[0]['suppressed_tail']
-					entry['short_legs'] = cat_data[0]['short_legs']
-					entry['hypoallergenic'] = cat_data[0]['hypoallergenic']
-					entry['adaptability'] = cat_data[0]['adaptability']
-					entry['affection_level'] = cat_data[0]['affection_level']
-					entry['child_friendly'] = cat_data[0]['child_friendly']
-					entry['dog_friendly'] = cat_data[0]['dog_friendly']
-					entry['energy_level'] = cat_data[0]['energy_level']
-					entry['grooming'] = cat_data[0]['grooming']
-					entry['health_issues'] = cat_data[0]['health_issues']
-					entry['intelligence'] = cat_data[0]['intelligence']
-					entry['shedding_level'] = cat_data[0]['shedding_level']
-					entry['social_needs'] = cat_data[0]['social_needs']
-					entry['stranger_friendly'] = cat_data[0]['stranger_friendly']
-					entry['vocalization'] = cat_data[0]['vocalisation']
-			# else if species_name == 'Dog' :
-
-		# new_breed = BreedsSpecies(api_id=api_id, species=species_name, breed=breed, youth_name=species_youth_name)
-		new_breed = BreedsSpecies(**entry)
-		breed_list.append(new_breed)
-
 
 	db.session.add_all(breed_list)
 	db.session.commit()

@@ -132,7 +132,8 @@ class AdoptablePetSchema(BaseSchema) :
 	name = fields.Str(required=True)
 	center = fields.Nested(
 		"AdoptionCenterSchema",
-		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services')
+		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services'),
+		required=True, many=True
 	)
 	species_breeds = fields.Nested(
 		"BreedsSpeciesSchema",
@@ -150,7 +151,8 @@ class AdoptionCenterSchema(BaseSchema) :
 	name = fields.Str(required=True)
 	pets = fields.Nested(
 		"AdoptablePetSchema",
-		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
+		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc'),
+		required=True, many=True
 	)
 	species_breed = fields.Nested(
 		"BreedsSpeciesSchema",
@@ -177,6 +179,34 @@ class BreedsSpeciesSchema(BaseSchema) :
 		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
 	)
 	youth_name = fields.Str(required=True)
+	temperament = fields.Str(required=True)
+	life_span = fields.Str(required=True)
+	alt_names = fields.Str(required=True)
+	wikipedia_url = fields.Str(required=True)
+	origin = fields.Str(required=True)
+	weight = fields.Str(required=True)
+	country_code = fields.Str(required=True)
+	height = fields.Str(required=True)
+	# experimental = db.Column(db.Integer)
+	hairless = fields.Int(required=True)
+	natural = fields.Int(required=True)
+	rare = fields.Int(required=True)
+	rex = fields.Int(required=True)
+	suppressed_tail = fields.Int(required=True)
+	short_legs = fields.Int(required=True)
+	hypoallergenic = fields.Int(required=True)
+	adaptability = fields.Int(required=True)
+	affection_level = fields.Int(required=True)
+	child_friendly = fields.Int(required=True)
+	dog_friendly = fields.Int(required=True)
+	energy_level = fields.Int(required=True)
+	grooming = fields.Int(required=True)
+	health_issues = fields.Int(required=True)
+	intelligence = fields.Int(required=True)
+	shedding_level = fields.Int(required=True)
+	social_needs = fields.Int(required=True)
+	stranger_friendly = fields.Int(required=True)
+	vocalization = fields.Int(required=True)
 
 adoptable_pet_schema = AdoptablePetSchema()
 adoption_center_schema = AdoptionCenterSchema()
