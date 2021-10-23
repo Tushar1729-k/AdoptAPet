@@ -88,5 +88,55 @@ class BreedsSpecies(db.Model) :
 # def __repr__(self) :
 #   return "<Breeds %s>" % self.name
 
+class AdoptablePetSchema(BaseSchema) :
+	id = fields.Int(required=True)
+	api_id = fields.Int(required=True)
+	name = fields.Str(required=True)
+	center = fields.Nested(
+		"AdoptionCenterSchema",
+		only=("")
+	)
+	species_breeds = fields.Nested(
+		"BreedsSpeciesSchema",
+		only=(), required=True, many=True
+	)
+	sex = fields.Str(required=True)
+	age = fields.Str(required=True)
+	color = fields.Str(required=True)
+	desc = fields.Str(required=True)
 
-	
+class AdoptionCenterSchema(BaseSchema) :
+	id = fields.Int(required=True)
+	api_id = fields.Int(required=True)
+	name = fields.Str(required=True)
+	pets = fields.Nested(
+		"AdoptablePetSchema",
+		only=("")
+	)
+	species_breed = fields.Nested(
+		"BreedsSpeciesSchema",
+		only=(), required=True, many=True
+	)
+	city = fields.Str(required=True)
+	state = fields.Str(required=True)
+	zipcode = fields.Str(required=True)
+	services = fields.Str(required=True)
+
+class BreedsSpeciesSchema(BaseSchema) :
+	id = fields.Int(required=True)
+	api_id = fields.Int(required=True)
+	species = fields.Str(required=True)
+	breed = fields.Str(required=True)
+	centers = fields.Nested(
+		"AdoptionCenterSchema",
+		only=(), required=True, attribute="species"
+	)
+	pets = fields.Nested(
+		"AdoptablePetSchema",
+		only=()
+	)
+	youth_name = fields.Str(required=True)
+
+adoptable_pet_schema = AdoptablePetSchema()
+adoption_center_schema = AdoptionCenterSchema()
+breeds_species_schema = BreedsSpeciesSchema()
