@@ -59,10 +59,8 @@ def pets() :
 	# q = get_query("q", queries)
 	# if q :
 	# 	pet_query = search_politicians(q, pet_query)
-
 	# # filtering
 	# pet_query = filter_politicans(pet_query, queries)
-
 	# # sorting
 	# sort = get_query("sort", queries)
 	# pet_query = sort_politicians(sort, pet_query)
@@ -86,9 +84,11 @@ def pets() :
 
 	return {"page": result, "count": count}
 
-# @app.route('/ap/<int:id>', methods=["GET"])
-# def ap_id() :
-# 	queries = 
+@app.route('/ap/<int:id>', methods=["GET"])
+def ap_id(id) :
+	pet = db.session.query(AdoptablePet).filter_by(id=id)
+	pet = adoptable_pet_schema.dump(pet, many=True)[0]
+	return pet
 
 # ---------------------- Adoption Centers ---------------
 

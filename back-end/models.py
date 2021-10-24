@@ -32,7 +32,7 @@ class AdoptablePet(db.Model) :
 	age = db.Column(db.String())
 	color = db.Column(db.String())
 	desc = db.Column(db.String())
-	# pic_url = db.Column(db.String)
+	pic_url = db.Column(db.String)
 
 	# pet_allergies = db.Column(db.String())
 	# pet_diet = db.Column(db.String())
@@ -145,7 +145,7 @@ class AdoptablePetSchema(BaseSchema) :
 	age = fields.Str(required=True)
 	color = fields.Str(required=True)
 	desc = fields.Str(required=True)
-	# pic_url = fields.Str(required=True)
+	pic_url = fields.Str(required=True)
 
 class AdoptionCenterSchema(BaseSchema) :
 	id = fields.Int(required=True)
