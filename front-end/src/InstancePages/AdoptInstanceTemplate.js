@@ -1,9 +1,19 @@
 import React from 'react'
 import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-bootstrap'
 import { Link } from "react-router-dom";
+import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
+import Youtube from '../GeneralPages/Youtube';
 
 const AdoptInstanceTemplate = ({attributes}) => {
+
+    // let map
+    // const initMap = () => {
+    //     map = new google.maps.Map(document.getElementById("map"), {
+    //         center: { lat: -34.397, lng: 150.644 },
+    //         zoom: 8,
+    //       })
+    // }
     return (
         <div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
@@ -11,8 +21,22 @@ const AdoptInstanceTemplate = ({attributes}) => {
                     <Image src={attributes.imgSrc} fluid style={{width: '100%'}}/>
                 </Row>
                 <Row>
-                    <h4>Google Maps</h4>
-                    <Image src={attributes.mapSrc} fluid style={{width: '100%'}}/>
+                    {/* <h4>Google Maps</h4>
+                    <Image src={attributes.mapSrc} fluid style={{width: '100%'}}/> */}
+                    {/* <div id="map" style={{height: "500px", width: "100%"}}></div>
+                    <script
+                    src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM&callback=initMap&v=weekly`}
+                    async
+                    ></script> */}
+                    <div style={{width: '100vw', height: '100vh'}}>
+                    <CustomMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+                                              AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`}
+                        loadingElement={<div style={{height: "100%"}}></div>}
+                        containerElement={<div style={{height: "100%"}}></div>}
+                        mapElement={<div style={{height: "100%"}}></div>}
+
+                    />
+                    </div>
                 </Row>
             </div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
@@ -39,10 +63,14 @@ const AdoptInstanceTemplate = ({attributes}) => {
                 </Card.Text>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
-                        <Link to={`/apmodel/${attributes.petId}`} style={{textDecoration: 'none'}}><h5>Look at an available pet</h5></Link>
+                    {attributes.speciesBreeds.map((sb, idx) => (
+                        <Link key={idx} to={`/sbmodel/${sb.api_id}`} style={{textDecoration: 'none'}}><h5>See a breed</h5></Link>
+                    ))}
                     </Col>
                     <Col>
-                        <Link to={`/sbmodel/${attributes.sbId}`} style={{textDecoration: 'none'}}><h5>See one of our common breeds</h5></Link>
+                        {attributes.pets.map((pet, idx) => (
+                            <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}}><h5>Take a look at {pet.name}</h5></Link>
+                        ))}
                     </Col>
                 </Row>
             </Card.Body>
@@ -56,7 +84,8 @@ const AdoptInstanceTemplate = ({attributes}) => {
 AdoptInstanceTemplate.defaultProps = {
     attributes: { name: '', address: '', city: '', state: '', zip: '',
                   phone: '', email: '', type: '', site: 'NA', species: '',
-                  services: '', petId: '', sbId: '', mapSrc: '', imgSrc: ''}
+                  services: '', petId: '', sbId: '', mapSrc: '', imgSrc: '',
+                  speciesBreeds: [], pets: []}
 }
 // Set type of the prop here.
 AdoptInstanceTemplate.propTypes = {

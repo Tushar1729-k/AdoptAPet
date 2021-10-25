@@ -37,7 +37,7 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                         </Row>
                         <Row style={{paddingTop: '2vh'}}>
                             <h4>Description</h4>
-                            <p>{attributes.description}</p>
+                            {attributes.description}
                         </Row>
                     </Container>
                 </Card.Text>
@@ -70,7 +70,7 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                         <Link to={`/sbmodel/${attributes.sbId}`} style={{textDecoration: 'none'}}><h5>Breed Information Page</h5></Link>
                     </Col>
                     <Col>
-                        <Link to={`/acmodel/${attributes.orgId}`} style={{textDecoration: 'none'}}><h5>Adoption Center Link</h5></Link>
+                        <Link to={`/acmodel/${attributes.adoptCenter.api_id}`} style={{textDecoration: 'none'}}><h5>This pet is at the {attributes.adoptCenter.name}</h5></Link>
                     </Col>
                 </Row>
             </Card.Body>
@@ -83,7 +83,8 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
 // Set defaults of props here.
 InstancePageTemplate.defaultProps = {
     attributes: { breed: '', name: '', size: '', age: '', color: '', sex: '',
-                  description: 'No description avaialable :(', imgSrc: '', mapSrc: ''},
+                  description: 'No description avaialable :(', imgSrc: '', mapSrc: '',
+                  adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'}},
     medicalHistory: { allergies: 'Not available', diet: 'Not available', 
                       issues: 'Not available', hearing: 'Not available',
                       sight: 'Not available', orgId: '198', sbId: '' }

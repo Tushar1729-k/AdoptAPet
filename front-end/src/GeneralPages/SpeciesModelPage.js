@@ -1,10 +1,28 @@
 import React from 'react'
 import { Row, Table } from 'react-bootstrap'
+import {  useState, useEffect } from 'react'
 import Species from '../Data/Species.json'
 import Breeds from '../Data/breeds2.json'
+import Paginate from '../Components/Pagination'
+import axios from 'axios'
 import {Link} from 'react-router-dom'
 
 const SpeciesModelPage = () => {
+    const [allBreeds, setAllBreeds] = useState([])
+    const [breedsPerPage, setBreedsPerPage] = useState(10)
+
+    const fetchBreeds = async (pageNum) => {
+        const res = await axios.get(`https://api.adoptapet.me/sb?page=${pageNum}`)
+        setAllBreeds(res.data.page)
+        setBreedsPerPage(res.data.count)
+    }
+
+    useEffect(() => {
+        fetchBreeds(1)
+    }, [])
+    const paginate = (num) => {
+        fetchBreeds(num)
+    }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
@@ -52,6 +70,9 @@ const SpeciesModelPage = () => {
                 </tbody>
                 </Table>
                 </div>
+                <Row>
+                    <Paginate totalItems={100} itemsPerPage={20} paginate={paginate} />
+                </Row>
         </div>
     )
 }

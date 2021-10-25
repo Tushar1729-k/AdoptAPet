@@ -1,9 +1,27 @@
 import React from 'react'
 import { Row, Table } from 'react-bootstrap'
+import {  useState, useEffect } from 'react'
 import adoptionCenters from '../Data/AdoptionCenters.json'
+import Paginate from '../Components/Pagination'
+import axios from 'axios'
 import { Link } from "react-router-dom"
 
 const AdopCentersPage = () => {
+    const [allCenters, setAllCenters] = useState([])
+    const [centersPerPage, setCentersPerPage] = useState(10)
+
+    const fetchCenters = async (pageNum) => {
+        const res = await axios.get(`https://api.adoptapet.me/ac?page=${pageNum}`)
+        setAllCenters(res.data.page)
+        setCentersPerPage(res.data.count)
+    }
+
+    useEffect(() => {
+        fetchCenters(1)
+    }, [])
+    const paginate = (num) => {
+        fetchCenters(num)
+    }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
@@ -21,20 +39,23 @@ const AdopCentersPage = () => {
                     </tr>
                 </thead>
                 <tbody>
-                {Array.from({ length: 3 }).map((_, index) => (
+                {allCenters.map((center, index) => (
                     <tr key={index}>
-                    <Link to={`/acmodel/${adoptionCenters[index].orgID}`} style={{ textDecoration: 'none'}}>
+                    <Link to={`/acmodel/${center.orgID}`} style={{ textDecoration: 'none'}}>
                         <td>{adoptionCenters[index].name}</td>
                     </Link>
-                    <td>{adoptionCenters[index].city}</td>
-                    <td>{adoptionCenters[index].state}</td>
-                    <td>{adoptionCenters[index].zip}</td>
-                    <td>{adoptionCenters[index].services}</td>
+                    <td>{center.city}</td>
+                    <td>{center.state}</td>
+                    <td>{center.zip}</td>
+                    <td>{center.services}</td>
                     </tr>
                 ))}
                 </tbody>
                 </Table>
                 </div>
+                <Row>
+                    <Paginate totalItems={100} itemsPerPage={centersPerPage} paginate={paginate} />
+                </Row>
         </div>
     )
 }

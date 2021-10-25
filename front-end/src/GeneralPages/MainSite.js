@@ -1,4 +1,6 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
+import axios from 'axios'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import HomePage from "./HomePage"
@@ -30,6 +32,24 @@ import centerImg3 from '../Images/adop_3.png'
 const MainSite = () => {
     const maps = [map1,map2,map3]
     const centerImgs = [centerImg2, centerImg1, centerImg3]
+
+    const [petsData, setPetsData] = useState([])
+    const [centersData, setCentersData] = useState([])
+    const [breedsData, setBreedsData] = useState([])
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const petRes = await axios.get(`https://api.adoptapet.me/ap?page=-1`)
+            const centerRes = await axios.get(`https://api.adoptapet.me/ac?page=-1`)
+            // const breedRes = await axios.get(`https://api.adoptapet.me/sb?page=-1`)
+            setPetsData(petRes.data.page)
+            setCentersData(centerRes.data.page)
+            // setBreedsData(breedRes.data.page)
+            
+        }
+        fetchData(1)
+    }, [])
+
     return (
         <div>
             <div style={{paddingBottom: '10vh'}}>
@@ -68,30 +88,30 @@ const MainSite = () => {
                             attributes={{ breed: 'Siberian Husky', name: 'Peter', weight: '100', age: '3', color: 'white/black', sex: 'M'}}
                         />
                     </Route>
-                    {Array.from({ length: 3 }).map((_, idx) => (
-                        <Route key={idx} exact path={`/apmodel/${pets[idx].animalID}`}>
+                    {petsData.map((pet, idx) => (
+                        <Route key={idx} exact path={`/apmodel/${pet.api_id}`}>
                             <InstancePage 
-                                attributes={{ breed: pets[idx].breed, name: pets[idx].name, size: pets[idx].size, 
-                                              age: pets[idx].age, color: pets[idx].color, sex: pets[idx].sex,
-                                              description: pets[idx].descriptionPlain, imgSrc: pets[idx].pictures[0].originalUrl,
-                                              orgId: adoptionCenters[idx].orgID, sbId: idx + 1, mapSrc: maps[idx] }}
-                                medicalHistory={{ allergies: pets[idx].allergies, diet: pets[idx].diet, 
-                                                  issues: pets[idx].ongoingMedical, hearing: pets[idx].hearingImpaired,
-                                                  sight: pets[idx].sightImpaired }}
+                                attributes={{ breed: "N/A", name: pet.name, size: "small", 
+                                              age: pet.age, color: pet.color, sex: pet.sex,
+                                              description: pet.desc, imgSrc: pet.pic_url,
+                                              adoptCenter: pet.center }}
+                                medicalHistory={{ allergies: pet.allergies, diet: pet.diet, 
+                                                  issues: pet.ongoingMedical, hearing: pet.hearingImpaired,
+                                                  sight: pet.sightImpaired }}
                             />
                         </Route>
                     ))}
-                    {Array.from({ length: 3 }).map((_, idx) => (
-                        <Route key={idx} exact path={`/acmodel/${adoptionCenters[idx].orgID}`}>
+                    {centersData.map((center, idx) => (
+                        <Route key={idx} exact path={`/acmodel/${center.api_id}`}>
                             <AdoptInstanceTemplate
-                                attributes={{ name: adoptionCenters[idx].name, address: adoptionCenters[idx].address,
-                                              city: adoptionCenters[idx].city, state: adoptionCenters[idx].state, 
-                                              zip: adoptionCenters[idx].zip, phone: adoptionCenters[idx].phone, 
-                                              email: adoptionCenters[idx].email, type: adoptionCenters[idx].orgType, 
-                                              site: adoptionCenters[idx].orgurl, species: adoptionCenters[idx].orgSpecies,
-                                              services: adoptionCenters[idx].services, petId: pets[idx].animalID, sbId: idx + 1,
-                                              imgSrc: centerImgs[idx],
-                                              mapSrc: maps[idx]
+                                attributes={{ name: center.name, address: "",
+                                              city: center.city, state: center.state, 
+                                              zip: center.zipcode, phone: "", 
+                                              email: "", type: center.orgType, 
+                                              site: center.orgurl, species: center.orgSpecies,
+                                              services: center.services, speciesBreeds: center.species_breed,
+                                              pets: center.pets,
+                                              imgSrc: ""
                                             }}
                             />
                         </Route>

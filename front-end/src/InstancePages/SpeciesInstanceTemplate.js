@@ -2,6 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
+import YoutubePlayer from '../GeneralPages/Youtube';
 
 const SpeciesInstanceTemplate = ({attributes}) => {
     return (
@@ -19,7 +20,7 @@ const SpeciesInstanceTemplate = ({attributes}) => {
                     <Image src={attributes.imgSrc[2]} fluid style={{width: '100%'}}/>
                 </Row>
                 <Row>
-                    {attributes.video}
+                    <YoutubePlayer searchQuery={attributes.breed}/>
                 </Row>
             </div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
@@ -76,7 +77,7 @@ SpeciesInstanceTemplate.defaultProps = {
     attributes: { breed: '', species: '', height: 'NA', weight: 'NA', color: 'NA',
                   energy: 'NA', lifespan: '', temperament: 'NA', shedding: 'NA',
                   health: 'NA', description: 'NA', petId: '', orgId: '', imgSrv: [],
-                  video: <div></div>}
+                  video: <div></div>, adoptCenters: [], pets: []}
 }
 // Set type of the prop here.
 SpeciesInstanceTemplate.propTypes = {
