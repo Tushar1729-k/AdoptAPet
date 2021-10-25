@@ -33,7 +33,7 @@ build_front_end:
 #   script:
 #     - cd front-end
 #     - npm install
-#     - npm run test # TODO: how does this work?
+#     - npm run test
 
 test_python:
   stage: test

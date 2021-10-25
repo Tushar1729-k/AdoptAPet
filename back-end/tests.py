@@ -12,6 +12,11 @@ class UnitTests(TestCase):
         req = test_client.get("/ap?page=1")
         self.assertEqual(req.status_code, 200)
 
+    def test_ap_perpage(self):
+        test_client = app.test_client()
+        req = test_client.get("/ap?perPage=1")
+        self.assertEqual(req.status_code, 200)
+
     def test_ap_id(self):
         test_client = app.test_client()
         req = test_client.get("/ap/1")
@@ -27,6 +32,11 @@ class UnitTests(TestCase):
         req = test_client.get("/sb?page=1")
         self.assertEqual(req.status_code, 200)
 
+    def test_sb_perpage(self):
+        test_client = app.test_client()
+        req = test_client.get("/sb?perPage=1")
+        self.assertEqual(req.status_code, 200)
+
     def test_sb_id(self):
         test_client = app.test_client()
         req = test_client.get("/sb/1")
@@ -40,6 +50,11 @@ class UnitTests(TestCase):
     def test_ac_page(self):
         test_client = app.test_client()
         req = test_client.get("/ac?page=1")
+        self.assertEqual(req.status_code, 200)
+
+    def test_ac_perpage(self):
+        test_client = app.test_client()
+        req = test_client.get("/ac?perPage=1")
         self.assertEqual(req.status_code, 200)
 
     def test_ac_id(self):
