@@ -7,6 +7,11 @@ class UnitTests(TestCase):
         req = test_client.get("/ap")
         self.assertEqual(req.status_code, 200)
 
+    def test_ap_page(self):
+        test_client = app.test_client()
+        req = test_client.get("/ap?page=1")
+        self.assertEqual(req.status_code, 200)
+
     def test_ap_id(self):
         test_client = app.test_client()
         req = test_client.get("/ap/1")
@@ -15,6 +20,11 @@ class UnitTests(TestCase):
     def test_sb(self):
         test_client = app.test_client()
         req = test_client.get("/sb")
+        self.assertEqual(req.status_code, 200)
+
+    def test_sb_page(self):
+        test_client = app.test_client()
+        req = test_client.get("/sb?page=1")
         self.assertEqual(req.status_code, 200)
 
     def test_sb_id(self):
@@ -27,9 +37,14 @@ class UnitTests(TestCase):
         req = test_client.get("/ac")
         self.assertEqual(req.status_code, 200)
 
-    def test_sb_id(self):
+    def test_ac_page(self):
         test_client = app.test_client()
-        req = test_client.get("/sb/1")
+        req = test_client.get("/ac?page=1")
+        self.assertEqual(req.status_code, 200)
+
+    def test_ac_id(self):
+        test_client = app.test_client()
+        req = test_client.get("/ac/1")
         self.assertEqual(req.status_code, 200)
 
 if __name__ == "__main__":
