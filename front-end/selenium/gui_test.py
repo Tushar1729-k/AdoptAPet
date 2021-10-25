@@ -14,7 +14,8 @@ wait = None
 url = "https://adoptapet.me"
 PATH = "./frontend/guitests/chromedriver"
 
-def setup_modele(module):
+def setup_module(module):
+    print("starting setup_module")
     global driver, wait
 
     chrome_options = Options()
@@ -26,7 +27,13 @@ def setup_modele(module):
     return driver
  
 def teardown_module(module):
+    print("starting teardown_module")
     driver.close()
 
 def test_title():
-    assert driver.title
+    print("starting test_title")
+    assert driver.title # 1
+
+def test_navbar():
+    print("starting test_navbar")
+    navbar = driver.find_elements(By.XPATH, "")

@@ -9,12 +9,12 @@ cache:
   paths:
     - front-end/node_modules/
 
-build_front_end:
-  stage: build
-  script:
-    - cd front-end
-    - npm install
-    - CI=false npm run-script build
+# build_front_end:
+#   stage: build
+#   script:
+#     - cd front-end
+#     - npm install
+#     - CI=false npm run-script build
 
 test_selenium:
   stage: test
