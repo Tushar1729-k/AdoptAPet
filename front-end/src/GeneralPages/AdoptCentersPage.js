@@ -6,7 +6,7 @@ import Paginate from '../Components/Pagination'
 import axios from 'axios'
 import { Link } from "react-router-dom"
 
-const AdopCentersPage = () => {
+const AdoptCentersPage = () => {
     const [allCenters, setAllCenters] = useState([])
     const [centersPerPage, setCentersPerPage] = useState(10)
 

@@ -2,7 +2,7 @@ import React from 'react'
 import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import PropTypes from 'prop-types'
-import YoutubePlayer from '../GeneralPages/Youtube';
+import YoutubePlayer from '../Components/Youtube';
 
 const SpeciesInstanceTemplate = ({attributes}) => {
     return (

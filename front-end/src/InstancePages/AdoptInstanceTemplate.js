@@ -3,7 +3,7 @@ import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-boots
 import { Link } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
-import Youtube from '../GeneralPages/Youtube';
+import Youtube from '../Components/Youtube';
 
 const AdoptInstanceTemplate = ({attributes}) => {
 
@@ -82,18 +82,10 @@ const AdoptInstanceTemplate = ({attributes}) => {
 
 // Set defaults of props here.
 AdoptInstanceTemplate.defaultProps = {
-<<<<<<< HEAD
     attributes: { name: '', address: '', city: '', state: '', zip: '',
                   phone: '', email: '', type: '', site: 'NA', species: '',
                   services: '', petId: '', sbId: '', mapSrc: '', imgSrc: '',
                   speciesBreeds: [], pets: []}
-=======
-	attributes: {
-		name: '', address: '', city: '', state: '', zip: '',
-		phone: '', email: '', type: '', site: 'NA', species: '',
-		services: '', petId: '', sbId: '', mapSrc: '', imgSrc: ''
-	}
->>>>>>> face13d134e2990c8995dc61b6a230257944b32b
 }
 // Set type of the prop here.
 AdoptInstanceTemplate.propTypes = {
