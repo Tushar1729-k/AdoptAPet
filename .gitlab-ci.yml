@@ -37,6 +37,11 @@ build_front_end:
 
 test_python:
   stage: test
+  only:
+    refs:
+      - branches
+    variables:
+      - $CI_COMMIT_REF_PROTECTED == "true"
   image:
     name: mcgenius/pp_python
     entrypoint: [""]
