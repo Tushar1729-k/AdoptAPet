@@ -36,4 +36,4 @@ def test_title():
 
 def test_navbar():
     print("starting test_navbar")
-    navbar = driver.find_elements(By.XPATH, "")
+    # navbar = driver.find_elements(By.XPATH, "")
