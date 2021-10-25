@@ -16,7 +16,7 @@ def populate_pets() :
 	pet_list = []
 	for org_id in org_ids :
 		print(org_id[0])
-		request = urllib.request.Request('https://api.rescuegroups.org/v5/public/orgs/' + str(org_id[0]) + '/animals')
+		request = urllib.request.Request('https://api.rescuegroups.org/v5/public/orgs/' + str(org_id[0]) + '/animals?include=breeds,pictures')
 		request.add_header("Authorization", "wmUYpgAP")
 		r = urllib.request.urlopen(request)
 		data = json.loads(r.read())
@@ -31,7 +31,11 @@ def populate_pets() :
 				age = animal['attributes']['ageGroup'] if 'ageGroup' in animal['attributes'] else ""
 				color = animal['attributes']['colorDetails'] if 'colorDetails' in animal['attributes'] else ""
 				desc = animal['attributes']['descriptionHtml'] if 'descriptionHtml' in animal['attributes'] else ""
-				# pic_url = 
+				for picture in data['included'] :
+					print(animal)
+					pic_id = animal['relationships']['pictures']['data'][0]['id'] if get_query('pictures', animal['relationships']) != None else None
+					if picture['id'] == pic_id :
+						pic_url = picture['attributes']['original']['url']
 				# new_pet = AdoptablePet(pet_name=item['attributes']["name"], pet_breed=item['attributes']["breedString"], 
 				# 						pet_sex=item['attributes']["sex"], pet_age=item['attributes']["ageGroup"], 
 				# 						pet_color=item['attributes']['colorDetails'],
@@ -39,7 +43,7 @@ def populate_pets() :
 				# pet_list.append(new_pet)
 				new_pet = AdoptablePet(api_id=api_id, center_number=center_number, breed_number=breed_number,
 																name=name, sex=sex, 
-																age=age, color=color, desc=desc)
+																age=age, color=color, desc=desc, pic_url=pic_url)
 				pet_list.append(new_pet)
 	# print(pet_list)
 	# flush script db.reset
@@ -50,7 +54,7 @@ def populate_pets() :
 	db.session.commit()
 
 def __init__(self, api_id=0, center_number=0, breed_number=0, name="NaN", sex="NaN", age="NaN", 
-							color="NaN", desc="NaN" 
+							color="NaN", desc="NaN", pic_url="NaN" 
 							# pet_allergies="NaN", pet_diet="NaN",
 							# pet_issues="NaN", pet_hearing="NaN", pet_sight="NaN"
 							) :
@@ -63,9 +67,10 @@ def __init__(self, api_id=0, center_number=0, breed_number=0, name="NaN", sex="N
 	self.age = age
 	self.color = color
 	self.desc = desc
+	self.pic_url = pic_url
 
 def populate_centers() :
-	url = "https://api.rescuegroups.org/v5/public/orgs?limit=125"
+	url = "https://api.rescuegroups.org/v5/public/orgs?limit=25"
 	querystring = {"format": "json"}
 	headers = {
 		'Authorization': "wmUYpgAP"
@@ -148,7 +153,7 @@ def populate_breeds() :
 					headers_cat = {'x-api-key' : '0934158a-de89-4fad-b996-14cf7f7cb5e7'}
 					cat_response = requests.request("GET", cat_url, headers=headers_cat, params=querystring)
 					cat_data = cat_response.json()
-					print(cat_data)
+					# print(cat_data)
 					if len(cat_data) > 0 :
 						entry['temperament'] = get_query('temperament', cat_data[0])
 						entry['life_span'] = get_query('life_span', cat_data[0])
@@ -181,7 +186,7 @@ def populate_breeds() :
 					headers_dog = {'x-api-key' : '57baad70-4ab7-4115-af29-638c7e149024'}
 					dog_response = requests.request("GET", dog_url, headers=headers_dog, params=querystring)
 					dog_data = dog_response.json()
-					print(dog_data)
+					# print(dog_data)
 					if len(dog_data) > 0 :
 						entry['temperament'] = get_query('temperament', dog_data[0])
 						entry['life_span'] = get_query('life_span', dog_data[0])
