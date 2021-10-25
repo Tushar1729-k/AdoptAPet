@@ -2,6 +2,7 @@ image: node:latest
 
 stages:
   - build
+  - test
   - deploy
 
 cache:
@@ -14,6 +15,16 @@ build_front_end:
     - cd front-end
     - npm install
     - CI=false npm run-script build
+
+test_selenium:
+  stage: test
+  services:
+    - selenium/standalone-chrome
+  image: python:3.9-slim
+  before_script:
+    - python3 -m pip install -r front-end/selenium/requirements.txt
+  script:
+    - python3 -m pytest
 
 # deploy_develop: ??? https://github.com/forbesye/cs373/blob/main/Flask_AWS_Deploy.md
 
