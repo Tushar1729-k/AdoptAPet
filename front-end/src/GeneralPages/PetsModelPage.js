@@ -24,6 +24,8 @@ const PetsModelPage = () => {
     }
     return (
         <div style={{padding: '4vw'}}>
+            <h2>Adoptable Pets</h2>
+            <h6>126 adoptable pets, page 1/1</h6>
             <Row xs={1} md={2} className="g-4">
                 {allPets.map((pet, idx) => (
                     <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none'}}>

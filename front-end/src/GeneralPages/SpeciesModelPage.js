@@ -28,6 +28,7 @@ const SpeciesModelPage = () => {
             <Row>
                 <h2>Species</h2>
             </Row>
+            <h5>3 species, page 1/1</h5>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm">
                 <thead>

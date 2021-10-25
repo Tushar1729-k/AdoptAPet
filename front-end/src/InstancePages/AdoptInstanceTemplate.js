@@ -82,14 +82,22 @@ const AdoptInstanceTemplate = ({attributes}) => {
 
 // Set defaults of props here.
 AdoptInstanceTemplate.defaultProps = {
+<<<<<<< HEAD
     attributes: { name: '', address: '', city: '', state: '', zip: '',
                   phone: '', email: '', type: '', site: 'NA', species: '',
                   services: '', petId: '', sbId: '', mapSrc: '', imgSrc: '',
                   speciesBreeds: [], pets: []}
+=======
+	attributes: {
+		name: '', address: '', city: '', state: '', zip: '',
+		phone: '', email: '', type: '', site: 'NA', species: '',
+		services: '', petId: '', sbId: '', mapSrc: '', imgSrc: ''
+	}
+>>>>>>> face13d134e2990c8995dc61b6a230257944b32b
 }
 // Set type of the prop here.
 AdoptInstanceTemplate.propTypes = {
-    attributes: PropTypes.object
+	attributes: PropTypes.object
 }
 
 export default AdoptInstanceTemplate
