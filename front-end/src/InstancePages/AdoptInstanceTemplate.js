@@ -1,9 +1,9 @@
 import React from 'react'
-import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-bootstrap'
+import { Container, Row, Col, Card, Badge, ListGroup, Image } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
-import Youtube from '../Components/Youtube';
+import { InfoCircleFill, PatchPlusFill } from 'react-bootstrap-icons';
 
 const AdoptInstanceTemplate = ({attributes}) => {
 
@@ -14,6 +14,8 @@ const AdoptInstanceTemplate = ({attributes}) => {
     //         zoom: 8,
     //       })
     // }
+    const services = attributes.services.split(",")
+    const badgeTypes = ["secondary", "success", "danger", "warning", "info", "light", "dark"]
     return (
         <div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
@@ -49,7 +51,21 @@ const AdoptInstanceTemplate = ({attributes}) => {
                         <Row>
                             <ListGroup variant="flush">
                                 <ListGroup.Item>Species Available : {attributes.species}</ListGroup.Item>
-                                <ListGroup.Item>Services Available : {attributes.services}</ListGroup.Item>
+                                <ListGroup.Item>
+                                    Services Available :
+                                    <div>
+                                        <InfoCircleFill/>{' '}
+                                        <Badge pill bg="primary">
+                                            <PatchPlusFill/>{' '}Adoption
+                                        </Badge>
+                                        {Array.from({length: services.length}).map((_, idx) => (
+                                            <Badge key={idx} pill bg={badgeTypes[idx]}>
+                                                <PatchPlusFill/>{' '}{services[idx]}
+                                            </Badge>
+                                        ))}
+                                    </div>
+                                    {attributes.services}
+                                </ListGroup.Item>
                                 <ListGroup.Item>Address : {attributes.address}</ListGroup.Item>
                                 <ListGroup.Item>City : {attributes.city}</ListGroup.Item>
                                 <ListGroup.Item>State : {attributes.state}</ListGroup.Item>

@@ -42,12 +42,12 @@ const AdoptCentersPage = () => {
                 <tbody>
                 {allCenters.map((center, index) => (
                     <tr key={index}>
-                    <Link to={`/acmodel/${center.orgID}`} style={{ textDecoration: 'none'}}>
-                        <td>{adoptionCenters[index].name}</td>
+                    <Link to={`/acmodel/${center.api_id}`} style={{ textDecoration: 'none'}}>
+                        <td>{center.name}</td>
                     </Link>
                     <td>{center.city}</td>
                     <td>{center.state}</td>
-                    <td>{center.zip}</td>
+                    <td>{center.zipcode}</td>
                     <td>{center.services}</td>
                     </tr>
                 ))}
