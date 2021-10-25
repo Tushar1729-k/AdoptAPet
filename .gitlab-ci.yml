@@ -2,6 +2,7 @@ image: node:latest
 
 stages:
   - build
+  - test
   - deploy
 
 cache:
@@ -14,6 +15,37 @@ build_front_end:
     - cd front-end
     - npm install
     - CI=false npm run-script build
+
+# test_postman:
+#   stage: test
+#   image:
+#     name: postman/newman_alpine33
+#     entrypoint: [""]
+#   script:
+#     - newman --version
+#     - newman run Postman.json # need to write tests in Postman client after API endpoints are updated
+
+# test_jest:
+#   stage: test
+#   image:
+#     name: mcgenius/pp_mocha
+#     entrypoint: [""]
+#   script:
+#     - cd front-end
+#     - npm install
+#     - npm run test # TODO: how does this work?
+
+test_python:
+  stage: test
+  image:
+    name: mcgenius/pp_python
+    entrypoint: [""]
+  script:
+    - cd back-end
+    - pip install -r requirements.txt
+    - python tests.py
+
+
 
 # deploy_develop: ??? https://github.com/forbesye/cs373/blob/main/Flask_AWS_Deploy.md
 
