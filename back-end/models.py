@@ -32,6 +32,7 @@ class AdoptablePet(db.Model) :
 	age = db.Column(db.String())
 	color = db.Column(db.String())
 	desc = db.Column(db.String())
+	# pic_url = db.Column(db.String)
 
 	# pet_allergies = db.Column(db.String())
 	# pet_diet = db.Column(db.String())
@@ -70,9 +71,38 @@ class BreedsSpecies(db.Model) :
 	# All associated pets, one-to-many relationship
 	pets = db.relationship("AdoptablePet", backref="species_breed")
 	api_id = db.Column(db.Integer)
-	species = db.Column(db.String())
-	breed = db.Column(db.String())
+	species_name = db.Column(db.String())
+	breed_name = db.Column(db.String())
 	youth_name = db.Column(db.String())
+	temperament = db.Column(db.String)
+	life_span = db.Column(db.String)
+	alt_names = db.Column(db.String)
+	wikipedia_url = db.Column(db.String)
+	origin = db.Column(db.String)
+	weight = db.Column(db.String)
+	country_code = db.Column(db.String)
+	height = db.Column(db.String)
+	# experimental = db.Column(db.Integer)
+	hairless = db.Column(db.Integer)
+	natural = db.Column(db.Integer)
+	rare = db.Column(db.Integer)
+	rex = db.Column(db.Integer)
+	suppressed_tail = db.Column(db.Integer)
+	short_legs = db.Column(db.Integer)
+	hypoallergenic = db.Column(db.Integer)
+	adaptability = db.Column(db.Integer)
+	affection_level = db.Column(db.Integer)
+	child_friendly = db.Column(db.Integer)
+	dog_friendly = db.Column(db.Integer)
+	energy_level = db.Column(db.Integer)
+	grooming = db.Column(db.Integer)
+	health_issues = db.Column(db.Integer)
+	intelligence = db.Column(db.Integer)
+	shedding_level = db.Column(db.Integer)
+	social_needs = db.Column(db.Integer)
+	stranger_friendly = db.Column(db.Integer)
+	vocalization = db.Column(db.Integer)
+
 	# get other fields from another api or db
 	# lifeexp = db.Column(db.String())
 	# size = db.Column(db.String())
@@ -103,17 +133,19 @@ class AdoptablePetSchema(BaseSchema) :
 	name = fields.Str(required=True)
 	center = fields.Nested(
 		"AdoptionCenterSchema",
-		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services')
+		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services'),
+		required=True
 	)
 	species_breeds = fields.Nested(
 		"BreedsSpeciesSchema",
 		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
-		required=True, many=True
+		required=True
 	)
 	sex = fields.Str(required=True)
 	age = fields.Str(required=True)
 	color = fields.Str(required=True)
 	desc = fields.Str(required=True)
+	# pic_url = fields.Str(required=True)
 
 class AdoptionCenterSchema(BaseSchema) :
 	id = fields.Int(required=True)
@@ -121,12 +153,15 @@ class AdoptionCenterSchema(BaseSchema) :
 	name = fields.Str(required=True)
 	pets = fields.Nested(
 		"AdoptablePetSchema",
-		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
+		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc'),
+		required=True, many=True
 	)
 	species_breed = fields.Nested(
 		"BreedsSpeciesSchema",
 		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
-		required=True, many=True
+		required=True, 
+		attribute="species",
+		many=True
 	)
 	city = fields.Str(required=True)
 	state = fields.Str(required=True)
@@ -141,13 +176,45 @@ class BreedsSpeciesSchema(BaseSchema) :
 	centers = fields.Nested(
 		"AdoptionCenterSchema",
 		only=('id', 'api_id', 'name', 'city', 'state', 'zipcode', 'services'), 
-		required=True
+		required=True,
+		attribute="center",
+		many=True
 	)
 	pets = fields.Nested(
 		"AdoptablePetSchema",
-		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc')
+		only=('id', 'api_id', 'name', 'sex', 'age', 'color', 'desc'),
+		required=True,
+		many=True
 	)
 	youth_name = fields.Str(required=True)
+	temperament = fields.Str(required=True)
+	life_span = fields.Str(required=True)
+	alt_names = fields.Str(required=True)
+	wikipedia_url = fields.Str(required=True)
+	origin = fields.Str(required=True)
+	weight = fields.Str(required=True)
+	country_code = fields.Str(required=True)
+	height = fields.Str(required=True)
+	# experimental = db.Column(db.Integer)
+	hairless = fields.Int(required=True)
+	natural = fields.Int(required=True)
+	rare = fields.Int(required=True)
+	rex = fields.Int(required=True)
+	suppressed_tail = fields.Int(required=True)
+	short_legs = fields.Int(required=True)
+	hypoallergenic = fields.Int(required=True)
+	adaptability = fields.Int(required=True)
+	affection_level = fields.Int(required=True)
+	child_friendly = fields.Int(required=True)
+	dog_friendly = fields.Int(required=True)
+	energy_level = fields.Int(required=True)
+	grooming = fields.Int(required=True)
+	health_issues = fields.Int(required=True)
+	intelligence = fields.Int(required=True)
+	shedding_level = fields.Int(required=True)
+	social_needs = fields.Int(required=True)
+	stranger_friendly = fields.Int(required=True)
+	vocalization = fields.Int(required=True)
 
 adoptable_pet_schema = AdoptablePetSchema()
 adoption_center_schema = AdoptionCenterSchema()
