@@ -54,6 +54,7 @@ class AdoptionCenter(db.Model) :
 											secondary=link_species_centers, 
 											backref=db.backref("center", lazy="dynamic"))
 	name = db.Column(db.String())
+	street = db.Column(db.String)
 	city = db.Column(db.String())
 	state = db.Column(db.String())
 	zipcode = db.Column(db.String())
@@ -138,7 +139,7 @@ class AdoptablePetSchema(BaseSchema) :
 	name = fields.Str(required=True)
 	center = fields.Nested(
 		"AdoptionCenterSchema",
-		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services'),
+		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'lat', 'lon', 'services'),
 		required=True
 	)
 	species_breed = fields.Nested(
@@ -169,6 +170,7 @@ class AdoptionCenterSchema(BaseSchema) :
 		attribute="species",
 		many=True
 	)
+	street = fields.Str(required=True)
 	city = fields.Str(required=True)
 	state = fields.Str(required=True)
 	zipcode = fields.Str(required=True)
