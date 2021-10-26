@@ -20,10 +20,15 @@ def populate_pets() :
 		r = urllib.request.urlopen(request)
 		data = json.loads(r.read())
 		if 'data' in data :
+			count = 0
 			for animal in data['data'] :
+				if count == 5:
+					break
+				count += 1
+
 				api_id = animal['id']
 				center_number = org_id[0]
-				breed_number = animal['relationships']['breeds']['data'][0]['id']
+				breed_number = animal['relationships']['breeds']['data'][0]['id'] if get_query('breeds', animal['relationships']) != None else None
 				name = animal['attributes']['name'] if 'name' in animal['attributes'] else ""
 				# breed = item['attributes']['breedString'] if 'breedString' in item['attributes'] else ""
 				sex = animal['attributes']['sex'] if 'sex' in animal['attributes'] else ""
@@ -68,7 +73,7 @@ def __init__(self, api_id=0, center_number=0, breed_number=0, name="NaN", sex="N
 	self.pic_url = pic_url
 
 def populate_centers() :
-	url = "https://api.rescuegroups.org/v5/public/orgs?limit=25"
+	url = "https://api.rescuegroups.org/v5/public/orgs?limit=100"
 	querystring = {"format": "json"}
 	headers = {
 		'Authorization': "wmUYpgAP"
@@ -80,6 +85,7 @@ def populate_centers() :
 		entry = dict()
 		entry['api_id'] = item['id']
 		entry['name'] = item['attributes']['name'] if 'name' in item['attributes'] else ''
+		entry['street'] = item['attributes']['street'] if 'street' in item['attributes'] else ''
 		entry['city'] = item['attributes']['city'] if 'city' in item['attributes'] else ''
 		entry['state'] = item['attributes']['state'] if 'state' in item['attributes'] else ''
 		entry['zipcode'] = item['attributes']['postalcode'] if 'postalcode' in item['attributes'] else ''
