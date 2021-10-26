@@ -30,7 +30,7 @@ test_python:
     refs:
       - branches
     variables:
-      - $CI_COMMIT_REF_PROTECTED == "true"
+      - $CI_COMMIT_BRANCH == "develop"
   image:
     name: mcgenius/pp_python
     entrypoint: [""]
