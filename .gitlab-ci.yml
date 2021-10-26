@@ -9,12 +9,12 @@ cache:
   paths:
     - front-end/node_modules/
 
-build_front_end:
-  stage: build
-  script:
-    - cd front-end
-    - npm install
-    - CI=false npm run-script build
+# build_front_end:
+#   stage: build
+#   script:
+#     - cd front-end
+#     - npm install
+#     - CI=false npm run-script build
 
 test_postman:
   image:
@@ -22,8 +22,7 @@ test_postman:
     entrypoint: [""]
   script:
     - cd back-end
-    - newman run postman.json
-
+    - newman run Postman.json
 
 test_python:
   stage: test
