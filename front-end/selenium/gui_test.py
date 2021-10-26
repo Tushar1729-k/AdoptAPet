@@ -69,3 +69,16 @@ def test_navbar_adoption_centers():
     centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
+
+# 7
+def test_navbar_logo():
+    print("starting test_navbar_logo")
+    logo = driver.find_element(By.LINK_TEXT, "Adopt a Pet")
+    logo.click()
+    assert driver.current_url == "https://www.adoptapet.me/"
+
+# 8
+def test_home_h1():
+    print("starting test_home_h1")
+    elem = driver.find_element(By.TAG_NAME, "h1")
+    assert elem.text == "Give a home to these animals"
