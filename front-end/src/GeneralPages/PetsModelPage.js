@@ -5,8 +5,9 @@ import { Link } from "react-router-dom"
 import pets from '../Data/AnimalsData.json'
 import Paginate from '../Components/Pagination'
 import axios from 'axios'
+import PropTypes from 'prop-types'
 
-const PetsModelPage = () => {
+const PetsModelPage = ({fetchPage}) => {
     const [allPets, setAllPets] = useState([])
     const [petsPerPage, setPetsPerPage] = useState(10)
 
@@ -25,16 +26,15 @@ const PetsModelPage = () => {
     return (
         <div style={{padding: '4vw'}}>
             <h2>Adoptable Pets</h2>
-            <h6>126 adoptable pets, page 1/1</h6>
             <Row xs={1} md={2} className="g-4">
                 {allPets.map((pet, idx) => (
-                    <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none'}}>
+                    <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
                         <Col>
                         <Card>
                             <img variant="top" src={pet.pic_url} style={{width: '100%', height: '400px'}} />
                             <Card.Body>
                             <Card.Title style={{fontSize: '4vh'}}>{pet.name}</Card.Title>
-                            <Card.Subtitle style={{fontSize: '2vh'}} className="mb-2 text-muted">{pets[idx].breed}</Card.Subtitle>
+                            <Card.Subtitle style={{fontSize: '2vh'}} className="mb-2 text-muted">{pet.species_breed.breed_name}</Card.Subtitle>
                             <ListGroup horizontal>
                             <ListGroup.Item>Sex : {pet.sex}</ListGroup.Item>
                             <ListGroup.Item>Age : {pet.age != "" ? pets[idx].age : "Not Available"}</ListGroup.Item>
@@ -49,6 +49,10 @@ const PetsModelPage = () => {
             <Paginate totalItems={600} itemsPerPage={petsPerPage} paginate={paginate}/>
         </div>
     )
+}
+
+PetsModelPage.propTypes = {
+    fetchPage: PropTypes.func
 }
 
 export default PetsModelPage

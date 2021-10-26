@@ -1,0 +1,417 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Pet Instance Page Text Properly Rendered 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "paddingLeft": "20vw",
+        "paddingRight": "20vw",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <img
+        className="img-fluid"
+        src=""
+        style={
+          Object {
+            "height": "750px",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingLeft": "20vw",
+        "paddingRight": "20vw",
+        "paddingTop": "4vh",
+      }
+    }
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "width": "60vw",
+        }
+      }
+    >
+      <div
+        className="card-body"
+      >
+        <div
+          className="card-title h5"
+          style={
+            Object {
+              "fontSize": "8vh",
+            }
+          }
+        >
+          German Sheperd
+        </div>
+        <div
+          className="mb-2 text-muted card-subtitle h6"
+          style={
+            Object {
+              "fontSize": "4vh",
+            }
+          }
+        >
+          Max
+        </div>
+        <p
+          className="card-text"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="list-group list-group-flush"
+                onKeyDown={[Function]}
+              >
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Size : 
+                  large
+                </div>
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Age : 
+                  5
+                </div>
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Color : 
+                  Grey/Black
+                </div>
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Sex : 
+                  M
+                </div>
+              </div>
+            </div>
+            <div
+              className="row"
+              style={
+                Object {
+                  "paddingTop": "2vh",
+                }
+              }
+            >
+              <h4>
+                Description
+              </h4>
+              Warm and loyal friend
+            </div>
+          </div>
+        </p>
+        <div
+          className="row"
+          style={
+            Object {
+              "paddingBottom": "2vh",
+            }
+          }
+        >
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Medical History
+          </button>
+        </div>
+        <div
+          className="row"
+        >
+          <h4>
+            Adoption Center Location
+          </h4>
+          <img
+            className="img-fluid"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="row"
+          style={
+            Object {
+              "paddingTop": "2vh",
+            }
+          }
+        >
+          <div
+            className="col"
+          >
+            <a
+              href="/sbmodel/undefined"
+              onClick={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <h5>
+                Breed Information Page
+              </h5>
+            </a>
+          </div>
+          <div
+            className="col"
+          >
+            <a
+              href="/acmodel/undefined"
+              onClick={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <h5>
+                This pet is at the 
+              </h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "paddingLeft": "20vw",
+        "paddingRight": "20vw",
+      }
+    }
+  >
+    <div
+      className="row"
+    >
+      <img
+        className="img-fluid"
+        src="beagle_1.jpeg"
+        style={
+          Object {
+            "height": "750px",
+            "width": "100%",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    style={
+      Object {
+        "paddingLeft": "20vw",
+        "paddingRight": "20vw",
+        "paddingTop": "4vh",
+      }
+    }
+  >
+    <div
+      className="card"
+      style={
+        Object {
+          "width": "60vw",
+        }
+      }
+    >
+      <div
+        className="card-body"
+      >
+        <div
+          className="card-title h5"
+          style={
+            Object {
+              "fontSize": "8vh",
+            }
+          }
+        >
+          German Sheperd
+        </div>
+        <div
+          className="mb-2 text-muted card-subtitle h6"
+          style={
+            Object {
+              "fontSize": "4vh",
+            }
+          }
+        >
+          Max
+        </div>
+        <p
+          className="card-text"
+        >
+          <div
+            className="container"
+          >
+            <div
+              className="row"
+            >
+              <div
+                className="list-group list-group-flush"
+                onKeyDown={[Function]}
+              >
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Size : 
+                  large
+                </div>
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Age : 
+                  5
+                </div>
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Color : 
+                  Grey/Black
+                </div>
+                <div
+                  className="list-group-item"
+                  data-rr-ui-event-key={null}
+                  onClick={[Function]}
+                >
+                  Sex : 
+                  M
+                </div>
+              </div>
+            </div>
+            <div
+              className="row"
+              style={
+                Object {
+                  "paddingTop": "2vh",
+                }
+              }
+            >
+              <h4>
+                Description
+              </h4>
+              Warm and loyal friend
+            </div>
+          </div>
+        </p>
+        <div
+          className="row"
+          style={
+            Object {
+              "paddingBottom": "2vh",
+            }
+          }
+        >
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            onClick={[Function]}
+            type="button"
+          >
+            Medical History
+          </button>
+        </div>
+        <div
+          className="row"
+        >
+          <h4>
+            Adoption Center Location
+          </h4>
+          <img
+            className="img-fluid"
+            style={
+              Object {
+                "width": "100%",
+              }
+            }
+          />
+        </div>
+        <div
+          className="row"
+          style={
+            Object {
+              "paddingTop": "2vh",
+            }
+          }
+        >
+          <div
+            className="col"
+          >
+            <a
+              href="/sbmodel/undefined"
+              onClick={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <h5>
+                Breed Information Page
+              </h5>
+            </a>
+          </div>
+          <div
+            className="col"
+          >
+            <a
+              href="/acmodel/undefined"
+              onClick={[Function]}
+              style={
+                Object {
+                  "textDecoration": "none",
+                }
+              }
+            >
+              <h5>
+                This pet is at the 
+              </h5>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

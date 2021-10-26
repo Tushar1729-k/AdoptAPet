@@ -1,48 +1,17 @@
 import React from 'react'
 import { Container, Row, Col, Card, Badge, ListGroup, Image } from 'react-bootstrap'
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 import { InfoCircleFill, PatchPlusFill } from 'react-bootstrap-icons';
 
-const AdoptInstanceTemplate = ({attributes}) => {
-
-    // let map
-    // const initMap = () => {
-    //     map = new google.maps.Map(document.getElementById("map"), {
-    //         center: { lat: -34.397, lng: 150.644 },
-    //         zoom: 8,
-    //       })
-    // }
+const AdoptInstanceTemplate = ({attributes, fetchPage}) => {
     const services = attributes.services.split(",")
     const badgeTypes = ["secondary", "success", "danger", "warning", "info", "light", "dark"]
     return (
         <div>
-            <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
-                <Row>
-                    <Image src={attributes.imgSrc} fluid style={{width: '100%'}}/>
-                </Row>
-                <Row>
-                    {/* <h4>Google Maps</h4>
-                    <Image src={attributes.mapSrc} fluid style={{width: '100%'}}/> */}
-                    {/* <div id="map" style={{height: "500px", width: "100%"}}></div>
-                    <script
-                    src={`https://maps.googleapis.com/maps/api/js?key=AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM&callback=initMap&v=weekly`}
-                    async
-                    ></script> */}
-                    <div style={{width: '100vw', height: '100vh'}}>
-                    <CustomMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
-                                              AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`}
-                        loadingElement={<div style={{height: "100%"}}></div>}
-                        containerElement={<div style={{height: "100%"}}></div>}
-                        mapElement={<div style={{height: "100%"}}></div>}
-
-                    />
-                    </div>
-                </Row>
-            </div>
-            <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
-            <Card style={{ width: '60vw' }}>
+            <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>
+            <Card style={{ width: '70vw' }}>
             <Card.Body>
                 <Card.Title style={{fontSize: '6vh'}}>{attributes.name}</Card.Title>
                 <Card.Subtitle style={{fontSize: '4vh'}} className="mb-2 text-muted">{attributes.type}</Card.Subtitle>
@@ -77,15 +46,36 @@ const AdoptInstanceTemplate = ({attributes}) => {
                         </Row>
                     </Container>
                 </Card.Text>
+                <Row>
+                    <div style={{width: '100vw', height: '100vh'}}>
+                    <CustomMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+                                              AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`}
+                        lat={attributes.lat}
+                        lng={attributes.lon}
+                        loadingElement={<div style={{height: "100%"}}></div>}
+                        containerElement={<div style={{height: "100%"}}></div>}
+                        mapElement={<div style={{height: "100%"}}></div>}
+                    />
+                    </div>
+                </Row>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
+                    {/* <Router> */}
+                    <h5>See breeds this center carries</h5>
                     {attributes.speciesBreeds.map((sb, idx) => (
-                        <Link key={idx} to={`/sbmodel/${sb.api_id}`} style={{textDecoration: 'none'}}><h5>See a breed</h5></Link>
+                        <Link key={idx} to={`/sbmodel/${sb.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("sb", sb.api_id)}>
+                            <h5>{sb.breed_name}</h5>
+                        </Link>
                     ))}
+                    {/* </Router> */}
                     </Col>
                     <Col>
+                    <h5>Pets avaialable at this center
+                    </h5>
                         {attributes.pets.map((pet, idx) => (
-                            <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}}><h5>Take a look at {pet.name}</h5></Link>
+                            <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
+                                <h5>Take a look at {pet.name}</h5>
+                            </Link>
                         ))}
                     </Col>
                 </Row>
@@ -99,13 +89,15 @@ const AdoptInstanceTemplate = ({attributes}) => {
 // Set defaults of props here.
 AdoptInstanceTemplate.defaultProps = {
     attributes: { name: '', address: '', city: '', state: '', zip: '',
-                  phone: '', email: '', type: '', site: 'NA', species: '',
+                  phone: '', email: '', site: 'NA', species: '',
                   services: '', petId: '', sbId: '', mapSrc: '', imgSrc: '',
-                  speciesBreeds: [], pets: []}
+                  speciesBreeds: [{api_id: 1, name: ''}], pets: [{api_id: 1, name: ''}],
+                  lat: 0, lon: 0}
 }
 // Set type of the prop here.
 AdoptInstanceTemplate.propTypes = {
-	attributes: PropTypes.object
+	attributes: PropTypes.object,
+    fetchPage: PropTypes.func
 }
 
 export default AdoptInstanceTemplate

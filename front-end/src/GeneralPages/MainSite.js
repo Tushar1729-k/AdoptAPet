@@ -4,7 +4,7 @@ import axios from 'axios'
 import { Navbar, Container, Nav } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import HomePage from "./HomePage"
-import InstancePage from "../InstancePages/InstancePageTemplate"
+import InstancePage from "../InstancePages/PetsInstanceTemplate"
 import AdoptInstanceTemplate from '../InstancePages/AdoptInstanceTemplate'
 import SpeciesInstanceTemplate from '../InstancePages/SpeciesInstanceTemplate'
 import SpeciesModelPage from './SpeciesModelPage'
@@ -34,21 +34,59 @@ const MainSite = () => {
     const centerImgs = [centerImg2, centerImg1, centerImg3]
 
     const [petsData, setPetsData] = useState([])
-    const [centersData, setCentersData] = useState([])
+    const [centersData, setCentersData] = useState([
+        {
+            api_id: 12,
+            city: "Baltimore",
+            email: "catrescueofmd@mindspring.com",
+            id: 1,
+            lat: 39.26750183105469,
+            lon: -76.74459838867188,
+            name: "Cat Rescue of Maryland, Inc.",
+            pets: [],
+            services: "",
+            species_breed: [],
+            state: "MD",
+            zipcode: "21228"
+        }
+    ])
     const [breedsData, setBreedsData] = useState([])
 
-    useEffect(() => {
-        const fetchData = async () => {
-            const petRes = await axios.get(`https://api.adoptapet.me/ap?page=-1`)
-            const centerRes = await axios.get(`https://api.adoptapet.me/ac?page=-1`)
-            // const breedRes = await axios.get(`https://api.adoptapet.me/sb?page=-1`)
-            setPetsData(petRes.data.page)
-            setCentersData(centerRes.data.page)
-            // setBreedsData(breedRes.data.page)
-            
+    // useEffect(() => {
+    //     const fetchData = async () => {
+    //         const petRes = await axios.get(`https://api.adoptapet.me/ap?page=-1`)
+    //         const centerRes = await axios.get(`https://api.adoptapet.me/ac?page=-1`)
+    //         const breedRes = await axios.get(`https://api.adoptapet.me/sb?page=-1`)
+    //         setPetsData(petRes.data.page)
+    //         console.log("pets data", petsData)
+    //         setCentersData(centerRes.data.page)
+    //         console.log("center data", centersData)
+    //         setBreedsData(breedRes.data.page)
+    //         console.log("breeds data", breedsData)
+    //     }
+    //     fetchData(1)
+    // }, [])
+
+    const fetchData = async (type, id) => {
+        const res = await axios.get(`https://api.adoptapet.me/${type}/${id}`)
+        if (type === "ap") {
+            setPetsData([res.data])
+        } else if (type === "ac") {
+            setCentersData([res.data])
+        } else {
+            setBreedsData([res.data])
         }
-        fetchData(1)
-    }, [])
+    }
+
+    const fetchPage = (type, id) => {
+        id = id.toString()
+        console.log(type, id)
+        fetchData(type, id)
+    }
+
+    const selectedPage = (num) => {
+        fetchData(num)
+    }
 
     return (
         <div>
@@ -75,13 +113,13 @@ const MainSite = () => {
                         <AboutPage />
                     </Route>
                     <Route exact path="/sbmodel">
-                        <SpeciesModelPage />
+                        <SpeciesModelPage fetchPage={fetchPage} />
                     </Route>
                     <Route exact path="/apmodel">
-                        <PetsModelPage />
+                        <PetsModelPage fetchPage={fetchPage}/>
                     </Route>
                     <Route exact path="/acmodel">
-                        <AdoptCentersPage />
+                        <AdoptCentersPage fetchPage={fetchPage}/>
                     </Route>
                     <Route path="/dog">
                         <InstancePage 
@@ -91,86 +129,48 @@ const MainSite = () => {
                     {petsData.map((pet, idx) => (
                         <Route key={idx} exact path={`/apmodel/${pet.api_id}`}>
                             <InstancePage 
-                                attributes={{ breed: "N/A", name: pet.name, size: "small", 
+                                attributes={{ breed: pet.species_breed.breed_name, name: pet.name, 
                                               age: pet.age, color: pet.color, sex: pet.sex,
                                               description: pet.desc, imgSrc: pet.pic_url,
-                                              adoptCenter: pet.center }}
+                                              adoptCenter: pet.center, speciesBreeds: pet.species_breed }}
                                 medicalHistory={{ allergies: pet.allergies, diet: pet.diet, 
                                                   issues: pet.ongoingMedical, hearing: pet.hearingImpaired,
                                                   sight: pet.sightImpaired }}
+                                fetchPage={fetchPage}
                             />
                         </Route>
                     ))}
                     {centersData.map((center, idx) => (
                         <Route key={idx} exact path={`/acmodel/${center.api_id}`}>
                             <AdoptInstanceTemplate
-                                attributes={{ name: center.name, address: "",
+                                attributes={{ name: center.name, address: center.street,
                                               city: center.city, state: center.state, 
-                                              zip: center.zipcode, phone: "", 
-                                              email: "", type: center.orgType, 
+                                              zip: center.zipcode, phone: center.phone, 
+                                              email: center.email, type: center.orgType, 
                                               site: center.orgurl, species: center.orgSpecies,
                                               services: center.services, speciesBreeds: center.species_breed,
-                                              pets: center.pets,
-                                              imgSrc: ""
+                                              pets: center.pets, lat: center.lat, lon: center.lon
                                             }}
+                                fetchPage={fetchPage}
                             />
                         </Route>
                     ))}
-                    <Route exact path='/sbmodel/1'>
-                        <SpeciesInstanceTemplate 
-                            attributes={{ breed: 'Domestic Short Hair', species: 'Cat', weight: '11 - 15 pounds', height: 'NA', energy: 'NA',
-                            color: 'White, black, blue, red, cream and silver, plus various patterns and shadings', lifespan: '15-20 years', 
-                            temperament: `They are adaptable and good-natured, which makes them the ideal family companion.
-                                          Although they loves attention from their people, including children, the Domestic
-                                          Shorthair does not like being carried and is fairly independent. They may curl up
-                                          in your lap on occasion, but they may prefer to sit alongside you instead. They'll
-                                          get along fine with a cat-friendly dog, but their hunting instincts may take over with
-                                          pet birds and other small animals.`,
-                            shedding: `Domestic Shorthairs will shed but combing a couple times per week removes
-                                          dead hair and redistributes skin oils to keep her coat shiny and prevent dry, itchy skin.`,
-                            health: `The American Shorthair is a hearty and healthy breed. Some instances of hypertrophic cardiomyopathy
-                                     have been recorded, but it’s unknown if the condition is hereditary. Their flat face also makes the
-                                     breed more susceptible to ocular and respiratory issues. They are genetically predisposed to mouth
-                                     and gum disease and their laid-back nature increases their risk of obesity. Reputable breeders test
-                                     thoroughly to avoid breeding cats with genetic diseases`,
+                    {breedsData.map((breed, idx) => (
+                        <Route key={idx} exact path={`/sbmodel/${breed.api_id}`}>
+                            <SpeciesInstanceTemplate 
+                            attributes={{ breed: breed.breed_name, species: breed.species_name, weight: breed.weight, height: 'NA', energy: breed.energy_level,
+                            color: 'White, black, blue, red, cream and silver, plus various patterns and shadings', lifespan: breed.life_span, 
+                            temperament: breed.temperament,
+                            shedding: breed.shedding_level,
+                            health: breed.health_issues,
                             description: `As a working cat, American Shorthairs have a stocky, muscular build. Their muscular legs
                                      lend themselves to the American’s agility and endurance. They have a large head and full face, medium-sized
                                      ears and large, wide eyes.`,
-                            petId: '17275209', imgSrc: [cat1, cat2, cat3], orgId: '198',
-                            video: <iframe width="560" height="315" src="https://www.youtube.com/embed/WKZXNroTP1A" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>}}
+                            adoptCenters: breed.centers, pets: breed.pets, wiki: breed.wikipedia_url}}
+                            fetchPage={fetchPage}
                         />
-                    </Route>
-                    <Route exact path='/sbmodel/2'>
-                        <SpeciesInstanceTemplate 
-                            attributes={{ breed: 'Beagle', species: 'Dog', weight: '18 - 35 pounds', height: '13 - 15 inches', energy: 'Medium',
-                            color: 'Tri-color (black, tan and white), and combinations of black, tan, red, white, brown, lemon, blue and redtick', lifespan: '10-15 years', 
-                            temperament: `Beagles are affectionate, smart and energetic.`,
-                            shedding: `The Beagle's smooth, dense double coat gets heavier during the winter and sheds in the summer. They also shed moderately throughout the year.`,
-                            health: `Responsible breeders screen the Beagle breed for conditions like hip dysplasia, hypothyroidism, epilepsy, luxating patella and eye disorders.`,
-                            description: `Beagles not only have an adorable face, but they are also generally loving and loveable, happy and companionable, making them great family dogs.
-                            The Beagle is an intelligent pack dog who loves the company of other dogs and people. In fact, it was bred to work in packs, so they are happiest when they have company.
-                            A Beagle left alone for too long may get restless and destructive.   
-                            Although energetic, your Beagle's specific exercise needs will depend on their age and health. Over time, you'll get to know your dog and whether
-                            they prefer lots of exercise or lounging on the couch. They are known escape artists, so watch them outside. When on walks, it's important to keep him on a leash, as his instincts are to run off and track if he catches a compelling scent.
-                            As trackers, they love to follow their nose and chase balls or their favorite people. They also love to play, so teaching tricks and playing games are always hit with this breed.`,
-                            petId: '17283929', imgSrc: [beagle1, beagle3, beagle2], orgId: '314',
-                            video: <iframe width="560" height="315" src="https://www.youtube.com/embed/lWn-yOp8CxE" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>}}
-                        />
-                    </Route>
-                    <Route exact path='/sbmodel/3'>
-                        <SpeciesInstanceTemplate 
-                            attributes={{ breed: 'Pit Bull Terrier', species: 'Dog', weight: '50 - 70 pounds', height: '21 - 22 inches', energy: 'Medium',
-                            color: 'Any color or all white', lifespan: '12-13 years', 
-                            temperament: `The Bull Terrier is robust and spirited, and always ready for a frolic. He loves children, but obedience training is necessary, and care must be taken to avoid overstimulation around younger children. 
-                            Friendly and affectionate, this energetic, well-muscled breed needs daily exercise.`,
-                            shedding: `The Bull Terrier is a seasonal shedding breed. Giving his short, flat coat a weekly brushing will help to remove loose hair and dirt.`,
-                            health: `While kidney and heart issues can be associated with the breed, responsible breeders test for these issues, and should test puppies for potential hearing issues.`,
-                            description: `This robust Terrier group breed is muscular and big-boned, with a unique, egg-shaped head accentuated by pointed ears and small, mischievous eyes. Powerful and agile, they walk with a cheerful gait that showcases their outgoing personality. 
-                            A happy Bull Terrier is one who receives early socialization with dogs and people, loving but firm training, lots of exercise and of course, time with his favorite people. A properly nurtured Bull Terrier is the most loving, loyal companion a family could want. `,
-                            petId: '17275248', imgSrc: [terrier1, terrier2, terrier3], orgId: '356',
-                            video: <iframe width="560" height="315" src="https://www.youtube.com/embed/X-yiP-bdD3k" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>}}
-                        />
-                    </Route>
+                        </Route>
+                    ))}
                 </Switch>
             </Router>
         </div>

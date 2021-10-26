@@ -1,10 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 import { Container, Row, Col, Card, Modal, Button, ListGroup, Image } from 'react-bootstrap'
-import { Link } from "react-router-dom";
+import { Link, BrowserRouter as Router } from "react-router-dom";
+import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 
-const InstancePageTemplate = ({ attributes, medicalHistory }) => {
+const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
     const [showModal, setShowModal] = useState(false)
 
     const showHandler = () => {
@@ -63,14 +64,31 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
                 </Row>
                 <Row>
                     <h4>Adoption Center Location</h4>
-                    <Image src={attributes.mapSrc} fluid style={{width: '100%'}}/>
+                    <div style={{width: '100vw', height: '100vh'}}>
+                    <CustomMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+                                              AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`}
+                        lat={attributes.adoptCenter.lat}
+                        lng={attributes.adoptCenter.lon}
+                        loadingElement={<div style={{height: "100%"}}></div>}
+                        containerElement={<div style={{height: "100%"}}></div>}
+                        mapElement={<div style={{height: "100%"}}></div>}
+                    />
+                    </div>
                 </Row>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
-                        <Link to={`/sbmodel/${attributes.sbId}`} style={{textDecoration: 'none'}}><h5>Breed Information Page</h5></Link>
+                        {/* <Router> */}
+                            <Link to={`/sbmodel/${attributes.speciesBreeds.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("sb", attributes.speciesBreeds.api_id)}>
+                                <h5>Breed Information Page</h5>
+                            </Link>
+                        {/* </Router> */}
                     </Col>
                     <Col>
-                        <Link to={`/acmodel/${attributes.adoptCenter.api_id}`} style={{textDecoration: 'none'}}><h5>This pet is at the {attributes.adoptCenter.name}</h5></Link>
+                        {/* <Router> */}
+                            <Link to={`/acmodel/${attributes.adoptCenter.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ac", attributes.adoptCenter.api_id)}>
+                                <h5>This pet is at the {attributes.adoptCenter.name}</h5>
+                            </Link>
+                        {/* </Router> */}
                     </Col>
                 </Row>
             </Card.Body>
@@ -84,7 +102,8 @@ const InstancePageTemplate = ({ attributes, medicalHistory }) => {
 InstancePageTemplate.defaultProps = {
     attributes: { breed: '', name: '', size: '', age: '', color: '', sex: '',
                   description: 'No description avaialable :(', imgSrc: '', mapSrc: '',
-                  adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'}},
+                  adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'},
+                  speciesBreeds: {api: 208}},
     medicalHistory: { allergies: 'Not available', diet: 'Not available', 
                       issues: 'Not available', hearing: 'Not available',
                       sight: 'Not available', orgId: '198', sbId: '' }
@@ -92,7 +111,8 @@ InstancePageTemplate.defaultProps = {
 // Set type of the prop here.
 InstancePageTemplate.propTypes = {
     attributes: PropTypes.object,
-    medicalHistory: PropTypes.object
+    medicalHistory: PropTypes.object,
+    fetchPage: PropTypes.func
 }
 
 export default InstancePageTemplate

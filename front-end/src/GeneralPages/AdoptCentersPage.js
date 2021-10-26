@@ -5,8 +5,9 @@ import adoptionCenters from '../Data/AdoptionCenters.json'
 import Paginate from '../Components/Pagination'
 import axios from 'axios'
 import { Link } from "react-router-dom"
+import PropTypes from 'prop-types'
 
-const AdoptCentersPage = () => {
+const AdoptCentersPage = ({fetchPage}) => {
     const [allCenters, setAllCenters] = useState([])
     const [centersPerPage, setCentersPerPage] = useState(10)
 
@@ -21,6 +22,9 @@ const AdoptCentersPage = () => {
     }, [])
     const paginate = (num) => {
         fetchCenters(num)
+    }
+    const whichCenterPage = (type, num) => {
+        fetchPage(type, num)
     }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
@@ -42,7 +46,7 @@ const AdoptCentersPage = () => {
                 <tbody>
                 {allCenters.map((center, index) => (
                     <tr key={index}>
-                    <Link to={`/acmodel/${center.api_id}`} style={{ textDecoration: 'none'}}>
+                    <Link to={`/acmodel/${center.api_id}`} style={{ textDecoration: 'none'}} onClick={() => whichCenterPage("ac", center.api_id)}>
                         <td>{center.name}</td>
                     </Link>
                     <td>{center.city}</td>
@@ -59,6 +63,10 @@ const AdoptCentersPage = () => {
                 </Row>
         </div>
     )
+}
+
+AdoptCentersPage.propTypes = {
+    fetchPage: PropTypes.func
 }
 
 export default AdoptCentersPage

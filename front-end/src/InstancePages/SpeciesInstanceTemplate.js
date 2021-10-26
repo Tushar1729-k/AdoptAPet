@@ -1,14 +1,14 @@
 import React from 'react'
-import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-bootstrap'
-import { Link } from "react-router-dom";
+import { Container, Row, Col, Card, ListGroup, Image } from 'react-bootstrap'
+import { Link, BrowserRouter as Router } from "react-router-dom";
 import PropTypes from 'prop-types'
 import YoutubePlayer from '../Components/Youtube';
 
-const SpeciesInstanceTemplate = ({attributes}) => {
+const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
     return (
         <div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
-                <Row>
+                {/* <Row>
                     <Col>
                         <Image src={attributes.imgSrc[0]} fluid/>
                     </Col>
@@ -18,7 +18,7 @@ const SpeciesInstanceTemplate = ({attributes}) => {
                 </Row>
                 <Row>
                     <Image src={attributes.imgSrc[2]} fluid style={{width: '100%'}}/>
-                </Row>
+                </Row> */}
                 <Row>
                     <YoutubePlayer searchQuery={attributes.breed}/>
                 </Row>
@@ -37,11 +37,13 @@ const SpeciesInstanceTemplate = ({attributes}) => {
                                 <ListGroup.Item>Colors : {attributes.color}</ListGroup.Item>
                                 <ListGroup.Item>Energy : {attributes.energy}</ListGroup.Item>
                                 <ListGroup.Item>Lifespan : {attributes.lifespan}</ListGroup.Item>
+                                <ListGroup.Item>Intelligence : {attributes.intelligence}</ListGroup.Item>
+                                <ListGroup.Item>Child Friendly : {attributes.child_friendly}</ListGroup.Item>
                             </ListGroup>
                         </Row>
                         <Row style={{paddingTop: '2vh'}}>
                             <h4>Description</h4>
-                            <p>{attributes.description}</p>
+                            <p>{attributes.wiki}</p>
                         </Row>
                         <Row style={{paddingTop: '2vh'}}>
                             <h4>Temperament</h4>
@@ -59,10 +61,32 @@ const SpeciesInstanceTemplate = ({attributes}) => {
                 </Card.Text>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
-                        <Link to={`/apmodel/${attributes.petId}`} style={{textDecoration: 'none'}}><h5>Recommended Pet</h5></Link>
+                    {attributes.pets.length === 0 ? <h4>No adoptable pets available</h4> : 
+                        <div>
+                        <h4>See some adoptable pets</h4>
+                        {/* <Router> */}
+                        {attributes.pets.map((pet, idx) => (
+                            <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
+                                <h5>Take a look at {pet.name}</h5>
+                            </Link>
+                        ))}
+                        {/* </Router> */}
+                        </div>
+                    }
                     </Col>
                     <Col>
-                        <Link to={`/acmodel/${attributes.orgId}`} style={{textDecoration: 'none'}}><h5>Adoption Center that carries this breed</h5></Link>
+                    {attributes.adoptCenters.length === 0 ? <h4>No adoption centers cuurrently carry this breed</h4> : 
+                        <div>
+                            <h4>Adoption Centers that carry this breed</h4>
+                            {/* <Router> */}
+                                {attributes.adoptCenters.map((center, idx) => (
+                                    <Link key={idx} to={`/acmodel/${center.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ac", center.api_id)}>
+                                        <h5>{center.name}</h5>
+                                    </Link>
+                                ))}
+                            {/* </Router> */}
+                        </div>
+                    }
                     </Col>
                 </Row>
             </Card.Body>
@@ -76,12 +100,13 @@ const SpeciesInstanceTemplate = ({attributes}) => {
 SpeciesInstanceTemplate.defaultProps = {
     attributes: { breed: '', species: '', height: 'NA', weight: 'NA', color: 'NA',
                   energy: 'NA', lifespan: '', temperament: 'NA', shedding: 'NA',
-                  health: 'NA', description: 'NA', petId: '', orgId: '', imgSrv: [],
-                  video: <div></div>, adoptCenters: [], pets: []}
+                  health: 'NA', description: 'NA', intelligence: 'NA', child_friendly: '',
+                  adoptCenters: [], pets: [], wiki: ''}
 }
 // Set type of the prop here.
 SpeciesInstanceTemplate.propTypes = {
-    attributes: PropTypes.object
+    attributes: PropTypes.object,
+    fetchPage: PropTypes.func
 }
 
 export default SpeciesInstanceTemplate

@@ -1,14 +1,15 @@
 import React, {useState} from 'react'
 import { GoogleMap, withGoogleMap, withScriptjs, Marker, InfoWindow } from 'react-google-maps';
+import PropTypes from 'prop-types'
 
-const CustomMap = withScriptjs(withGoogleMap(() => {
+const CustomMap = withScriptjs(withGoogleMap(({lat, lng}) => {
 
     const mapStyles = {        
         height: "100vh",
         width: "100%"
     }
     const defaultCenter = {
-        lat: 41.3851, lng: 2.1734
+        lat: lat, lng: lng
     }
     const [selected, setSelected] = useState(null)
     return (
@@ -28,5 +29,16 @@ const CustomMap = withScriptjs(withGoogleMap(() => {
         </div>
     )
 }))
+
+// Set defaults of props here.
+CustomMap.defaultProps = {
+    lat: 41.3851,
+    lng: 2.1734
+}
+// Set type of the prop here.
+CustomMap.propTypes = {
+	lat: PropTypes.number,
+    lng: PropTypes.number
+}
 
 export default CustomMap
