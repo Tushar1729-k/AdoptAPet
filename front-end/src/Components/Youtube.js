@@ -4,6 +4,7 @@ import YoutubeAPI from './YoutubeAPI'
 import { Button } from 'react-bootstrap'
 import YouTube from 'react-youtube'
 import PropTypes from 'prop-types'
+import { PlayBtnFill } from 'react-bootstrap-icons';
 
 const YoutubePlayer = ({searchQuery}) => {
     const opts = {
@@ -25,7 +26,9 @@ const YoutubePlayer = ({searchQuery}) => {
       }
     return (
         <div>
-            <Button onClick={() => onSearch(searchQuery)}>Youtube</Button>
+            <div style={{paddingLeft: "27.5vw", paddingBottom: "2vh"}}>
+                <Button variant="danger" style={{width: '10vw'}} onClick={() => onSearch(searchQuery)}>{<PlayBtnFill/>}</Button>
+            </div>
             {videoIDs.map((vid, idx) => (
                 <div key={idx}>
                 <YouTube videoId={vid.id.videoId} opts={opts} onReady={_onReady} />

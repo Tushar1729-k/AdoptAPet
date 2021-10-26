@@ -166,6 +166,7 @@ const MainSite = () => {
                             description: `As a working cat, American Shorthairs have a stocky, muscular build. Their muscular legs
                                      lend themselves to the American’s agility and endurance. They have a large head and full face, medium-sized
                                      ears and large, wide eyes.`,
+                            origin: breed.origin,
                             adoptCenters: breed.centers, pets: breed.pets, wiki: breed.wikipedia_url}}
                             fetchPage={fetchPage}
                         />

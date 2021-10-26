@@ -1,30 +1,25 @@
 import React from 'react'
-import { Container, Row, Col, Card, ListGroup, Image } from 'react-bootstrap'
+import { useState } from 'react'
+import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap'
 import { Link, BrowserRouter as Router } from "react-router-dom";
 import PropTypes from 'prop-types'
+import CustomMap from '../GeneralPages/GoogleMap'
 import YoutubePlayer from '../Components/Youtube';
+import axios from 'axios';
 
 const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
+
+    const [lat, setLat] = useState(0)
+    const [lng, setLng] = useState(0)
+    const fetchCoords = async () => {
+        const res = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${attributes.origin}&key=AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`)
+        setLat(res.data.results[0].geometry.location.lat)
+        setLng(res.data.results[0].geometry.location.lng)
+    }
     return (
         <div>
-            <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
-                {/* <Row>
-                    <Col>
-                        <Image src={attributes.imgSrc[0]} fluid/>
-                    </Col>
-                    <Col>
-                        <Image src={attributes.imgSrc[1]} fluid/>
-                    </Col>
-                </Row>
-                <Row>
-                    <Image src={attributes.imgSrc[2]} fluid style={{width: '100%'}}/>
-                </Row> */}
-                <Row>
-                    <YoutubePlayer searchQuery={attributes.breed}/>
-                </Row>
-            </div>
-            <div style={{paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh"}}>
-            <Card style={{ width: '60vw' }}>
+            <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>
+            <Card style={{ width: '70vw' }}>
             <Card.Body>
                 <Card.Title style={{fontSize: '6vh'}}>{attributes.breed}</Card.Title>
                 <Card.Subtitle style={{fontSize: '4vh'}} className="mb-2 text-muted">{attributes.species}</Card.Subtitle>
@@ -59,6 +54,31 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
                         </Row>
                     </Container>
                 </Card.Text>
+                <Row>
+                    <h4>Country of Origin: {attributes.origin}</h4>
+                    <div style={{paddingLeft: "27.5vw"}}>
+                        <Button onClick={() => fetchCoords()}>Click to see Origin Country</Button>
+                    </div>
+                    <div style={{width: '100vw', height: '100vh'}}>
+                    <CustomMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
+                                              AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`}
+                        lat={lat}
+                        lng={lng}
+                        zoom={5}
+                        loadingElement={<div style={{height: "100%"}}></div>}
+                        containerElement={<div style={{height: "100%"}}></div>}
+                        mapElement={<div style={{height: "100%"}}></div>}
+                    />
+                    </div>
+                </Row>
+                <Row>
+                <div style={{paddingTop: "4vh"}}>
+                    <div style={{paddingLeft: "17.5vw"}}>
+                        <h4>Click to see some videos of the {attributes.breed}!</h4>
+                    </div>
+                    <YoutubePlayer searchQuery={attributes.breed}/>
+                </div>
+                </Row>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
                     {attributes.pets.length === 0 ? <h4>No adoptable pets available</h4> : 
@@ -101,7 +121,7 @@ SpeciesInstanceTemplate.defaultProps = {
     attributes: { breed: '', species: '', height: 'NA', weight: 'NA', color: 'NA',
                   energy: 'NA', lifespan: '', temperament: 'NA', shedding: 'NA',
                   health: 'NA', description: 'NA', intelligence: 'NA', child_friendly: '',
-                  adoptCenters: [], pets: [], wiki: ''}
+                  adoptCenters: [], pets: [], wiki: '', origin: ''}
 }
 // Set type of the prop here.
 SpeciesInstanceTemplate.propTypes = {

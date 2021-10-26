@@ -70,7 +70,7 @@ const AdoptInstanceTemplate = ({attributes, fetchPage}) => {
                     {/* </Router> */}
                     </Col>
                     <Col>
-                    <h5>Pets avaialable at this center
+                    <h5>Pets available at this center
                     </h5>
                         {attributes.pets.map((pet, idx) => (
                             <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
