@@ -31,7 +31,6 @@ def populate_pets() :
 				color = animal['attributes']['colorDetails'] if 'colorDetails' in animal['attributes'] else ""
 				desc = animal['attributes']['descriptionHtml'] if 'descriptionHtml' in animal['attributes'] else ""
 				for picture in data['included'] :
-					# print(animal)
 					pic_id = animal['relationships']['pictures']['data'][0]['id'] if get_query('pictures', animal['relationships']) != None else None
 					if picture['id'] == pic_id :
 						pic_url = picture['attributes']['original']['url']
@@ -77,7 +76,6 @@ def populate_centers() :
 	response = requests.request("GET", url, headers=headers, params=querystring)
 	data = response.json()
 	org_list = []
-	# print(orgs_list)
 	for item in data['data'] :
 		api_id = item['id']
 		name = item['attributes']['name'] if 'name' in item['attributes'] else ''
@@ -87,17 +85,6 @@ def populate_centers() :
 		services = item['attributes']['services'] if 'services' in item['attributes'] else ''
 		new_center = AdoptionCenter(api_id=api_id, name=name, city=city, state=state, zipcode=zipcode, services=services)
 		org_list.append(new_center)
-		orgs_species_url = 'https://api.rescuegroups.org/v5/public/orgs/' + api_id + '/animals/species'
-		orgs_species_response = requests.request("GET", orgs_species_url, headers=headers, params=querystring)
-		orgs_species_data = orgs_species_response.json()
-		# new list of all breed ids at org
-		# print(orgs_species_data)
-		for species in orgs_species_data['data'] :
-			if(species['id'] == '3' or species['id'] == '8') :
-				species_breeds = db.session.query(BreedsSpecies).filter_by(api_id=species['id'])
-				for species_breed in species_breeds :
-					# print(species_breeds)
-					new_center.species_breeds.append(species_breed)
 
 	db.session.add_all(org_list)
 	db.session.commit()
@@ -130,11 +117,14 @@ def populate_breeds() :
 				entry = dict()
 				entry['api_id'] = item['id']
 				entry['breed_name'] = item['attributes']['name']
-				species_url = 'https://api.rescuegroups.org/v5/public/animals/species/' + species_id
-				species_response = requests.request("GET", species_url, headers=headers, params=querystring)
-				species_data = species_response.json()
-				entry['species_name'] = species_data['data'][0]['attributes']['singular']
-				entry['youth_name'] = species_data['data'][0]['attributes']['youngSingular']
+				entry['species_id'] = species_id
+
+				if species_id == '3' :
+					entry['species_name'] = 'Cat'
+					entry['youth_name'] = 'Kitten'
+				elif species_id == '8' :
+					entry['species_name'] = 'Dog'
+					entry['youth_name'] = 'Puppy'
 
 				if entry['species_name'] == 'Cat' :
 					cat_url = 'https://api.thecatapi.com/v1/breeds/search?q=' + entry['breed_name']
@@ -151,8 +141,6 @@ def populate_breeds() :
 						entry['country_code'] = get_query('country_code', cat_data[0])
 						entry['hairless'] = get_query('hairless', cat_data[0])
 						entry['natural'] = get_query('natural', cat_data[0])
-						# entry['rare'] = get_query('rare', cat_data[0])
-						# entry['rex'] = get_query('rex', cat_data[0])
 						entry['suppressed_tail'] = get_query('suppressed_tail', cat_data[0])
 						entry['short_legs'] = get_query('short_legs', cat_data[0])
 						entry['hypoallergenic'] = get_query('hypoallergenic', cat_data[0])
@@ -183,8 +171,6 @@ def populate_breeds() :
 						entry['country_code'] = get_query('country_code', dog_data[0])
 						entry['hairless'] = get_query('hairless', dog_data[0])
 						entry['natural'] = get_query('natural', dog_data[0])
-						# entry['rare'] = get_query('rare', dog_data[0])
-						# entry['rex'] = get_query('rex', dog_data[0])
 						entry['suppressed_tail'] = get_query('suppressed_tail', dog_data[0])
 						entry['short_legs'] = get_query('short_legs', dog_data[0])
 						entry['hypoallergenic'] = get_query('hypoallergenic', dog_data[0])
@@ -230,6 +216,24 @@ def link_pets_species_breeds() :
 		pet.species_breed = temp_species_breed
 	db.session.commit()
 
+def link_species_breeds_centers() :
+	centers = db.session.query(AdoptionCenter).all()
+	for center in centers :
+		api_id = center.api_id
+		orgs_species_url = 'https://api.rescuegroups.org/v5/public/orgs/' + str(api_id) + '/animals/species'
+		querystring = {'format': 'json'}
+		headers = {'Authorization': "wmUYpgAP"}
+		orgs_species_response = requests.request("GET", orgs_species_url, headers=headers, params=querystring)
+		orgs_species_data = orgs_species_response.json()
+		# new list of all breed ids at org
+		for species in orgs_species_data['data'] :
+			if(species['id'] == '3' or species['id'] == '8') :
+				species_breeds = db.session.query(BreedsSpecies).filter_by(species_id=species['id'])
+				for species_breed in species_breeds :
+					center.species_breeds.append(species_breed)
+	db.session.commit()
+
+
 def reset_db() :
 	# db.session.remove()
 	db.drop_all()
@@ -247,3 +251,5 @@ if __name__ == "__main__" :
 	link_pets_centers()
 	print('start link pets species breeds')
 	link_pets_species_breeds()
+	print('start link adoption centers species breeds')
+	link_species_breeds_centers()

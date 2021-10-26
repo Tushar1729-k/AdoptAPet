@@ -11,8 +11,8 @@ ma = Marshmallow(app)
 
 # Association table between BreedsSpecies and Adoption Centers, many-to-many relationship
 link_species_centers = db.Table("link_species_centers",
-	db.Column("breeds_species_id", db.Integer, db.ForeignKey("adoption_center.id"), primary_key=True),
-	db.Column("adoption_center_id", db.Integer, db.ForeignKey("breeds_species.id"), primary_key=True)
+	db.Column("adoption_center_id", db.Integer, db.ForeignKey("adoption_center.id"), primary_key=True),
+	db.Column("breeds_species_id", db.Integer, db.ForeignKey("breeds_species.id"), primary_key=True)
 )
 
 # Create tables
@@ -71,6 +71,7 @@ class BreedsSpecies(db.Model) :
 	# All associated pets, one-to-many relationship
 	pets = db.relationship("AdoptablePet", backref="species_breed")
 	api_id = db.Column(db.Integer)
+	species_id = db.Column(db.Integer)
 	species_name = db.Column(db.String())
 	breed_name = db.Column(db.String())
 	youth_name = db.Column(db.String())
@@ -82,11 +83,8 @@ class BreedsSpecies(db.Model) :
 	weight = db.Column(db.String)
 	country_code = db.Column(db.String)
 	height = db.Column(db.String)
-	# experimental = db.Column(db.Integer)
 	hairless = db.Column(db.Integer)
 	natural = db.Column(db.Integer)
-	# rare = db.Column(db.Integer)
-	# rex = db.Column(db.Integer)
 	suppressed_tail = db.Column(db.Integer)
 	short_legs = db.Column(db.Integer)
 	hypoallergenic = db.Column(db.Integer)
@@ -136,9 +134,9 @@ class AdoptablePetSchema(BaseSchema) :
 		only=("id", 'api_id', 'name', 'city', 'state', 'zipcode', 'services'),
 		required=True
 	)
-	species_breeds = fields.Nested(
+	species_breed = fields.Nested(
 		"BreedsSpeciesSchema",
-		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
+		only=('id', 'api_id', 'species_name', 'breed_name', 'youth_name'),
 		required=True
 	)
 	sex = fields.Str(required=True)
@@ -154,11 +152,12 @@ class AdoptionCenterSchema(BaseSchema) :
 	pets = fields.Nested(
 		"AdoptablePetSchema",
 		only=('id', 'api_id', 'name'),
-		required=True, many=True
+		required=True,
+		many=True
 	)
 	species_breed = fields.Nested(
 		"BreedsSpeciesSchema",
-		only=('id', 'api_id', 'species', 'breed', 'youth_name'), 
+		only=('id', 'api_id', 'species_name', 'breed_name', 'youth_name'), 
 		required=True, 
 		attribute="species",
 		many=True
@@ -171,6 +170,7 @@ class AdoptionCenterSchema(BaseSchema) :
 class BreedsSpeciesSchema(BaseSchema) :
 	id = fields.Int(required=True)
 	api_id = fields.Int(required=True)
+	species_id = fields.Int(required=True)
 	species_name = fields.Str(required=True)
 	breed_name = fields.Str(required=True)
 	centers = fields.Nested(
@@ -195,11 +195,8 @@ class BreedsSpeciesSchema(BaseSchema) :
 	weight = fields.Str(required=True)
 	country_code = fields.Str(required=True)
 	height = fields.Str(required=True)
-	# experimental = db.Column(db.Integer)
 	hairless = fields.Int(required=True)
 	natural = fields.Int(required=True)
-	# rare = fields.Int(required=True)
-	# rex = fields.Int(required=True)
 	suppressed_tail = fields.Int(required=True)
 	short_legs = fields.Int(required=True)
 	hypoallergenic = fields.Int(required=True)
