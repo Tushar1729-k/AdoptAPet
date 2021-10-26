@@ -77,13 +77,19 @@ def populate_centers() :
 	data = response.json()
 	org_list = []
 	for item in data['data'] :
-		api_id = item['id']
-		name = item['attributes']['name'] if 'name' in item['attributes'] else ''
-		city = item['attributes']['city'] if 'city' in item['attributes'] else ''
-		state = item['attributes']['state'] if 'state' in item['attributes'] else ''
-		zipcode = item['attributes']['postalcode'] if 'postalcode' in item['attributes'] else ''
-		services = item['attributes']['services'] if 'services' in item['attributes'] else ''
-		new_center = AdoptionCenter(api_id=api_id, name=name, city=city, state=state, zipcode=zipcode, services=services)
+		entry = dict()
+		entry['api_id'] = item['id']
+		entry['name'] = item['attributes']['name'] if 'name' in item['attributes'] else ''
+		entry['city'] = item['attributes']['city'] if 'city' in item['attributes'] else ''
+		entry['state'] = item['attributes']['state'] if 'state' in item['attributes'] else ''
+		entry['zipcode'] = item['attributes']['postalcode'] if 'postalcode' in item['attributes'] else ''
+		entry['services'] = item['attributes']['services'] if 'services' in item['attributes'] else ''
+		entry['email'] = get_query('email', item['attributes'])
+		entry['phone'] = get_query('phone', item['attributes'])
+		entry['lat'] = get_query('lat', item['attributes'])
+		entry['lon'] = get_query('lon', item['attributes'])
+		# new_center = AdoptionCenter(api_id=api_id, name=name, city=city, state=state, zipcode=zipcode, services=services)
+		new_center = AdoptionCenter(**entry)
 		org_list.append(new_center)
 
 	db.session.add_all(org_list)

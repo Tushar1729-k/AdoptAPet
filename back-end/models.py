@@ -57,6 +57,13 @@ class AdoptionCenter(db.Model) :
 	city = db.Column(db.String())
 	state = db.Column(db.String())
 	zipcode = db.Column(db.String())
+	# country = db.Column(db.String)
+	email = db.Column(db.String)
+	# url = db.Column(db.String)
+	# facebookUrl = db.Column(db.String)
+	phone = db.Column(db.String)
+	lat = db.Column(db.Float)
+	lon = db.Column(db.Float)
 	services = db.Column(db.String())
 
 # def __repr__(self) :
@@ -165,6 +172,10 @@ class AdoptionCenterSchema(BaseSchema) :
 	city = fields.Str(required=True)
 	state = fields.Str(required=True)
 	zipcode = fields.Str(required=True)
+	email = fields.Email(required=True)
+	phone = fields.Str(required=True)
+	lat = fields.Float(required=True)
+	lon = fields.Float(required=True)
 	services = fields.Str(required=True)
 
 class BreedsSpeciesSchema(BaseSchema) :
