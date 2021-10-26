@@ -37,4 +37,9 @@ def test_title():
 def test_navbar_home():
     print("starting test_navbar_home")
     home = driver.find_elements(By.LINK_TEXT, "Home")
-    assert driver.current_url == url
+    assert driver.current_url == "https://www.adoptapet.me/"
+
+def test_navbar_about():
+    print("starting test_navbar_about")
+    home = driver.find_elements(By.LINK_TEXT, "About")
+    assert driver.current_url == "https://www.adoptapet.me/about"
