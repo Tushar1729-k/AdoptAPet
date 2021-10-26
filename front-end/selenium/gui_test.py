@@ -30,18 +30,42 @@ def teardown_module(module):
     print("starting teardown_module")
     driver.close()
 
+# 1
 def test_title():
     print("starting test_title")
-    assert driver.title # 1
+    assert driver.title
 
+# 2
 def test_navbar_home():
     print("starting test_navbar_home")
     home = driver.find_element(By.LINK_TEXT, "Home")
     home.click()
     assert driver.current_url == "https://www.adoptapet.me/"
 
+# 3
 def test_navbar_about():
     print("starting test_navbar_about")
     about = driver.find_element(By.LINK_TEXT, "About")
     about.click()
     assert driver.current_url == "https://www.adoptapet.me/about"
+
+# 4
+def test_navbar_species():
+    print("starting test_navbar_sbmodel")
+    species = driver.find_element(By.LINK_TEXT, "Species")
+    species.click()
+    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+
+# 5
+def test_navbar_pets():
+    print("starting test_navbar_apmodel")
+    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+
+# 6
+def test_navbar_adoption_centers():
+    print("starting test_navbar_adoption_centers")
+    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers.click()
+    assert driver.current_url == "https://www.adoptapet.me/acmodel"
