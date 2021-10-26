@@ -34,6 +34,7 @@ def test_title():
     print("starting test_title")
     assert driver.title # 1
 
-def test_navbar():
-    print("starting test_navbar")
-    # navbar = driver.find_elements(By.XPATH, "")
+def test_navbar_home():
+    print("starting test_navbar_home")
+    home = driver.find_elements(By.LINK_TEXT, "Home")
+    assert driver.current_url == url
