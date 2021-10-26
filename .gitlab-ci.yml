@@ -16,6 +16,30 @@ build_front_end:
     - npm install
     - CI=false npm run-script build
 
+test_postman:
+  image:
+    name: postman/newman_alpine33
+    entrypoint: [""]
+  script:
+    - cd back-end
+    - newman run postman.json
+
+
+test_python:
+  stage: test
+  only:
+    refs:
+      - branches
+    variables:
+      - $CI_COMMIT_REF_PROTECTED == "true"
+  image:
+    name: mcgenius/pp_python
+    entrypoint: [""]
+  script:
+    - cd back-end
+    - pip install -r requirements.txt
+    - python tests.py
+
 test_selenium:
   stage: test
   services:
