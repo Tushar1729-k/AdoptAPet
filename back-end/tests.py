@@ -19,7 +19,7 @@ class UnitTests(TestCase):
 
     def test_ap_id(self):
         test_client = app.test_client()
-        req = test_client.get("/ap/1")
+        req = test_client.get("/ap/1019366")
         self.assertEqual(req.status_code, 200)
 
     def test_sb(self):
@@ -59,7 +59,7 @@ class UnitTests(TestCase):
 
     def test_ac_id(self):
         test_client = app.test_client()
-        req = test_client.get("/ac/1")
+        req = test_client.get("/ac/12")
         self.assertEqual(req.status_code, 200)
 
 if __name__ == "__main__":
