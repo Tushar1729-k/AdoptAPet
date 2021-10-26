@@ -78,7 +78,28 @@ def test_navbar_logo():
     assert driver.current_url == "https://www.adoptapet.me/"
 
 # 8
-# def test_home_h1():
-#     print("starting test_home_h1")
-#     elem = driver.find_element(By.TAG_NAME, "h1")
-#     assert elem.text == "Give a home to these animals"
+def test_navbar_about_back():
+    print("starting test_navbar_about_back")
+    about = driver.find_element(By.LINK_TEXT, "About")
+    about.click()
+    assert driver.current_url == "https://www.adoptapet.me/about"
+    driver.back()
+    assert driver.current_url == "https://www.adoptapet.me/"
+
+# 9
+def test_navbar_adoption_centers_back():
+    print("starting test_navbar_adoption_centers_back")
+    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers.click()
+    assert driver.current_url == "https://www.adoptapet.me/acmodel"
+    driver.back()
+    assert driver.current_url == "https://www.adoptapet.me/"
+
+# 10
+def test_navbar_species_back():
+    print("starting test_navbar_sbmodel_back")
+    species = driver.find_element(By.LINK_TEXT, "Species")
+    species.click()
+    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+    driver.back()
+    assert driver.current_url == "https://www.adoptapet.me/"
