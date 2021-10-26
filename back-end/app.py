@@ -84,9 +84,9 @@ def pets() :
 
 	return {"page": result, "count": count}
 
-@app.route('/ap/<int:id>', methods=["GET"])
-def ap_id(id) :
-	pet = db.session.query(AdoptablePet).filter_by(id=id)
+@app.route('/ap/<int:api_id>', methods=["GET"])
+def ap_id(api_id) :
+	pet = db.session.query(AdoptablePet).filter_by(api_id=api_id)
 	pet = adoptable_pet_schema.dump(pet, many=True)[0]
 	return pet
 
@@ -137,9 +137,9 @@ def centers():
 	return {"page": result, "count": count}
 
 
-@app.route("/ac/<int:id>", methods=["GET"])
-def center_id(id):
-	center = db.session.query(AdoptionCenter).filter_by(id=id)
+@app.route("/ac/<int:api_id>", methods=["GET"])
+def center_id(api_id):
+	center = db.session.query(AdoptionCenter).filter_by(api_id=api_id)
 	center = adoption_center_schema.dump(center, many=True)[0]
 	# format_center(center)
 	return center
@@ -188,9 +188,9 @@ def species_breeds() :
 
 	return {"page": result, "count": count}
 
-@app.route("/sb/<int:id>", methods=["GET"])
-def sb_id(id) :
-	sb = db.session.query(BreedsSpecies).filter_by(id=id)
+@app.route("/sb/<int:api_id>", methods=["GET"])
+def sb_id(api_id) :
+	sb = db.session.query(BreedsSpecies).filter_by(api_id=api_id)
 	sb = breeds_species_schema.dump(sb, many=True)[0]
 	# format_sb(sb)
 	return sb
