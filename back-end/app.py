@@ -1,3 +1,7 @@
+# Texas Votes https://gitlab.com/forbesye/fitsbits/-/blob/master/back-end/app.py
+# and Burnin' Up https://gitlab.com/caitlinlien/cs373-sustainability/-/blob/master/backend/main.py
+# for overall structure of file
+
 # from typing import get_args
 from models import (
     AdoptablePet,

@@ -11,6 +11,9 @@ import requests
 from sqlalchemy import select
 from query_helpers import *
 
+# Texas Votes https://gitlab.com/forbesye/fitsbits/-/blob/master/back-end/db_push.py
+# and Burnin' Up https://gitlab.com/caitlinlien/cs373-sustainability/-/blob/master/backend/main.py
+# for overall structure of this file
 
 def populate_pets():
     # Get API request
