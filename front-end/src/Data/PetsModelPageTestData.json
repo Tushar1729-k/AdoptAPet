@@ -1,0 +1,385 @@
+{
+    "count": 600,
+    "page": [
+      {
+        "age": "Baby",
+        "api_id": 100026,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black with brindle",
+        "desc": "Andrea and her brother Andre and sister Audra were brought to us through another rescue and we really have no idea what breed they are.  We are guessing mixed Shepherds, but we cannot guarantee anything with them as we did not see their mother.  They are sweet little puppies that are full of energy and love.<img src=\"https://tracker.rescuegroups.org/pet?100026\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 56,
+        "name": "Andrea",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100026/176050_500x553.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Baby",
+        "api_id": 100028,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black & tan",
+        "desc": "Audra and her sister Andrea and brother Andre were brought to us through another rescue group and we have no idea what they are.  We are guessing they are Shepherd mixes but we cannot guarantee anything.  These puppies are full of energy and love.  <img src=\"https://tracker.rescuegroups.org/pet?100028\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 57,
+        "name": "Audra",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100028/176054_500x579.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Young",
+        "api_id": 100031,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "tan",
+        "desc": "Ilsa is a quiet little girl that needs someone to love and care for her. This is an older picture. She is now a year old. <img src=\"https://tracker.rescuegroups.org/pet?100031\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 58,
+        "name": "Ilsa",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100031/191830_350x392.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Baby",
+        "api_id": 100034,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "brindle",
+        "desc": "Issak was brought to us from another rescue so we are not exactly sure what breed he is.  All of the pups in the litter had Dachshund features and he is not growing too big too fast.  We can make no guarantees of potential size when grown though as we did not even see the mother of these guys.  He is a nice little puppy that loves to play.<img src=\"https://tracker.rescuegroups.org/pet?100034\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 59,
+        "name": "Issak",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100034/176062_500x718.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "Baby",
+        "api_id": 100035,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black & tan",
+        "desc": "<img src=\"https://tracker.rescuegroups.org/pet?100035\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 60,
+        "name": "Inglebert",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100035/176063_500x443.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "Baby",
+        "api_id": 100037,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black, white, tan",
+        "desc": "<img src=\"https://tracker.rescuegroups.org/pet?100037\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 61,
+        "name": "Immanuel",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100037/176065_500x707.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "Baby",
+        "api_id": 100041,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black",
+        "desc": "Bruce is one of many cats living on a local isalnd.  He must have been dumped by someone because he is by no means feral and is a real sweetheart.<img src=\"https://tracker.rescuegroups.org/pet?100041\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 62,
+        "name": "Bruce",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/100/100041/176085_500x347.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "",
+        "api_id": 10028549,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "red",
+        "desc": "Bella is an owner give up because one of her owners is in the hospital and not doing well and the other owner was forced to move into a place that doesnt allow pets.&nbsp; Bella loves everyone she meets, is crate trained and is a little chubby.&nbsp; We are working on her weight loss now<br /><br /><img src=\"https://tracker.rescuegroups.org/pet?10028549\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 63,
+        "name": "Bella",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10028/10028549/34882603_1056x612.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "",
+        "api_id": 10029756,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black and tan",
+        "desc": "<img src=\"https://tracker.rescuegroups.org/pet?10029756\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 64,
+        "name": "April",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10029/10029756/34912599_1188x1743.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Young",
+        "api_id": 10034,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "",
+        "desc": "Camille came to us as a skinny little kitten that was very near starvation.  We have had her about 1 month now and she has bounced back beautifully.  She has gained weight and her coat is shiny and healthy and she is ready to find a new home of her own.<img src=\"https://tracker.rescuegroups.org/pet?10034\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 65,
+        "name": "Camille",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10/10034/18262_350x505.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Young",
+        "api_id": 10035,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "",
+        "desc": "Franklin was brought to us with an ugly injury to his nose.  We have nursed him back to health and he is looking great.  He is a sweet little lovebug that loves attetion and being held.<img src=\"https://tracker.rescuegroups.org/pet?10035\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 66,
+        "name": "Franklin",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10/10035/24268_350x304.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "Baby",
+        "api_id": 10009975,
+        "center": {
+          "api_id": 23,
+          "city": "Reston",
+          "id": 5,
+          "name": "The Feline Foundation of Greater Washington, Inc.",
+          "services": "rescue, home-based foster care, adoptions, placement assistance to pet owners",
+          "state": "VA",
+          "zipcode": "20191"
+        },
+        "color": "",
+        "desc": "<img src=\"https://tracker.rescuegroups.org/pet?10009975\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 106,
+        "name": "Nala",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/23/pictures/animals/10009/10009975/34767226_4800x3840.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Young",
+        "api_id": 10038,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "white with a tan ear",
+        "desc": "Helen was rescued from a local shelter where she had been turned in by her owners.  The reason she was turned in was becasue they found out she was deaf.  She is a very well adjusted little girl.  She gets along great with other dogs and is doing well with her crate training.  She will need to go into a home that is willing to take the time to work with her to get her trained and continue her socialization.  All of which can be more difficult with a deaf puppy.  She may do better with another dog in the household.<img src=\"https://tracker.rescuegroups.org/pet?10038\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 67,
+        "name": "Helen",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10/10038/15891_350x615.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "",
+        "api_id": 10041143,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "brown/black tabby",
+        "desc": "Saxon, Murdock, Flynn and Teagan were all found abandoned in someone's yard.&nbsp; We are only guessing there is Bengal in this litter because their colors are so striking and they have spots so they certainly appear to be Bengal like :)<img src=\"https://tracker.rescuegroups.org/pet?10041143\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 68,
+        "name": "Saxon",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10041/10041143/34915150_1610x2147.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "",
+        "api_id": 10041145,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "chocolate tabby",
+        "desc": "Saxon, Murdock, Flynn and Teagan were all found abandoned in someone's yard.&nbsp; We are only guessing there is Bengal in this litter because their colors are so striking and they have spots so they certainly appear to be Bengal like :)<br />****he does have a tail but you cannot see it in the one picture****<img src=\"https://tracker.rescuegroups.org/pet?10041145\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 69,
+        "name": "Flynn",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10041/10041145/34915598_1706x2276.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "",
+        "api_id": 10041147,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black/brown tabby",
+        "desc": "Saxon, Murdock, Flynn and Teagan were all found abandoned in someone's yard.&nbsp; We are only guessing there is Bengal in this litter because their colors are so striking and they have spots so they certainly appear to be Bengal like :)<br />***he does have a tail but you cannot see it in the one picture***<img src=\"https://tracker.rescuegroups.org/pet?10041147\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 70,
+        "name": "Murdock",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10041/10041147/34916462_2780x2084.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "",
+        "api_id": 10041148,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "rusty orange tabby",
+        "desc": "Saxon, Murdock, Flynn and Teagan were all found abandoned in someone's yard.&nbsp; We are only guessing there is Bengal in this litter because their colors are so striking and they have spots so they certainly appear to be Bengal like :)<img src=\"https://tracker.rescuegroups.org/pet?10041148\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 71,
+        "name": "Teagan",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10041/10041148/34917122_1990x2654.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "",
+        "api_id": 10041232,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "grey with white",
+        "desc": "<img src=\"https://tracker.rescuegroups.org/pet?10041232\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 72,
+        "name": "Cal",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10041/10041232/34919243_2082x2778.jpg",
+        "sex": "Male"
+      },
+      {
+        "age": "",
+        "api_id": 10041233,
+        "center": {
+          "api_id": 16,
+          "city": "Hollywood",
+          "id": 3,
+          "name": "Animal Relief Fund",
+          "services": "",
+          "state": "MD",
+          "zipcode": "20636"
+        },
+        "color": "black",
+        "desc": "<img src=\"https://tracker.rescuegroups.org/pet?10041233\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 73,
+        "name": "Caitlin",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/16/pictures/animals/10041/10041233/34919361_2302x3071.jpg",
+        "sex": "Female"
+      },
+      {
+        "age": "Young",
+        "api_id": 10447378,
+        "center": {
+          "api_id": 22,
+          "city": "New Castle DE",
+          "id": 4,
+          "name": "LNF Dog Rescue Adoption Center",
+          "services": "adoption of dogs",
+          "state": "DE",
+          "zipcode": "19720"
+        },
+        "color": "Red & White",
+        "desc": "<p><span style=\"font-family: 'times new roman', times; font-size: 14pt; background-color: #ffff00;\"><strong>** April has an adoption pending! **</strong></span></p>\n<p><strong style=\"font-family: 'times new roman', times; font-size: 14pt;\">Be sure to view April's videos playing with her foster sisters &amp; playing with her \"inner-kitty\" below -- April loves everyone including cats &amp; other dogs!&nbsp;</strong></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">Not exactly sure but we think April&nbsp;might be a Sheltie/Collie mix with almost a rust color &amp; her eyes match her coat. She&rsquo;s just over a year old,&nbsp;only 30 pounds. April is getting prettier&nbsp;every day. April has a very sweet &amp; gentle spirit. She loves to curl up on a chair or doggie bed. She has proven to have LOTS of personality. April is one adorable little lady &amp; I think whoever adopts her will be so happy that you found this little treasure. </span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">Given that she had been outside her whole young life, her ears are both fly-blown which means that flies ate the tips of her ears -- but she&rsquo;s all healed now! When she arrived her coat was super dry &amp; looked like an old dirty rug --- but she has been fed <a href=\"http://www.freshpet.com/\">www.Freshpet.com</a>&nbsp;exclusively to help her gain her strength &amp; now her coat finally has a lovely sheen.&nbsp;&nbsp;&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">April&rsquo;s had a very hard life&nbsp;in KY. Her Mom &amp; siblings were captured by animal control, but she escaped. Thankfully a very nice lady named &ldquo;April&rdquo; spent several days trying to capture her &amp; finally she did. I saw her picture and she looked so terribly sad,&nbsp;I just wanted to bring her to DE, so I could make her feel loved, safe &amp; smile &ndash; yes dogs do smile!&nbsp;&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">Because the \"family\"&nbsp;in KY left her Mom &amp; her siblings outside their whole life when April arrived, we found she had a very odd disease. It was the 1st time&nbsp;my Vet had ever had to treat it here in our area.&nbsp; It's called <strong>Canine blastomycosis</strong> &amp; it's something that she contracted in KY. We're&nbsp;still treating it&nbsp;aggressively. This disease also caused a cataract in one of her eyes, but she can see fine. Her disease is not&nbsp;contagious to humans or other animals.&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">She's not sickly as you can see in the video, she's active, plays with the other dogs and her extremely affectionate &amp; just a very sweet &amp; gentle little lady.&nbsp;&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">For more info read our adoption requirements &amp; if you can meet or exceed them, you can apply here at my website. </span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\" data-mce-mark=\"1\">All LnF pups/dogs have been temperament tested &amp; live in foster homes ~ All pups and dogs have been housebroken (puppies are paper trained) &amp; crated trained ~&nbsp;All pups/dogs have been Microchipped ~ Tested for Heartworm, Ehrlichia &amp; Lyme ~ Each dog is on Heartworm Medication year-round while in our care ~ Up to date with Rabies ~ Distemper, Parvo &amp; Leptospirosis vaccines&nbsp;~ Wormed. </span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\" data-mce-mark=\"1\">&nbsp;Our adoption fee includes (30) days of FREE pet insurance with an option to purchase, but it's your choice.&nbsp;We strive to provide the BEST medical care available so that YOU are assured all our pups/dogs are healthy, up-to-date on all necessary shots,&nbsp;spayed or neutered&nbsp;by our&nbsp;rescue.</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\"><strong>Adoption Requirements:&nbsp; *A minimum physical 4-foot high fence or is higher is always mandatory and must be installed.</strong> Some dogs may need a 6-foot wood or vinyl fence &amp; if so it's noted on their profile. We will not consider any applications that does not have&nbsp;an installed fence. <strong>We do NOT accept any type of electric fence, no exceptions.</strong></span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p>\n<p><span style=\"font-family: times new roman,times; font-size: 14pt;\">&nbsp;</span></p><img src=\"https://tracker.rescuegroups.org/pet?10447378\" width=\"0\" height=\"0\" alt=\"\" />",
+        "id": 85,
+        "name": "April/ADOPTION PENDING!",
+        "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/22/pictures/animals/10447/10447378/38056496_960x720.jpg",
+        "sex": "Female"
+      }
+    ]
+  }

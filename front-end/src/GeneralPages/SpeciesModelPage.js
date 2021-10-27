@@ -1,16 +1,46 @@
 import React from 'react'
-import { Row, Table } from 'react-bootstrap'
+import { Row, Table, Col } from 'react-bootstrap'
+import {  useState, useEffect } from 'react'
 import Species from '../Data/Species.json'
 import Breeds from '../Data/breeds2.json'
+import Paginate from '../Components/Pagination'
+import axios from 'axios'
 import {Link} from 'react-router-dom'
+import PropTypes from 'prop-types'
 
-const SpeciesModelPage = () => {
+const SpeciesModelPage = ({fetchPage}) => {
+    const [allBreeds, setAllBreeds] = useState([])
+    const [breedsPerPage, setBreedsPerPage] = useState(10)
+    const [isLoading, setIsLoading] = useState(false)
+    const [currentPage, setCurrentPage] = useState(1)
+
+    const fetchBreeds = async (pageNum) => {
+        setIsLoading(true)
+        const res = await axios.get(`https://api.adoptapet.me/sb?page=${pageNum}`)
+        setAllBreeds(res.data.page)
+        setIsLoading(false)
+        setBreedsPerPage(res.data.count)
+    }
+
+    useEffect(() => {
+        fetchBreeds(1)
+    }, [])
+    const paginate = (num) => {
+        setCurrentPage(num)
+        fetchBreeds(num)
+    }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
-                <h2>Species</h2>
+                <Col>
+                    <h2>Species</h2>
+                    <h5>20 species, page {currentPage}/19</h5>
+                    {isLoading && <h4>Loading...</h4>}
+                </Col>
+                <Col>
+                    <Paginate totalItems={368} itemsPerPage={20} paginate={paginate} />
+                </Col>
             </Row>
-            <h5>3 species, page 1/1</h5>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm">
                 <thead>
@@ -18,43 +48,32 @@ const SpeciesModelPage = () => {
                     <th>Species</th>
                     <th>Breeds</th>
                     <th>Life Expectancy</th>
-                    <th>Size</th>
-                    <th>Potential Health Issues</th>
+                    <th>Weight</th>
+                    <th>Origin</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                    <td>Cat</td>
-                    <Link to={`/sbmodel/1`} style={{ textDecoration: 'none'}}>
-                        <td>Domestic Short Hair</td>
+                    {allBreeds.map((breed, index) => (
+                    <tr key={index}>
+                    <td>{breed.species_name}</td>
+                    <Link to={`/sbmodel/${breed.api_id}`} style={{ textDecoration: 'none'}} onClick={() => fetchPage("sb", breed.api_id)}>
+                        <td>{breed.breed_name}</td>
                     </Link>
-                    <td>15 - 20 years</td>
-                    <td>Medium/Large</td>
-                    <td>Ocular, Respiratory, Gum disease, Obesity</td>
+                    <td>{breed.life_span ? breed.life_span : "N/A"}</td>
+                    <td>{breed.weight ? breed.weight : "N/A"}</td>
+                    <td>{breed.origin ? breed.origin : "N/A"}</td>
                     </tr>
-                    <tr>
-                    <td>Dog</td>
-                    <Link to={`/sbmodel/2`} style={{ textDecoration: 'none'}}>
-                    <td>Beagle</td>
-                    </Link>
-                    <td>10 - 15 years</td>
-                    <td>Small/Medium</td>
-                    <td>Epilepsy, Dysplasia, Hypythyroidism</td>
-                    </tr>
-                    <tr>
-                    <td>Dog</td>
-                    <Link to={`/sbmodel/3`} style={{ textDecoration: 'none'}}>
-                    <td>Pit Bull Terrier</td>
-                    </Link>
-                    <td>12 - 13 years</td>
-                    <td>Medium/Large</td>
-                    <td>Kidney, Heart</td>
-                    </tr>
+                ))}
                 </tbody>
                 </Table>
                 </div>
         </div>
     )
+}
+
+// Set type of the prop here.
+SpeciesModelPage.propTypes = {
+    fetchPage: PropTypes.func
 }
 
 export default SpeciesModelPage

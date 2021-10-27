@@ -1,0 +1,38 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Youtube video properly rendered 1`] = `
+<div>
+  <div
+    style={
+      Object {
+        "paddingBottom": "2vh",
+        "paddingLeft": "27.5vw",
+      }
+    }
+  >
+    <button
+      className="btn btn-danger"
+      disabled={false}
+      onClick={[Function]}
+      style={
+        Object {
+          "width": "10vw",
+        }
+      }
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        viewBox="0 0 16 16"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M0 12V4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm6.79-6.907A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814l-3.5-2.5z"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
