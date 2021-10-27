@@ -1,6 +1,6 @@
 import React from 'react'
-import { Container, Row, Col, Card, Badge, ListGroup, Image } from 'react-bootstrap'
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Container, Row, Col, Card, Badge, ListGroup, Button } from 'react-bootstrap'
+import { Link, BrowserRouter as Router, Switch, useHistory } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 import { InfoCircleFill, PatchPlusFill } from 'react-bootstrap-icons';
@@ -8,6 +8,12 @@ import { InfoCircleFill, PatchPlusFill } from 'react-bootstrap-icons';
 const AdoptInstanceTemplate = ({attributes, fetchPage}) => {
     const services = attributes.services.split(",")
     const badgeTypes = ["secondary", "success", "danger", "warning", "info", "light", "dark"]
+    let history = useHistory();
+
+    const redirect = (type, num, path) => {
+        fetchPage(type, num)
+        history.push(path)
+    }
     return (
         <div>
             <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>
@@ -60,22 +66,20 @@ const AdoptInstanceTemplate = ({attributes, fetchPage}) => {
                 </Row>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
-                    {/* <Router> */}
                     <h5>See breeds this center carries</h5>
                     {attributes.speciesBreeds.map((sb, idx) => (
-                        <Link key={idx} to={`/sbmodel/${sb.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("sb", sb.api_id)}>
+                        <Button key={idx} variant="link" style={{textDecoration: 'none'}} onClick={() => redirect("sb", sb.api_id, `/sbmodel/${sb.api_id}`)}>
                             <h5>{sb.breed_name}</h5>
-                        </Link>
+                        </Button>
                     ))}
-                    {/* </Router> */}
                     </Col>
                     <Col>
                     <h5>Pets available at this center
                     </h5>
                         {attributes.pets.map((pet, idx) => (
-                            <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
+                            <Button key={idx} variant="link" style={{textDecoration: 'none'}} onClick={() => redirect("ap", pet.api_id, `/apmodel/${pet.api_id}`)}>
                                 <h5>Take a look at {pet.name}</h5>
-                            </Link>
+                            </Button>
                         ))}
                     </Col>
                 </Row>

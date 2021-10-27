@@ -1,0 +1,2723 @@
+{
+    "count": 100,
+    "page": [
+        {
+            "api_id": 12,
+            "city": "Baltimore",
+            "email": "catrescueofmd@mindspring.com",
+            "id": 1,
+            "lat": 39.26750183105469,
+            "lon": -76.74459838867188,
+            "name": "Cat Rescue of Maryland, Inc.",
+            "pets": [
+              {
+                "api_id": 10530168,
+                "id": 5,
+                "name": "Indy (Independence)"
+              },
+              {
+                "api_id": 1077692,
+                "id": 6,
+                "name": "Sara"
+              },
+              {
+                "api_id": 1077694,
+                "id": 7,
+                "name": "Annie"
+              },
+              {
+                "api_id": 11116406,
+                "id": 8,
+                "name": "Elsa"
+              },
+              {
+                "api_id": 1121,
+                "id": 9,
+                "name": "Kittens (1 boy, 1 girl)"
+              },
+              {
+                "api_id": 1122,
+                "id": 10,
+                "name": "Girl kitten"
+              },
+              {
+                "api_id": 11428091,
+                "id": 11,
+                "name": "Rebel (F)"
+              },
+              {
+                "api_id": 11928917,
+                "id": 12,
+                "name": "Vera"
+              },
+              {
+                "api_id": 1194850,
+                "id": 13,
+                "name": "Kara"
+              },
+              {
+                "api_id": 1194854,
+                "id": 14,
+                "name": "Marli"
+              },
+              {
+                "api_id": 12131760,
+                "id": 15,
+                "name": "Hamilton"
+              },
+              {
+                "api_id": 12131773,
+                "id": 16,
+                "name": "Koco"
+              },
+              {
+                "api_id": 12157488,
+                "id": 17,
+                "name": "Pixie"
+              },
+              {
+                "api_id": 12170208,
+                "id": 18,
+                "name": "Marge"
+              },
+              {
+                "api_id": 12170215,
+                "id": 19,
+                "name": "Bart"
+              },
+              {
+                "api_id": 12425913,
+                "id": 20,
+                "name": "Homer"
+              },
+              {
+                "api_id": 12474573,
+                "id": 21,
+                "name": "Cinnamon"
+              },
+              {
+                "api_id": 12852146,
+                "id": 22,
+                "name": "Mildred (Millie)"
+              },
+              {
+                "api_id": 13355518,
+                "id": 23,
+                "name": "Wally"
+              },
+              {
+                "api_id": 1349742,
+                "id": 24,
+                "name": "Paddy"
+              },
+              {
+                "api_id": 13618670,
+                "id": 25,
+                "name": "Altheana"
+              },
+              {
+                "api_id": 1019366,
+                "id": 1,
+                "name": "Handsome Boy"
+              },
+              {
+                "api_id": 1019369,
+                "id": 2,
+                "name": "Hulagan"
+              },
+              {
+                "api_id": 104592,
+                "id": 3,
+                "name": "Scotty"
+              },
+              {
+                "api_id": 10530165,
+                "id": 4,
+                "name": "Pretty Boy"
+              }
+            ],
+            "services": "",
+            "species_breed": [
+              {
+                "api_id": 1,
+                "breed_name": "Abyssinian",
+                "id": 1,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 2,
+                "breed_name": "American Curl",
+                "id": 2,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 3,
+                "breed_name": "American Shorthair",
+                "id": 3,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 4,
+                "breed_name": "American Wirehair",
+                "id": 4,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 5,
+                "breed_name": "Angora",
+                "id": 5,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 6,
+                "breed_name": "Applehead Siamese",
+                "id": 6,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 7,
+                "breed_name": "Balinese",
+                "id": 7,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 8,
+                "breed_name": "Bengal",
+                "id": 8,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 9,
+                "breed_name": "Birman",
+                "id": 9,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 10,
+                "breed_name": "Bobtail",
+                "id": 10,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 11,
+                "breed_name": "Bombay",
+                "id": 11,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 12,
+                "breed_name": "British Shorthair",
+                "id": 12,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 13,
+                "breed_name": "Burmese",
+                "id": 13,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 14,
+                "breed_name": "Burmilla",
+                "id": 14,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 15,
+                "breed_name": "Calico",
+                "id": 15,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 16,
+                "breed_name": "Canadian Hairless",
+                "id": 16,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 17,
+                "breed_name": "Chausie",
+                "id": 17,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 19,
+                "breed_name": "Chinchilla",
+                "id": 18,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 20,
+                "breed_name": "Cornish Rex",
+                "id": 19,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 21,
+                "breed_name": "Cymric",
+                "id": 20,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 22,
+                "breed_name": "Devon Rex",
+                "id": 21,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 23,
+                "breed_name": "Dilute Tortoiseshell",
+                "id": 22,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 24,
+                "breed_name": "Domestic Long Hair",
+                "id": 23,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 29,
+                "breed_name": "Domestic Medium Hair",
+                "id": 24,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 35,
+                "breed_name": "Domestic Short Hair",
+                "id": 25,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 42,
+                "breed_name": "Egyptian Mau",
+                "id": 26,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 43,
+                "breed_name": "Exotic Shorthair",
+                "id": 27,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 44,
+                "breed_name": "Havana",
+                "id": 28,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 45,
+                "breed_name": "Himalayan",
+                "id": 29,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 46,
+                "breed_name": "Japanese Bobtail",
+                "id": 30,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 47,
+                "breed_name": "Korat",
+                "id": 31,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 48,
+                "breed_name": "Maine Coon",
+                "id": 32,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 49,
+                "breed_name": "Manx",
+                "id": 33,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 50,
+                "breed_name": "Norwegian Forest Cat",
+                "id": 34,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 51,
+                "breed_name": "Ocicat",
+                "id": 35,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 52,
+                "breed_name": "Oriental Tabby",
+                "id": 36,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 53,
+                "breed_name": "Persian",
+                "id": 37,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 54,
+                "breed_name": "Pixie-Bob",
+                "id": 38,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 55,
+                "breed_name": "Ragdoll",
+                "id": 39,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 56,
+                "breed_name": "Russian Blue",
+                "id": 40,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 57,
+                "breed_name": "Scottish Fold",
+                "id": 41,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 58,
+                "breed_name": "Selkirk Rex",
+                "id": 42,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 59,
+                "breed_name": "Siamese",
+                "id": 43,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 60,
+                "breed_name": "Snowshoe",
+                "id": 44,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 61,
+                "breed_name": "Somali",
+                "id": 45,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 62,
+                "breed_name": "Sphynx (hairless cat)",
+                "id": 46,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 63,
+                "breed_name": "Tabby",
+                "id": 47,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 68,
+                "breed_name": "Tiger",
+                "id": 48,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 69,
+                "breed_name": "Tonkinese",
+                "id": 49,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 70,
+                "breed_name": "Torbie",
+                "id": 50,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 71,
+                "breed_name": "Tortoiseshell",
+                "id": 51,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 72,
+                "breed_name": "Turkish Van",
+                "id": 52,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 73,
+                "breed_name": "Tuxedo",
+                "id": 53,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 426,
+                "breed_name": "Dilute Calico",
+                "id": 290,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 437,
+                "breed_name": "Extra-Toes Cat (Hemingway Polydactyl)",
+                "id": 291,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 438,
+                "breed_name": "Javanese",
+                "id": 292,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 439,
+                "breed_name": "LaPerm",
+                "id": 293,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 440,
+                "breed_name": "Munchkin",
+                "id": 294,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 441,
+                "breed_name": "Nebelung",
+                "id": 295,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 442,
+                "breed_name": "Oriental Long Hair",
+                "id": 296,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 443,
+                "breed_name": "Oriental Short Hair",
+                "id": 297,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 444,
+                "breed_name": "Ragamuffin",
+                "id": 298,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 446,
+                "breed_name": "Siberian",
+                "id": 299,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 447,
+                "breed_name": "Singapura",
+                "id": 300,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 450,
+                "breed_name": "Turkish Angora",
+                "id": 301,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 595,
+                "breed_name": "Brazilian Shorthair",
+                "id": 311,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 596,
+                "breed_name": "Chanilly/Tiffany",
+                "id": 312,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 597,
+                "breed_name": "Chartreux",
+                "id": 313,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 598,
+                "breed_name": "Colorpoint Shorthair",
+                "id": 314,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 599,
+                "breed_name": "European Shorthair",
+                "id": 315,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 600,
+                "breed_name": "German Rex",
+                "id": 316,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 735,
+                "breed_name": "European Burmese",
+                "id": 343,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 851,
+                "breed_name": "Malayan",
+                "id": 354,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 852,
+                "breed_name": "Rex",
+                "id": 355,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 853,
+                "breed_name": "Savannah",
+                "id": 356,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 855,
+                "breed_name": "Tiffany",
+                "id": 357,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 975,
+                "breed_name": "Scottish Straight",
+                "id": 367,
+                "species_name": "Cat",
+                "youth_name": "Kitten"
+              },
+              {
+                "api_id": 74,
+                "breed_name": "Affenpinscher",
+                "id": 54,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 75,
+                "breed_name": "Afghan Hound",
+                "id": 55,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 76,
+                "breed_name": "Airedale Terrier",
+                "id": 56,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 77,
+                "breed_name": "Akbash",
+                "id": 57,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 78,
+                "breed_name": "Akita",
+                "id": 58,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 79,
+                "breed_name": "Alaskan Malamute",
+                "id": 59,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 80,
+                "breed_name": "American Bulldog",
+                "id": 60,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 81,
+                "breed_name": "American Eskimo Dog",
+                "id": 61,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 82,
+                "breed_name": "American Staffordshire Terrier",
+                "id": 62,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 83,
+                "breed_name": "Anatolian Shepherd",
+                "id": 63,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 84,
+                "breed_name": "Australian Cattle Dog/Blue Heeler",
+                "id": 64,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 85,
+                "breed_name": "Australian Kelpie",
+                "id": 65,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 86,
+                "breed_name": "Australian Shepherd",
+                "id": 66,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 87,
+                "breed_name": "Australian Terrier",
+                "id": 67,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 88,
+                "breed_name": "Basenji",
+                "id": 68,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 89,
+                "breed_name": "Basset Hound",
+                "id": 69,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 90,
+                "breed_name": "Beagle",
+                "id": 70,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 91,
+                "breed_name": "Bearded Collie",
+                "id": 71,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 92,
+                "breed_name": "Beauceron",
+                "id": 72,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 93,
+                "breed_name": "Belgian Shepherd Dog Sheepdog",
+                "id": 73,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 94,
+                "breed_name": "Bernese Mountain Dog",
+                "id": 74,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 95,
+                "breed_name": "Bichon Frise",
+                "id": 75,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 96,
+                "breed_name": "Black and Tan Coonhound",
+                "id": 76,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 97,
+                "breed_name": "Black Mouth Cur",
+                "id": 77,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 98,
+                "breed_name": "Bloodhound",
+                "id": 78,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 99,
+                "breed_name": "Border Collie",
+                "id": 79,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 100,
+                "breed_name": "Bordeaux",
+                "id": 80,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 101,
+                "breed_name": "Borzoi",
+                "id": 81,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 102,
+                "breed_name": "Boston Terrier",
+                "id": 82,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 103,
+                "breed_name": "Bouvier des Flandres",
+                "id": 83,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 104,
+                "breed_name": "Boxer",
+                "id": 84,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 105,
+                "breed_name": "Briard",
+                "id": 85,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 106,
+                "breed_name": "Brittany",
+                "id": 86,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 107,
+                "breed_name": "Brussels Griffon",
+                "id": 87,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 108,
+                "breed_name": "Bull Terrier",
+                "id": 88,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 109,
+                "breed_name": "Bulldog",
+                "id": 89,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 110,
+                "breed_name": "Bullmastiff",
+                "id": 90,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 111,
+                "breed_name": "Cairn Terrier",
+                "id": 91,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 112,
+                "breed_name": "Cane Corso Mastiff",
+                "id": 92,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 113,
+                "breed_name": "Carolina Dog",
+                "id": 93,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 114,
+                "breed_name": "Catahoula Leopard Dog",
+                "id": 94,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 115,
+                "breed_name": "Cattle Dog",
+                "id": 95,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 116,
+                "breed_name": "Cavalier King Charles Spaniel",
+                "id": 96,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 117,
+                "breed_name": "Chesapeake Bay Retriever",
+                "id": 97,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 118,
+                "breed_name": "Chihuahua",
+                "id": 98,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 119,
+                "breed_name": "Chinese Crested-Hairless",
+                "id": 99,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 120,
+                "breed_name": "Chinese Shar-Pei",
+                "id": 100,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 121,
+                "breed_name": "Chow Chow",
+                "id": 101,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 122,
+                "breed_name": "Cockapoo",
+                "id": 102,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 123,
+                "breed_name": "Cocker Spaniel",
+                "id": 103,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 124,
+                "breed_name": "Collie",
+                "id": 104,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 125,
+                "breed_name": "Coonhound",
+                "id": 105,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 126,
+                "breed_name": "Corgi",
+                "id": 106,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 127,
+                "breed_name": "Dachshund",
+                "id": 107,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 128,
+                "breed_name": "Dalmatian",
+                "id": 108,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 129,
+                "breed_name": "Dandie Dinmont Terrier",
+                "id": 109,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 130,
+                "breed_name": "Doberman Pinscher",
+                "id": 110,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 131,
+                "breed_name": "Dutch Shepherd",
+                "id": 111,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 132,
+                "breed_name": "English Pointer",
+                "id": 112,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 133,
+                "breed_name": "English Setter",
+                "id": 113,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 134,
+                "breed_name": "English Shepherd",
+                "id": 114,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 135,
+                "breed_name": "English Springer Spaniel",
+                "id": 115,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 136,
+                "breed_name": "English Toy Spaniel",
+                "id": 116,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 137,
+                "breed_name": "Eskimo Dog",
+                "id": 117,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 138,
+                "breed_name": "Finnish Spitz",
+                "id": 118,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 139,
+                "breed_name": "Flat-coated Retriever",
+                "id": 119,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 140,
+                "breed_name": "Fox Terrier",
+                "id": 120,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 141,
+                "breed_name": "Foxhound",
+                "id": 121,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 142,
+                "breed_name": "German Shepherd Dog",
+                "id": 122,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 143,
+                "breed_name": "German Shorthaired Pointer",
+                "id": 123,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 144,
+                "breed_name": "German Wirehaired Pointer",
+                "id": 124,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 145,
+                "breed_name": "Golden Retriever",
+                "id": 125,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 146,
+                "breed_name": "Gordon Setter",
+                "id": 126,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 147,
+                "breed_name": "Great Dane",
+                "id": 127,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 148,
+                "breed_name": "Great Pyrenees",
+                "id": 128,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 149,
+                "breed_name": "Greater Swiss Mountain Dog",
+                "id": 129,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 150,
+                "breed_name": "Greyhound",
+                "id": 130,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 151,
+                "breed_name": "Hound",
+                "id": 131,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 152,
+                "breed_name": "Husky",
+                "id": 132,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 153,
+                "breed_name": "Irish Setter",
+                "id": 133,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 154,
+                "breed_name": "Irish Wolfhound",
+                "id": 134,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 155,
+                "breed_name": "Italian Greyhound",
+                "id": 135,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 156,
+                "breed_name": "Italian Spinone",
+                "id": 136,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 157,
+                "breed_name": "Jack Russell Terrier",
+                "id": 137,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 158,
+                "breed_name": "Japanese Chin",
+                "id": 138,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 159,
+                "breed_name": "Jindo (Korean)",
+                "id": 139,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 160,
+                "breed_name": "Keeshond",
+                "id": 140,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 161,
+                "breed_name": "Kuvasz",
+                "id": 141,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 162,
+                "breed_name": "Labrador Retriever",
+                "id": 142,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 163,
+                "breed_name": "Lhasa Apso",
+                "id": 143,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 164,
+                "breed_name": "Leonberger",
+                "id": 144,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 165,
+                "breed_name": "Maltese",
+                "id": 145,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 166,
+                "breed_name": "Manchester Terrier",
+                "id": 146,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 167,
+                "breed_name": "Mastiff",
+                "id": 147,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 168,
+                "breed_name": "Miniature Pinscher",
+                "id": 148,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 169,
+                "breed_name": "Mountain Dog",
+                "id": 149,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 170,
+                "breed_name": "Neapolitan Mastiff",
+                "id": 150,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 171,
+                "breed_name": "Newfoundland Dog",
+                "id": 151,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 172,
+                "breed_name": "Norwegian Elkhound",
+                "id": 152,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 173,
+                "breed_name": "Old English Sheepdog",
+                "id": 153,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 174,
+                "breed_name": "Otterhound",
+                "id": 154,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 175,
+                "breed_name": "Papillon",
+                "id": 155,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 176,
+                "breed_name": "Petit Basset Griffon Vendeen",
+                "id": 156,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 177,
+                "breed_name": "Pekingese",
+                "id": 157,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 178,
+                "breed_name": "Pharaoh Hound",
+                "id": 158,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 179,
+                "breed_name": "Pit Bull Terrier",
+                "id": 159,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 180,
+                "breed_name": "Pointer",
+                "id": 160,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 181,
+                "breed_name": "Polish Lowland Sheepdog",
+                "id": 161,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 182,
+                "breed_name": "Pomeranian",
+                "id": 162,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 183,
+                "breed_name": "Poodle (unknown type)",
+                "id": 163,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 184,
+                "breed_name": "Portuguese Water Dog",
+                "id": 164,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 185,
+                "breed_name": "Pug",
+                "id": 165,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 186,
+                "breed_name": "Rat Terrier",
+                "id": 166,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 187,
+                "breed_name": "Retriever",
+                "id": 167,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 188,
+                "breed_name": "Rhodesian Ridgeback",
+                "id": 168,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 189,
+                "breed_name": "Rottweiler",
+                "id": 169,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 190,
+                "breed_name": "Saluki Greyhound",
+                "id": 170,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 191,
+                "breed_name": "Saint Bernard",
+                "id": 171,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 192,
+                "breed_name": "Samoyed",
+                "id": 172,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 193,
+                "breed_name": "Schipperke",
+                "id": 173,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 194,
+                "breed_name": "Schnauzer",
+                "id": 174,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 195,
+                "breed_name": "Scottish Terrier Scottie",
+                "id": 175,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 196,
+                "breed_name": "Setter",
+                "id": 176,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 197,
+                "breed_name": "Shar Pei",
+                "id": 177,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 198,
+                "breed_name": "Sheep Dog",
+                "id": 178,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 199,
+                "breed_name": "Shetland Sheepdog Sheltie",
+                "id": 179,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 200,
+                "breed_name": "Shiba Inu",
+                "id": 180,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 201,
+                "breed_name": "Shih Tzu",
+                "id": 181,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 202,
+                "breed_name": "Siberian Husky",
+                "id": 182,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 203,
+                "breed_name": "Silky Terrier",
+                "id": 183,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 204,
+                "breed_name": "Smooth Fox Terrier",
+                "id": 184,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 205,
+                "breed_name": "Spaniel",
+                "id": 185,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 206,
+                "breed_name": "Spitz",
+                "id": 186,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 207,
+                "breed_name": "Staffordshire Bull Terrier",
+                "id": 187,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 208,
+                "breed_name": "Terrier",
+                "id": 188,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 209,
+                "breed_name": "Tibetan Terrier",
+                "id": 189,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 210,
+                "breed_name": "Toy Fox Terrier",
+                "id": 190,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 211,
+                "breed_name": "Treeing Walker Coonhound",
+                "id": 191,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 212,
+                "breed_name": "Vizsla",
+                "id": 192,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 213,
+                "breed_name": "Weimaraner",
+                "id": 193,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 214,
+                "breed_name": "Welsh Corgi",
+                "id": 194,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 215,
+                "breed_name": "Welsh Terrier",
+                "id": 195,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 216,
+                "breed_name": "Welsh Springer Spaniel",
+                "id": 196,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 217,
+                "breed_name": "West Highland White Terrier Westie",
+                "id": 197,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 218,
+                "breed_name": "Wheaten Terrier",
+                "id": 198,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 219,
+                "breed_name": "Whippet",
+                "id": 199,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 220,
+                "breed_name": "White German Shepherd",
+                "id": 200,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 221,
+                "breed_name": "Wire-haired Pointing Griffon",
+                "id": 201,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 222,
+                "breed_name": "Wirehaired Fox Terrier",
+                "id": 202,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 223,
+                "breed_name": "Wolf Dog",
+                "id": 203,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 224,
+                "breed_name": "Yorkshire Terrier Yorkie",
+                "id": 204,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 325,
+                "breed_name": "American Water Spaniel",
+                "id": 205,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 327,
+                "breed_name": "Appenzell Mountain Dog",
+                "id": 206,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 329,
+                "breed_name": "Bedlington Terrier",
+                "id": 207,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 330,
+                "breed_name": "Belgian Shepherd Laekenois",
+                "id": 208,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 331,
+                "breed_name": "Belgian Shepherd Malinois",
+                "id": 209,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 332,
+                "breed_name": "Belgian Shepherd Tervuren",
+                "id": 210,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 333,
+                "breed_name": "Black Labrador Retriever",
+                "id": 211,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 334,
+                "breed_name": "Black Russian Terrier",
+                "id": 212,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 335,
+                "breed_name": "Bluetick Coonhound",
+                "id": 213,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 336,
+                "breed_name": "Border Terrier",
+                "id": 214,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 338,
+                "breed_name": "Boykin Spaniel",
+                "id": 215,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 339,
+                "breed_name": "Canaan Dog",
+                "id": 216,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 340,
+                "breed_name": "Caucasian Sheepdog (Caucasian Ovtcharka)",
+                "id": 217,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 342,
+                "breed_name": "Chinese Foo Dog",
+                "id": 218,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 343,
+                "breed_name": "Chinook",
+                "id": 219,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 344,
+                "breed_name": "Chocolate Labrador Retriever",
+                "id": 220,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 345,
+                "breed_name": "Clumber Spaniel",
+                "id": 221,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 346,
+                "breed_name": "Coton de Tulear",
+                "id": 222,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 347,
+                "breed_name": "Curly-Coated Retriever",
+                "id": 223,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 348,
+                "breed_name": "Dogo Argentino",
+                "id": 224,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 349,
+                "breed_name": "Dogue de Bordeaux",
+                "id": 225,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 350,
+                "breed_name": "English Bulldog",
+                "id": 226,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 351,
+                "breed_name": "English Cocker Spaniel",
+                "id": 227,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 352,
+                "breed_name": "English Coonhound",
+                "id": 228,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 353,
+                "breed_name": "Entlebucher",
+                "id": 229,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 354,
+                "breed_name": "Eurasier",
+                "id": 230,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 355,
+                "breed_name": "Field Spaniel",
+                "id": 231,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 356,
+                "breed_name": "Fila Brasileiro",
+                "id": 232,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 357,
+                "breed_name": "Finnish Lapphund",
+                "id": 233,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 358,
+                "breed_name": "French Bulldog",
+                "id": 234,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 359,
+                "breed_name": "Galgo Spanish Greyhound",
+                "id": 235,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 360,
+                "breed_name": "German Pinscher",
+                "id": 236,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 361,
+                "breed_name": "German Spitz",
+                "id": 237,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 363,
+                "breed_name": "Giant Schnauzer",
+                "id": 238,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 364,
+                "breed_name": "Glen of Imaal Terrier",
+                "id": 239,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 367,
+                "breed_name": "Harrier",
+                "id": 240,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 368,
+                "breed_name": "Havanese",
+                "id": 241,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 369,
+                "breed_name": "Hovawart",
+                "id": 242,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 371,
+                "breed_name": "Ibizan Hound",
+                "id": 243,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 372,
+                "breed_name": "Illyrian Sheepdog",
+                "id": 244,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 373,
+                "breed_name": "Irish Terrier",
+                "id": 245,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 374,
+                "breed_name": "Irish Water Spaniel",
+                "id": 246,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 375,
+                "breed_name": "Kai Dog",
+                "id": 247,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 376,
+                "breed_name": "Karelian Bear Dog",
+                "id": 248,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 377,
+                "breed_name": "Kerry Blue Terrier",
+                "id": 249,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 378,
+                "breed_name": "Kishu",
+                "id": 250,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 379,
+                "breed_name": "Klee Kai",
+                "id": 251,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 380,
+                "breed_name": "Komondor",
+                "id": 252,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 381,
+                "breed_name": "Kyi Leo",
+                "id": 253,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 382,
+                "breed_name": "Lakeland Terrier",
+                "id": 254,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 383,
+                "breed_name": "Lancashire Heeler",
+                "id": 255,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 384,
+                "breed_name": "L\u00f6wchen",
+                "id": 256,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 385,
+                "breed_name": "Maremma Sheepdog",
+                "id": 257,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 387,
+                "breed_name": "McNab",
+                "id": 258,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 388,
+                "breed_name": "Mountain Cur",
+                "id": 259,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 389,
+                "breed_name": "Munsterlander",
+                "id": 260,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 390,
+                "breed_name": "New Guinea Singing Dog",
+                "id": 261,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 392,
+                "breed_name": "Norfolk Terrier",
+                "id": 262,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 393,
+                "breed_name": "Norwich Terrier",
+                "id": 263,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 394,
+                "breed_name": "Norwegian Buhund",
+                "id": 264,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 395,
+                "breed_name": "Norwegian Lundehund",
+                "id": 265,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 396,
+                "breed_name": "Nova Scotia Duck-Tolling Retriever",
+                "id": 266,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 397,
+                "breed_name": "Patterdale Terrier (Fell Terrier)",
+                "id": 267,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 398,
+                "breed_name": "Peruvian Inca Orchid",
+                "id": 268,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 400,
+                "breed_name": "Plott Hound",
+                "id": 269,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 401,
+                "breed_name": "Podengo Portugueso",
+                "id": 270,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 404,
+                "breed_name": "Presa Canario",
+                "id": 271,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 405,
+                "breed_name": "Puli",
+                "id": 272,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 406,
+                "breed_name": "Pumi",
+                "id": 273,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 407,
+                "breed_name": "Redbone Coonhound",
+                "id": 274,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 408,
+                "breed_name": "Saluki",
+                "id": 275,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 409,
+                "breed_name": "Scottish Deerhound",
+                "id": 276,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 410,
+                "breed_name": "Sealyham Terrier",
+                "id": 277,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 411,
+                "breed_name": "Shepherd",
+                "id": 278,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 413,
+                "breed_name": "Skye Terrier",
+                "id": 279,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 414,
+                "breed_name": "Sloughi",
+                "id": 280,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 415,
+                "breed_name": "Poodle (Standard)",
+                "id": 281,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 416,
+                "breed_name": "South Russian Ovcharka",
+                "id": 282,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 417,
+                "breed_name": "Swedish Vallhund",
+                "id": 283,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 418,
+                "breed_name": "Thai Ridgeback",
+                "id": 284,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 419,
+                "breed_name": "Tibetan Mastiff",
+                "id": 285,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 420,
+                "breed_name": "Tibetan Spaniel",
+                "id": 286,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 421,
+                "breed_name": "Tosa Inu",
+                "id": 287,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 422,
+                "breed_name": "Yellow Labrador Retriever",
+                "id": 288,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 424,
+                "breed_name": "Xoloitzcuintle/Mexican Hairless",
+                "id": 289,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 584,
+                "breed_name": "Cardigan Welsh Corgi",
+                "id": 302,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 585,
+                "breed_name": "Pembroke Welsh Corgi",
+                "id": 303,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 586,
+                "breed_name": "Miniature Schnauzer",
+                "id": 304,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 587,
+                "breed_name": "Poodle (Toy)",
+                "id": 305,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 588,
+                "breed_name": "Red Heeler",
+                "id": 306,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 589,
+                "breed_name": "Saarlooswolfhond",
+                "id": 307,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 590,
+                "breed_name": "Soft-Coated Wheaten Terrier",
+                "id": 308,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 591,
+                "breed_name": "Springer Spaniel",
+                "id": 309,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 593,
+                "breed_name": "Toy Terrier",
+                "id": 310,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 602,
+                "breed_name": "Argentinian Mastiff",
+                "id": 317,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 603,
+                "breed_name": "Belgian Griffon",
+                "id": 318,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 604,
+                "breed_name": "Bobtail",
+                "id": 319,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 605,
+                "breed_name": "Brazilian Mastiff",
+                "id": 320,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 606,
+                "breed_name": "Chinese Crested-Powder Puff",
+                "id": 321,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 607,
+                "breed_name": "Elkhound",
+                "id": 322,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 608,
+                "breed_name": "English Mastiff",
+                "id": 323,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 609,
+                "breed_name": "English Sheepdog",
+                "id": 324,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 610,
+                "breed_name": "Eskimo Spitz",
+                "id": 325,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 611,
+                "breed_name": "Feist",
+                "id": 326,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 613,
+                "breed_name": "French Mastiff",
+                "id": 327,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 614,
+                "breed_name": "Halden Hound (Haldenstrover)",
+                "id": 328,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 615,
+                "breed_name": "Italian Mastiff",
+                "id": 329,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 616,
+                "breed_name": "Mexican Hairless",
+                "id": 330,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 617,
+                "breed_name": "Queensland Heeler",
+                "id": 331,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 618,
+                "breed_name": "Russian Wolfhound",
+                "id": 332,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 619,
+                "breed_name": "Schiller Hound",
+                "id": 333,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 620,
+                "breed_name": "Sussex Spaniel",
+                "id": 334,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 621,
+                "breed_name": "Poodle (T-Cup)",
+                "id": 335,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 728,
+                "breed_name": "American Foxhound",
+                "id": 336,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 729,
+                "breed_name": "American Pit Bull Terrier",
+                "id": 337,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 730,
+                "breed_name": "Anatolian Karabash Dog",
+                "id": 338,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 731,
+                "breed_name": "Basset Griffon Vendeen",
+                "id": 339,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 732,
+                "breed_name": "Bolognese",
+                "id": 340,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 733,
+                "breed_name": "Deerhound",
+                "id": 341,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 734,
+                "breed_name": "English Foxhound",
+                "id": 342,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 736,
+                "breed_name": "Miniature Bull Terrier",
+                "id": 344,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 737,
+                "breed_name": "Poodle (Miniature)",
+                "id": 345,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 738,
+                "breed_name": "Parson Russell Terrier",
+                "id": 346,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 739,
+                "breed_name": "Spinone Italiano",
+                "id": 347,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 740,
+                "breed_name": "Markiesje",
+                "id": 348,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 741,
+                "breed_name": "Hollandse Tulphond",
+                "id": 349,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 751,
+                "breed_name": "Blue Lacy",
+                "id": 350,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 752,
+                "breed_name": "Cirneco dellEtna",
+                "id": 351,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 753,
+                "breed_name": "Jack Russell Terrier (Parson Russell Terrier)",
+                "id": 352,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 836,
+                "breed_name": "French Brittany",
+                "id": 353,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 893,
+                "breed_name": "Alaskan Klee Kai",
+                "id": 358,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 952,
+                "breed_name": "Biewer",
+                "id": 359,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 953,
+                "breed_name": "Spanish Mastiff",
+                "id": 360,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 954,
+                "breed_name": "Boerboel Mastiff",
+                "id": 361,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 958,
+                "breed_name": "American Hairless Terrier",
+                "id": 362,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 959,
+                "breed_name": "Picardy Shepherd",
+                "id": 363,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 960,
+                "breed_name": "Danish Broholmer",
+                "id": 364,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 963,
+                "breed_name": "Tamaskan",
+                "id": 365,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 964,
+                "breed_name": "White Swiss Shepherd Dog (Swiss Berger)",
+                "id": 366,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              },
+              {
+                "api_id": 976,
+                "breed_name": "Smooth Collie",
+                "id": 368,
+                "species_name": "Dog",
+                "youth_name": "Puppy"
+              }
+            ],
+            "state": "MD",
+            "street": "",
+            "zipcode": "21228"
+          }
+    ]
+}

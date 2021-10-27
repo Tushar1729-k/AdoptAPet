@@ -59,7 +59,7 @@ const AdoptCentersPage = ({fetchPage}) => {
                 </Table>
                 </div>
                 <Row>
-                    <Paginate totalItems={100} itemsPerPage={centersPerPage} paginate={paginate} />
+                    <Paginate totalItems={100} itemsPerPage={20} paginate={paginate} />
                 </Row>
         </div>
     )

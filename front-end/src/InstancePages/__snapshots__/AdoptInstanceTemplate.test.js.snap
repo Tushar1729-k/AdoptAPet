@@ -5,50 +5,8 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
   <div
     style={
       Object {
-        "paddingLeft": "20vw",
-        "paddingRight": "20vw",
-      }
-    }
-  >
-    <div
-      className="row"
-    >
-      <img
-        className="img-fluid"
-        src=""
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      />
-    </div>
-    <div
-      className="row"
-    >
-      <div
-        style={
-          Object {
-            "height": "100vh",
-            "width": "100vw",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "height": "100%",
-            }
-          }
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    style={
-      Object {
-        "paddingLeft": "20vw",
-        "paddingRight": "20vw",
+        "paddingLeft": "15vw",
+        "paddingRight": "15vw",
         "paddingTop": "4vh",
       }
     }
@@ -57,7 +15,7 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
       className="card"
       style={
         Object {
-          "width": "60vw",
+          "width": "70vw",
         }
       }
     >
@@ -238,6 +196,26 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
         </p>
         <div
           className="row"
+        >
+          <div
+            style={
+              Object {
+                "height": "100vh",
+                "width": "100vw",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="row"
           style={
             Object {
               "paddingTop": "2vh",
@@ -247,51 +225,61 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
           <div
             className="col"
           >
-            <a
-              href="/sbmodel/12"
+            <h5>
+              See breeds this center carries
+            </h5>
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
-              <h5>
-                See a breed
-              </h5>
-            </a>
+              <h5 />
+            </button>
           </div>
           <div
             className="col"
           >
-            <a
-              href="/apmodel/1"
+            <h5>
+              Pets available at this center
+            </h5>
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 Take a look at 
                 Jack
               </h5>
-            </a>
-            <a
-              href="/apmodel/2"
+            </button>
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 Take a look at 
                 John
               </h5>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -305,50 +293,8 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
   <div
     style={
       Object {
-        "paddingLeft": "20vw",
-        "paddingRight": "20vw",
-      }
-    }
-  >
-    <div
-      className="row"
-    >
-      <img
-        className="img-fluid"
-        src="pitbull_terrier_1.jpeg"
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
-      />
-    </div>
-    <div
-      className="row"
-    >
-      <div
-        style={
-          Object {
-            "height": "100vh",
-            "width": "100vw",
-          }
-        }
-      >
-        <div
-          style={
-            Object {
-              "height": "100%",
-            }
-          }
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    style={
-      Object {
-        "paddingLeft": "20vw",
-        "paddingRight": "20vw",
+        "paddingLeft": "15vw",
+        "paddingRight": "15vw",
         "paddingTop": "4vh",
       }
     }
@@ -357,7 +303,7 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
       className="card"
       style={
         Object {
-          "width": "60vw",
+          "width": "70vw",
         }
       }
     >
@@ -538,6 +484,26 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
         </p>
         <div
           className="row"
+        >
+          <div
+            style={
+              Object {
+                "height": "100vh",
+                "width": "100vw",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            />
+          </div>
+        </div>
+        <div
+          className="row"
           style={
             Object {
               "paddingTop": "2vh",
@@ -547,51 +513,61 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
           <div
             className="col"
           >
-            <a
-              href="/sbmodel/12"
+            <h5>
+              See breeds this center carries
+            </h5>
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
-              <h5>
-                See a breed
-              </h5>
-            </a>
+              <h5 />
+            </button>
           </div>
           <div
             className="col"
           >
-            <a
-              href="/apmodel/1"
+            <h5>
+              Pets available at this center
+            </h5>
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 Take a look at 
                 Jack
               </h5>
-            </a>
-            <a
-              href="/apmodel/2"
+            </button>
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 Take a look at 
                 John
               </h5>
-            </a>
+            </button>
           </div>
         </div>
       </div>

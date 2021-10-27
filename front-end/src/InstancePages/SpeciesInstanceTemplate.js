@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap'
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import PropTypes from 'prop-types'
 import CustomMap from '../GeneralPages/GoogleMap'
 import YoutubePlayer from '../Components/Youtube';
@@ -15,6 +15,12 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
         const res = await axios.get(`https://maps.googleapis.com/maps/api/geocode/json?address=${attributes.origin}&key=AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`)
         setLat(res.data.results[0].geometry.location.lat)
         setLng(res.data.results[0].geometry.location.lng)
+    }
+    let history = useHistory();
+
+    const redirect = (type, num, path) => {
+        fetchPage(type, num)
+        history.push(path)
     }
     return (
         <div>
@@ -84,13 +90,11 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
                     {attributes.pets.length === 0 ? <h4>No adoptable pets available</h4> : 
                         <div>
                         <h4>See some adoptable pets</h4>
-                        {/* <Router> */}
                         {attributes.pets.map((pet, idx) => (
-                            <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
+                            <Button key={idx} variant="link" style={{textDecoration: 'none'}} onClick={() => redirect("ap", pet.api_id, `/apmodel/${pet.api_id}`)}>
                                 <h5>Take a look at {pet.name}</h5>
-                            </Link>
+                            </Button>
                         ))}
-                        {/* </Router> */}
                         </div>
                     }
                     </Col>
@@ -98,13 +102,11 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
                     {attributes.adoptCenters.length === 0 ? <h4>No adoption centers cuurrently carry this breed</h4> : 
                         <div>
                             <h4>Adoption Centers that carry this breed</h4>
-                            {/* <Router> */}
                                 {attributes.adoptCenters.map((center, idx) => (
-                                    <Link key={idx} to={`/acmodel/${center.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ac", center.api_id)}>
+                                    <Button key={idx} variant="link" style={{textDecoration: 'none'}} onClick={() => redirect("ac", center.api_id, `/acmodel/${center.api_id}`)}>
                                         <h5>{center.name}</h5>
-                                    </Link>
+                                    </Button>
                                 ))}
-                            {/* </Router> */}
                         </div>
                     }
                     </Col>
@@ -119,8 +121,8 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
 // Set defaults of props here.
 SpeciesInstanceTemplate.defaultProps = {
     attributes: { breed: '', species: '', height: 'NA', weight: 'NA', color: 'NA',
-                  energy: 'NA', lifespan: '', temperament: 'NA', shedding: 'NA',
-                  health: 'NA', description: 'NA', intelligence: 'NA', child_friendly: '',
+                  energy: 'NA', lifespan: '', temperament: 'NA', shedding: 0,
+                  health: 0, description: 'NA', intelligence: 'NA', child_friendly: '',
                   adoptCenters: [], pets: [], wiki: '', origin: ''}
 }
 // Set type of the prop here.

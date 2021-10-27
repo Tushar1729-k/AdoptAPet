@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { Container, Row, Col, Card, Modal, Button, ListGroup, Image } from 'react-bootstrap'
-import { Link, BrowserRouter as Router } from "react-router-dom";
+import { Link, BrowserRouter as Router, useHistory } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 
@@ -13,6 +13,12 @@ const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
     }
     const hideHandler = () => {
         setShowModal(false)
+    }
+    let history = useHistory();
+
+    const redirect = (type, num, path) => {
+        fetchPage(type, num)
+        history.push(path)
     }
     return (
         <div>
@@ -77,18 +83,14 @@ const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
                 </Row>
                 <Row style={{paddingTop: '2vh'}}>
                     <Col>
-                        {/* <Router> */}
-                            <Link to={`/sbmodel/${attributes.speciesBreeds.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("sb", attributes.speciesBreeds.api_id)}>
-                                <h5>Breed Information Page</h5>
-                            </Link>
-                        {/* </Router> */}
+                        <Button variant="link" style={{textDecoration: 'none'}} onClick={() => redirect("sb", attributes.speciesBreeds.api_id, `/sbmodel/${attributes.speciesBreeds.api_id}`)}>
+                            <h5>Breed Information Page</h5>
+                        </Button>
                     </Col>
                     <Col>
-                        {/* <Router> */}
-                            <Link to={`/acmodel/${attributes.adoptCenter.api_id}`} style={{textDecoration: 'none'}} onClick={() => fetchPage("ac", attributes.adoptCenter.api_id)}>
-                                <h5>This pet is at the {attributes.adoptCenter.name}</h5>
-                            </Link>
-                        {/* </Router> */}
+                        <Button variant="link" style={{textDecoration: 'none'}} onClick={() => redirect("ac", attributes.adoptCenter.api_id, `/acmodel/${attributes.adoptCenter.api_id}`)}>
+                            <h5>This pet is at the {attributes.adoptCenter.name}</h5>
+                        </Button>
                     </Col>
                 </Row>
             </Card.Body>

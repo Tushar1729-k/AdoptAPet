@@ -52,21 +52,6 @@ const MainSite = () => {
     ])
     const [breedsData, setBreedsData] = useState([])
 
-    // useEffect(() => {
-    //     const fetchData = async () => {
-    //         const petRes = await axios.get(`https://api.adoptapet.me/ap?page=-1`)
-    //         const centerRes = await axios.get(`https://api.adoptapet.me/ac?page=-1`)
-    //         const breedRes = await axios.get(`https://api.adoptapet.me/sb?page=-1`)
-    //         setPetsData(petRes.data.page)
-    //         console.log("pets data", petsData)
-    //         setCentersData(centerRes.data.page)
-    //         console.log("center data", centersData)
-    //         setBreedsData(breedRes.data.page)
-    //         console.log("breeds data", breedsData)
-    //     }
-    //     fetchData(1)
-    // }, [])
-
     const fetchData = async (type, id) => {
         const res = await axios.get(`https://api.adoptapet.me/${type}/${id}`)
         if (type === "ap") {
@@ -163,9 +148,6 @@ const MainSite = () => {
                             temperament: breed.temperament,
                             shedding: breed.shedding_level,
                             health: breed.health_issues,
-                            description: `As a working cat, American Shorthairs have a stocky, muscular build. Their muscular legs
-                                     lend themselves to the American’s agility and endurance. They have a large head and full face, medium-sized
-                                     ears and large, wide eyes.`,
                             origin: breed.origin,
                             adoptCenters: breed.centers, pets: breed.pets, wiki: breed.wikipedia_url}}
                             fetchPage={fetchPage}
@@ -173,7 +155,7 @@ const MainSite = () => {
                         </Route>
                     ))}
                 </Switch>
-            </Router>
+                </Router>
         </div>
     )
 }

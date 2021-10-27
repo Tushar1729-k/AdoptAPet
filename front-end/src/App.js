@@ -1,11 +1,11 @@
 import React from 'react';
-import './App.css';
 import MainSite from "./GeneralPages/MainSite";
+import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   return (
     <div className="App">
-      <MainSite />
+        <MainSite />
     </div>
   );
 }

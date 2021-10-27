@@ -150,14 +150,22 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
           <h4>
             Adoption Center Location
           </h4>
-          <img
-            className="img-fluid"
+          <div
             style={
               Object {
-                "width": "100%",
+                "height": "100vh",
+                "width": "100vw",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            />
+          </div>
         </div>
         <div
           className="row"
@@ -170,36 +178,41 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
           <div
             className="col"
           >
-            <a
-              href="/sbmodel/undefined"
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 Breed Information Page
               </h5>
-            </a>
+            </button>
           </div>
           <div
             className="col"
           >
-            <a
-              href="/acmodel/undefined"
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 This pet is at the 
+                Cat Rescue of Maryland, Inc.
               </h5>
-            </a>
+            </button>
           </div>
         </div>
       </div>
@@ -358,14 +371,22 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
           <h4>
             Adoption Center Location
           </h4>
-          <img
-            className="img-fluid"
+          <div
             style={
               Object {
-                "width": "100%",
+                "height": "100vh",
+                "width": "100vw",
               }
             }
-          />
+          >
+            <div
+              style={
+                Object {
+                  "height": "100%",
+                }
+              }
+            />
+          </div>
         </div>
         <div
           className="row"
@@ -378,36 +399,41 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
           <div
             className="col"
           >
-            <a
-              href="/sbmodel/undefined"
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 Breed Information Page
               </h5>
-            </a>
+            </button>
           </div>
           <div
             className="col"
           >
-            <a
-              href="/acmodel/undefined"
+            <button
+              className="btn btn-link"
+              disabled={false}
               onClick={[Function]}
               style={
                 Object {
                   "textDecoration": "none",
                 }
               }
+              type="button"
             >
               <h5>
                 This pet is at the 
+                Cat Rescue of Maryland, Inc.
               </h5>
-            </a>
+            </button>
           </div>
         </div>
       </div>

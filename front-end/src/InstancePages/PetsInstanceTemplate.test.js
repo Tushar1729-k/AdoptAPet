@@ -9,7 +9,7 @@ test("Pet Instance Page Text Properly Rendered", () => {
         attributes={{ breed: "German Sheperd", name: "Max", size: "large", 
             age: "5", color: "Grey/Black", sex: "M",
             description: "Warm and loyal friend", imgSrc: "",
-            adoptCenter: "Pets For Life" }}
+            adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'}, speciesBreeds: {api: 208} }}
         medicalHistory={{ allergies: "Cats", diet: "Organic food", 
                 issues: "None", hearing: "No",
                 sight: "No" }}
@@ -25,7 +25,7 @@ test("Pet Instance Page Text and Image Properly Rendered", () => {
         attributes={{ breed: "German Sheperd", name: "Max", size: "large", 
             age: "5", color: "Grey/Black", sex: "M",
             description: "Warm and loyal friend", imgSrc: beagle1,
-            adoptCenter: "Pets For Life" }}
+            adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'}, speciesBreeds: {api: 208} }}
         medicalHistory={{ allergies: "Cats", diet: "Organic food", 
                 issues: "None", hearing: "No",
                 sight: "No" }}

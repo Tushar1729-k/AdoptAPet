@@ -1,0 +1,401 @@
+{
+    "count": 360,
+    "page": [
+        {
+            "adaptability": 5,
+            "affection_level": 5,
+            "alt_names": "",
+            "api_id": 1,
+            "breed_name": "Abyssinian",
+            "centers": [
+              {
+                "api_id": 12,
+                "id": 1,
+                "name": "Cat Rescue of Maryland, Inc."
+              },
+              {
+                "api_id": 13,
+                "id": 2,
+                "name": "Prince Georges Feral Friends, SPCA, Inc."
+              },
+              {
+                "api_id": 16,
+                "id": 3,
+                "name": "Animal Relief Fund"
+              },
+              {
+                "api_id": 22,
+                "id": 4,
+                "name": "LNF Dog Rescue Adoption Center"
+              },
+              {
+                "api_id": 23,
+                "id": 5,
+                "name": "The Feline Foundation of Greater Washington, Inc."
+              },
+              {
+                "api_id": 24,
+                "id": 6,
+                "name": "Lost Fantasy Rescue"
+              },
+              {
+                "api_id": 27,
+                "id": 7,
+                "name": "Olive Branch Animal Rescue & Refuge, Inc."
+              },
+              {
+                "api_id": 30,
+                "id": 8,
+                "name": "Castaway Critters, the James A. Hueholt Memorial Foundation"
+              },
+              {
+                "api_id": 35,
+                "id": 9,
+                "name": "Delaware Puppy Rescue"
+              },
+              {
+                "api_id": 41,
+                "id": 10,
+                "name": "Whimsical Animal Rescue, Inc.  of Sussex County Animal Association"
+              },
+              {
+                "api_id": 43,
+                "id": 11,
+                "name": "Paws and Whiskers Animal Rescue Organization"
+              },
+              {
+                "api_id": 50,
+                "id": 13,
+                "name": "Genesis Animal Rescue"
+              },
+              {
+                "api_id": 52,
+                "id": 14,
+                "name": "Animal Rescue Network / Reseau Secours Animal"
+              },
+              {
+                "api_id": 53,
+                "id": 15,
+                "name": "Love of Animals, Inc."
+              },
+              {
+                "api_id": 56,
+                "id": 17,
+                "name": "Pets-4-Pets Cat Rescue, Inc."
+              },
+              {
+                "api_id": 64,
+                "id": 18,
+                "name": "Shore Animal Volunteer Enterprise"
+              },
+              {
+                "api_id": 65,
+                "id": 19,
+                "name": "Hampshire County Animal Control"
+              },
+              {
+                "api_id": 70,
+                "id": 21,
+                "name": "Atlantic Rottweiler Rescue Foundation"
+              },
+              {
+                "api_id": 77,
+                "id": 24,
+                "name": "Happy Cat Adoptions"
+              },
+              {
+                "api_id": 81,
+                "id": 25,
+                "name": "Animal Advocates of Howard County"
+              },
+              {
+                "api_id": 84,
+                "id": 27,
+                "name": "The Dogs' Den"
+              },
+              {
+                "api_id": 85,
+                "id": 28,
+                "name": "Animal Coalition of Delaware County, Inc."
+              },
+              {
+                "api_id": 91,
+                "id": 30,
+                "name": "Posey Humane Society"
+              },
+              {
+                "api_id": 93,
+                "id": 32,
+                "name": "It's All About The Cats, Inc"
+              },
+              {
+                "api_id": 98,
+                "id": 34,
+                "name": "Independent Cat Society"
+              },
+              {
+                "api_id": 105,
+                "id": 37,
+                "name": "Benevolent Animal Rescue Committee, Inc"
+              },
+              {
+                "api_id": 110,
+                "id": 38,
+                "name": "Candy's Cats, Inc."
+              },
+              {
+                "api_id": 112,
+                "id": 39,
+                "name": "Animal Rescue Force of South Florida, Inc."
+              },
+              {
+                "api_id": 115,
+                "id": 41,
+                "name": "Save Them All Animal Rescue"
+              },
+              {
+                "api_id": 118,
+                "id": 42,
+                "name": "Mid Hudson Animal Aid"
+              },
+              {
+                "api_id": 119,
+                "id": 43,
+                "name": "California Animal Shelter Friends, Inc."
+              },
+              {
+                "api_id": 121,
+                "id": 44,
+                "name": "Dane County Friends of Ferals"
+              },
+              {
+                "api_id": 124,
+                "id": 46,
+                "name": "Paws Animal Rescue, Inc."
+              },
+              {
+                "api_id": 126,
+                "id": 47,
+                "name": "Northeast Animal Rescue"
+              },
+              {
+                "api_id": 129,
+                "id": 48,
+                "name": "Pet Haven Rescue Inc Murrieta"
+              },
+              {
+                "api_id": 136,
+                "id": 50,
+                "name": "Pet Rescue of Maryland"
+              },
+              {
+                "api_id": 141,
+                "id": 51,
+                "name": "Save The Cats Inc"
+              },
+              {
+                "api_id": 142,
+                "id": 52,
+                "name": "Rainbow Animal Rescue, Inc"
+              },
+              {
+                "api_id": 147,
+                "id": 53,
+                "name": "Animal Rescue of Texas"
+              },
+              {
+                "api_id": 151,
+                "id": 54,
+                "name": "Community Animal Rescue Effort (CARE)"
+              },
+              {
+                "api_id": 159,
+                "id": 57,
+                "name": "Central Valley Rescue Railroad"
+              },
+              {
+                "api_id": 163,
+                "id": 58,
+                "name": "Tanya's Adoption Network 4 Young Animals, Inc. (T.A.N.Y.A.'s, Inc.)"
+              },
+              {
+                "api_id": 175,
+                "id": 59,
+                "name": "Raining Cats 'n' Dogs"
+              },
+              {
+                "api_id": 179,
+                "id": 60,
+                "name": "Where Wolves Rescue"
+              },
+              {
+                "api_id": 184,
+                "id": 61,
+                "name": "NE Ohio Greyhound Rescue"
+              },
+              {
+                "api_id": 194,
+                "id": 64,
+                "name": "Carolina Dal Pals Dalmatian Rescue"
+              },
+              {
+                "api_id": 195,
+                "id": 65,
+                "name": "AuCaDo Australian Cattle Dog Rescue MI"
+              },
+              {
+                "api_id": 207,
+                "id": 71,
+                "name": "Columbia County Animal Control"
+              },
+              {
+                "api_id": 208,
+                "id": 72,
+                "name": "Collie Rescue, Inc"
+              },
+              {
+                "api_id": 222,
+                "id": 73,
+                "name": "Tennessee Pekingese Rescue"
+              },
+              {
+                "api_id": 231,
+                "id": 74,
+                "name": "North Toronto Cat Rescue"
+              },
+              {
+                "api_id": 238,
+                "id": 75,
+                "name": "Pet Guardian Pet Service,Inc."
+              },
+              {
+                "api_id": 240,
+                "id": 76,
+                "name": "Tender Loving Care Animal Shelter"
+              },
+              {
+                "api_id": 242,
+                "id": 77,
+                "name": "Satchel's Last Resort"
+              },
+              {
+                "api_id": 243,
+                "id": 78,
+                "name": "Community Animal Welfare Society"
+              },
+              {
+                "api_id": 266,
+                "id": 81,
+                "name": "Second Chance for Homeless Pets"
+              },
+              {
+                "api_id": 267,
+                "id": 82,
+                "name": "Animal Friends Rescue Project"
+              },
+              {
+                "api_id": 271,
+                "id": 85,
+                "name": "The Humane Society of Dallas"
+              },
+              {
+                "api_id": 273,
+                "id": 86,
+                "name": "Grayson County Humane Society"
+              },
+              {
+                "api_id": 276,
+                "id": 87,
+                "name": "Fayette Humane Society"
+              },
+              {
+                "api_id": 282,
+                "id": 89,
+                "name": "Wag On Inn Rescue"
+              },
+              {
+                "api_id": 287,
+                "id": 90,
+                "name": "Furry Kids Refuge"
+              },
+              {
+                "api_id": 289,
+                "id": 91,
+                "name": "Grateful Paws Dog & Cat Rescue"
+              },
+              {
+                "api_id": 293,
+                "id": 92,
+                "name": "K-9 Homefinders & Rescue, Inc"
+              },
+              {
+                "api_id": 308,
+                "id": 94,
+                "name": "RescueCats, Inc."
+              },
+              {
+                "api_id": 312,
+                "id": 95,
+                "name": "Shelley's Bed & Biscuit Rescue"
+              },
+              {
+                "api_id": 313,
+                "id": 96,
+                "name": "Itty Bitty Orphan Kitty Rescue"
+              },
+              {
+                "api_id": 321,
+                "id": 98,
+                "name": "Autumn Acres Animal Rescue"
+              },
+              {
+                "api_id": 323,
+                "id": 99,
+                "name": "Clay County Animal Shelter"
+              },
+              {
+                "api_id": 331,
+                "id": 100,
+                "name": "Long Beach Spay Neuter"
+              }
+            ],
+            "child_friendly": 3,
+            "country_code": "EG",
+            "dog_friendly": 4,
+            "energy_level": 5,
+            "grooming": 1,
+            "hairless": 0,
+            "health_issues": 2,
+            "hypoallergenic": 0,
+            "id": 1,
+            "intelligence": 5,
+            "life_span": "14 - 15",
+            "natural": 1,
+            "origin": "Egypt",
+            "pets": [
+              {
+                "api_id": 11034,
+                "id": 566,
+                "name": "Sparkle"
+              },
+              {
+                "api_id": 10035302,
+                "id": 1384,
+                "name": "Moja"
+              }
+            ],
+            "shedding_level": 2,
+            "short_legs": 0,
+            "social_needs": 5,
+            "species_id": 3,
+            "species_name": "Cat",
+            "stranger_friendly": 5,
+            "suppressed_tail": 0,
+            "temperament": "Active, Energetic, Independent, Intelligent, Gentle",
+            "vocalization": 1,
+            "weight": "7  -  10",
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
+            "youth_name": "Kitten"
+          }
+    ]
+}

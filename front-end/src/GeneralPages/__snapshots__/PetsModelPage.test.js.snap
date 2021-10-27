@@ -11,9 +11,6 @@ exports[`Pets Model Page Properly Rendered 1`] = `
   <h2>
     Adoptable Pets
   </h2>
-  <h6>
-    126 adoptable pets, page 1/1
-  </h6>
   <div
     className="g-4 row row-cols-md-2 row-cols-1"
   />
