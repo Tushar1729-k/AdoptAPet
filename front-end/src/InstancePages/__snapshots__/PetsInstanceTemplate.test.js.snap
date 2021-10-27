@@ -236,7 +236,7 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
     >
       <img
         className="img-fluid"
-        src="beagle_1.jpeg"
+        src="beagle_1.jpg"
         style={
           Object {
             "height": "750px",
