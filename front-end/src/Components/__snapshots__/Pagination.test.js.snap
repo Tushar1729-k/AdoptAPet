@@ -18,28 +18,6 @@ exports[`Number of Pages Properly Rendered 1`] = `
         <span
           aria-hidden="true"
         >
-          «
-        </span>
-        <span
-          className="visually-hidden"
-        >
-          First
-        </span>
-      </a>
-    </li>
-    <li
-      className="page-item"
-    >
-      <a
-        className="page-link"
-        onClick={[Function]}
-        onKeyDown={[Function]}
-        role="button"
-        tabIndex={0}
-      >
-        <span
-          aria-hidden="true"
-        >
           ‹
         </span>
         <span
@@ -143,12 +121,12 @@ exports[`Number of Pages Properly Rendered 1`] = `
         <span
           aria-hidden="true"
         >
-          ›
+          …
         </span>
         <span
           className="visually-hidden"
         >
-          Next
+          More
         </span>
       </a>
     </li>
@@ -165,12 +143,12 @@ exports[`Number of Pages Properly Rendered 1`] = `
         <span
           aria-hidden="true"
         >
-          »
+          ›
         </span>
         <span
           className="visually-hidden"
         >
-          Last
+          Next
         </span>
       </a>
     </li>
