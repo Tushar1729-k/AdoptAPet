@@ -30,17 +30,17 @@ const PetsModelPage = ({fetchPage}) => {
     }
     return (
         <div style={{padding: '4vw'}}>
-            <Row>
-                <Col xs={12}>
+            <Row xs={1}>
+                <Col>
                     <h2>Adoptable Pets</h2>
                     <h5>20 pets, page {currentPage}/107</h5>
                     {isLoading && <h4>Loading...</h4>}
                 </Col>
-                <Col xs={12}>
+                <Col>
                     <Paginate totalItems={2130} itemsPerPage={20} paginate={paginate}/>
                 </Col>
             </Row>
-            <Row xs={1} className="g-4">
+            <Row xs={1} md={2} className="g-4">
                 {allPets.map((pet, idx) => (
                     <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
                         <Col>

@@ -10,28 +10,8 @@ import SpeciesInstanceTemplate from '../InstancePages/SpeciesInstanceTemplate'
 import SpeciesModelPage from './SpeciesModelPage'
 import PetsModelPage from './PetsModelPage'
 import AdoptCentersPage from './AdoptCentersPage'
-import pets from '../Data/AnimalsData.json'
 import AboutPage from "./AboutPage"
-import adoptionCenters from '../Data/AdoptionCenters.json'
-import cat1 from '../Images/domestic_short_hair_1.jpeg'
-import cat2 from '../Images/domestic_short_hair_2.jpeg'
-import cat3 from '../Images/domestic_short_hair_3.jpeg'
-import beagle1 from '../Images/beagle_1.jpeg'
-import beagle2 from '../Images/beagle_2.webp'
-import beagle3 from '../Images/beagle_3.jpeg'
-import terrier1 from '../Images/pitbull_terrier_1.jpeg'
-import terrier2 from '../Images/pitbull_terrier_3.jpeg'
-import terrier3 from '../Images/pitbull_terrier_2.jpeg'
-import map1 from '../Images/198_map.png'
-import map2 from '../Images/314_map.png'
-import map3 from '../Images/356_map.png'
-import centerImg1 from '../Images/adop_1.png'
-import centerImg2 from '../Images/adop_2.png'
-import centerImg3 from '../Images/adop_3.png'
-
 const MainSite = () => {
-    const maps = [map1,map2,map3]
-    const centerImgs = [centerImg2, centerImg1, centerImg3]
 
     const [petsData, setPetsData] = useState([])
     const [centersData, setCentersData] = useState([

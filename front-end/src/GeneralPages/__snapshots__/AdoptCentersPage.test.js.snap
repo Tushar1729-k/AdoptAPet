@@ -10,7 +10,7 @@ exports[`Pets Model Page Properly Rendered 1`] = `
   }
 >
   <div
-    className="row"
+    className="row row-cols-1"
   >
     <div
       className="col"
@@ -31,144 +31,140 @@ exports[`Pets Model Page Properly Rendered 1`] = `
         <ul
           className="pagination"
         >
-          <div
-            className="row row-cols-1"
+          <li
+            className="page-item"
           >
-            <li
-              className="page-item"
-            >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                <span
-                  aria-hidden="true"
-                >
-                  ‹
-                </span>
-                <span
-                  className="visually-hidden"
-                >
-                  Previous
-                </span>
-              </a>
-            </li>
-            <li
-              className="page-item active"
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
               <span
-                className="page-link"
-                disabled={false}
-                onClick={[Function]}
+                aria-hidden="true"
               >
-                1
-                <span
-                  className="visually-hidden"
-                >
-                  (current)
-                </span>
+                ‹
               </span>
-            </li>
-            <li
-              className="page-item"
-            >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
+              <span
+                className="visually-hidden"
               >
-                2
-              </a>
-            </li>
-            <li
-              className="page-item"
+                Previous
+              </span>
+            </a>
+          </li>
+          <li
+            className="page-item active"
+          >
+            <span
+              className="page-link"
+              disabled={false}
+              onClick={[Function]}
             >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
+              1
+              <span
+                className="visually-hidden"
               >
-                3
-              </a>
-            </li>
-            <li
-              className="page-item"
+                (current)
+              </span>
+            </span>
+          </li>
+          <li
+            className="page-item"
+          >
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                4
-              </a>
-            </li>
-            <li
-              className="page-item"
+              2
+            </a>
+          </li>
+          <li
+            className="page-item"
+          >
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                5
-              </a>
-            </li>
-            <li
-              className="page-item"
+              3
+            </a>
+          </li>
+          <li
+            className="page-item"
+          >
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
-              >
-                <span
-                  aria-hidden="true"
-                >
-                  …
-                </span>
-                <span
-                  className="visually-hidden"
-                >
-                  More
-                </span>
-              </a>
-            </li>
-            <li
-              className="page-item"
+              4
+            </a>
+          </li>
+          <li
+            className="page-item"
+          >
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
             >
-              <a
-                className="page-link"
-                onClick={[Function]}
-                onKeyDown={[Function]}
-                role="button"
-                tabIndex={0}
+              5
+            </a>
+          </li>
+          <li
+            className="page-item"
+          >
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                aria-hidden="true"
               >
-                <span
-                  aria-hidden="true"
-                >
-                  ›
-                </span>
-                <span
-                  className="visually-hidden"
-                >
-                  Next
-                </span>
-              </a>
-            </li>
-          </div>
+                …
+              </span>
+              <span
+                className="visually-hidden"
+              >
+                More
+              </span>
+            </a>
+          </li>
+          <li
+            className="page-item"
+          >
+            <a
+              className="page-link"
+              onClick={[Function]}
+              onKeyDown={[Function]}
+              role="button"
+              tabIndex={0}
+            >
+              <span
+                aria-hidden="true"
+              >
+                ›
+              </span>
+              <span
+                className="visually-hidden"
+              >
+                Next
+              </span>
+            </a>
+          </li>
         </ul>
       </div>
     </div>
@@ -180,30 +176,34 @@ exports[`Pets Model Page Properly Rendered 1`] = `
       }
     }
   >
-    <table
-      className="table table-sm table-striped table-bordered table-hover"
+    <div
+      className="table-responsive"
     >
-      <thead>
-        <tr>
-          <th>
-            Name
-          </th>
-          <th>
-            City
-          </th>
-          <th>
-            State
-          </th>
-          <th>
-            Zip
-          </th>
-          <th>
-            Services
-          </th>
-        </tr>
-      </thead>
-      <tbody />
-    </table>
+      <table
+        className="table table-sm table-striped table-bordered table-hover"
+      >
+        <thead>
+          <tr>
+            <th>
+              Name
+            </th>
+            <th>
+              City
+            </th>
+            <th>
+              State
+            </th>
+            <th>
+              Zip
+            </th>
+            <th>
+              Services
+            </th>
+          </tr>
+        </thead>
+        <tbody />
+      </table>
+    </div>
   </div>
 </div>
 `;

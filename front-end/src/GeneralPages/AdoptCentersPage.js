@@ -33,7 +33,7 @@ const AdoptCentersPage = ({fetchPage}) => {
     }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
-            <Row>
+            <Row xs={1}>
                 <Col>
                     <h2>Adoption Centers</h2>
                     <h6>20 adoption centers, page {currentPage}/5</h6>
@@ -44,7 +44,7 @@ const AdoptCentersPage = ({fetchPage}) => {
                 </Col>
             </Row>
             <div style={{ paddingTop: '2vh'}}>
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm" responsive>
                 <thead>
                     <tr>
                     <th>Name</th>

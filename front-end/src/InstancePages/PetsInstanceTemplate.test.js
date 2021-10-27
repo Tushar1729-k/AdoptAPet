@@ -1,7 +1,7 @@
 import React from 'react';
 import InstancePageTemplate from './PetsInstanceTemplate';
 import renderer from 'react-test-renderer';
-import beagle1 from '../Images/beagle_1.jpeg'
+import beagle1 from '../Images/beagle_1.jpg'
 
 test("Pet Instance Page Text Properly Rendered", () => {
     const component = renderer.create(
@@ -10,9 +10,6 @@ test("Pet Instance Page Text Properly Rendered", () => {
             age: "5", color: "Grey/Black", sex: "M",
             description: "Warm and loyal friend", imgSrc: "",
             adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'}, speciesBreeds: {api: 208} }}
-        medicalHistory={{ allergies: "Cats", diet: "Organic food", 
-                issues: "None", hearing: "No",
-                sight: "No" }}
         />,
       );
       let tree = component.toJSON();
@@ -26,9 +23,6 @@ test("Pet Instance Page Text and Image Properly Rendered", () => {
             age: "5", color: "Grey/Black", sex: "M",
             description: "Warm and loyal friend", imgSrc: beagle1,
             adoptCenter: {api_id: 12, name: 'Cat Rescue of Maryland, Inc.'}, speciesBreeds: {api: 208} }}
-        medicalHistory={{ allergies: "Cats", diet: "Organic food", 
-                issues: "None", hearing: "No",
-                sight: "No" }}
         />,
       );
       let tree = component.toJSON();

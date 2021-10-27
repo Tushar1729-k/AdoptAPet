@@ -31,7 +31,7 @@ const SpeciesModelPage = ({fetchPage}) => {
     }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
-            <Row>
+            <Row xs={1}>
                 <Col>
                     <h2>Species</h2>
                     <h5>20 species, page {currentPage}/19</h5>
@@ -42,7 +42,7 @@ const SpeciesModelPage = ({fetchPage}) => {
                 </Col>
             </Row>
             <div style={{ paddingTop: '2vh'}}>
-            <Table striped bordered hover size="sm">
+            <Table striped bordered hover size="sm" responsive>
                 <thead>
                     <tr>
                     <th>Species</th>
