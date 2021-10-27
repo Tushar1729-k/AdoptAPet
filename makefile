@@ -36,3 +36,4 @@ check: $(CFILES)
 clean:
 	rm -f *.tmp
 	rm -rf __pycache__
+	

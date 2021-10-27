@@ -1,6 +1,7 @@
 from unittest import main, TestCase
 from app import app
 
+
 class UnitTests(TestCase):
     def test_ap(self):
         test_client = app.test_client()
@@ -61,6 +62,7 @@ class UnitTests(TestCase):
         test_client = app.test_client()
         req = test_client.get("/ac/12")
         self.assertEqual(req.status_code, 200)
+
 
 if __name__ == "__main__":
     main()
