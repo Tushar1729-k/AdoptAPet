@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Table } from 'react-bootstrap'
+import { Row, Table, Col } from 'react-bootstrap'
 import {  useState, useEffect } from 'react'
 import Species from '../Data/Species.json'
 import Breeds from '../Data/breeds2.json'
@@ -11,10 +11,14 @@ import PropTypes from 'prop-types'
 const SpeciesModelPage = ({fetchPage}) => {
     const [allBreeds, setAllBreeds] = useState([])
     const [breedsPerPage, setBreedsPerPage] = useState(10)
+    const [isLoading, setIsLoading] = useState(false)
+    const [currentPage, setCurrentPage] = useState(1)
 
     const fetchBreeds = async (pageNum) => {
+        setIsLoading(true)
         const res = await axios.get(`https://api.adoptapet.me/sb?page=${pageNum}`)
         setAllBreeds(res.data.page)
+        setIsLoading(false)
         setBreedsPerPage(res.data.count)
     }
 
@@ -22,14 +26,21 @@ const SpeciesModelPage = ({fetchPage}) => {
         fetchBreeds(1)
     }, [])
     const paginate = (num) => {
+        setCurrentPage(num)
         fetchBreeds(num)
     }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
-                <h2>Species</h2>
+                <Col>
+                    <h2>Species</h2>
+                    <h5>20 species, page {currentPage}/19</h5>
+                    {isLoading && <h4>Loading...</h4>}
+                </Col>
+                <Col>
+                    <Paginate totalItems={368} itemsPerPage={20} paginate={paginate} />
+                </Col>
             </Row>
-            <h5>3 species, page 1/1</h5>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm">
                 <thead>
@@ -56,9 +67,6 @@ const SpeciesModelPage = ({fetchPage}) => {
                 </tbody>
                 </Table>
                 </div>
-                <Row>
-                    <Paginate totalItems={360} itemsPerPage={20} paginate={paginate} />
-                </Row>
         </div>
     )
 }

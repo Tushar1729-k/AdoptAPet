@@ -1,5 +1,5 @@
 import React from 'react'
-import { Row, Table } from 'react-bootstrap'
+import { Row, Table, Col } from 'react-bootstrap'
 import {  useState, useEffect } from 'react'
 import adoptionCenters from '../Data/AdoptionCenters.json'
 import Paginate from '../Components/Pagination'
@@ -10,10 +10,14 @@ import PropTypes from 'prop-types'
 const AdoptCentersPage = ({fetchPage}) => {
     const [allCenters, setAllCenters] = useState([])
     const [centersPerPage, setCentersPerPage] = useState(10)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [isLoading, setIsLoading] = useState(false)
 
     const fetchCenters = async (pageNum) => {
+        setIsLoading(true)
         const res = await axios.get(`https://api.adoptapet.me/ac?page=${pageNum}`)
         setAllCenters(res.data.page)
+        setIsLoading(false)
         setCentersPerPage(res.data.count)
     }
 
@@ -21,6 +25,7 @@ const AdoptCentersPage = ({fetchPage}) => {
         fetchCenters(1)
     }, [])
     const paginate = (num) => {
+        setCurrentPage(num)
         fetchCenters(num)
     }
     const whichCenterPage = (type, num) => {
@@ -29,9 +34,15 @@ const AdoptCentersPage = ({fetchPage}) => {
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row>
-                <h2>Adoption Centers</h2>
+                <Col>
+                    <h2>Adoption Centers</h2>
+                    <h6>20 adoption centers, page {currentPage}/5</h6>
+                    {isLoading && <h4>Loading...</h4>}
+                </Col>
+                <Col>
+                    <Paginate totalItems={100} itemsPerPage={20} paginate={paginate} />
+                </Col>
             </Row>
-            <h6>3 adoption centers, page 1/1</h6>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm">
                 <thead>
@@ -58,9 +69,6 @@ const AdoptCentersPage = ({fetchPage}) => {
                 </tbody>
                 </Table>
                 </div>
-                <Row>
-                    <Paginate totalItems={100} itemsPerPage={20} paginate={paginate} />
-                </Row>
         </div>
     )
 }

@@ -10,10 +10,14 @@ import PropTypes from 'prop-types'
 const PetsModelPage = ({fetchPage}) => {
     const [allPets, setAllPets] = useState([])
     const [petsPerPage, setPetsPerPage] = useState(10)
+    const [currentPage, setCurrentPage] = useState(1)
+    const [isLoading, setIsLoading] = useState(false)
 
     const fetchPets = async (pageNum) => {
+        setIsLoading(true)
         const res = await axios.get(`https://api.adoptapet.me/ap?page=${pageNum}`)
         setAllPets(res.data.page)
+        setIsLoading(false)
         setPetsPerPage(res.data.count)
     }
 
@@ -21,11 +25,21 @@ const PetsModelPage = ({fetchPage}) => {
         fetchPets(1)
     }, [])
     const paginate = (num) => {
+        setCurrentPage(num)
         fetchPets(num)
     }
     return (
         <div style={{padding: '4vw'}}>
-            <h2>Adoptable Pets</h2>
+            <Row>
+                <Col>
+                    <h2>Adoptable Pets</h2>
+                    <h5>20 pets, page {currentPage}/107</h5>
+                    {isLoading && <h4>Loading...</h4>}
+                </Col>
+                <Col>
+                    <Paginate totalItems={2130} itemsPerPage={20} paginate={paginate}/>
+                </Col>
+            </Row>
             <Row xs={1} md={2} className="g-4">
                 {allPets.map((pet, idx) => (
                     <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none'}} onClick={() => fetchPage("ap", pet.api_id)}>
@@ -46,7 +60,6 @@ const PetsModelPage = ({fetchPage}) => {
                     </Link>
                 ))}
             </Row>
-            <Paginate totalItems={600} itemsPerPage={petsPerPage} paginate={paginate}/>
         </div>
     )
 }
