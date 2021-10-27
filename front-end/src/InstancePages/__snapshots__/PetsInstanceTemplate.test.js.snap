@@ -129,23 +129,6 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
         </p>
         <div
           className="row"
-          style={
-            Object {
-              "paddingBottom": "2vh",
-            }
-          }
-        >
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            Medical History
-          </button>
-        </div>
-        <div
-          className="row"
         >
           <h4>
             Adoption Center Location
@@ -348,23 +331,6 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
             </div>
           </div>
         </p>
-        <div
-          className="row"
-          style={
-            Object {
-              "paddingBottom": "2vh",
-            }
-          }
-        >
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            onClick={[Function]}
-            type="button"
-          >
-            Medical History
-          </button>
-        </div>
         <div
           className="row"
         >

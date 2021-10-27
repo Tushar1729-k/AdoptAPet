@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap'
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import PropTypes from 'prop-types'
 import CustomMap from '../GeneralPages/GoogleMap'
 import YoutubePlayer from '../Components/Youtube';
@@ -53,7 +53,7 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
                             </ListGroup>
                         </Row>
                         <Row style={{paddingTop: '2vh'}}>
-                            <h4>Description</h4>
+                            <h4>Wikipedia Page</h4>
                             <p>{attributes.wiki}</p>
                         </Row>
                         <Row style={{paddingTop: '2vh'}}>

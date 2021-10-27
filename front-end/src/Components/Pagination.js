@@ -21,7 +21,6 @@ const Paginate = ({totalItems, itemsPerPage, paginate}) => {
     return (
         <div>
             <Pagination>
-                <Row xs={1}>
                 <Pagination.Prev onClick={() => changePage(currentPage - 1)}/>
                     {Array.from({length: pageNumbers.length <= 20 ? pageNumbers.length : 20}).map((_, idx) => (
                         <Pagination.Item key={pageNumbers[idx]} active={pageNumbers[idx] === currentPage} onClick={() => changePage(pageNumbers[idx])}>
@@ -30,7 +29,6 @@ const Paginate = ({totalItems, itemsPerPage, paginate}) => {
                     ))}
                     <Pagination.Ellipsis />
                 <Pagination.Next onClick={() => changePage(currentPage + 1)}/>
-                </Row>
             </Pagination>
         </div>
     )
