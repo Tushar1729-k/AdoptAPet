@@ -1,7 +1,7 @@
 import React from 'react';
 import InstancePageTemplate from './PetsInstanceTemplate';
 import renderer from 'react-test-renderer';
-import beagle1 from '../Images/beagle_1.jpeg'
+import beagle1 from '../Images/beagle_1.jpg'
 
 test("Pet Instance Page Text Properly Rendered", () => {
     const component = renderer.create(

@@ -1,7 +1,7 @@
 import React from 'react';
 import AdoptInstanceTemplate from './AdoptInstanceTemplate';
 import renderer from 'react-test-renderer';
-import terrier1 from '../Images/pitbull_terrier_1.jpeg'
+import terrier1 from '../Images/pitbull_terrier_1.jpg'
 
 test("Adoption Center Instance Page Properly Rendered", () => {
     const component = renderer.create(
