@@ -4,6 +4,10 @@ from flask_cors import CORS
 from flask_marshmallow import Marshmallow
 from marshmallow import fields, post_dump
 
+# Texas Votes https://gitlab.com/forbesye/fitsbits/-/blob/master/back-end/models.py
+# and Sustainability/Burnin' Up https://gitlab.com/caitlinlien/cs373-sustainability/-/blob/master/backend/models.py
+# for overall structure of this file
+
 app = Flask(__name__)
 CORS(app)
 db = init_db(app)

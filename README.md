@@ -2,8 +2,6 @@
 
 **NOTE:** .gitignore file is in the front-end folder
 
-**NOTE:** Only the first three pets on on the Pets Model Page lead to instance pages, as per the requirements
-
 ## Authors
 
 * Sean-Matthew Aujong, sha567, seanaujong
@@ -28,12 +26,17 @@
 * track progress on feature branches
 * monitor website health
     * NameCheap
-    * AWS Amplify
+    * Amplify
+    * Elastic Beanstalk
+    * RDS
 * review merge requests
+* Phase 1: Lead deployment
+* Phase 2: Lead backend
 
 ### Phase Leaders
 
 * Phase 1: Sean-Matthew Aujong
+* Phase 2: Tushar Kohli
 
 ## GitLab Pipelines
 
@@ -45,6 +48,8 @@ https://adoptapet.me
 
 ## Estimated Completion Time for Each Member
 
+### Phase 1
+
 * Sean-Matthew Aujong: 8 hours
 
 * Tushar Kohli: 8 hours
@@ -55,7 +60,21 @@ https://adoptapet.me
 
 * Sohum Kapoor: 8 hours
 
+### Phase 2
+
+* Sean-Matthew Aujong: 16 hours
+
+* Tushar Kohli: 16 hours
+
+* Nandu Vudumula: 16 hours
+
+* Edward Chamblee: 16 hours
+
+* Sohum Kapoor: 16 hours
+
 ## Actual Completion Time for Each Member
+
+### Phase 1
 
 * Sean-Matthew Aujong: 10 hours
 
@@ -67,6 +86,18 @@ https://adoptapet.me
 
 * Sohum Kapoor: 12 hours
 
+### Phase 2
+
+* Sean-Matthew Aujong: 17 hours
+
+* Tushar Kohli: 19 hours
+
+* Nandu Vudumula: 20 hours
+
+* Edward Chamblee: 18 hours
+
+* Sohum Kapoor: 16 hours
+
 ## Comments
 
-Most of us are new to web development, but we hope that this project increases our competence.
+Thanks to Caitlin and Jefferson for being such great TA's!
