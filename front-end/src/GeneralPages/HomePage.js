@@ -3,7 +3,7 @@ import { Card, Row, Col, CardGroup } from 'react-bootstrap'
 import DogHomePage from "../Images/dog_home_page.jpg"
 import SpeciesBreedHomePage from "../Images/species_breeds_home.jpg"
 import AdoptableHomePage from "../Images/adoptable_model_home.jpg"
-import AdoptionCenterHomePage from "../Images/adoption_center_model_home.webp"
+import AdoptionCenterHomePage from "../Images/adoption_center_model_home.jpg"
 import { Link } from "react-router-dom";
 
 const HomePage = () => {

@@ -1,46 +1,103 @@
-# Getting Started with Create React App
+# AdoptAPet
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+**NOTE:** .gitignore file is in the front-end folder
 
-## Available Scripts
+## Authors
 
-In the project directory, you can run:
+* Sean-Matthew Aujong, sha567, seanaujong
 
-### `yarn start`
+* Tushar Kohli, tk22994, tkohli
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+* Nandu Vudumula, nrv379, nandukrv
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+* Edward Chamblee, eic348, edwardchamblee
 
-### `yarn test`
+* Sohum Kapoor, sjk2667, sohumk
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Git SHA
 
-### `yarn build`
+77513b8634e5993fdf1967f6f7cc13826a355554
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Project Leader
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Responsibilities
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+* schedule meetings
+* track progress on feature branches
+* monitor website health
+    * NameCheap
+    * Amplify
+    * Elastic Beanstalk
+    * RDS
+* review merge requests
+* Phase 1: Lead deployment
+* Phase 2: Lead backend
 
-### `yarn eject`
+### Phase Leaders
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+* Phase 1: Sean-Matthew Aujong
+* Phase 2: Tushar Kohli
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## GitLab Pipelines
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+https://gitlab.com/10am-group-8/adopt-a-pet/-/pipelines
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Website Link
 
-## Learn More
+https://adoptapet.me
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Estimated Completion Time for Each Member
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Phase 1
+
+* Sean-Matthew Aujong: 8 hours
+
+* Tushar Kohli: 8 hours
+
+* Nandu Vudumula: 8 hours
+
+* Edward Chamblee: 8 hours
+
+* Sohum Kapoor: 8 hours
+
+### Phase 2
+
+* Sean-Matthew Aujong: 16 hours
+
+* Tushar Kohli: 16 hours
+
+* Nandu Vudumula: 16 hours
+
+* Edward Chamblee: 16 hours
+
+* Sohum Kapoor: 16 hours
+
+## Actual Completion Time for Each Member
+
+### Phase 1
+
+* Sean-Matthew Aujong: 10 hours
+
+* Tushar Kohli: 9 hours
+
+* Nandu Vudumula: 13 hours
+
+* Edward Chamblee: 12 hours
+
+* Sohum Kapoor: 12 hours
+
+### Phase 2
+
+* Sean-Matthew Aujong: 17 hours
+
+* Tushar Kohli: 19 hours
+
+* Nandu Vudumula: 20 hours
+
+* Edward Chamblee: 18 hours
+
+* Sohum Kapoor: 16 hours
+
+## Comments
+
+Thanks to Caitlin and Jefferson for being such great TA's!
