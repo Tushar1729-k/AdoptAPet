@@ -1,0 +1,21 @@
+image: node:latest
+
+stages:
+  - build
+  - test
+  - deploy
+
+cache:
+  paths:
+    - front-end/node_modules/
+
+
+cs373-sustainability_jest:
+  image:
+    name: mcgenius/pp_mocha
+    entrypoint: [""]
+  script:
+    - cd front-end
+    - npm install
+    - npm test
+
