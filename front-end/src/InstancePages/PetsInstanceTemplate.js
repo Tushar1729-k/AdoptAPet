@@ -6,14 +6,6 @@ import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 
 const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
-    const [showModal, setShowModal] = useState(false)
-
-    const showHandler = () => {
-        setShowModal(true)
-    }
-    const hideHandler = () => {
-        setShowModal(false)
-    }
     let history = useHistory();
 
     const redirect = (type, num, path) => {
@@ -58,26 +50,6 @@ const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
                         </Row>
                     </Container>
                 </Card.Text>
-                <Row style={{paddingBottom: "2vh"}}>
-                <Button variant="primary" onClick={showHandler}>
-                    Medical History
-                </Button>
-                <Modal show={showModal} onHide={hideHandler}>
-                    <Modal.Header closeButton>
-                        <Modal.Title>Medical History</Modal.Title>
-                    </Modal.Header>
-                    <Modal.Body>Allergies: {medicalHistory.allergies != "" ? medicalHistory.allergies : 'NA'}</Modal.Body>
-                    <Modal.Body>Diet: {medicalHistory.diet != "" ? medicalHistory.diet : 'NA'}</Modal.Body>
-                    <Modal.Body>Ongoing Medical Issues: {medicalHistory.issues != "" ? medicalHistory.issues : 'NA'}</Modal.Body>
-                    <Modal.Body>Hearing: {medicalHistory.hearing != "" ? medicalHistory.hearing : 'NA'}</Modal.Body>
-                    <Modal.Body>Sight: {medicalHistory.sight != "" ? medicalHistory.sight : 'NA'}</Modal.Body>
-                    <Modal.Footer>
-                    <Button variant="secondary" onClick={hideHandler}>
-                        Close
-                    </Button>
-                    </Modal.Footer>
-                </Modal>
-                </Row>
                 <Row>
                     <h4>Adoption Center Location</h4>
                     <div style={{width: '100vw', height: '100vh'}}>
