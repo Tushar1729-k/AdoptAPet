@@ -6,4 +6,3 @@
 # 			"name": schema["center"]["name"],
 # 			"number": schema["center"]['api_id']
 # 		}
-

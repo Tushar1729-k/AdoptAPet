@@ -14,26 +14,33 @@ wait = None
 url = "https://adoptapet.me"
 PATH = "./frontend/guitests/chromedriver"
 
+
 def setup_module(module):
     print("starting setup_module")
     global driver, wait
 
     chrome_options = Options()
-    chrome_options.add_argument('--headless')
-    chrome_options.add_argument('--no-sandbox')
-    driver = Remote("http://selenium__standalone-chrome:4444/wd/hub", desired_capabilities=chrome_options.to_capabilities())
+    chrome_options.add_argument("--headless")
+    chrome_options.add_argument("--no-sandbox")
+    driver = Remote(
+        "http://selenium__standalone-chrome:4444/wd/hub",
+        desired_capabilities=chrome_options.to_capabilities(),
+    )
     driver.get(url)
     wait = WebDriverWait(driver, 20)
     return driver
- 
+
+
 def teardown_module(module):
     print("starting teardown_module")
     driver.close()
+
 
 # 1
 def test_title():
     print("starting test_title")
     assert driver.title
+
 
 # 2
 def test_navbar_home():
@@ -42,12 +49,14 @@ def test_navbar_home():
     home.click()
     assert driver.current_url == "https://www.adoptapet.me/"
 
+
 # 3
 def test_navbar_about():
     print("starting test_navbar_about")
     about = driver.find_element(By.LINK_TEXT, "About")
     about.click()
     assert driver.current_url == "https://www.adoptapet.me/about"
+
 
 # 4
 def test_navbar_species():
@@ -56,12 +65,14 @@ def test_navbar_species():
     species.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
 
+
 # 5
 def test_navbar_pets():
     print("starting test_navbar_apmodel")
     pets = driver.find_element(By.LINK_TEXT, "Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
+
 
 # 6
 def test_navbar_adoption_centers():
@@ -70,12 +81,14 @@ def test_navbar_adoption_centers():
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
 
+
 # 7
 def test_navbar_logo():
     print("starting test_navbar_logo")
     logo = driver.find_element(By.LINK_TEXT, "Adopt A Pet")
     logo.click()
     assert driver.current_url == "https://www.adoptapet.me/"
+
 
 # 8
 def test_navbar_about_back():
@@ -86,6 +99,7 @@ def test_navbar_about_back():
     driver.back()
     assert driver.current_url == "https://www.adoptapet.me/"
 
+
 # 9
 def test_navbar_adoption_centers_back():
     print("starting test_navbar_adoption_centers_back")
@@ -94,6 +108,7 @@ def test_navbar_adoption_centers_back():
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
     driver.back()
     assert driver.current_url == "https://www.adoptapet.me/"
+
 
 # 10
 def test_navbar_species_back():

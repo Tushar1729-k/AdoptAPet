@@ -2,6 +2,7 @@ from flask import Flask, request, jsonify
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.dialects.postgresql import UUID
 import uuid
+
 # from flask_marshmellow import Marshmallow
 from marshmallow_sqlalchemy import SQLAlchemySchema, auto_field
 from dotenv import load_dotenv
@@ -12,6 +13,7 @@ import os
 import json
 from sqlalchemy import create_engine
 import flask_restless
+
 # import pandas as pd
 # import numpy as np
 import requests
@@ -23,10 +25,10 @@ app = Flask(__name__)
 basedir = os.path.abspath(os.path.dirname(__file__))
 
 load_dotenv()
-print('hello')
+print("hello")
 app.debug = True
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("AWS_DB_KEY")
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("AWS_DB_KEY")
+app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
 
 db = SQLAlchemy(app)
 ma = Marshmallow(app)
@@ -43,48 +45,64 @@ path = "./datasets"
 # 	pet_desc = db.Column(db.String())
 
 # Adoption Center Model
-class AdoptionCenter(db.Model) :
-	id = db.Column(db.Integer, primary_key=True)
-	# id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
-	api_id = db.Column(db.Integer)
-	name = db.Column(db.String())
-	city = db.Column(db.String())
-	state = db.Column(db.String())
-	zipcode = db.Column(db.String())
-	services = db.Column(db.String())
+class AdoptionCenter(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    # id = db.Column(UUID(as_uuid=True), primary_key=True, default=uuid.uuid4)
+    api_id = db.Column(db.Integer)
+    name = db.Column(db.String())
+    city = db.Column(db.String())
+    state = db.Column(db.String())
+    zipcode = db.Column(db.String())
+    services = db.Column(db.String())
 
-def __init__(self, api_id=0, name="NaN", city="NaN", state="NaN", zipcode="NaN", services="NaN") :
-	self.api_id = api_id
-	self.name = name
-	self.city = city
-	self.state = state
-	self.zipcode = zipcode
-	self.services = services
 
-def populate_centers() :
-	url = "https://api.rescuegroups.org/v5/public/orgs?limit=250"
-	querystring = {"format": "json"}
-	headers = {
-		'Authorization': "wmUYpgAP"
-	}
-	response = requests.request("GET", url, headers=headers, params=querystring)
-	data = response.json()
-	org_list = []
-	# print(orgs_list)
-	for item in data['data'] :
-		api_id = item['id']
-		name = item['attributes']['name'] if 'name' in item['attributes'] else ''
-		city = item['attributes']['city'] if 'city' in item['attributes'] else ''
-		state = item['attributes']['state'] if 'state' in item['attributes'] else ''
-		zipcode = item['attributes']['postalcode'] if 'postalcode' in item['attributes'] else ''
-		services = item['attributes']['services'] if 'services' in item['attributes'] else ''
-		new_center = AdoptionCenter(api_id=api_id, name=name, city=city, state=state, zipcode=zipcode, services=services)
-		org_list.append(new_center)
+def __init__(
+    self, api_id=0, name="NaN", city="NaN", state="NaN", zipcode="NaN", services="NaN"
+):
+    self.api_id = api_id
+    self.name = name
+    self.city = city
+    self.state = state
+    self.zipcode = zipcode
+    self.services = services
 
-	db.session.add_all(org_list)
-	db.session.commit()
 
-if __name__ == '__main__' :
-	db.drop_all()
-	db.create_all()
-	populate_centers()
+def populate_centers():
+    url = "https://api.rescuegroups.org/v5/public/orgs?limit=250"
+    querystring = {"format": "json"}
+    headers = {"Authorization": "wmUYpgAP"}
+    response = requests.request("GET", url, headers=headers, params=querystring)
+    data = response.json()
+    org_list = []
+    # print(orgs_list)
+    for item in data["data"]:
+        api_id = item["id"]
+        name = item["attributes"]["name"] if "name" in item["attributes"] else ""
+        city = item["attributes"]["city"] if "city" in item["attributes"] else ""
+        state = item["attributes"]["state"] if "state" in item["attributes"] else ""
+        zipcode = (
+            item["attributes"]["postalcode"]
+            if "postalcode" in item["attributes"]
+            else ""
+        )
+        services = (
+            item["attributes"]["services"] if "services" in item["attributes"] else ""
+        )
+        new_center = AdoptionCenter(
+            api_id=api_id,
+            name=name,
+            city=city,
+            state=state,
+            zipcode=zipcode,
+            services=services,
+        )
+        org_list.append(new_center)
+
+    db.session.add_all(org_list)
+    db.session.commit()
+
+
+if __name__ == "__main__":
+    db.drop_all()
+    db.create_all()
+    populate_centers()
