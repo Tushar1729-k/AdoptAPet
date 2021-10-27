@@ -50,16 +50,91 @@ const MainSite = () => {
             zipcode: "21228"
         }
     ])
-    const [breedsData, setBreedsData] = useState([])
+    const [breedsData, setBreedsData] = useState([
+        {
+            "adaptability": 5,
+            "affection_level": 5,
+            "alt_names": "",
+            "api_id": 1,
+            "breed_name": "Abyssinian",
+            "centers": [
+              {
+                "api_id": 12,
+                "id": 1,
+                "name": "Cat Rescue of Maryland, Inc."
+              },
+              {
+                "api_id": 13,
+                "id": 2,
+                "name": "Prince Georges Feral Friends, SPCA, Inc."
+              },
+              {
+                "api_id": 16,
+                "id": 3,
+                "name": "Animal Relief Fund"
+              },
+              {
+                "api_id": 22,
+                "id": 4,
+                "name": "LNF Dog Rescue Adoption Center"
+              },
+              {
+                "api_id": 23,
+                "id": 5,
+                "name": "The Feline Foundation of Greater Washington, Inc."
+              }
+            ],
+            "child_friendly": 3,
+            "country_code": "EG",
+            "dog_friendly": 4,
+            "energy_level": 5,
+            "grooming": 1,
+            "hairless": 0,
+            "health_issues": 2,
+            "hypoallergenic": 0,
+            "id": 1,
+            "intelligence": 5,
+            "life_span": "14 - 15",
+            "natural": 1,
+            "origin": "Egypt",
+            "pets": [
+              {
+                "api_id": 11034,
+                "id": 566,
+                "name": "Sparkle"
+              },
+              {
+                "api_id": 10035302,
+                "id": 1384,
+                "name": "Moja"
+              }
+            ],
+            "shedding_level": 2,
+            "short_legs": 0,
+            "social_needs": 5,
+            "species_id": 3,
+            "species_name": "Cat",
+            "stranger_friendly": 5,
+            "suppressed_tail": 0,
+            "temperament": "Active, Energetic, Independent, Intelligent, Gentle",
+            "vocalization": 1,
+            "weight": "7  -  10",
+            "wikipedia_url": "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
+            "youth_name": "Kitten"
+          }
+    ])
 
     const fetchData = async (type, id) => {
         const res = await axios.get(`https://api.adoptapet.me/${type}/${id}`)
         if (type === "ap") {
             setPetsData([res.data])
+            localStorage.setItem('petsData', res.data)
         } else if (type === "ac") {
             setCentersData([res.data])
+            localStorage.setItem('centersData', res.data)
         } else {
             setBreedsData([res.data])
+            localStorage.setItem('breedsData', res.data)
         }
     }
 
@@ -72,6 +147,17 @@ const MainSite = () => {
     const selectedPage = (num) => {
         fetchData(num)
     }
+
+    useEffect(() => {
+        window.addEventListener("beforeunload", alertUser);
+        return () => {
+          window.removeEventListener("beforeunload", alertUser);
+        };
+      }, []);
+      const alertUser = (e) => {
+        e.preventDefault();
+        e.returnValue = "";
+      };
 
     return (
         <div>
