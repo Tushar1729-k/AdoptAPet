@@ -16,6 +16,16 @@ build_front_end:
     - npm install
     - CI=false npm run-script build
 
+test_jest:
+  stage: test
+  image:
+    name: mcgenius/pp_mocha
+    entrypoint: [""]
+  script:
+    - cd front-end
+    - npm install
+    - npm test
+
 test_postman:
   image:
     name: postman/newman_alpine33
