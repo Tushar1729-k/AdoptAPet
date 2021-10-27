@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Container, Row, Col, Card, ListGroup, Button } from 'react-bootstrap'
 import { Link, useHistory } from "react-router-dom";
 import PropTypes from 'prop-types'
@@ -22,6 +22,16 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
         fetchPage(type, num)
         history.push(path)
     }
+
+    useEffect(() => {
+        window.onbeforeunload = function() {
+            return true;
+        };
+    
+        return () => {
+            window.onbeforeunload = null;
+        };
+    }, [])
     return (
         <div>
             <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>

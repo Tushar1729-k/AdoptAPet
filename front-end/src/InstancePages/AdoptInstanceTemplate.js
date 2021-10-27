@@ -1,4 +1,5 @@
 import React from 'react'
+import { useEffect } from 'react'
 import { Container, Row, Col, Card, Badge, ListGroup, Button } from 'react-bootstrap'
 import { Link, BrowserRouter as Router, Switch, useHistory } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
@@ -14,6 +15,15 @@ const AdoptInstanceTemplate = ({attributes, fetchPage}) => {
         fetchPage(type, num)
         history.push(path)
     }
+    useEffect(() => {
+        window.onbeforeunload = function() {
+            return true;
+        };
+    
+        return () => {
+            window.onbeforeunload = null;
+        };
+    }, [])
     return (
         <div>
             <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>

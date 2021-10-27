@@ -148,17 +148,6 @@ const MainSite = () => {
         fetchData(num)
     }
 
-    useEffect(() => {
-        window.addEventListener("beforeunload", alertUser);
-        return () => {
-          window.removeEventListener("beforeunload", alertUser);
-        };
-      }, []);
-      const alertUser = (e) => {
-        e.preventDefault();
-        e.returnValue = "";
-      };
-
     return (
         <div>
             <div style={{paddingBottom: '10vh'}}>

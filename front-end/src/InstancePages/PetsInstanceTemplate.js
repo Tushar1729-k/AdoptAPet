@@ -1,5 +1,5 @@
 import React from 'react'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { Container, Row, Col, Card, Modal, Button, ListGroup, Image } from 'react-bootstrap'
 import { Link, BrowserRouter as Router, useHistory } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
@@ -20,6 +20,16 @@ const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
         fetchPage(type, num)
         history.push(path)
     }
+
+    useEffect(() => {
+        window.onbeforeunload = function() {
+            return true;
+        };
+    
+        return () => {
+            window.onbeforeunload = null;
+        };
+    }, [])
     return (
         <div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
