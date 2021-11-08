@@ -13,7 +13,6 @@ from models import (
     adoption_center_schema,
     breeds_species_schema,
 )
-
 # from models import *
 
 from flask import Flask, request, make_response, jsonify, send_from_directory
@@ -25,7 +24,7 @@ import json
 from dotenv import load_dotenv
 import os
 
-# from AdoptablePet import *
+from AdoptablePet import *
 # from AdoptionCenter import *
 # from BreedsSpecies import *
 
@@ -60,15 +59,17 @@ def pets():
         # Convert the given page number into an int
         page = int(page[0])
 
-    # # Searching
-    # q = get_query("q", queries)
-    # if q :
-    # 	pet_query = search_politicians(q, pet_query)
-    # # filtering
-    # pet_query = filter_politicans(pet_query, queries)
-    # # sorting
-    # sort = get_query("sort", queries)
-    # pet_query = sort_politicians(sort, pet_query)
+    # Searching
+    q = get_query("q", queries)
+    if q :
+    	pet_query = search_politicians(q, pet_query)
+
+    # filtering
+    pet_query = filter_adoptablepets(pet_query, queries)
+
+    # sorting
+    sort = get_query("sort", queries)
+    pet_query = sort_adoptablepets(sort, pet_query)
 
     count = pet_query.count()
 

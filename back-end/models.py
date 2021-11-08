@@ -40,9 +40,7 @@ class AdoptablePet(db.Model):
         db.Integer, db.ForeignKey("adoption_center.id"), nullable=True
     )
     # Foreign key for associated species/breed, one-to-many relationship
-    species_breed_id = db.Column(
-        db.Integer, db.ForeignKey("breeds_species.id"), nullable=True
-    )
+    species_breed_id = db.Column(db.Integer, db.ForeignKey("breeds_species.id"), nullable=True)
     center_number = db.Column(db.Integer)
     breed_number = db.Column(db.Integer)
     name = db.Column(db.String())
@@ -74,7 +72,7 @@ class AdoptionCenter(db.Model):
     species_breeds = db.relationship(
         "BreedsSpecies",
         secondary=link_species_centers,
-        backref=db.backref("center", lazy="dynamic"),
+        backref=db.backref("center", lazy="joined"),
     )
     name = db.Column(db.String())
     street = db.Column(db.String)
@@ -109,7 +107,7 @@ class BreedsSpecies(db.Model):
     api_id = db.Column(db.Integer)
     species_id = db.Column(db.Integer)
     species_name = db.Column(db.String())
-    breed_name = db.Column(db.String())
+    breed_name = db.Column(db.String, nullable=False, unique=True)
     youth_name = db.Column(db.String())
     temperament = db.Column(db.String)
     life_span = db.Column(db.String)

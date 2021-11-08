@@ -1,137 +1,116 @@
-from flask import Flask, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
+# from models import (
+#   AdoptablePet,
+#   AdoptionCenter,
+#   BreedsSpecies,
+#   db,
+#   app,
+#   adoptable_pet_schema,
+#   adoption_center_schema,
+#   breeds_species_schema
+# )
+from models import *
 
-# from flask_marshmellow import Marshmallow
-from marshmallow_sqlalchemy import SQLAlchemySchema, auto_field
-from dotenv import load_dotenv
-from sqlalchemy import Column, String, Integer
-from flask import request
-import urllib
-import os
-import json
-from sqlalchemy import create_engine
-import flask_restless
+from sqlalchemy import and_, or_, func, any_
+from query_helpers import *
 
-# import pandas as pdp
-# import numpy as np
-# import requests
-from time import sleep
-import flask_marshmallow as ma
-from flask_marshmallow import Marshmallow
+# filters adoptable pets by one of the four supported attributes
+# supports filtering for multiple values for the attribute
+def filter_adoptablepet_by(pet_query, filtering, what) :
+  print('what', what)
+  if filtering == "sex":
+    pet_query = pet_query.filter(func.lower(AdoptablePet.sex).in_(what))
+  
+  elif filtering == "age":
+    pet_query = pet_query.filter(func.lower(AdoptablePet.age).in_(what))
+    # print(pet_query)
 
-app = Flask(__name__)
-basedir = os.path.abspath(os.path.dirname(__file__))
+  elif filtering == "breeds":
+    filters = []
+    for breed in what:
+      print(breed)
+      filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
+      # pet_query = pet_query.filter(AdoptablePet.breed_number.any(BreedsSpecies.breed_name==breed))
+      print(len(filters))
+    # print('tuple', *tuple(filters))
+    pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
+    print(pet_query)
 
-load_dotenv()
-print("hello")
-app.debug = True
-app.config["SQLALCHEMY_DATABASE_URI"] = os.getenv("AWS_DB_KEY")
-app.config["SQLALCHEMY_TRACK_MODIFICATIONS"] = False
+  elif filtering == "color":
+    pet_query = pet_query.filter(func.lower(AdoptablePet.color).in_(what))
 
-db = SQLAlchemy(app)
-ma = Marshmallow(app)
-path = "./datasets"
+  return pet_query
 
-# Create tables
-class AdoptablePet(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
-    pet_name = db.Column(db.String())
-    pet_breed = db.Column(db.String())
-    pet_sex = db.Column(db.String())
-    pet_age = db.Column(db.String())
-    pet_color = db.Column(db.String())
-    pet_desc = db.Column(db.String())
-    # pet_allergies = db.Column(db.String())
-    # pet_diet = db.Column(db.String())
-    # pet_issues = db.Column(db.String())
-    # pet_hearing = db.Column(db.String())
-    # pet_sight = db.Column(db.String())
+def filter_adoptablepets(pet_query, queries) :
+  sex = get_query("sex", queries)
+  # print(sex)
+  age = get_query("age", queries)
+  breeds = get_query("breeds", queries)
+  color = get_query("color", queries)
+  # print('here')
+  print(breeds)
 
+  if sex != None:
+    pet_query = filter_adoptablepet_by(pet_query, "sex", sex)
+  if age != None:
+    pet_query = filter_adoptablepet_by(pet_query, "age", age)
+  if breeds != None:
+    pet_query = filter_adoptablepet_by(pet_query, "breeds", breeds)
+  if color != None:
+    pet_query = filter_adoptablepet_by(pet_query, "color", color)
 
-def __init__(
-    self,
-    pet_name="NaN",
-    pet_breed="NaN",
-    pet_sex="NaN",
-    pet_age="NaN",
-    pet_color="NaN",
-    pet_desc="NaN"
-    # pet_allergies="NaN", pet_diet="NaN",
-    # pet_issues="NaN", pet_hearing="NaN", pet_sight="NaN"
-):
-    self.pet_name = pet_name
-    self.pet_breed = pet_breed
-    self.pet_sex = pet_sex
-    self.pet_age = pet_age
-    self.pet_color = pet_color
-    self.pet_desc = pet_desc
-    # self.pet_allergies = pet_allergies
-    # self.pet_diet = pet_diet
-    # self.pet_issues = pet_issues
-    # self.pet_hearing = pet_hearing
-    # self.pet_sight = pet_sight
+  return pet_query
 
+# sorts adoptable pets by one of the four supported attributes
+# in ascending or descending order
+def sort_adoptablepet_by(sorting, pet_query, desc) :
+  pet = None
 
-# db.create_all()
+  if sorting == "name":
+    pet = AdoptablePet.name
+  elif sorting == "age":
+    pet = AdoptablePet.age
+  else:
+    return pet_query
 
-### Table for Adoptable Pet ###
+  if desc:
+    return pet_query.order_by(pet.desc())
+  else:
+    return pet_query.order_by(pet)
 
+# determines whether attribute will be sorted in ascending or descending order
+# passes attribute to be sorted to sort_adoptablepet_by for sorting
+# only supports sorting on one attribute at a time
+def sort_adoptablepets(sort, pet_query):
+  if sort == None:
+    return pet_query
+  else:
+    sort = sort[0]
 
-def populate_pets():
-    # Get API request
-    request = urllib.request.Request(
-        "https://api.rescuegroups.org/v5/public/animals?limit=250"
-    )
-    request.add_header("Authorization", "wmUYpgAP")
-    r = urllib.request.urlopen(request)
-    data = json.loads(r.read())
-    # print(data)
-    pet_list = []
-    for item in data["data"]:
-        pet_name = item["attributes"]["name"] if "name" in item["attributes"] else ""
-        pet_breed = (
-            item["attributes"]["breedString"]
-            if "breedString" in item["attributes"]
-            else ""
-        )
-        pet_sex = item["attributes"]["sex"] if "sex" in item["attributes"] else ""
-        pet_age = (
-            item["attributes"]["ageGroup"] if "ageGroup" in item["attributes"] else ""
-        )
-        pet_color = (
-            item["attributes"]["colorDetails"]
-            if "colorDetails" in item["attributes"]
-            else ""
-        )
-        pet_desc = (
-            item["attributes"]["descriptionHtml"]
-            if "descriptionHtml" in item["attributes"]
-            else ""
-        )
-        # new_pet = AdoptablePet(pet_name=item['attributes']["name"], pet_breed=item['attributes']["breedString"],
-        # 						pet_sex=item['attributes']["sex"], pet_age=item['attributes']["ageGroup"],
-        # 						pet_color=item['attributes']['colorDetails'],
-        # 						pet_desc=item['attributes']['descriptionHtml'])
-        # pet_list.append(new_pet)
-        new_pet = AdoptablePet(
-            pet_name=pet_name,
-            pet_breed=pet_breed,
-            pet_sex=pet_sex,
-            pet_age=pet_age,
-            pet_color=pet_color,
-            pet_desc=pet_desc,
-        )
-        pet_list.append(new_pet)
-    # print(pet_list)
-    # flush script db.reset
-    # loop through all pages api returns
-    # db.drop_all()
-    # db.create_all()
-    db.session.add_all(pet_list)
-    db.session.commit()
+  sort = sort.split("-")
 
+  # In descending order
+  if len(sort) > 1:
+    return sort_adoptablepet_by(sort[1], pet_query, True)
+  else:
+    return sort_adoptablepet_by(sort[0], pet_query, False)
 
-if __name__ == "__main__":
-    db.drop_all()
-    db.create_all()
-    populate_pets()
+# applies filter with an "or" on each attribute
+# have to be an exact match
+def search_politicians(q, pet_query) :
+  if not q:
+    return pet_query
+  else:
+    q = q[0].strip()
+
+  terms = q.split()
+  terms = [w.lower() for w in terms]
+
+  searches = []
+  for term in terms:
+    searches.append(AdoptablePet.sex.match(term))
+    # try:
+    #   searches.append(AdoptablePet.age.in_)
+
+  pet_query = pet_query.filter(or_(*tuple(searches)))
+
+  return pet_query

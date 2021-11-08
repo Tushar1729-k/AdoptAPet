@@ -36,7 +36,7 @@ COPY requirements.txt usr/src/backend/requirements.txt
 WORKDIR /usr/src/backend
 
 RUN pip3 install --upgrade pip
-RUN pip3 install -r requirements.txt
+# RUN pip3 install -r requirements.txt
 RUN pip3 install psycopg2
 
 EXPOSE 80
@@ -48,5 +48,5 @@ EXPOSE 5000
 # CMD [ "./main.py" ]
 # CMD [ "flask", "run", "--host", "0.0.0.0", "-p", "5000" ]
 # CMD [ "python", "adoptablepet.py" ]
-ENTRYPOINT python adoptablepet.py
+# ENTRYPOINT python adoptablepet.py
 # ENTRYPOINT python main.py
