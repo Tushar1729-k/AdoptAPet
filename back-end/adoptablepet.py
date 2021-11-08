@@ -28,11 +28,12 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
     filters = []
     for breed in what:
       print(breed)
-      filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
-      # pet_query = pet_query.filter(AdoptablePet.breed_number.any(BreedsSpecies.breed_name==breed))
+      # filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
+      # pet_query = pet_query.filter(AdoptablePet.breed_number==BreedsSpecies.api_id)
+      pet_query = pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==breed)
       print(len(filters))
     # print('tuple', *tuple(filters))
-    pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
+    # pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
     print(pet_query)
 
   elif filtering == "color":
