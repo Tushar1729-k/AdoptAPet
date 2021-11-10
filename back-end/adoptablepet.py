@@ -10,7 +10,7 @@
 # )
 from models import *
 
-from sqlalchemy import and_, or_, func, any_
+from sqlalchemy import and_, or_, func, any_, case
 from query_helpers import *
 
 # filters adoptable pets by one of the four supported attributes
@@ -19,11 +19,9 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
   print('what', what)
   if filtering == "sex":
     pet_query = pet_query.filter(func.lower(AdoptablePet.sex).in_(what))
-  
   elif filtering == "age":
     pet_query = pet_query.filter(func.lower(AdoptablePet.age).in_(what))
     # print(pet_query)
-
   elif filtering == "breeds":
     filters = []
     for breed in what:
@@ -35,9 +33,10 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
     # print('tuple', *tuple(filters))
     # pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
     print(pet_query)
-
   elif filtering == "color":
     pet_query = pet_query.filter(func.lower(AdoptablePet.color).in_(what))
+  elif filtering == 'size':
+    pet_query = pet_query.filter(func.lower(AdoptablePet.size_group).in_(what))
 
   return pet_query
 
@@ -47,8 +46,9 @@ def filter_adoptablepets(pet_query, queries) :
   age = get_query("age", queries)
   breeds = get_query("breeds", queries)
   color = get_query("color", queries)
+  size = get_query('size', queries)
   # print('here')
-  print(breeds)
+  # print(breeds)
 
   if sex != None:
     pet_query = filter_adoptablepet_by(pet_query, "sex", sex)
@@ -58,6 +58,8 @@ def filter_adoptablepets(pet_query, queries) :
     pet_query = filter_adoptablepet_by(pet_query, "breeds", breeds)
   if color != None:
     pet_query = filter_adoptablepet_by(pet_query, "color", color)
+  if size != None:
+    pet_query = filter_adoptablepet_by(pet_query, 'size', size)
 
   return pet_query
 
@@ -70,13 +72,27 @@ def sort_adoptablepet_by(sorting, pet_query, desc) :
     pet = AdoptablePet.name
   elif sorting == "age":
     pet = AdoptablePet.age
+  elif sorting == 'size':
+    pet = AdoptablePet.size_group
+  elif sorting == 'color':
+    pet = AdoptablePet.color
+  elif sorting == 'sex':
+    pet = AdoptablePet.sex
   else:
     return pet_query
 
   if desc:
     return pet_query.order_by(pet.desc())
   else:
-    return pet_query.order_by(pet)
+    sort_order = pet
+    if sorting == 'age':
+      _whens = {'Baby': 1, 'Young': 2, 'Adult': 3, 'Senior': 4, '': 5}
+      sort_order = case(value=pet, whens=_whens)
+    elif sorting == 'size':
+      _whens = {'Small': 1, 'Medium': 2, 'Large': 3, '': 4}
+      sort_order = case(value=pet, whens=_whens)
+
+    return pet_query.order_by(sort_order)
 
 # determines whether attribute will be sorted in ascending or descending order
 # passes attribute to be sorted to sort_adoptablepet_by for sorting
@@ -104,14 +120,31 @@ def search_politicians(q, pet_query) :
     q = q[0].strip()
 
   terms = q.split()
-  terms = [w.lower() for w in terms]
+  # terms = [w.lower() for w in terms]
 
   searches = []
   for term in terms:
     searches.append(AdoptablePet.sex.match(term))
+    searches.append(AdoptablePet.age.match(term))
+    searches.append(AdoptablePet.size_group.match(term))
+    # searches.append(pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==term))
+    # searches.append(
+    #   AdoptablePet.center.has(
+    #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
+    #   )
+    # )
+    # print(AdoptablePet.center.has(
+    #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
+    #   ))
+    print(len(searches))
+    # print('tuple', *tuple(searches))
+    # searches.append(AdoptablePet.color.match(term))
     # try:
     #   searches.append(AdoptablePet.age.in_)
 
-  pet_query = pet_query.filter(or_(*tuple(searches)))
+  
+  pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
+  print(terms)
+  # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))
 
   return pet_query

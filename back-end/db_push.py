@@ -80,6 +80,12 @@ def populate_pets():
                 # 						pet_color=item['attributes']['colorDetails'],
                 # 						pet_desc=item['attributes']['descriptionHtml'])
                 # pet_list.append(new_pet)
+                size_group = (
+                    animal["attributes"]["sizeGroup"]
+                    if get_query('sizeGroup', animal['attributes'])
+                    else ''
+                )
+
                 new_pet = AdoptablePet(
                     api_id=api_id,
                     center_number=center_number,
@@ -90,6 +96,7 @@ def populate_pets():
                     color=color,
                     desc=desc,
                     pic_url=pic_url,
+                    size_group=size_group
                 )
                 pet_list.append(new_pet)
     # print(pet_list)

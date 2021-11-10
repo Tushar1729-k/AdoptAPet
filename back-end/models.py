@@ -50,6 +50,7 @@ class AdoptablePet(db.Model):
     color = db.Column(db.String())
     desc = db.Column(db.String())
     pic_url = db.Column(db.String)
+    size_group = db.Column(db.String)
 
     # pet_allergies = db.Column(db.String())
     # pet_diet = db.Column(db.String())
@@ -107,7 +108,7 @@ class BreedsSpecies(db.Model):
     api_id = db.Column(db.Integer)
     species_id = db.Column(db.Integer)
     species_name = db.Column(db.String())
-    breed_name = db.Column(db.String, nullable=False, unique=True)
+    breed_name = db.Column(db.String, nullable=False)
     youth_name = db.Column(db.String())
     temperament = db.Column(db.String)
     life_span = db.Column(db.String)
@@ -191,6 +192,7 @@ class AdoptablePetSchema(BaseSchema):
     color = fields.Str(required=True)
     desc = fields.Str(required=True)
     pic_url = fields.Str(required=True)
+    size_group = fields.Str(required=True)
 
 
 class AdoptionCenterSchema(BaseSchema):
