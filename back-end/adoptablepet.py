@@ -13,7 +13,7 @@ from models import *
 from sqlalchemy import and_, or_, func, any_, case
 from query_helpers import *
 
-# filters adoptable pets by one of the four supported attributes
+# filters adoptable pets by one of the five supported attributes
 # supports filtering for multiple values for the attribute
 def filter_adoptablepet_by(pet_query, filtering, what) :
   print('what', what)
@@ -40,6 +40,7 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
 
   return pet_query
 
+# filters adoptable pets for all five supported attributes
 def filter_adoptablepets(pet_query, queries) :
   sex = get_query("sex", queries)
   # print(sex)
@@ -63,7 +64,7 @@ def filter_adoptablepets(pet_query, queries) :
 
   return pet_query
 
-# sorts adoptable pets by one of the four supported attributes
+# sorts adoptable pets by one of the five supported attributes
 # in ascending or descending order
 def sort_adoptablepet_by(sorting, pet_query, desc) :
   pet = None
@@ -111,9 +112,8 @@ def sort_adoptablepets(sort, pet_query):
   else:
     return sort_adoptablepet_by(sort[0], pet_query, False)
 
-# applies filter with an "or" on each attribute
-# have to be an exact match
-def search_politicians(q, pet_query) :
+# applies filter with an "or" on each of the five searchable attributes
+def search_adoptablepets(q, pet_query) :
   if not q:
     return pet_query
   else:
@@ -138,10 +138,9 @@ def search_politicians(q, pet_query) :
     #   ))
     print(len(searches))
     # print('tuple', *tuple(searches))
-    # searches.append(AdoptablePet.color.match(term))
+    searches.append(AdoptablePet.color.match(term))
     # try:
     #   searches.append(AdoptablePet.age.in_)
-
   
   pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
   print(terms)

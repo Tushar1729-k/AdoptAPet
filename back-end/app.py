@@ -62,7 +62,7 @@ def pets():
     # Searching
     q = get_query("q", queries)
     if q :
-    	pet_query = search_politicians(q, pet_query)
+    	pet_query = search_adoptablepets(q, pet_query)
 
     # Filtering
     pet_query = filter_adoptablepets(pet_query, queries)

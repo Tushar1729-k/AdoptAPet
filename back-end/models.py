@@ -88,7 +88,7 @@ class AdoptionCenter(db.Model):
     lat = db.Column(db.Float)
     lon = db.Column(db.Float)
     services = db.Column(db.String())
-
+    type = db.Column(db.String)
 
 # def __repr__(self) :
 #   return "<Adoption Center %s %s>" % (self.type_name, self.number)
@@ -218,6 +218,7 @@ class AdoptionCenterSchema(BaseSchema):
     lat = fields.Float(required=True)
     lon = fields.Float(required=True)
     services = fields.Str(required=True)
+    type = fields.Str(required=True)
 
 
 class BreedsSpeciesSchema(BaseSchema):

@@ -12,7 +12,7 @@ from models import (
 from sqlalchemy import and_, or_, func
 from query_helpers import *
 
-# filters breeds by one of the four supported attributes
+# filters breeds by one of the five supported attributes
 # supports filtering for multiple values for the attribute
 def filter_breed_by(breed_query, filtering, what) :
   if filtering == "species":
@@ -28,7 +28,7 @@ def filter_breed_by(breed_query, filtering, what) :
 
   return breed_query
 
-# filters breeds for all four supported attributes
+# filters breeds for all five supported attributes
 def filter_breeds(breed_query, queries) :
   species = get_query("species", queries)
   breed = get_query("breed", queries)
@@ -89,7 +89,7 @@ def sort_breeds(sort, breed_query) :
   else:
     return sort_breed_by(sort[0], breed_query, False)
     
-# applies filter with an "or" on each attribute
+# applies filter with an "or" on each of the five searchable attributes
 def search_breeds(q, breed_query) :
   if not q:
     return breed_query

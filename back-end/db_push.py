@@ -168,6 +168,7 @@ def populate_centers():
         entry["phone"] = get_query("phone", item["attributes"])
         entry["lat"] = get_query("lat", item["attributes"])
         entry["lon"] = get_query("lon", item["attributes"])
+        entry["type"] = get_query("type", item["attributes"])
         # new_center = AdoptionCenter(api_id=api_id, name=name, city=city, state=state, zipcode=zipcode, services=services)
         new_center = AdoptionCenter(**entry)
         org_list.append(new_center)
