@@ -1,3 +1,4 @@
+from sqlalchemy.sql.expression import null
 from models import (
   AdoptablePet,
   AdoptionCenter,
@@ -22,7 +23,9 @@ def filter_center_by(center_query, filtering, what) :
   elif filtering == 'zip':
     center_query = center_query.filter(func.lower(AdoptionCenter.zipcode).in_(what))
   elif filtering == 'services':
-    center_query = center_query.filter(func.lower(AdoptionCenter.services).in_(what))
+    # if AdoptionCenter.services != None:
+    # print(what)
+    center_query = center_query.filter(func.lower(AdoptionCenter.services).contains(what[0]))
   elif filtering == 'type':
     center_query = center_query.filter(func.lower(AdoptionCenter.type).in_(what))
 

@@ -87,7 +87,7 @@ class AdoptionCenter(db.Model):
     phone = db.Column(db.String)
     lat = db.Column(db.Float)
     lon = db.Column(db.Float)
-    services = db.Column(db.String())
+    services = db.Column(db.String)
     type = db.Column(db.String)
 
 # def __repr__(self) :
