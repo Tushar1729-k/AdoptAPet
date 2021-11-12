@@ -1,5 +1,5 @@
 # get node
-FROM node:latest
+FROM node:14
 
 # Creates the docker directory
 COPY . /app
