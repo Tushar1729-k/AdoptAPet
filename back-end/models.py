@@ -40,9 +40,7 @@ class AdoptablePet(db.Model):
         db.Integer, db.ForeignKey("adoption_center.id"), nullable=True
     )
     # Foreign key for associated species/breed, one-to-many relationship
-    species_breed_id = db.Column(
-        db.Integer, db.ForeignKey("breeds_species.id"), nullable=True
-    )
+    species_breed_id = db.Column(db.Integer, db.ForeignKey("breeds_species.id"), nullable=True)
     center_number = db.Column(db.Integer)
     breed_number = db.Column(db.Integer)
     name = db.Column(db.String())
@@ -52,6 +50,7 @@ class AdoptablePet(db.Model):
     color = db.Column(db.String())
     desc = db.Column(db.String())
     pic_url = db.Column(db.String)
+    size_group = db.Column(db.String)
 
     # pet_allergies = db.Column(db.String())
     # pet_diet = db.Column(db.String())
@@ -74,7 +73,7 @@ class AdoptionCenter(db.Model):
     species_breeds = db.relationship(
         "BreedsSpecies",
         secondary=link_species_centers,
-        backref=db.backref("center", lazy="dynamic"),
+        backref=db.backref("center", lazy="joined"),
     )
     name = db.Column(db.String())
     street = db.Column(db.String)
@@ -88,8 +87,8 @@ class AdoptionCenter(db.Model):
     phone = db.Column(db.String)
     lat = db.Column(db.Float)
     lon = db.Column(db.Float)
-    services = db.Column(db.String())
-
+    services = db.Column(db.String)
+    type = db.Column(db.String)
 
 # def __repr__(self) :
 #   return "<Adoption Center %s %s>" % (self.type_name, self.number)
@@ -109,14 +108,18 @@ class BreedsSpecies(db.Model):
     api_id = db.Column(db.Integer)
     species_id = db.Column(db.Integer)
     species_name = db.Column(db.String())
-    breed_name = db.Column(db.String())
+    breed_name = db.Column(db.String, nullable=False)
     youth_name = db.Column(db.String())
     temperament = db.Column(db.String)
-    life_span = db.Column(db.String)
+    life_span = db.Column(db.String)      # in years
+    life_span_min = db.Column(db.Integer)
+    life_span_max = db.Column(db.Integer)
     alt_names = db.Column(db.String)
     wikipedia_url = db.Column(db.String)
     origin = db.Column(db.String)
-    weight = db.Column(db.String)
+    weight = db.Column(db.String)       # in pounds
+    weight_min = db.Column(db.Integer)
+    weight_max = db.Column(db.Integer)
     country_code = db.Column(db.String)
     height = db.Column(db.String)
     hairless = db.Column(db.Integer)
@@ -193,6 +196,7 @@ class AdoptablePetSchema(BaseSchema):
     color = fields.Str(required=True)
     desc = fields.Str(required=True)
     pic_url = fields.Str(required=True)
+    size_group = fields.Str(required=True)
 
 
 class AdoptionCenterSchema(BaseSchema):
@@ -218,6 +222,7 @@ class AdoptionCenterSchema(BaseSchema):
     lat = fields.Float(required=True)
     lon = fields.Float(required=True)
     services = fields.Str(required=True)
+    type = fields.Str(required=True)
 
 
 class BreedsSpeciesSchema(BaseSchema):
@@ -239,10 +244,14 @@ class BreedsSpeciesSchema(BaseSchema):
     youth_name = fields.Str(required=True)
     temperament = fields.Str(required=True)
     life_span = fields.Str(required=True)
+    life_span_min = fields.Int(required=True)
+    life_span_max = fields.Int(required=True)
     alt_names = fields.Str(required=True)
     wikipedia_url = fields.Str(required=True)
     origin = fields.Str(required=True)
     weight = fields.Str(required=True)
+    weight_min = fields.Int(required=True)
+    weight_max = fields.Int(required=True)
     country_code = fields.Str(required=True)
     height = fields.Str(required=True)
     hairless = fields.Int(required=True)

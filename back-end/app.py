@@ -13,7 +13,6 @@ from models import (
     adoption_center_schema,
     breeds_species_schema,
 )
-
 # from models import *
 
 from flask import Flask, request, make_response, jsonify, send_from_directory
@@ -25,9 +24,9 @@ import json
 from dotenv import load_dotenv
 import os
 
-# from AdoptablePet import *
-# from AdoptionCenter import *
-# from BreedsSpecies import *
+from AdoptablePet import *
+from AdoptionCenter import *
+from SpeciesBreed import *
 
 from query_helpers import *
 
@@ -60,15 +59,17 @@ def pets():
         # Convert the given page number into an int
         page = int(page[0])
 
-    # # Searching
-    # q = get_query("q", queries)
-    # if q :
-    # 	pet_query = search_politicians(q, pet_query)
-    # # filtering
-    # pet_query = filter_politicans(pet_query, queries)
-    # # sorting
-    # sort = get_query("sort", queries)
-    # pet_query = sort_politicians(sort, pet_query)
+    # Searching
+    q = get_query("q", queries)
+    if q :
+    	pet_query = search_adoptablepets(q, pet_query)
+
+    # Filtering
+    pet_query = filter_adoptablepets(pet_query, queries)
+
+    # Sorting
+    sort = get_query("sort", queries)
+    pet_query = sort_adoptablepets(sort, pet_query)
 
     count = pet_query.count()
 
@@ -113,17 +114,17 @@ def centers():
         # Conver the given page number into an int
         page = int(page[0])
 
-    # # searching
-    # q = get_query("sort", queries)
-    # if q:
-    # 	center_query = search_centers(q, center_query)
+    # searching
+    q = get_query("q", queries)
+    if q:
+    	center_query = search_centers(q, center_query)
 
-    # # filtering
-    # center_query = filter_centers(center_query, queries)
+    # filtering
+    center_query = filter_centers(center_query, queries)
 
-    # # sorting
-    # sort = get_query("sort", queries)
-    # center_query = sort_districts(sort, center_query)
+    # sorting
+    sort = get_query("sort", queries)
+    center_query = sort_centers(sort, center_query)
 
     count = center_query.count()
 
@@ -167,17 +168,17 @@ def species_breeds():
         # Convert the given page number into an int
         page = int(page[0])
 
-    # # searching
-    # q = get_query("q", queries)
-    # if q:
-    # 	sb_query = search_sb(q, sb_query)
+    # searching
+    q = get_query("q", queries)
+    if q:
+    	sb_query = search_breeds(q, sb_query)
 
-    # # filtering
-    # sb_query = filter_sb(sb_query, queries)
+    # filtering
+    sb_query = filter_breeds(sb_query, queries)
 
-    # # sorting
-    # sort = get_query("sort", queries)
-    # sb_query = sort_sb(sort, sb_query)
+    # sorting
+    sort = get_query("sort", queries)
+    sb_query = sort_breeds(sort, sb_query)
 
     count = sb_query.count()
 
