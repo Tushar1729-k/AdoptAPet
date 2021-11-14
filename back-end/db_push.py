@@ -60,7 +60,7 @@ def populate_pets():
         color = (
           animal["attributes"]["colorDetails"]
           if "colorDetails" in animal["attributes"]
-          else ""
+          else None
         )
         desc = (
           animal["attributes"]["descriptionHtml"]
@@ -293,11 +293,11 @@ def populate_breeds():
           if len(dog_data) > 0:
             entry["temperament"] = get_query("temperament", dog_data[0])
             entry["life_span"] = get_query("life_span", dog_data[0])
-            life_span = get_query("life_span", cat_data[0])
-            if life_span != None:
-              life_span = life_span.split()
-              entry["life_span_min"] = life_span[0]
-              entry["life_span_max"] = life_span[2] if len(life_span) >= 2 else life_span[0]
+            # life_span = get_query("life_span", cat_data[0])
+            # if life_span != None:
+            #   life_span = life_span.split()
+            #   entry["life_span_min"] = life_span[0]
+            #   entry["life_span_max"] = life_span[2] if len(life_span) >= 2 else life_span[0]
             entry["alt_names"] = get_query("alt_names", dog_data[0])
             entry["wikipedia_url"] = get_query("wikipedia_url", dog_data[0])
             entry["origin"] = get_query("origin", dog_data[0])

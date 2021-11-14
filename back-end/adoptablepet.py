@@ -10,7 +10,7 @@
 # )
 from models import *
 
-from sqlalchemy import and_, or_, func, any_, case
+from sqlalchemy import and_, or_, func, any_, case, nullslast
 from query_helpers import *
 
 # filters adoptable pets by one of the five supported attributes
@@ -92,6 +92,9 @@ def sort_adoptablepet_by(sorting, pet_query, desc) :
     elif sorting == 'size':
       _whens = {'Small': 1, 'Medium': 2, 'Large': 3, '': 4}
       sort_order = case(value=pet, whens=_whens)
+    elif sorting == "color":
+      return pet_query.order_by(case([(or_(pet.is_(None), pet == ""), 1)],
+                                else_=0), pet)
 
     return pet_query.order_by(sort_order)
 

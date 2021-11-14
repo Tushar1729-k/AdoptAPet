@@ -166,7 +166,6 @@ class BaseSchema(ma.Schema):
             key: value for key, value in data.items() if value not in self.SKIP_VALUES
         }
 
-
 class AdoptablePetSchema(BaseSchema):
     id = fields.Int(required=True)
     api_id = fields.Int(required=True)
