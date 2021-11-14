@@ -25,10 +25,10 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
   elif filtering == "breeds":
     filters = []
     for breed in what:
-      print(breed)
+      # print(breed)
       # filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
       # pet_query = pet_query.filter(AdoptablePet.breed_number==BreedsSpecies.api_id)
-      pet_query = pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==breed)
+      pet_query = pet_query.join(BreedsSpecies).filter(func.lower(BreedsSpecies.breed_name)==func.lower(breed))
       print(len(filters))
     # print('tuple', *tuple(filters))
     # pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
