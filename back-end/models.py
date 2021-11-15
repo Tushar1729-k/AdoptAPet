@@ -101,8 +101,7 @@ class BreedsSpecies(db.Model):
         "AdoptionCenter",
         secondary=link_species_centers,
         lazy="subquery",
-        backref=db.backref("species", lazy=True),
-        overlaps="center,species_breeds"
+        backref=db.backref("species", lazy=True)
     )
     # All associated pets, one-to-many relationship
     pets = db.relationship("AdoptablePet", backref="species_breed")
