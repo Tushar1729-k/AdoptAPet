@@ -214,6 +214,9 @@ def species_breeds():
   origins = get_query("origins", queries)
   if origins:
     sb_query = return_all_origins(sb_query, queries)
+  lifeexps = get_query("lifeexps", queries)
+  if lifeexps:
+    sb_query = return_all_lifeexps(sb_query, queries)
 
   # searching
   q = get_query("q", queries)
