@@ -49,6 +49,9 @@ def filter_breeds(breed_query, queries) :
 
   return breed_query
 
+def return_all_weights(breed_query, queries) :
+  return breed_query.with_entities(BreedsSpecies.weight)
+
 # sorts breeds by one of the five supported attributes
 # in ascending or descending order
 def sort_breed_by(sorting, breed_query, desc) :

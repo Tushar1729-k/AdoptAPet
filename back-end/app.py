@@ -168,6 +168,11 @@ def species_breeds():
         # Convert the given page number into an int
         page = int(page[0])
 
+    # return all weights
+    weight = get_query("weights", queries)
+    if weight:
+        sb_query = return_all_weights(sb_query, queries)
+
     # searching
     q = get_query("q", queries)
     if q:

@@ -101,7 +101,7 @@ class BreedsSpecies(db.Model):
         "AdoptionCenter",
         secondary=link_species_centers,
         lazy="subquery",
-        backref=db.backref("species", lazy=True),
+        backref=db.backref("species", lazy=True)
     )
     # All associated pets, one-to-many relationship
     pets = db.relationship("AdoptablePet", backref="species_breed")
@@ -165,7 +165,6 @@ class BaseSchema(ma.Schema):
         return {
             key: value for key, value in data.items() if value not in self.SKIP_VALUES
         }
-
 
 class AdoptablePetSchema(BaseSchema):
     id = fields.Int(required=True)
@@ -236,7 +235,7 @@ class BreedsSpeciesSchema(BaseSchema):
         only=("id", "api_id", "name"),
         required=True,
         attribute="center",
-        many=True,
+        many=True
     )
     pets = fields.Nested(
         "AdoptablePetSchema", only=("id", "api_id", "name"), required=True, many=True

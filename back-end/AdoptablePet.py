@@ -10,7 +10,7 @@
 # )
 from models import *
 
-from sqlalchemy import and_, or_, func, any_, case
+from sqlalchemy import and_, or_, func, any_, case, nullslast
 from query_helpers import *
 
 # filters adoptable pets by one of the five supported attributes
@@ -25,10 +25,10 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
   elif filtering == "breeds":
     filters = []
     for breed in what:
-      print(breed)
+      # print(breed)
       # filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
       # pet_query = pet_query.filter(AdoptablePet.breed_number==BreedsSpecies.api_id)
-      pet_query = pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==breed)
+      pet_query = pet_query.join(BreedsSpecies).filter(func.lower(BreedsSpecies.breed_name)==func.lower(breed))
       print(len(filters))
     # print('tuple', *tuple(filters))
     # pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
@@ -92,6 +92,9 @@ def sort_adoptablepet_by(sorting, pet_query, desc) :
     elif sorting == 'size':
       _whens = {'Small': 1, 'Medium': 2, 'Large': 3, '': 4}
       sort_order = case(value=pet, whens=_whens)
+    elif sorting == "color":
+      return pet_query.order_by(case([(or_(pet.is_(None), pet == ""), 1)],
+                                else_=0), pet)
 
     return pet_query.order_by(sort_order)
 
