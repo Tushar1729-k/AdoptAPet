@@ -364,38 +364,47 @@ def link_pets_species_breeds():
     pet.species_breed = temp_species_breed
   db.session.commit()
 
-
-def link_species_breeds_centers():
+def link_species_breeds_centers() :
   centers = db.session.query(AdoptionCenter).all()
   for center in centers:
-    api_id = center.api_id
-    orgs_species_url = (
-      "https://api.rescuegroups.org/v5/public/orgs/"
-      + str(api_id)
-      + "/animals/species"
-    )
-    querystring = {"format": "json"}
-    headers = {"Authorization": "wmUYpgAP"}
-    orgs_species_response = requests.request(
-      "GET", orgs_species_url, headers=headers, params=querystring
-    )
-    orgs_species_data = orgs_species_response.json()
-    # new list of all breed ids at org
-    for species in orgs_species_data["data"]:
-      if species["id"] == "3" or species["id"] == "8":
-        species_breeds = db.session.query(BreedsSpecies).filter_by(
-          species_id=species["id"]
-        )
-        for species_breed in species_breeds:
-          center.species_breeds.append(species_breed)
+    pets_in_center = center.pets
+    for pet in pets_in_center:
+      db_pet = db.session.query(AdoptablePet).filter_by(id=pet.id).first()
+      species_breed_id = db_pet.species_breed_id
+      if species_breed_id:
+        db_species_breed = db.session.query(BreedsSpecies).filter_by(id=species_breed_id).first()
+        center.species_breeds.append(db_species_breed)
   db.session.commit()
 
+# def link_species_breeds_centers():
+#   centers = db.session.query(AdoptionCenter).all()
+#   for center in centers:
+#     api_id = center.api_id
+#     orgs_species_url = (
+#       "https://api.rescuegroups.org/v5/public/orgs/"
+#       + str(api_id)
+#       + "/animals/species"
+#     )
+#     querystring = {"format": "json"}
+#     headers = {"Authorization": "wmUYpgAP"}
+#     orgs_species_response = requests.request(
+#       "GET", orgs_species_url, headers=headers, params=querystring
+#     )
+#     orgs_species_data = orgs_species_response.json()
+#     # new list of all breed ids at org
+#     for species in orgs_species_data["data"]:
+#       if species["id"] == "3" or species["id"] == "8":
+#         species_breeds = db.session.query(BreedsSpecies).filter_by(
+#           species_id=species["id"]
+#         )
+#         for species_breed in species_breeds:
+#           center.species_breeds.append(species_breed)
+#   db.session.commit()
 
 def reset_db():
   # db.session.remove()
   db.drop_all()
   db.create_all()
-
 
 if __name__ == "__main__":
   reset_db()
