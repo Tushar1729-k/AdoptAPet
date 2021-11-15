@@ -117,6 +117,12 @@ def centers():
   cities = get_query("cities", queries)
   if cities:
     center_query = return_all_cities(center_query, queries)
+  states = get_query("states", queries)
+  if states:
+    center_query = return_all_states(center_query, queries)
+  zips = get_query("zips", queries)
+  if zips:
+    center_query = return_all_zips(center_query, queries)
 
   # searching
   q = get_query("q", queries)
@@ -173,8 +179,8 @@ def species_breeds():
     page = int(page[0])
 
   # return all weights
-  weight = get_query("weights", queries)
-  if weight:
+  weights = get_query("weights", queries)
+  if weights:
     sb_query = return_all_weights(sb_query, queries)
   origins = get_query("origins", queries)
   if origins:
