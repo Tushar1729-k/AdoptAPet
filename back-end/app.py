@@ -169,9 +169,12 @@ def species_breeds():
         page = int(page[0])
 
     # return all weights
-    weight = get_query("weights", queries)
-    if weight:
+    weights = get_query("weights", queries)
+    if weights:
         sb_query = return_all_weights(sb_query, queries)
+    origins = get_query("origins", queries)
+    if origins:
+        sb_query = return_all_origins(sb_query, queries)
 
     # searching
     q = get_query("q", queries)
