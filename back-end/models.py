@@ -102,6 +102,7 @@ class BreedsSpecies(db.Model):
         secondary=link_species_centers,
         lazy="subquery",
         backref=db.backref("species", lazy=True),
+        overlaps="center,species_breeds"
     )
     # All associated pets, one-to-many relationship
     pets = db.relationship("AdoptablePet", backref="species_breed")
@@ -235,7 +236,7 @@ class BreedsSpeciesSchema(BaseSchema):
         only=("id", "api_id", "name"),
         required=True,
         attribute="center",
-        many=True,
+        many=True
     )
     pets = fields.Nested(
         "AdoptablePetSchema", only=("id", "api_id", "name"), required=True, many=True
