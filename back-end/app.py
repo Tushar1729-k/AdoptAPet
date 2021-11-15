@@ -3,6 +3,7 @@
 # for overall structure of file
 
 # from typing import get_args
+from sqlalchemy.sql.functions import count
 from models import (
   AdoptablePet,
   AdoptionCenter,
@@ -44,6 +45,34 @@ from query_helpers import *
 # earlier u had a one off script that populates db
 
 # base url: api.adoptapet.me
+
+# sitewide search
+@app.route("/search", methods=["GET"])
+def search() :
+  queries = request.args.to_dict(flat=False)
+  pet_query = db.session.query(AdoptablePet)
+  center_query = db.session.query(AdoptionCenter)
+  breed_query = db.session.query(BreedsSpecies)
+
+  q = get_query("q", queries)
+  if q:
+    pet_query = search_adoptablepets(q, pet_query)
+    center_query = search_centers(q, center_query)
+    breed_query = search_breeds(q, breed_query)
+
+  pet_count = pet_query.count()
+  center_count = center_query.count()
+  breed_count = breed_query.count()
+
+  pet_result = adoptable_pet_schema.dump(pet_query, many = True)
+  center_result = adoption_center_schema.dump(center_query, many = True)
+  breed_result = breeds_species_schema.dump(breed_query, many = True)
+
+  return {"breed_count": breed_count, "breeds": breed_result,
+          "center_count": center_count, "centers": center_result, 
+          "pet_count": pet_count, "pets": pet_result}
+
+
 # -------------------- Adoptable Pets ---------------------
 
 
@@ -61,7 +90,7 @@ def pets():
 
   # Searching
   q = get_query("q", queries)
-  if q :
+  if q:
     pet_query = search_adoptablepets(q, pet_query)
 
   # Filtering
