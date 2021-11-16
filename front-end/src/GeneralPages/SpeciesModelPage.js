@@ -103,7 +103,6 @@ const SpeciesModelPage = ({fetchPage}) => {
         }
     }
     const fetchSearchResults = () => {
-        console.log("query", `q=${searchQuery}`)
         fetchBreeds(`q=${searchQuery}`)
     }
     return (
@@ -152,7 +151,7 @@ const SpeciesModelPage = ({fetchPage}) => {
                 <Tab eventKey="search" title="Search">
                 <Form>
                     <Form.Group className="mb-3" controlId="formBasicSearch">
-                        <Form.Label>Email address</Form.Label>
+                        <Form.Label> Species Search</Form.Label>
                         <Form.Control type="search" placeholder="Enter query"
                             onChange={e => setSearchQuery(e.target.value)}
                         />

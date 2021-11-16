@@ -1,7 +1,8 @@
 import React from 'react'
-import { Row, Table, Col } from 'react-bootstrap'
+import { Row, Table, Col, Button, Tabs, Tab, Form } from 'react-bootstrap'
 import {  useState, useEffect } from 'react'
 import adoptionCenters from '../Data/AdoptionCenters.json'
+import Highlighter from "react-highlight-words"
 import Select from 'react-select'
 import Paginate from '../Components/Pagination'
 import axios from 'axios'
@@ -16,6 +17,7 @@ const AdoptCentersPage = ({fetchPage}) => {
     const [currentPage, setCurrentPage] = useState(1)
     const [isLoading, setIsLoading] = useState(false)
     const [options, setOptions] = useState([])
+    const [searchQuery, setSearchQuery] = useState("")
 
     const fetchCenters = async (query) => {
         setIsLoading(true)
@@ -104,6 +106,9 @@ const AdoptCentersPage = ({fetchPage}) => {
             }
         }
     }
+    const fetchSearchResults = () => {
+        fetchCenters(`q=${searchQuery}`)
+    }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row xs={1}>
@@ -117,31 +122,52 @@ const AdoptCentersPage = ({fetchPage}) => {
                 </Col>
             </Row>
             <Row style={{paddingBottom: '2vh'}}>
-            {Array.from({length: 3}).map((_, idx) => (
-                    <Col key={idx}>
-                        <h6>{optionLabels[idx]}</h6>
-                        <Select options={options[idx]} isSearchable={true}
-                            onChange={(filter) => fetchFilteredResults(filter, options[idx][0].type)}
+            <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
+                <Tab eventKey="sort" title="Sort">
+                    <Row>
+                        {Array.from({length: 3}).map((_, idx) => (
+                        <Col key={idx}>
+                            <h6>{optionLabels[idx]}</h6>
+                            <Select options={options[idx]} isSearchable={true}
+                                onChange={(filter) => fetchFilteredResults(filter, options[idx][0].type)}
+                                isClearable={true}
+                            />
+                        </Col>
+                    ))}
+                    <Col>
+                        <h6>Center Type</h6>
+                        <Select options={[{value: 'type1', label: 'None', type: 'type'}, {value: 'type2', label: 'Rescue', type: 'type'}, {value: 'type3', label: 'Shelter', type: 'type'}]} 
+                            isSearchable={true}
                             isClearable={true}
+                            onChange={(option) => fetchFilteredResults(option, 'type')}
                         />
                     </Col>
-                ))}
-                <Col>
-                    <h6>Center Type</h6>
-                    <Select options={[{value: 'type1', label: 'None', type: 'type'}, {value: 'type2', label: 'Rescue', type: 'type'}, {value: 'type3', label: 'Shelter', type: 'type'}]} 
-                        isSearchable={true}
-                        isClearable={true}
-                        onChange={(option) => fetchFilteredResults(option, 'type')}
-                    />
-                </Col>
-                <Col>
-                    <h6>Sort Name(Asc.)</h6>
-                    <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Name', type: 'sort'}]} 
-                        isSearchable={true}
-                        isClearable={true}
-                        onChange={(filter) => fetchFilteredResults(filter, 'sort')}
-                    />
-                </Col>
+                    <Col>
+                        <h6>Sort Name(Asc.)</h6>
+                        <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Name', type: 'sort'}]} 
+                            isSearchable={true}
+                            isClearable={true}
+                            onChange={(filter) => fetchFilteredResults(filter, 'sort')}
+                        />
+                    </Col>
+                    </Row>
+                </Tab>
+                <Tab eventKey="search" title="Search">
+                <Form>
+                    <Form.Group className="mb-3" controlId="formBasicSearch">
+                        <Form.Label>Adoption Centers Search</Form.Label>
+                        <Form.Control type="search" placeholder="Enter query"
+                            onChange={e => setSearchQuery(e.target.value)}
+                        />
+                    </Form.Group>
+                </Form>
+                    <div style={{paddingTop: '2vh'}}>
+                        <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
+                            Submit
+                        </Button>
+                    </div>
+                </Tab>
+            </Tabs>
             </Row>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm" responsive>
@@ -158,12 +184,42 @@ const AdoptCentersPage = ({fetchPage}) => {
                 {allCenters.map((center, index) => (
                     <tr key={index}>
                     <Link to={`/acmodel/${center.api_id}`} style={{ textDecoration: 'none'}} onClick={() => whichCenterPage("ac", center.api_id)}>
-                        <td>{center.name}</td>
+                        <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={center.name}
+                        />
+                        </td>
                     </Link>
-                    <td>{center.city}</td>
-                    <td>{center.state}</td>
-                    <td>{center.zipcode}</td>
-                    <td>{center.type}</td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={center.city}
+                        />
+                    </td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={center.state}
+                        />
+                    </td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={center.zipcode}
+                        />
+                    </td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={center.type}
+                        />
+                    </td>
                     </tr>
                 ))}
                 </tbody>
