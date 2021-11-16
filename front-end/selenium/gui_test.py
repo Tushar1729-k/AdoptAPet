@@ -122,6 +122,9 @@ def test_navbar_species_back():
 # 11
 def test_ap_filter():
     print("starting test_ap_filter")
+    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field = driver.find_element(By.ID, "react-select-3-input")
     field.sendKeys("Beagle")
     field.submit()
