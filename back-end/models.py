@@ -196,6 +196,8 @@ class AdoptablePetSchema(BaseSchema):
     desc = fields.Str(required=True)
     pic_url = fields.Str(required=True)
     size_group = fields.Str(required=True)
+    # breed_number = fields.Int(required=True)
+    breed_name = fields.Str(required=True)
 
 
 class AdoptionCenterSchema(BaseSchema):

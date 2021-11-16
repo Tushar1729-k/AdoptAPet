@@ -29,10 +29,10 @@ def filter_adoptablepet_by(pet_query, filtering, what) :
       # filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
       # pet_query = pet_query.filter(AdoptablePet.breed_number==BreedsSpecies.api_id)
       pet_query = pet_query.join(BreedsSpecies).filter(func.lower(BreedsSpecies.breed_name)==func.lower(breed))
-      print(len(filters))
+      # print(len(filters))
     # print('tuple', *tuple(filters))
     # pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
-    print(pet_query)
+    # print(pet_query)
   elif filtering == "color":
     pet_query = pet_query.filter(func.lower(AdoptablePet.color).in_(what))
   elif filtering == 'size':
@@ -63,6 +63,13 @@ def filter_adoptablepets(pet_query, queries) :
     pet_query = filter_adoptablepet_by(pet_query, 'size', size)
 
   return pet_query
+
+def return_all_breeds(pet_query, queries) :
+  # return pet_query.with_entities(AdoptablePet.species_breed)
+  return pet_query.join(BreedsSpecies).with_entities(BreedsSpecies.breed_name)
+
+def return_all_colors(pet_query, queries) :
+  return pet_query.with_entities(AdoptablePet.color)
 
 # sorts adoptable pets by one of the five supported attributes
 # in ascending or descending order

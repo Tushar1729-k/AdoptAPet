@@ -52,6 +52,15 @@ def filter_centers(center_query, queries) :
 
   return center_query
 
+
+def return_all_cities(center_query, queries) :
+  return center_query.with_entities(AdoptionCenter.city)
+def return_all_states(center_query, queries) :
+  return center_query.with_entities(AdoptionCenter.state)
+def return_all_zips(center_query, queries) :
+  return center_query.with_entities(AdoptionCenter.zipcode)
+
+
 # sorts adoption centers by one of the five supported attributes
 # in ascending or descending order
 def sort_center_by(sorting, center_query, desc) :

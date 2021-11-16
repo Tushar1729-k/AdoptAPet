@@ -51,6 +51,10 @@ def filter_breeds(breed_query, queries) :
 
 def return_all_weights(breed_query, queries) :
   return breed_query.with_entities(BreedsSpecies.weight)
+def return_all_origins(breed_query, queries) :
+  return breed_query.with_entities(BreedsSpecies.origin)
+def return_all_lifeexps(breed_query, queries) :
+  return breed_query.with_entities(BreedsSpecies.life_span)
 
 def return_all_origins(breed_query, queries) :
   return breed_query.with_entities(BreedsSpecies.origin)

@@ -63,6 +63,11 @@ class UnitTests(TestCase):
         req = test_client.get("/ac/12")
         self.assertEqual(req.status_code, 200)
 
+    def test_search(self) :
+        test_client = app.test_client()
+        req = test_client.get("/search")
+        self.assertEqual(req.status_code, 200)
+
 
 if __name__ == "__main__":
     main()
