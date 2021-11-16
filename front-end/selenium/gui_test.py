@@ -126,7 +126,7 @@ def test_ap_filter():
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]")
-    self.driver.execute_script("arguments[0].click();", field)
+    driver.execute_script("arguments[0].click();", field)
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     # field.sendKeys("Beagle")
     # field.submit()
