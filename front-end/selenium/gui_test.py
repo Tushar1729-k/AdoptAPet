@@ -125,7 +125,11 @@ def test_ap_filter():
     pets = driver.find_element(By.LINK_TEXT, "Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    field = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input")
+    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input")
     field.sendKeys("Beagle")
     field.submit()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
+
+# /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div
+# /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div
+# /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input
