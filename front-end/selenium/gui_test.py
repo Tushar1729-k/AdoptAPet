@@ -161,7 +161,7 @@ def test_search() :
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     # field = driver.find_element()
-    search_btn = driver.find_element(By.LINK_TEXT, "Search")
+    search_btn = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button")
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/form/div/input")
