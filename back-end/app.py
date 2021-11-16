@@ -88,6 +88,13 @@ def pets():
     # Convert the given page number into an int
     page = int(page[0])
 
+  breednames = get_query("breednames", queries)
+  if breednames:
+    pet_query = return_all_breeds(pet_query, queries)
+  colors = get_query("colors", queries)
+  if colors:
+    pet_query = return_all_colors(pet_query, queries)
+
   # Searching
   q = get_query("q", queries)
   if q:
