@@ -124,19 +124,22 @@ def test_ap_filter():
     print("starting test_ap_filter")
     pets = driver.find_element(By.LINK_TEXT, "Pets")
     pets.click()
-    assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]")
-    driver.execute_script("arguments[0].click();", field)
-    assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    driver.find_element_by_css_selector('.Select--single .Select-value').click()
-    beagle = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, '.Select-option#react-select-2--option-1')))
-
-    beagle.click()
-    assert driver.current_url == "https://www.adoptapet.me/apmodel"
-
-    # field.sendKeys("Beagle")
-    # field.submit()
     # assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    # field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]")
+    # driver.execute_script("arguments[0].click();", field)
+    # assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    # driver.find_element_by_css_selector('.Select--single .Select-value').click()
+    # beagle = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, '.Select-option#react-select-2--option-1')))
+
+    # beagle.click()
+
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    field = driver.find_element(By.XPATH, "//input[0]")
+    field = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input")
+
+    field.send_keys("Beagle")
+    field.submit()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
 
 # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]
 # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div
