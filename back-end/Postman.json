@@ -1,0 +1,491 @@
+{
+	"info": {
+		"_postman_id": "1b2285ac-8d05-4095-a100-52e0bf38be09",
+		"name": "AdoptAPet API Collection",
+		"description": "# Introduction\nThe AdoptAPet API has three models: adoption-center, species-and-breed, adoptable-pet. This API documentation provides examples of REST Endpoints for each model and how instances of the model can be queried for.\n",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "All Adoption Centers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://adoptapet.me/api/adoption-centers",
+					"protocol": "https",
+					"host": [
+						"adoptapet",
+						"me"
+					],
+					"path": [
+						"api",
+						"adoption-centers"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Information about every Adoption Center in the Database",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/adoption-centers",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"adoption-centers"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"adoption_centers\": [\r\n        {\r\n            \"adoption_center_id\": 22,\r\n            \"city\": \"Austin\",\r\n            \"state\": \"Texas\",\r\n            \"zip_code\": \"78705\",\r\n            \"available_pets\": [\r\n                {\r\n                    links: {\r\n                        self: \"/adoptable-pets/24\"\r\n                    }\r\n                }\r\n            ],\r\n            \"available_species_breeds\": [\r\n                {\r\n                    links: {\r\n                        self: \"/pet-species-breeds/24\"\r\n                    }\r\n                }\r\n            ],\r\n            \"rating\": 4.7,\r\n            \"donation_url\": \"\",\r\n            \"website_url\": \"\"\r\n        },\r\n        {\r\n            \"adoption_center_id\": 23,\r\n            \"city\": \"Austin\",\r\n            \"state\": \"Texas\",\r\n            \"zip_code\": \"78705\",\r\n            \"available_pets\": [\r\n                {\r\n                    links: {\r\n                        self: \"/adoptable-pets/23\"\r\n                    }\r\n                }\r\n            ],\r\n            \"available_species_breeds\": [\r\n                {\r\n                    links: {\r\n                        self: \"/pet-species-breeds/22\"\r\n                    }\r\n                }\r\n            ],\r\n            \"rating\": 4,\r\n            \"donation_url\": \"\",\r\n            \"website_url\": \"\"\r\n        },\r\n        {\r\n            \"adoption_center_id\": 24,\r\n            \"city\": \"Austin\",\r\n            \"state\": \"Texas\",\r\n            \"zip_code\": \"78705\",\r\n            \"available_pets\": [\r\n                {\r\n                    links: {\r\n                        self: \"/adoptable-pets/22\"\r\n                    }\r\n                }\r\n            ],\r\n            \"available_species_breeds\": [\r\n                {\r\n                    links: {\r\n                        self: \"/pet-species-breeds/23\"\r\n                    }\r\n                }\r\n            ],\r\n            \"rating\": 3.6,\r\n            \"donation_url\": \"\",\r\n            \"website_url\": \"\"\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Adoption Center by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://adoptapet.me/api/adoption-centers/{id}",
+					"protocol": "https",
+					"host": [
+						"adoptapet",
+						"me"
+					],
+					"path": [
+						"api",
+						"adoption-centers",
+						"{id}"
+					]
+				},
+				"description": "Adoption Center by ID"
+			},
+			"response": [
+				{
+					"name": "Information about Adoption Center with given ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/adoption-centers/23",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"adoption-centers",
+								"23"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"adoption_center_id\": 23,\r\n    \"city\": \"Austin\",\r\n    \"state\": \"Texas\",\r\n    \"zip_code\": \"78705\",\r\n    \"available_pets\": [\r\n        {\r\n            links: {\r\n                self: \"/adoptable-pets/23\"\r\n            }\r\n        }\r\n    ],\r\n    \"available_species_breeds\": [\r\n        {\r\n            links: {\r\n                self: \"/pet-species-breeds/22\"\r\n            }\r\n        }\r\n    ],\r\n    \"rating\": 4,\r\n    \"donation_url\": \"\",\r\n    \"website_url\": \"\"\r\n}"
+				},
+				{
+					"name": "Not Found Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/adoption-centers/1002",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"adoption-centers",
+								"1002"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"-1 not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "All Pet Species and Breeds",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://adoptapet.me/api/pet-species-breeds",
+					"protocol": "https",
+					"host": [
+						"adoptapet",
+						"me"
+					],
+					"path": [
+						"api",
+						"pet-species-breeds"
+					]
+				},
+				"description": "All Adoptable Pet Species and Breeds"
+			},
+			"response": [
+				{
+					"name": "Information about every Pet Species and Breed",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/pet-species-breeds",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"pet-species-breeds"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"species_breed\": [\r\n        {\r\n            \"species_breed_id\": 22,\r\n            \"species\": \"dog\",\r\n            \"breed\": \"Australian Shepherd\",\r\n            \"pictures\": /Australian_Shepherd.img,\r\n            \"ok_cats\": true,\r\n            \"ok_dogs\": true,\r\n            \"life_expectancy\": 12,\r\n            \"average_weight\": 20,\r\n            \"adoption_centers\": [\r\n                {\r\n                    links: {\r\n                        self: \"/adoption-centers/23\"\r\n                    }\r\n                }\r\n            ],\r\n            \"adoptable_pets\": [\r\n                {\r\n                    \"adoptable_pet_id\": 23,\r\n                    \"name\": \"Jim\",\r\n                    \"species_breed_id\": 22,\r\n                    \"adoption_center_id\": 23,\r\n                    \"age\": 10,\r\n                    \"weight\": 20,\r\n                    \"color\": \"white\",\r\n                    \"sex\": \"male\",\r\n                    \"trainability\": \"easy\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"species_breed_id\": 23,\r\n            \"species\": \"dog\",\r\n            \"breed\": \"Afghan Hound\",\r\n            \"pictures\": /Afghan_Hound.img,\r\n            \"ok_cats\": false,\r\n            \"ok_dogs\": false,\r\n            \"life_expectancy\": 12,\r\n            \"average_weight\": 55,\r\n            \"adoption_centers\": [\r\n                {\r\n                    links: {\r\n                        self: \"/adoption-centers/24\"\r\n                    }\r\n                }\r\n            ],\r\n            \"adoptable_pets\": [\r\n                {\r\n                    \"adoptable_pet_id\": 22,\r\n                    \"name\": \"Jerry\",\r\n                    \"species_breed_id\": 23,\r\n                    \"adoption_center_id\": 24,\r\n                    \"age\": 4,\r\n                    \"weight\": 50,\r\n                    \"color\": \"brown\",\r\n                    \"sex\": \"male\",\r\n                    \"trainability\": \"hard\"\r\n                }\r\n            ]\r\n        },\r\n        {\r\n            \"species_breed_id\": 24,\r\n            \"species\": \"cat\",\r\n            \"breed\": \"Abyssinian\",\r\n            \"pictures\": /Abyssinian.img,\r\n            \"ok_cats\": true,\r\n            \"ok_dogs\": false,\r\n            \"life_expectancy\": 12,\r\n            \"average_weight\": 12,\r\n            \"adoption_centers\": [\r\n                {\r\n                    links: {\r\n                        self: \"/adoption-centers/22\"\r\n                    }\r\n                }\r\n            ],\r\n            \"adoptable_pets\": [\r\n                {\r\n                    \"adoptable_pet_id\": 24,\r\n                    \"name\": \"Jan\",\r\n                    \"species_breed_id\": 24,\r\n                    \"adoption_center_id\": 22,\r\n                    \"age\": 7,\r\n                    \"weight\": 12,\r\n                    \"color\": \"white\",\r\n                    \"sex\": \"female\",\r\n                    \"trainability\": \"easy\"\r\n                }\r\n            ]\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Pet Species and Breed by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://adoptapet.me/api/pet-species-breeds/{id}",
+					"protocol": "https",
+					"host": [
+						"adoptapet",
+						"me"
+					],
+					"path": [
+						"api",
+						"pet-species-breeds",
+						"{id}"
+					]
+				},
+				"description": "Adoptable Pet Species and Breed by ID"
+			},
+			"response": [
+				{
+					"name": "Information about Pet Species and Breed with given ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/pet-species-breeds/23",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"pet-species-breeds",
+								"23"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"species_breed_id\": 23,\r\n    \"species\": \"dog\",\r\n    \"breed\": \"Afghan Hound\",\r\n    \"pictures\": /Afghan_Hound.img,\r\n    \"ok_cats\": \"no\",\r\n    \"ok_dogs\": \"no\",\r\n    \"life_expectancy\": 12,\r\n    \"average_weight\": 55,\r\n    \"adoption_centers\": [\r\n        {\r\n            links: {\r\n                self: \"/adoption-centers/24\"\r\n            }\r\n        }\r\n    ],\r\n    \"adoptable_pets\": [\r\n        {\r\n            \"adoptable_pet_id\": 22,\r\n            \"name\": \"Jerry\",\r\n            \"species_breed_id\": 23,\r\n            \"adoption_center_id\": 24,\r\n            \"age\": 4,\r\n            \"weight\": 50,\r\n            \"color\": \"brown\",\r\n            \"sex\": \"male\",\r\n            \"trainability\": \"hard\"\r\n        }\r\n    ]\r\n}"
+				},
+				{
+					"name": "Not Found Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/pet-species-breeds/1002",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"pet-species-breeds",
+								"1002"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"-1 not found\"\r\n}"
+				}
+			]
+		},
+		{
+			"name": "All Adoptable Pets",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://adoptapet.me/api/adoptable-pets",
+					"protocol": "https",
+					"host": [
+						"adoptapet",
+						"me"
+					],
+					"path": [
+						"api",
+						"adoptable-pets"
+					]
+				},
+				"description": "All Adoptable Pets"
+			},
+			"response": [
+				{
+					"name": "Information about every Adoptable Pet",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/adoptable-pets",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"adoptable-pets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"adoptable_pets\": [\r\n        {\r\n            \"adoptable_pet_id\": 22,\r\n            \"name\": \"Jerry\",\r\n            \"species_breed_id\": 23,\r\n            \"adoption_center_id\": 24,\r\n            \"age\": 4,\r\n            \"weight\": 50,\r\n            \"color\": \"brown\",\r\n            \"sex\": \"male\",\r\n            \"trainability\": \"hard\"\r\n        },\r\n        {\r\n            \"adoptable_pet_id\": 23,\r\n            \"name\": \"Jim\",\r\n            \"species_breed_id\": 22,\r\n            \"adoption_center_id\": 23,\r\n            \"age\": 10,\r\n            \"weight\": 20,\r\n            \"color\": \"white\",\r\n            \"sex\": \"male\",\r\n            \"trainability\": \"easy\"\r\n        },\r\n        {\r\n            \"adoptable_pet_id\": 24,\r\n            \"name\": \"Jan\",\r\n            \"species_breed_id\": 24,\r\n            \"adoption_center_id\": 22,\r\n            \"age\": 7,\r\n            \"weight\": 12,\r\n            \"color\": \"white\",\r\n            \"sex\": \"female\",\r\n            \"trainability\": \"easy\"\r\n        }\r\n    ]\r\n}"
+				}
+			]
+		},
+		{
+			"name": "Adoptable Pet by ID",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"  pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "https://adoptapet.me/api/adoptable-pets/{id}",
+					"protocol": "https",
+					"host": [
+						"adoptapet",
+						"me"
+					],
+					"path": [
+						"api",
+						"adoptable-pets",
+						"{id}"
+					]
+				},
+				"description": "Adoptable Pet by ID"
+			},
+			"response": [
+				{
+					"name": "Information about Adoptable Pet with give ID",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/adoptable-pets/23",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"adoptable-pets",
+								"23"
+							]
+						}
+					},
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"adoptable_pet_id\": 23,\r\n    \"name\": Jim,\r\n    \"species_breed_id\": 22,\r\n    \"adoption_center_id\": 23,\r\n    \"age\": 10,\r\n    \"weight\": 20,\r\n    \"color\": white,\r\n    \"sex\": female,\r\n    \"trainability\": easy\r\n}"
+				},
+				{
+					"name": "Not Found Error",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://adoptapet.me/api/adoptable-pets/10002",
+							"protocol": "https",
+							"host": [
+								"adoptapet",
+								"me"
+							],
+							"path": [
+								"api",
+								"adoptable-pets",
+								"10002"
+							]
+						}
+					},
+					"status": "Not Found",
+					"code": 404,
+					"_postman_previewlanguage": "Text",
+					"header": null,
+					"cookie": [],
+					"body": "{\r\n    \"error\": \"-1 not found\"\r\n}"
+				}
+			]
+		}
+	]
+}
