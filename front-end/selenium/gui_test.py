@@ -143,6 +143,35 @@ def test_ap_filter():
     # field.submit()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
 
+# 12
+def test_sort() :
+    print("starting test_sort")
+    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[6]/div/div/div[1]/div[2]/input")
+    field.send_keys("Name")
+    field.send_keys(Keys.RETURN)
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+
+# 13
+def test_search() :
+    print("starting test_search")
+    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    field = driver.find_element()
+    search_btn = driver.find_element(By.LINK_TEXT, "Search")
+    search_btn.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/form/div/input")
+    field.send_keys("female")
+    submit = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button")
+    submit.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+
+
+
 # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]
 # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div
 
