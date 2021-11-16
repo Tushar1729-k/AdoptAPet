@@ -1,6 +1,6 @@
 import React from 'react'
 import {  useState, useEffect } from 'react'
-import { Row, Col, Card, ListGroup, Dropdown, FormControl } from 'react-bootstrap'
+import { Row, Col, Card, ListGroup } from 'react-bootstrap'
 import Select from 'react-select'
 import { Link } from "react-router-dom"
 import pets from '../Data/AnimalsData.json'
@@ -15,6 +15,7 @@ const PetsModelPage = ({fetchPage}) => {
     const [isLoading, setIsLoading] = useState(false)
     const [filterQueries, setFilterQueries] = useState([])
     const [queryString, setQueryString] = useState("")
+    const [options, setOptions] = useState([])
 
     const fetchPets = async (query) => {
         setIsLoading(true)
@@ -33,20 +34,21 @@ const PetsModelPage = ({fetchPage}) => {
         temp.unshift({value: val, label: "None", type: val})
         return temp
     }
-    let colors = allPets.map((el) => el.color)
-    colors = filterOptions(colors, 'color')
-    let sexes = allPets.map((el) => el.sex)
-    sexes = filterOptions(sexes, 'sex')
-    let breeds = allPets.map((el) => el.species_breed.breed_name)
-    breeds = filterOptions(breeds, 'breeds')
-    const options = [
-        breeds,
-        sexes,
-        colors
-    ]
-    const optionLabels = ['Breed', 'Sex', 'Color']
+    const fetchOptions = async () => {
+        const colors = await axios.get(`https://api.adoptapet.me/ap?colors`)
+        const breeds = await axios.get(`https://api.adoptapet.me/ap?breednames`)
+        let tempColors = colors.data.page.map((el) => el.color)
+        tempColors.sort()
+        let tempBreeds = breeds.data.page.map((el) => el.breed_name)
+        tempBreeds.sort()
+        let colorOptions = filterOptions(tempColors, "color")
+        let breedOptions = filterOptions(tempBreeds, "breeds")
+        setOptions([breedOptions, colorOptions])
+    }
+    const optionLabels = ['Breed', 'Color']
     useEffect(() => {
         fetchPets(`page=1`)
+        fetchOptions()
     }, [])
     const paginate = (num) => {
         setCurrentPage(num)
@@ -106,7 +108,7 @@ const PetsModelPage = ({fetchPage}) => {
                 </Col>
             </Row>
             <Row style={{paddingBottom: '2vh'}}>
-            {Array.from({length: 3}).map((_, idx) => (
+            {Array.from({length: 2}).map((_, idx) => (
                     <Col key={idx}>
                         <h6>{optionLabels[idx]}</h6>
                         <Select options={options[idx]} defaultValue="Name" isSearchable={true}
@@ -115,6 +117,14 @@ const PetsModelPage = ({fetchPage}) => {
                         />
                     </Col>
                 ))}
+                <Col>
+                    <h6>Sex</h6>
+                    <Select options={[{value: 'sex1', label: 'None', type: 'sex'}, {value: 'sex2', label: 'Male', type: 'sex'}, {value: 'sex3', label: 'Female', type: 'sex'}]} 
+                        defaultValue="Name" isSearchable={true}
+                        onChange={(option) => fetchFilteredResults(option, 'sex')}
+                        isClearable={true}
+                    />
+                </Col>
                 <Col>
                     <h6>Age</h6>
                     <Select options={[{value: 'age1', label: 'None', type: 'age'}, {value: 'age2', label: 'Baby', type: 'age'}, {value: 'age3', label: 'Young', type: 'age'}, {value: 'age4', label: 'Adult', type: 'age'}, {value: 'age5', label: 'Senior', type: 'age'}]} 
@@ -134,7 +144,7 @@ const PetsModelPage = ({fetchPage}) => {
                 <Col>
                     <h6>Sort(Asc.)</h6>
                     <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Name', type: 'sort'}, {value: 'sort3', label: 'Age', type: 'sort'},
-                        {value: 'sort4', label: 'Size', type: 'sort'}, {value: 'sort5', label: 'Color', type: 'sort'}, {value: 'sort6', label: 'Sex', type: 'sort'}]} 
+                        {value: 'sort4', label: 'Size', type: 'sort'}, {value: 'sort5', label: 'Color', type: 'sort'}]} 
                         defaultValue="Name" isSearchable={true}
                         onChange={(option) => fetchFilteredResults(option)}
                         isClearable={true}
@@ -148,12 +158,12 @@ const PetsModelPage = ({fetchPage}) => {
                         <Card>
                             <img variant="top" src={pet.pic_url} style={{width: '100%', height: '400px'}} />
                             <Card.Body style={{backgroundColor: "#00008b", color: "white"}}>
-                            <Card.Title style={{fontSize: '4vh'}}>{pet.name}</Card.Title>
+                            <Card.Title style={{fontSize: '4vh'}}>{pet.name} ({pet.sex})</Card.Title>
                             <Card.Subtitle style={{fontSize: '2vh'}} className="mb-2 text-muted">{pet.species_breed.breed_name}</Card.Subtitle>
                             <ListGroup horizontal>
-                            <ListGroup.Item>Sex : {pet.sex}</ListGroup.Item>
-                            <ListGroup.Item>Age : {pet.age != "" ? pets[idx].age : "Not Available"}</ListGroup.Item>
-                            <ListGroup.Item>Color : {pet.color != "" ? pets[idx].color : "Exact Color NA"}</ListGroup.Item>
+                            <ListGroup.Item>Size : {pet.size_group != "" ? pet.size_group : "Not Available"}</ListGroup.Item>
+                            <ListGroup.Item>Age : {pet.age != "" ? pet.age : "Not Available"}</ListGroup.Item>
+                            <ListGroup.Item>Color : {pet.color != "" ? pet.color : "Exact Color NA"}</ListGroup.Item>
                             </ListGroup>
                             </Card.Body>
                         </Card>
