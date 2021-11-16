@@ -131,9 +131,8 @@ const SpeciesModelPage = ({fetchPage}) => {
                     />
                 </Col>
                 <Col>
-                    <h6>Sort(Asc.)</h6>
-                    <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Species', type: 'sort'}, {value: 'sort3', label: 'Breed', type: 'sort'},
-                        {value: 'sort4', label: 'Life_Exp', type: 'sort'}, {value: 'sort5', label: 'Weight', type: 'sort'}, {value: 'sort6', label: 'Origin', type: 'sort'}]} 
+                    <h6>Sort Breeds(Asc.)</h6>
+                    <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Breed', type: 'sort'}]} 
                         defaultValue="Name" isSearchable={true}
                         isClearable={true}
                         onChange={(filter) => fetchFilteredResults(filter, 'sort')}
