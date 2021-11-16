@@ -9,45 +9,45 @@ cache:
   paths:
     - front-end/node_modules/
 
-build_front_end:
-  stage: build
-  script:
-    - cd front-end
-    - npm install
-    - CI=false npm run-script build
+# build_front_end:
+#   stage: build
+#   script:
+#     - cd front-end
+#     - npm install
+#     - CI=false npm run-script build
 
-test_jest:
-  stage: test
-  image:
-    name: mcgenius/pp_mocha
-    entrypoint: [""]
-  script:
-    - cd front-end
-    - npm install
-    - npm test
+# test_jest:
+#   stage: test
+#   image:
+#     name: mcgenius/pp_mocha
+#     entrypoint: [""]
+#   script:
+#     - cd front-end
+#     - npm install
+#     - npm test
 
-test_postman:
-  image:
-    name: postman/newman_alpine33
-    entrypoint: [""]
-  script:
-    - cd back-end
-    - newman run Postman.json
+# test_postman:
+#   image:
+#     name: postman/newman_alpine33
+#     entrypoint: [""]
+#   script:
+#     - cd back-end
+#     - newman run Postman.json
 
-test_python:
-  stage: test
-  only:
-    refs:
-      - branches
-    variables:
-      - $CI_COMMIT_REF_PROTECTED == "true"
-  image:
-    name: mcgenius/pp_python
-    entrypoint: [""]
-  script:
-    - cd back-end
-    - pip install -r requirements.txt
-    - python tests.py
+# test_python:
+#   stage: test
+#   only:
+#     refs:
+#       - branches
+#     variables:
+#       - $CI_COMMIT_REF_PROTECTED == "true"
+#   image:
+#     name: mcgenius/pp_python
+#     entrypoint: [""]
+#   script:
+#     - cd back-end
+#     - pip install -r requirements.txt
+#     - python tests.py
 
 test_selenium:
   stage: test
