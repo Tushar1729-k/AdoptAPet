@@ -9,22 +9,22 @@ cache:
   paths:
     - front-end/node_modules/
 
-build_front_end:
-  stage: build
-  script:
-    - cd front-end
-    - npm install
-    - CI=false npm run-script build
+# build_front_end:
+#   stage: build
+#   script:
+#     - cd front-end
+#     - npm install
+#     - CI=false npm run-script build
 
-test_jest:
-  stage: test
-  image:
-    name: mcgenius/pp_mocha
-    entrypoint: [""]
-  script:
-    - cd front-end
-    - npm install
-    - npm test
+# test_jest:
+#   stage: test
+#   image:
+#     name: mcgenius/pp_mocha
+#     entrypoint: [""]
+#   script:
+#     - cd front-end
+#     - npm install
+#     - npm test
 
 test_postman:
   image:
@@ -34,30 +34,30 @@ test_postman:
     - cd back-end
     - newman run Postman.json
 
-test_python:
-  stage: test
-  only:
-    refs:
-      - branches
-    variables:
-      - $CI_COMMIT_REF_PROTECTED == "true"
-  image:
-    name: mcgenius/pp_python
-    entrypoint: [""]
-  script:
-    - cd back-end
-    - pip install -r requirements.txt
-    - python tests.py
+# test_python:
+#   stage: test
+#   only:
+#     refs:
+#       - branches
+#     variables:
+#       - $CI_COMMIT_REF_PROTECTED == "true"
+#   image:
+#     name: mcgenius/pp_python
+#     entrypoint: [""]
+#   script:
+#     - cd back-end
+#     - pip install -r requirements.txt
+#     - python tests.py
 
-test_selenium:
-  stage: test
-  services:
-    - selenium/standalone-chrome
-  image: python:3.9-slim
-  before_script:
-    - python3 -m pip install -r front-end/selenium/requirements.txt
-  script:
-    - python3 -m pytest
+# test_selenium:
+#   stage: test
+#   services:
+#     - selenium/standalone-chrome
+#   image: python:3.9-slim
+#   before_script:
+#     - python3 -m pip install -r front-end/selenium/requirements.txt
+#   script:
+#     - python3 -m pytest
 
 # deploy_develop: ??? https://github.com/forbesye/cs373/blob/main/Flask_AWS_Deploy.md
 
