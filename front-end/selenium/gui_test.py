@@ -1,3 +1,4 @@
+from selenium.webdriver.remote.webelement import WebElement
 import pytest
 from selenium import webdriver
 from selenium.webdriver import Remote
@@ -138,7 +139,8 @@ def test_ap_filter():
     field = driver.find_element(By.XPATH, "/html/body/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input")
 
     field.send_keys("Beagle")
-    field.submit()
+    WebElement.send_keys(Keys.RETURN)
+    # field.submit()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
 
 # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]
