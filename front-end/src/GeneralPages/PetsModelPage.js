@@ -30,6 +30,7 @@ const PetsModelPage = ({fetchPage}) => {
         temp = temp.map((el) => {
             return {value: `${val}${el}`, label: el, type: val}
         })
+        temp.unshift({value: val, label: "None", type: val})
         return temp
     }
     let colors = allPets.map((el) => el.color)

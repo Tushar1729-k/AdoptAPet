@@ -31,7 +31,7 @@ const SpeciesModelPage = ({fetchPage}) => {
         temp = temp.map((el) => {
             return {value: `${val}${el}`, label: el, type: val}
         })
-        temp.unshift({value: val, label: "None"})
+        temp.unshift({value: val, label: "None", type: val})
         return temp
     }
 
@@ -128,14 +128,6 @@ const SpeciesModelPage = ({fetchPage}) => {
                         isSearchable={true}
                         isClearable={true}
                         onChange={(option) => fetchFilteredResults(option, 'species')}
-                    />
-                </Col>
-                <Col>
-                    <h6>Size</h6>
-                    <Select options={[{value: 'size1', label: 'None', type: 'size'}, {value: 'size2', label: 'Small', type: 'size'}, {value: 'size3', label: 'Medium', type: 'size'}, {value: 'size4', label: 'Large', type: 'size'}]} 
-                        defaultValue="Name" isSearchable={true}
-                        isClearable={true}
-                        onChange={(filter) => fetchFilteredResults(filter, 'size')}
                     />
                 </Col>
                 <Col>

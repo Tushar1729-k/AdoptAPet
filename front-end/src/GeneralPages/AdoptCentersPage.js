@@ -30,7 +30,7 @@ const AdoptCentersPage = ({fetchPage}) => {
         temp = temp.map((el) => {
             return {value: `${val}${el}`, label: el, type: val}
         })
-        temp.unshift({value: val, label: "None"})
+        temp.unshift({value: val, label: "None", type: val})
         return temp
     }
 
@@ -135,10 +135,9 @@ const AdoptCentersPage = ({fetchPage}) => {
                     />
                 </Col>
                 <Col>
-                    <h6>Sort(Asc.)</h6>
-                    <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Species', type: 'sort'}, {value: 'sort3', label: 'Breed', type: 'sort'},
-                        {value: 'sort4', label: 'Life_Exp', type: 'sort'}, {value: 'sort5', label: 'Weight', type: 'sort'}, {value: 'sort6', label: 'Origin', type: 'sort'}]} 
-                        defaultValue="Name" isSearchable={true}
+                    <h6>Sort Name(Asc.)</h6>
+                    <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Name', type: 'sort'}]} 
+                        isSearchable={true}
                         isClearable={true}
                         onChange={(filter) => fetchFilteredResults(filter, 'sort')}
                     />
@@ -152,7 +151,7 @@ const AdoptCentersPage = ({fetchPage}) => {
                     <th>City</th>
                     <th>State</th>
                     <th>Zip</th>
-                    <th>Services</th>
+                    <th>Center Type</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -164,7 +163,7 @@ const AdoptCentersPage = ({fetchPage}) => {
                     <td>{center.city}</td>
                     <td>{center.state}</td>
                     <td>{center.zipcode}</td>
-                    <td>{center.services}</td>
+                    <td>{center.type}</td>
                     </tr>
                 ))}
                 </tbody>
