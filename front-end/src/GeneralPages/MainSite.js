@@ -1,8 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Navbar, Container, Nav } from 'react-bootstrap'
+import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
+import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus } from "react-icons/fa"
 import HomePage from "./HomePage"
 import InstancePage from "../InstancePages/PetsInstanceTemplate"
 import AdoptInstanceTemplate from '../InstancePages/AdoptInstanceTemplate'
@@ -128,18 +129,44 @@ const MainSite = () => {
         fetchData(num)
     }
 
+    useEffect(() => {
+        const localPetsData = localStorage.getItem('petsData')
+        const localCD = localStorage.getItem('centersData')
+        const localBD = localStorage.getItem('breedsData')
+
+        if (localPetsData) {
+            setPetsData([localPetsData])
+        }
+        if (localCD) {
+            setCentersData([localCD])
+        }
+        if (localBD) {
+            setBreedsData([localBD])
+        }
+      }, [])
+      
+
     return (
         <div>
             <div style={{paddingBottom: '10vh'}}>
-            <Navbar bg="primary" variant="dark" fixed="top">
+            <Navbar variant="dark" fixed="top" style={{backgroundColor: "#00008b"}}>
                 <Container>
-                <Navbar.Brand href="/">Adopt A Pet</Navbar.Brand>
+                <Navbar.Brand href="/">
+                    <Row>
+                        <Col>
+                            <FaDog/> 
+                        </Col>
+                        <Col>
+                            Adopt A Pet
+                        </Col>
+                    </Row>
+                </Navbar.Brand>
                 <Nav className="me-auto">
-                <Nav.Link href="/">Home</Nav.Link>
-                <Nav.Link href="/about">About</Nav.Link>
-                <Nav.Link href="/sbmodel">Species</Nav.Link>
-                <Nav.Link href="/apmodel">Pets</Nav.Link>
-                <Nav.Link href="/acmodel">Adoption Centers</Nav.Link>
+                <Nav.Link href="/"><FaHome/> Home</Nav.Link>
+                <Nav.Link href="/about"><FaInfoCircle/> About</Nav.Link>
+                <Nav.Link href="/sbmodel"><FaCat/> Species</Nav.Link>
+                <Nav.Link href="/apmodel"><FaPaw/> Pets</Nav.Link>
+                <Nav.Link href="/acmodel"><FaCartPlus/> Adoption Centers</Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>
@@ -169,7 +196,7 @@ const MainSite = () => {
                     {petsData.map((pet, idx) => (
                         <Route key={idx} exact path={`/apmodel/${pet.api_id}`}>
                             <InstancePage 
-                                attributes={{ breed: pet.species_breed.breed_name, name: pet.name, 
+                                attributes={{ breed: "Breed", name: pet.name, 
                                               age: pet.age, color: pet.color, sex: pet.sex,
                                               description: pet.desc, imgSrc: pet.pic_url,
                                               adoptCenter: pet.center, speciesBreeds: pet.species_breed }}
