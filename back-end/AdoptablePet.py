@@ -65,7 +65,9 @@ def filter_adoptablepets(pet_query, queries) :
   return pet_query
 
 def return_all_breeds(pet_query, queries) :
-  return pet_query.with_entities(AdoptablePet.center_number)
+  # return pet_query.with_entities(AdoptablePet.species_breed)
+  return pet_query.join(BreedsSpecies).with_entities(BreedsSpecies.breed_name)
+
 def return_all_colors(pet_query, queries) :
   return pet_query.with_entities(AdoptablePet.color)
 
