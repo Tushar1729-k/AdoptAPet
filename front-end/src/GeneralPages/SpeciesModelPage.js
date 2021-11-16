@@ -1,7 +1,8 @@
 import React from 'react'
-import { Row, Table, Col, Button } from 'react-bootstrap'
+import { Row, Table, Col, Button, Tabs, Tab, Form } from 'react-bootstrap'
 import {  useState, useEffect } from 'react'
 import Select from 'react-select'
+import Highlighter from "react-highlight-words"
 import Species from '../Data/Species.json'
 import Breeds from '../Data/breeds2.json'
 import Paginate from '../Components/Pagination'
@@ -17,6 +18,7 @@ const SpeciesModelPage = ({fetchPage}) => {
     const [isLoading, setIsLoading] = useState(false)
     const [currentPage, setCurrentPage] = useState(1)
     const [options, setOptions] = useState([])
+    const [searchQuery, setSearchQuery] = useState("")
 
     const fetchBreeds = async (query) => {
         setIsLoading(true)
@@ -100,6 +102,10 @@ const SpeciesModelPage = ({fetchPage}) => {
             }
         }
     }
+    const fetchSearchResults = () => {
+        console.log("query", `q=${searchQuery}`)
+        fetchBreeds(`q=${searchQuery}`)
+    }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row xs={1}>
@@ -113,31 +119,52 @@ const SpeciesModelPage = ({fetchPage}) => {
                 </Col>
             </Row>
             <Row style={{paddingBottom: '2vh'}}>
-            {Array.from({length: 3}).map((_, idx) => (
-                    <Col key={idx}>
-                        <h6>{optionLabels[idx]}</h6>
-                        <Select options={options[idx]} isSearchable={true}
-                            onChange={(filter) => fetchFilteredResults(filter, options[idx][0].type)}
+            <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
+                <Tab eventKey="sort" title="Sort">
+                    <Row>
+                        {Array.from({length: 3}).map((_, idx) => (
+                        <Col key={idx}>
+                            <h6>{optionLabels[idx]}</h6>
+                            <Select options={options[idx]} isSearchable={true}
+                                onChange={(filter) => fetchFilteredResults(filter, options[idx][0].type)}
+                                isClearable={true}
+                            />
+                        </Col>
+                    ))}
+                    <Col>
+                        <h6>Species</h6>
+                        <Select options={[{value: 'species1', label: 'None', type: 'species'}, {value: 'species2', label: 'Cat', type: 'species'}, {value: 'species3', label: 'Dog', type: 'species'}]} 
+                            isSearchable={true}
                             isClearable={true}
+                            onChange={(option) => fetchFilteredResults(option, 'species')}
                         />
                     </Col>
-                ))}
-                <Col>
-                    <h6>Species</h6>
-                    <Select options={[{value: 'species1', label: 'None', type: 'species'}, {value: 'species2', label: 'Cat', type: 'species'}, {value: 'species3', label: 'Dog', type: 'species'}]} 
-                        isSearchable={true}
-                        isClearable={true}
-                        onChange={(option) => fetchFilteredResults(option, 'species')}
-                    />
-                </Col>
-                <Col>
-                    <h6>Sort Breeds(Asc.)</h6>
-                    <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Breed', type: 'sort'}]} 
-                        defaultValue="Name" isSearchable={true}
-                        isClearable={true}
-                        onChange={(filter) => fetchFilteredResults(filter, 'sort')}
-                    />
-                </Col>
+                    <Col>
+                        <h6>Sort Breeds(Asc.)</h6>
+                        <Select options={[{value: 'sort1', label: 'None', type: 'sort'}, {value: 'sort2', label: 'Breed', type: 'sort'}]} 
+                            defaultValue="Name" isSearchable={true}
+                            isClearable={true}
+                            onChange={(filter) => fetchFilteredResults(filter, 'sort')}
+                        />
+                    </Col>
+                    </Row>
+                </Tab>
+                <Tab eventKey="search" title="Search">
+                <Form>
+                    <Form.Group className="mb-3" controlId="formBasicSearch">
+                        <Form.Label>Email address</Form.Label>
+                        <Form.Control type="search" placeholder="Enter query"
+                            onChange={e => setSearchQuery(e.target.value)}
+                        />
+                    </Form.Group>
+                </Form>
+                    <div style={{paddingTop: '2vh'}}>
+                        <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
+                            Submit
+                        </Button>
+                    </div>
+                </Tab>
+            </Tabs>
             </Row>
             <div style={{ paddingTop: '2vh'}}>
             <Table striped bordered hover size="sm" responsive>
@@ -153,13 +180,43 @@ const SpeciesModelPage = ({fetchPage}) => {
                 <tbody>
                     {allBreeds.map((breed, index) => (
                     <tr key={index}>
-                    <td>{breed.species_name}</td>
+                    <td>
+                            <Highlighter
+                                searchWords={[searchQuery]}
+                                autoEscape={true}
+                                textToHighlight={breed.species_name}
+                            />
+                    </td>
                     <Link to={`/sbmodel/${breed.api_id}`} style={{ textDecoration: 'none'}} onClick={() => fetchPage("sb", breed.api_id)}>
-                        <td>{breed.breed_name}</td>
+                        <td>
+                            <Highlighter
+                                searchWords={[searchQuery]}
+                                autoEscape={true}
+                                textToHighlight={breed.breed_name}
+                            />
+                        </td>
                     </Link>
-                    <td>{breed.life_span ? breed.life_span : "N/A"}</td>
-                    <td>{breed.weight ? breed.weight : "N/A"}</td>
-                    <td>{breed.origin ? breed.origin : "N/A"}</td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={breed.life_span ? breed.life_span : "N/A"}
+                        />
+                    </td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={breed.weight ? breed.weight : "N/A"}
+                        />
+                    </td>
+                    <td>
+                        <Highlighter
+                            searchWords={[searchQuery]}
+                            autoEscape={true}
+                            textToHighlight={breed.origin ? breed.origin : "N/A"}
+                        />
+                    </td>
                     </tr>
                 ))}
                 </tbody>
