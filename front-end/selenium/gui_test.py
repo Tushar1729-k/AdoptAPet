@@ -118,3 +118,11 @@ def test_navbar_species_back():
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
     driver.back()
     assert driver.current_url == "https://www.adoptapet.me/"
+
+# 11
+def test_ap_filter():
+    print("starting test_ap_filter")
+    field = driver.find_element(By.ID, "react-select-3-input")
+    field.sendKeys("Beagle")
+    field.submit()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
