@@ -4,7 +4,6 @@ import { Row, Col, Card, ListGroup, Tabs, Tab, Form, Button } from 'react-bootst
 import Select from 'react-select'
 import Highlighter from "react-highlight-words"
 import { Link } from "react-router-dom"
-import pets from '../Data/AnimalsData.json'
 import Paginate from '../Components/Pagination'
 import axios from 'axios'
 import PropTypes from 'prop-types'

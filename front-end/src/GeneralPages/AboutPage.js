@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { Row, Col, Card, ListGroup } from 'react-bootstrap'
+import { Row, Col, Card, ListGroup, Tabs, Tab } from 'react-bootstrap'
 import TusharKohliImg from "./images/TusharKohliImg.jpg"
 import NanduVudumulaImg from "./images/NanduVudumulaImg.jpg"
 import SeanAujongImg from "./images/SeanAujongImg.jpg"
@@ -188,11 +188,11 @@ const About = () => {
 						return (
 							<Col key={teamMember}>
 								<Card>
-									<Card.Img variant="top" src={picture} style={{ width: '50%', height: '50%' }} />
+									<Card.Img variant="top" src={picture} style={{ width: '100%', height: '100%' }} />
 									<Card.Body>
 										<Card.Title style={{ fontSize: '4vh' }}>{name}</Card.Title>
 										<Card.Subtitle style={{ fontSize: '2vh' }} className="mb-2 text-muted">{role}</Card.Subtitle>
-										<ListGroup horizontal>
+										<ListGroup>
 											<ListGroup.Item>Bio : {bio}</ListGroup.Item>
 											<ListGroup.Item>Commits : {commits}</ListGroup.Item>
 											<ListGroup.Item>Issues : {issues}</ListGroup.Item>
@@ -211,37 +211,52 @@ const About = () => {
 				<div>
 				</div>
 			)}
+			<div style={{paddingTop: '4vh'}}>
+			<Card>
+				<Card.Header>
+					<h1>Gitlab Combined Data</h1>
+					<Row>
+						<Col>
+						<p>Total Commits: {groupCommits}</p>
+						</Col>
+						<Col>
+						<p>Total Issues: {groupIssues}</p>
+						</Col>
+						<Col>
+						<p>Total Tests: {groupTests}</p>
+						</Col>
+					</Row>
+				</Card.Header>
+			<Card.Body>
+			<Tabs defaultActiveKey="api" id="uncontrolled-tab-example" className="mb-3">
+				<Tab eventKey="api" title="APIs Used">
+					<p><a href="https://gitlab.com/api/v4/projects/29831002/repository/contributors" target="_blank" rel="noopener noreferrer">Git Repo Contributor API</a>: Provides team contribution info for the About page</p>
 
-			<h1>Gitlab Combined Data</h1>
-			<p>Total Commits: {groupCommits}</p>
-			<p>Total Issues: {groupIssues}</p>
-			<p>Total Tests: {groupTests}</p>
-			{/* <br /> */}
-			<a href="https://gitlab.com/10am-group-8/adopt-a-pet" target="_blank" rel="noopener noreferrer"><h1>GitLab Repo</h1></a>
-			<br></br>
-			<a href="https://documenter.getpostman.com/view/17710041/UUy38kte" target="_blank" rel="noopener noreferrer"><h1>API Documentation</h1></a>
-			<br />
-			<h1>APIs Used</h1>
-			<p><a href="https://gitlab.com/api/v4/projects/29831002/repository/contributors" target="_blank" rel="noopener noreferrer">Git Repo Contributor API</a>: Provides team contribution info for the About page</p>
-			{/* <br /> */}
-			<p><a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>: Provides aggregated data for Adoption Centers</p>
-			{/* <br /> */}
-			<p><a href="https://docs.thecatapi.com/" target="_blank" rel="noopener noreferrer">The Cat API</a>: Provides generic information about cat breeds</p>
-			{/* <br /> */}
-			<p><a href="https://docs.thedogapi.com/" target="_blank" rel="noopener noreferrer">The Dog API</a>: Provides generic information about dog breeds</p>
-			{/* <br /> */}
-			<p><a href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps API</a>: Provides information and graphics for provided locations (e.g. adoption centers)</p>
+					<p><a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>: Provides aggregated data for Adoption Centers</p>
 
-			<h1>Tools Used</h1>
-			<ul>
-				<li><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> - front-end framework by Facebook to design and update simple views</li>
-				<li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">React Bootstrap</a> - used for its prebuilt components like Card and Navbar</li>
-				<li><a href="https://aws.amazon.com/amplify/" target="_blank" rel="noopener noreferrer">AWS Amplify</a> - used to deploy our website and connect to GitLab repository</li>
-				<li><a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a> - used to mock up api requests and to document our api</li>
-				<li><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a> - used to host our code in a version control system</li>
-				<li><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">NameCheap</a> - used to purchase the domain and manage DNS records</li>
-			</ul>
+					<p><a href="https://docs.thecatapi.com/" target="_blank" rel="noopener noreferrer">The Cat API</a>: Provides generic information about cat breeds</p>
 
+					<p><a href="https://docs.thedogapi.com/" target="_blank" rel="noopener noreferrer">The Dog API</a>: Provides generic information about dog breeds</p>
+					<p><a href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps API</a>: Provides information and graphics for provided locations (e.g. adoption centers)</p>
+				</Tab>
+				<Tab eventKey="tool" title="Tools Used">
+				<ul>
+					<li><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> - front-end framework by Facebook to design and update simple views</li>
+					<li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">React Bootstrap</a> - used for its prebuilt components like Card and Navbar</li>
+					<li><a href="https://aws.amazon.com/amplify/" target="_blank" rel="noopener noreferrer">AWS Amplify</a> - used to deploy our website and connect to GitLab repository</li>
+					<li><a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a> - used to mock up api requests and to document our api</li>
+					<li><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a> - used to host our code in a version control system</li>
+					<li><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">NameCheap</a> - used to purchase the domain and manage DNS records</li>
+				</ul>
+				</Tab>
+				<Tab eventKey="link" title="Links">
+					<a href="https://gitlab.com/10am-group-8/adopt-a-pet" target="_blank" rel="noopener noreferrer"><h3>GitLab Repo</h3></a>
+					<a href="https://documenter.getpostman.com/view/17710041/UUy38kte" target="_blank" rel="noopener noreferrer"><h3>API Documentation</h3></a>
+				</Tab>
+			</Tabs>
+			</Card.Body>
+			</Card>
+			</div>
 		</div>
 	)
 }
