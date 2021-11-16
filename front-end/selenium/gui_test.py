@@ -160,7 +160,7 @@ def test_search() :
     pets = driver.find_element(By.LINK_TEXT, "Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    field = driver.find_element()
+    # field = driver.find_element()
     search_btn = driver.find_element(By.LINK_TEXT, "Search")
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
