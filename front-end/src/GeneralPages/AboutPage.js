@@ -188,7 +188,7 @@ const About = () => {
 						return (
 							<Col key={teamMember}>
 								<Card>
-									<Card.Img variant="top" src={picture} style={{ width: '100%', height: '400px' }} />
+									<Card.Img variant="top" src={picture} style={{ width: '50%', height: '50%' }} />
 									<Card.Body>
 										<Card.Title style={{ fontSize: '4vh' }}>{name}</Card.Title>
 										<Card.Subtitle style={{ fontSize: '2vh' }} className="mb-2 text-muted">{role}</Card.Subtitle>
