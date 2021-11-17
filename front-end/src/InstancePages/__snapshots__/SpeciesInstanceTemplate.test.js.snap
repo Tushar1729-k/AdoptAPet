@@ -183,22 +183,6 @@ exports[`Species Instance Page Properly Rendered 1`] = `
           <div
             style={
               Object {
-                "paddingLeft": "27.5vw",
-              }
-            }
-          >
-            <button
-              className="btn btn-primary"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
-            >
-              Click to see Origin Country
-            </button>
-          </div>
-          <div
-            style={
-              Object {
                 "height": "100vh",
                 "width": "100vw",
               }

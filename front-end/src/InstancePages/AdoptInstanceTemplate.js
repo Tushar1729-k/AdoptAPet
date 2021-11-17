@@ -15,16 +15,6 @@ const AdoptInstanceTemplate = ({attributes, fetchPage}) => {
         fetchPage(type, num)
         history.push(path)
     }
-    useEffect(() => {
-        window.addEventListener("beforeunload", alertUser);
-        return () => {
-          window.removeEventListener("beforeunload", alertUser);
-        };
-      }, []);
-      const alertUser = (e) => {
-        e.preventDefault();
-        e.returnValue = "";
-      }
     return (
         <div>
             <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>

@@ -122,6 +122,11 @@ const AdoptCentersPage = ({fetchPage}) => {
     const fetchSearchResults = () => {
         fetchCenters(`q=${searchQuery}`)
     }
+    const handleKeyDown = (event) => {
+        if (event.key == "Enter") {
+            fetchSearchResults()
+        }
+    }
     return (
         <div style={{paddingLeft: '10vw', paddingRight: '10vw'}}>
             <Row xs={1}>
@@ -166,14 +171,12 @@ const AdoptCentersPage = ({fetchPage}) => {
                     </Row>
                 </Tab>
                 <Tab eventKey="search" title="Search">
-                <Form>
-                    <Form.Group className="mb-3" controlId="formBasicSearch">
-                        <Form.Label>Adoption Centers Search</Form.Label>
-                        <Form.Control type="search" placeholder="Enter query"
-                            onChange={e => setSearchQuery(e.target.value)}
+                <div style={{width: "50vw"}}>
+                        <h3>Adoption Center Search</h3>
+                        <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown} 
+                            placeholder="Enter query"
                         />
-                    </Form.Group>
-                </Form>
+                    </div>
                     <div style={{paddingTop: '2vh'}}>
                         <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
                             Submit

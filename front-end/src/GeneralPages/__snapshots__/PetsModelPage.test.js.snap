@@ -1073,27 +1073,23 @@ exports[`Pets Model Page Properly Rendered 1`] = `
         className="tab-pane"
         id="uncontrolled-tab-example-tabpane-search"
       >
-        <form
-          className=""
+        <div
+          style={
+            Object {
+              "width": "50vw",
+            }
+          }
         >
-          <div
-            className="mb-3"
-          >
-            <label
-              className="form-label"
-              htmlFor="formBasicSearch"
-            >
-              Adoption Centers Search
-            </label>
-            <input
-              className="form-control"
-              id="formBasicSearch"
-              onChange={[Function]}
-              placeholder="Enter query"
-              type="search"
-            />
-          </div>
-        </form>
+          <h3>
+            Pet Search
+          </h3>
+          <input
+            onChange={[Function]}
+            onKeyPress={[Function]}
+            placeholder="Enter query"
+            type="text"
+          />
+        </div>
         <div
           style={
             Object {
