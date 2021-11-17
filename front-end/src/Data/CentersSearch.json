@@ -1,0 +1,265 @@
+[
+    {
+      "api_id": 12,
+      "city": "Baltimore",
+      "email": "catrescueofmd@mindspring.com",
+      "id": 1,
+      "lat": 39.26750183105469,
+      "lon": -76.74459838867188,
+      "name": "Cat Rescue of Maryland, Inc.",
+      "pets": [
+        {
+          "api_id": 1019366,
+          "id": 1,
+          "name": "Handsome Boy"
+        },
+        {
+          "api_id": 1019369,
+          "id": 2,
+          "name": "Hulagan"
+        },
+        {
+          "api_id": 104592,
+          "id": 3,
+          "name": "Scotty"
+        },
+        {
+          "api_id": 10530165,
+          "id": 4,
+          "name": "Pretty Boy"
+        },
+        {
+          "api_id": 10530168,
+          "id": 5,
+          "name": "Indy (Independence)"
+        }
+      ],
+      "services": "",
+      "species_breed": [
+        {
+          "api_id": 6,
+          "breed_name": "Applehead Siamese",
+          "id": 6,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        },
+        {
+          "api_id": 24,
+          "breed_name": "Domestic Long Hair",
+          "id": 23,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        },
+        {
+          "api_id": 35,
+          "breed_name": "Domestic Short Hair",
+          "id": 25,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        },
+        {
+          "api_id": 63,
+          "breed_name": "Tabby",
+          "id": 47,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        }
+      ],
+      "state": "MD",
+      "street": "",
+      "type": "Rescue",
+      "zipcode": "21228"
+    },
+    {
+      "api_id": 13,
+      "city": "Bowie",
+      "id": 2,
+      "lat": 39.00640106201172,
+      "lon": -76.77950286865234,
+      "name": "Prince Georges Feral Friends, SPCA, Inc.",
+      "pets": [
+        {
+          "api_id": 219597,
+          "id": 6,
+          "name": "Duncan"
+        },
+        {
+          "api_id": 320,
+          "id": 7,
+          "name": "Corky"
+        },
+        {
+          "api_id": 321,
+          "id": 8,
+          "name": "Babyface"
+        },
+        {
+          "api_id": 324,
+          "id": 9,
+          "name": "Teddy"
+        },
+        {
+          "api_id": 325,
+          "id": 10,
+          "name": "May"
+        }
+      ],
+      "phone": "(301) 262-6452",
+      "services": "",
+      "species_breed": [
+        {
+          "api_id": 35,
+          "breed_name": "Domestic Short Hair",
+          "id": 25,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        }
+      ],
+      "state": "MD",
+      "street": "P.O. Box 1036",
+      "type": "Shelter",
+      "zipcode": "20718"
+    },
+    {
+      "api_id": 16,
+      "city": "Hollywood",
+      "email": "info@animalrelieffund.org",
+      "id": 3,
+      "lat": 38.349998474121094,
+      "lon": -76.57389831542969,
+      "name": "Animal Relief Fund",
+      "pets": [
+        {
+          "api_id": 100000,
+          "id": 11,
+          "name": "Shyann"
+        },
+        {
+          "api_id": 100001,
+          "id": 12,
+          "name": "Shiloh"
+        },
+        {
+          "api_id": 100005,
+          "id": 13,
+          "name": "Pamela"
+        },
+        {
+          "api_id": 10000872,
+          "id": 14,
+          "name": "Ms Slate"
+        },
+        {
+          "api_id": 100024,
+          "id": 15,
+          "name": "Andre"
+        }
+      ],
+      "services": "",
+      "species_breed": [
+        {
+          "api_id": 24,
+          "breed_name": "Domestic Long Hair",
+          "id": 23,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        },
+        {
+          "api_id": 29,
+          "breed_name": "Domestic Medium Hair",
+          "id": 24,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        },
+        {
+          "api_id": 35,
+          "breed_name": "Domestic Short Hair",
+          "id": 25,
+          "species_name": "Cat",
+          "youth_name": "Kitten"
+        },
+        {
+          "api_id": 142,
+          "breed_name": "German Shepherd Dog",
+          "id": 122,
+          "species_name": "Dog",
+          "youth_name": "Puppy"
+        }
+      ],
+      "state": "MD",
+      "street": "P.O. Box 10",
+      "type": "Rescue",
+      "zipcode": "20636"
+    },
+    {
+      "api_id": 22,
+      "city": "New Castle DE",
+      "email": "lnfdogs@gmail.com",
+      "id": 4,
+      "lat": 39.63819885253906,
+      "lon": -75.58719635009766,
+      "name": "LNF Dog Rescue Adoption Center",
+      "pets": [
+        {
+          "api_id": 10150548,
+          "id": 16,
+          "name": "Morgan/ADOPTED!"
+        },
+        {
+          "api_id": 10151914,
+          "id": 17,
+          "name": "Paige/SAGE Adopted !!"
+        },
+        {
+          "api_id": 10173356,
+          "id": 18,
+          "name": "Dixie/ADOPTED!"
+        },
+        {
+          "api_id": 10173857,
+          "id": 19,
+          "name": "Bon-Bon/PRINCESS ADOPTED !!"
+        },
+        {
+          "api_id": 10174296,
+          "id": 20,
+          "name": "Star/Sarah-Adopted!"
+        }
+      ],
+      "services": "adoption of dogs",
+      "species_breed": [
+        {
+          "api_id": 90,
+          "breed_name": "Beagle",
+          "id": 70,
+          "species_name": "Dog",
+          "youth_name": "Puppy"
+        },
+        {
+          "api_id": 118,
+          "breed_name": "Chihuahua",
+          "id": 98,
+          "species_name": "Dog",
+          "youth_name": "Puppy"
+        },
+        {
+          "api_id": 127,
+          "breed_name": "Dachshund",
+          "id": 107,
+          "species_name": "Dog",
+          "youth_name": "Puppy"
+        },
+        {
+          "api_id": 168,
+          "breed_name": "Miniature Pinscher",
+          "id": 148,
+          "species_name": "Dog",
+          "youth_name": "Puppy"
+        }
+      ],
+      "state": "DE",
+      "street": "",
+      "type": "Rescue",
+      "zipcode": "19720"
+    }
+  ]

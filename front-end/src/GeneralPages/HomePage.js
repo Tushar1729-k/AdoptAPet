@@ -4,28 +4,16 @@ import DogHomePage from "../Images/dog_home_page.jpg"
 import SpeciesBreedHomePage from "../Images/species_breeds_home.jpg"
 import AdoptableHomePage from "../Images/adoptable_model_home.jpg"
 import AdoptionCenterHomePage from "../Images/adoption_center_model_home.jpg"
+import CarouselHomePage from '../Components/CarouselHomePage'
 import { Link } from "react-router-dom";
 
 const HomePage = () => {
     return (
-        <div style={{paddingLeft: "5vw", paddingRight: "5vw"}}>
+        <div>
             <div>
-            <Card>
-                <Card.Body>
-                <Card.Text>
-                    <Row>
-                        <Col></Col>
-                        <Col lg={6} xl={6}>
-                            <h1>Give a home to these animals</h1>
-                        </Col>
-                        <Col></Col>
-                    </Row>
-                </Card.Text>
-                </Card.Body>
-                <Card.Img variant="bottom" src={DogHomePage} />
-            </Card>
+                <CarouselHomePage />
             </div>
-            <div style={{paddingTop: "4vh"}}>
+            <div style={{paddingTop: "4vh", paddingLeft: "4vw", paddingRight: "4vw"}}>
             <CardGroup>
                 <Card>
                     <Link to="/sbmodel" style={{ textDecoration: 'none'}}>
