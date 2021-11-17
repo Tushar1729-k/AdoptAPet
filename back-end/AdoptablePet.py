@@ -134,9 +134,9 @@ def search_adoptablepets(q, pet_query) :
 
   searches = []
   for term in terms:
-    searches.append(AdoptablePet.sex.contains(term))
-    searches.append(AdoptablePet.age.contains(term))
-    searches.append(AdoptablePet.size_group.contains(term))
+    searches.append(func.lower(AdoptablePet.sex).contains(func.lower(term)))
+    searches.append(func.lower(AdoptablePet.age).contains(func.lower(term)))
+    searches.append(func.lower(AdoptablePet.size_group).contains(func.lower(term)))
     # searches.append(pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==term))
     # searches.append(
     #   AdoptablePet.center.has(
@@ -148,7 +148,7 @@ def search_adoptablepets(q, pet_query) :
     #   ))
     print(len(searches))
     # print('tuple', *tuple(searches))
-    searches.append(AdoptablePet.color.contains(term))
+    searches.append(func.lower(AdoptablePet.color).contains(func.lower(term)))
     # print(searches)
     # try:
     #   searches.append(AdoptablePet.age.in_)
