@@ -134,7 +134,7 @@ def search_adoptablepets(q, pet_query) :
 
   searches = []
   for term in terms:
-    searches.append(func.lower(AdoptablePet.sex).contains(func.lower(term)))
+    searches.append(func.lower(AdoptablePet.sex).match(func.lower(term)))
     searches.append(func.lower(AdoptablePet.age).contains(func.lower(term)))
     searches.append(func.lower(AdoptablePet.size_group).contains(func.lower(term)))
     searches.append(func.lower(AdoptablePet.color).contains(func.lower(term)))
