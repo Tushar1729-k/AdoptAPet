@@ -14,14 +14,15 @@ const InstancePageTemplate = ({ attributes, medicalHistory, fetchPage }) => {
     }
 
     useEffect(() => {
-        window.onbeforeunload = function() {
-            return true;
-        };
-    
+        window.addEventListener("beforeunload", alertUser);
         return () => {
-            window.onbeforeunload = null;
+          window.removeEventListener("beforeunload", alertUser);
         };
-    }, [])
+      }, []);
+      const alertUser = (e) => {
+        e.preventDefault();
+        e.returnValue = "";
+      }
     return (
         <div>
             <div style={{paddingLeft: "20vw", paddingRight: "20vw"}}>
