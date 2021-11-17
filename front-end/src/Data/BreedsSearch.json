@@ -1,0 +1,217 @@
+[
+    {
+      "api_id": 6,
+      "breed_name": "Applehead Siamese",
+      "centers": [
+        {
+          "api_id": 12,
+          "id": 1,
+          "name": "Cat Rescue of Maryland, Inc."
+        }
+      ],
+      "id": 6,
+      "pets": [
+        {
+          "api_id": 10530165,
+          "id": 4,
+          "name": "Pretty Boy"
+        }
+      ],
+      "species_id": 3,
+      "species_name": "Cat",
+      "youth_name": "Kitten"
+    },
+    {
+      "api_id": 15,
+      "breed_name": "Calico",
+      "centers": [
+        {
+          "api_id": 24,
+          "id": 6,
+          "name": "Lost Fantasy Rescue"
+        },
+        {
+          "api_id": 27,
+          "id": 7,
+          "name": "Olive Branch Animal Rescue & Refuge, Inc."
+        },
+        {
+          "api_id": 112,
+          "id": 39,
+          "name": "Animal Rescue Force of South Florida, Inc."
+        },
+        {
+          "api_id": 124,
+          "id": 46,
+          "name": "Paws Animal Rescue, Inc."
+        },
+        {
+          "api_id": 238,
+          "id": 75,
+          "name": "Pet Guardian Pet Service,Inc."
+        },
+        {
+          "api_id": 273,
+          "id": 86,
+          "name": "Grayson County Humane Society"
+        },
+        {
+          "api_id": 312,
+          "id": 95,
+          "name": "Shelley's Bed & Biscuit Rescue"
+        }
+      ],
+      "id": 15,
+      "pets": [
+        {
+          "api_id": 10003743,
+          "id": 176,
+          "name": "Jingles"
+        },
+        {
+          "api_id": 10062793,
+          "id": 212,
+          "name": "Callie"
+        },
+        {
+          "api_id": 5918886,
+          "id": 334,
+          "name": "Biscotti"
+        },
+        {
+          "api_id": 10005596,
+          "id": 372,
+          "name": "Callie"
+        },
+        {
+          "api_id": 10008234,
+          "id": 31,
+          "name": "Skylar"
+        },
+        {
+          "api_id": 3798705,
+          "id": 406,
+          "name": "ANGEL"
+        },
+        {
+          "api_id": 10234394,
+          "id": 29,
+          "name": "Miss Priss"
+        },
+        {
+          "api_id": 10067921,
+          "id": 26,
+          "name": "Nosey"
+        },
+        {
+          "api_id": 10067980,
+          "id": 28,
+          "name": "Nala"
+        }
+      ],
+      "species_id": 3,
+      "species_name": "Cat",
+      "youth_name": "Kitten"
+    },
+    {
+      "adaptability": 5,
+      "affection_level": 5,
+      "alt_names": "Domestic Shorthair",
+      "api_id": 3,
+      "breed_name": "American Shorthair",
+      "centers": [
+        {
+          "api_id": 136,
+          "id": 50,
+          "name": "Pet Rescue of Maryland"
+        }
+      ],
+      "child_friendly": 4,
+      "country_code": "US",
+      "dog_friendly": 5,
+      "energy_level": 3,
+      "grooming": 1,
+      "hairless": 0,
+      "health_issues": 3,
+      "hypoallergenic": 0,
+      "id": 3,
+      "intelligence": 3,
+      "life_span": "15 - 17",
+      "life_span_max": 17,
+      "life_span_min": 15,
+      "natural": 1,
+      "origin": "United States",
+      "pets": [
+        {
+          "api_id": 100125,
+          "id": 231,
+          "name": "Gus"
+        }
+      ],
+      "shedding_level": 3,
+      "short_legs": 0,
+      "social_needs": 4,
+      "species_id": 3,
+      "species_name": "Cat",
+      "stranger_friendly": 3,
+      "suppressed_tail": 0,
+      "temperament": "Active, Curious, Easy Going, Playful, Calm",
+      "vocalization": 3,
+      "weight": "8 - 15",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/American_Shorthair",
+      "youth_name": "Kitten"
+    },
+    {
+      "adaptability": 5,
+      "affection_level": 5,
+      "alt_names": "",
+      "api_id": 10,
+      "breed_name": "Bobtail",
+      "centers": [
+        {
+          "api_id": 175,
+          "id": 59,
+          "name": "Raining Cats 'n' Dogs"
+        }
+      ],
+      "child_friendly": 4,
+      "country_code": "US",
+      "dog_friendly": 5,
+      "energy_level": 3,
+      "grooming": 1,
+      "hairless": 0,
+      "health_issues": 1,
+      "hypoallergenic": 0,
+      "id": 10,
+      "intelligence": 5,
+      "life_span": "11 - 15",
+      "life_span_max": 15,
+      "life_span_min": 11,
+      "natural": 0,
+      "origin": "United States",
+      "pets": [
+        {
+          "api_id": 1003335,
+          "id": 279,
+          "name": "Flame pt Bobtail Kitten"
+        },
+        {
+          "api_id": 1003341,
+          "id": 280,
+          "name": "Lynx pt Bobtail Kitten"
+        }
+      ],
+      "shedding_level": 3,
+      "short_legs": 0,
+      "social_needs": 3,
+      "species_id": 3,
+      "species_name": "Cat",
+      "stranger_friendly": 3,
+      "suppressed_tail": 1,
+      "temperament": "Intelligent, Interactive, Lively, Playful, Sensitive",
+      "vocalization": 3,
+      "weight": "7 - 16",
+      "wikipedia_url": "https://en.wikipedia.org/wiki/American_Bobtail",
+      "youth_name": "Kitten"
+    }
+  ]

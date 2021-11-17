@@ -94,7 +94,7 @@ class UnitTests(TestCase):
         test_client = app.test_client()
         r = test_client.get("/ac?q=Baltimore Animal Relief Fund")
         data = r.json
-        self.assertEqual(data["count"], 30))
+        self.assertEqual(data["count"], 30)
 
     # searching by breed name
     def search_center_1(self) :

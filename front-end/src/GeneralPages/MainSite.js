@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap'
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
-import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus } from "react-icons/fa"
+import { Navbar, Container, Nav, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
+import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
+import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus, FaSearch } from "react-icons/fa"
 import HomePage from "./HomePage"
 import InstancePage from "../InstancePages/PetsInstanceTemplate"
 import AdoptInstanceTemplate from '../InstancePages/AdoptInstanceTemplate'
@@ -12,9 +12,11 @@ import SpeciesModelPage from './SpeciesModelPage'
 import PetsModelPage from './PetsModelPage'
 import AdoptCentersPage from './AdoptCentersPage'
 import AboutPage from "./AboutPage"
+import SearchResultsPage from './SearchResultsPage'
 const MainSite = () => {
-
     const [petsData, setPetsData] = useState([])
+    const [searchQuery, setSearchQuery] = useState("")
+    console.log(searchQuery)
     const [centersData, setCentersData] = useState([
         {
             api_id: 12,
@@ -144,8 +146,10 @@ const MainSite = () => {
             setBreedsData([localBD])
         }
       }, [])
-      
 
+    const setQuery = (query) => {
+        setSearchQuery(query)
+    }
     return (
         <div>
             <div style={{paddingBottom: '10vh'}}>
@@ -167,6 +171,9 @@ const MainSite = () => {
                 <Nav.Link href="/sbmodel"><FaCat/> Species</Nav.Link>
                 <Nav.Link href="/apmodel"><FaPaw/> Pets</Nav.Link>
                 <Nav.Link href="/acmodel"><FaCartPlus/> Adoption Centers</Nav.Link>
+                <Nav.Link href="/search">
+                    <FaSearch />Search
+                </Nav.Link>
                 </Nav>
                 </Container>
             </Navbar>
@@ -188,10 +195,8 @@ const MainSite = () => {
                     <Route exact path="/acmodel">
                         <AdoptCentersPage fetchPage={fetchPage}/>
                     </Route>
-                    <Route path="/dog">
-                        <InstancePage 
-                            attributes={{ breed: 'Siberian Husky', name: 'Peter', weight: '100', age: '3', color: 'white/black', sex: 'M'}}
-                        />
+                    <Route exact path="/search">
+                        <SearchResultsPage searchQuery={searchQuery} fetchPage={fetchPage} />
                     </Route>
                     {petsData.map((pet, idx) => (
                         <Route key={idx} exact path={`/apmodel/${pet.api_id}`}>

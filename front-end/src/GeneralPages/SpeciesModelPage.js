@@ -78,27 +78,40 @@ const SpeciesModelPage = ({fetchPage}) => {
         setFilterQueries([...filterQueries, filter])
         return [...filterQueries, filter]
     }
+    const getQueryString = (queries) => {
+        let tempQueryString = ""
+        for (let i = 0; i < queries.length; i++) {
+            if (queries.length != 1 && i + 1 != queries.length) {
+                tempQueryString = tempQueryString.concat(queries[i].type.concat("=", queries[i].label), "&")
+            } else {
+                tempQueryString = tempQueryString.concat(queries[i].type.concat("=", queries[i].label))
+            }
+        }
+        tempQueryString = tempQueryString.toLowerCase()
+        return tempQueryString
+    }
     const fetchFilteredResults = (filter, option) => {
         if (filter && filter.label !== "None") {
             let tempFilterQueries = checkfilterQueries(filter)
-            let tempQueryString = ""
-            for (let i = 0; i < tempFilterQueries.length; i++) {
-                if (tempFilterQueries.length != 1 && i + 1 != tempFilterQueries.length) {
-                    tempQueryString = tempQueryString.concat(tempFilterQueries[i].type.concat("=", tempFilterQueries[i].label), "&")
-                } else {
-                    tempQueryString = tempQueryString.concat(tempFilterQueries[i].type.concat("=", tempFilterQueries[i].label))
-                }
-            }
-            tempQueryString = tempQueryString.toLowerCase()
+            let tempQueryString = getQueryString(tempFilterQueries)
             setQueryString(tempQueryString)
             fetchBreeds(tempQueryString)
         } else {
+            let newQueries = []
             for (let i = 0; i < filterQueries.length; i++) {
                 if (option === filterQueries[i].type) {
-                    let newQueries = [...filterQueries];
+                    newQueries = [...filterQueries];
                     newQueries.splice(i, 1)
                     setFilterQueries([...newQueries])
                 }
+            }
+            if (newQueries.length != 0) {
+                let tempQueryString = getQueryString(newQueries)
+                setQueryString(tempQueryString)
+                fetchBreeds(tempQueryString)
+            } else {
+                setQueryString("")
+                fetchBreeds(`page=${currentPage}`)
             }
         }
     }

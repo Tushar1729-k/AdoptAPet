@@ -1,0 +1,116 @@
+[
+    {
+      "age": "Adult",
+      "api_id": 100040,
+      "center": {
+        "api_id": 52,
+        "city": "Montreal",
+        "id": 14,
+        "lat": 45.51679992675781,
+        "lon": -73.55799865722656,
+        "name": "Animal Rescue Network / Reseau Secours Animal",
+        "services": "adoptions, rescue, spay-neuter, shelter",
+        "state": "QC",
+        "zipcode": "H2L 4Y5"
+      },
+      "color": "Grey and white",
+      "desc": "Baba is a very young male all in smoothness, charming and very very affectionate. He's been only in the shelter for a few months. Baba hopes to be adopted by someone he will be able to follow everywhere in his new home and also seduce all the visitors without discrimination. <br><br>Baba est un tr&#65533;s jeune m&#65533;le tout en finesse, charmant et tr&#65533;s tr&#65533;s affectueux. Il est depuis quelques mois seulement au refuge et esp&#65533;re bien &#65533;tre adopt&#65533; par quelqu&#65533;un qu&#65533;il pourra suivre partout dans son nouveau foyer et pouvoir s&#65533;duire &#65533; sati&#65533;t&#65533; tous les visiteurs sans discrimination.<br><img src=\"https://tracker.rescuegroups.org/pet?100040\" width=\"0\" height=\"0\" alt=\"\" />",
+      "id": 66,
+      "name": "Baba",
+      "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/52/pictures/animals/100/100040/176084_350x469.jpg",
+      "sex": "Male",
+      "size_group": "",
+      "species_breed": {
+        "api_id": 35,
+        "breed_name": "Domestic Short Hair",
+        "id": 25,
+        "species_name": "Cat",
+        "youth_name": "Kitten"
+      }
+    },
+    {
+      "age": "",
+      "api_id": 100042,
+      "center": {
+        "api_id": 52,
+        "city": "Montreal",
+        "id": 14,
+        "lat": 45.51679992675781,
+        "lon": -73.55799865722656,
+        "name": "Animal Rescue Network / Reseau Secours Animal",
+        "services": "adoptions, rescue, spay-neuter, shelter",
+        "state": "QC",
+        "zipcode": "H2L 4Y5"
+      },
+      "color": "Calico tabby",
+      "desc": "Here's the very delicate and splendid Peaches. Her name suits her well since her face, her fur, but especially her character has the softness of a peach. Indeed, rarely we saw a little, delicate and affectionate cat like her. She will follow you everywhere in the house, will lie down on the couch beside you and will sleep at the end of your bed. Perhaps, she missed food when she was a baby or it's simply in her genes, but we think that she will remain a small size . Do'nt think that she's weak: you should see her playing and running vigorously. <br><br>Voici la tr&#65533;s d&#65533;licate et magnifique Peaches. Son nom lui va &#65533; merveille puisque sa figure, sa fourrure mais surtout son caract&#65533;re ont la douceur de la p&#65533;che. En effet, r&#65533;rement a-t-on vu une petite chatte si douce et affectueuse. Elle vous suivra partout dans la maison, se couchera &#65533; c&#65533;t&#65533; de vous sur le divan et dormira au pied de votre lit. Peut-&#65533;tre a-t-elle manqu&#65533; de nourriture &#65533;tant b&#65533;b&#65533; ou est-ce tout simplement dans ses g&#65533;nes, mais nous pensons que de toute fa&#65533;on, elle restera un chat de petite taille. Mais ne pensez pas qu'elle soit faible : vous devriez la voir jouer et courir &#65533; fond de train.<br><img src=\"https://tracker.rescuegroups.org/pet?100042\" width=\"0\" height=\"0\" alt=\"\" />",
+      "id": 67,
+      "name": "Peaches",
+      "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/52/pictures/animals/100/100042/176091_350x390.jpg",
+      "sex": "Female",
+      "size_group": "",
+      "species_breed": {
+        "api_id": 29,
+        "breed_name": "Domestic Medium Hair",
+        "id": 24,
+        "species_name": "Cat",
+        "youth_name": "Kitten"
+      }
+    },
+    {
+      "age": "Adult",
+      "api_id": 110695,
+      "center": {
+        "api_id": 56,
+        "city": "New Market",
+        "id": 17,
+        "lat": 39.411598205566406,
+        "lon": -77.27279663085938,
+        "name": "Pets-4-Pets Cat Rescue, Inc.",
+        "services": "",
+        "state": "MD",
+        "zipcode": "21774"
+      },
+      "desc": "Very sweet girl.  Still likes to play so would love a playmate, but would do fine by herself.  Likes dogs and kids.<img src=\"https://tracker.rescuegroups.org/pet?110695\" width=\"0\" height=\"0\" alt=\"\" />",
+      "id": 85,
+      "name": "Spunky",
+      "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/56/pictures/animals/110/110695/197366_500x375.jpg",
+      "sex": "Female",
+      "size_group": "Medium",
+      "species_breed": {
+        "api_id": 35,
+        "breed_name": "Domestic Short Hair",
+        "id": 25,
+        "species_name": "Cat",
+        "youth_name": "Kitten"
+      }
+    },
+    {
+      "age": "Young",
+      "api_id": 10027366,
+      "center": {
+        "api_id": 64,
+        "city": "Toms River",
+        "id": 18,
+        "lat": 40.005401611328125,
+        "lon": -74.22560119628906,
+        "name": "Shore Animal Volunteer Enterprise",
+        "services": "",
+        "state": "NJ",
+        "zipcode": "08755"
+      },
+      "desc": "Cody is a sweet neutered male who is up to date on Rabies, Distempter and Bordetella.<img src=\"https://tracker.rescuegroups.org/pet?10027366\" width=\"0\" height=\"0\" alt=\"\" />",
+      "id": 86,
+      "name": "Cody",
+      "pic_url": "https://s3.amazonaws.com/filestore.rescuegroups.org/64/pictures/animals/10027/10027366/34819377_720x960.jpg",
+      "sex": "Male",
+      "size_group": "Medium",
+      "species_breed": {
+        "api_id": 90,
+        "breed_name": "Beagle",
+        "id": 70,
+        "species_name": "Dog",
+        "youth_name": "Puppy"
+      }
+    }
+  ]
