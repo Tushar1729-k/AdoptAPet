@@ -134,30 +134,38 @@ def search_adoptablepets(q, pet_query) :
 
   searches = []
   for term in terms:
-    searches.append(func.lower(AdoptablePet.sex).contains(func.lower(term)))
+    searches.append(func.lower(AdoptablePet.sex).match(func.lower(term)))
     searches.append(func.lower(AdoptablePet.age).contains(func.lower(term)))
     searches.append(func.lower(AdoptablePet.size_group).contains(func.lower(term)))
-    # searches.append(pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==term))
-    # searches.append(
-    #   AdoptablePet.center.has(
-    #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
-    #   )
-    # )
-    # print(AdoptablePet.center.has(
-    #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
-    #   ))
-    print(len(searches))
-    # print('tuple', *tuple(searches))
     searches.append(func.lower(AdoptablePet.color).contains(func.lower(term)))
-    # print(searches)
-    # try:
-    #   searches.append(AdoptablePet.age.in_)
-    # joined_table = pet_query.join(BreedsSpecies)
-    # print(BreedsSpecies.breed_name.contains(term))
-    # searches.append(pet_query.join(BreedsSpecies).sp .contains(term))
-
   pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
-  # print(terms)
-  # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))
 
   return pet_query
+
+
+  # searches.append(pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==term))
+  # searches.append(
+  #   AdoptablePet.center.has(
+  #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
+  #   )
+  # )
+  # print(AdoptablePet.center.has(
+  #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
+  #   ))
+  # print(len(searches))
+  # print('tuple', *tuple(searches))
+
+  # print(searches)
+  # try:
+  #   searches.append(AdoptablePet.age.in_)
+  # joined_table = pet_query.join(BreedsSpecies)
+  # print(BreedsSpecies.breed_name.contains(term))
+  # searches.append(pet_query.join(BreedsSpecies).sp .contains(term))
+  # searches.append(
+  #     AdoptablePet.species_breed.has(BreedsSpecies.breed_name.contains(term))
+  # )
+
+  # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches)))
+
+  # print(terms)
+  # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))

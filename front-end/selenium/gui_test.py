@@ -218,11 +218,11 @@ def test_ap_search() :
     search_btn = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button")
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/form/div/input")
+    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input")
     field.send_keys("female")
     submit = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button")
     submit.click()
-    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    assert driver.current_url == "https://www.adoptapet.me/apmodel?name=female"
 
 # 19
 def test_ac_search() :
@@ -233,7 +233,7 @@ def test_ac_search() :
     search_btn = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button")
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
-    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/form/div/input")
+    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input")
     field.send_keys("Animal")
     submit = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button")
     submit.click()
@@ -248,7 +248,7 @@ def test_sb_search() :
     search_btn = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button")
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
-    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/form/div/input")
+    field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input")
     field.send_keys("Calico")
     submit = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button")
     submit.click()
