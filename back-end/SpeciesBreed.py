@@ -65,8 +65,9 @@ def return_all_lifeexps(breed_query, queries):
     return breed_query.with_entities(BreedsSpecies.life_span)
 
 
-def return_all_origins(breed_query, queries) :
-  return breed_query.with_entities(BreedsSpecies.origin)
+def return_all_origins(breed_query, queries):
+    return breed_query.with_entities(BreedsSpecies.origin)
+
 
 # sorts breeds by one of the five supported attributes
 # in ascending or descending order
