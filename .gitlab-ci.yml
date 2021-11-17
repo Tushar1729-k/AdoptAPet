@@ -26,13 +26,13 @@ cache:
 #     - npm install
 #     - npm test
 
-# test_postman:
-#   image:
-#     name: postman/newman_alpine33
-#     entrypoint: [""]
-#   script:
-#     - cd back-end
-#     - newman run Postman.json
+test_postman:
+  image:
+    name: postman/newman_alpine33
+    entrypoint: [""]
+  script:
+    - cd back-end
+    - newman run Postman.json
 
 # test_python:
 #   stage: test
