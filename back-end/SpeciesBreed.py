@@ -107,11 +107,11 @@ def search_breeds(q, breed_query) :
 
   searches = []
   for term in terms:
-    searches.append(BreedsSpecies.species_name.contains(func.lower(term)))
-    searches.append(BreedsSpecies.breed_name.contains(func.lower(term)))
-    searches.append(BreedsSpecies.life_span.contains(func.lower(term)))
-    searches.append(BreedsSpecies.weight.contains(func.lower(term)))
-    searches.append(BreedsSpecies.origin.contains(func.lower(term)))
+    searches.append(func.lower(BreedsSpecies.species_name).contains(func.lower(term)))
+    searches.append(func.lower(BreedsSpecies.breed_name).contains(func.lower(term)))
+    searches.append(func.lower(BreedsSpecies.life_span).contains(func.lower(term)))
+    searches.append(func.lower(BreedsSpecies.weight).contains(func.lower(term)))
+    searches.append(func.lower(BreedsSpecies.origin).contains(func.lower(term)))
   breed_query = breed_query.filter(or_(*tuple(searches)))
 
   return breed_query

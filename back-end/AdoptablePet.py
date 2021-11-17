@@ -146,7 +146,7 @@ def search_adoptablepets(q, pet_query) :
     # print(AdoptablePet.center.has(
     #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
     #   ))
-    print(len(searches))
+    # print(len(searches))
     # print('tuple', *tuple(searches))
     searches.append(func.lower(AdoptablePet.color).contains(func.lower(term)))
     # print(searches)
@@ -155,8 +155,12 @@ def search_adoptablepets(q, pet_query) :
     # joined_table = pet_query.join(BreedsSpecies)
     # print(BreedsSpecies.breed_name.contains(term))
     # searches.append(pet_query.join(BreedsSpecies).sp .contains(term))
+    # searches.append(
+    #     AdoptablePet.species_breed.has(BreedsSpecies.breed_name.contains(term))
+    # )
+  # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
+  pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches)))
 
-  pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
   # print(terms)
   # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))
 
