@@ -153,7 +153,7 @@ def search_adoptablepets(q, pet_query) :
     #   searches.append(AdoptablePet.age.in_)
   
   pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
-  print(terms)
+  # print(terms)
   # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))
 
   return pet_query
