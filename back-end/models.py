@@ -40,7 +40,9 @@ class AdoptablePet(db.Model):
         db.Integer, db.ForeignKey("adoption_center.id"), nullable=True
     )
     # Foreign key for associated species/breed, one-to-many relationship
-    species_breed_id = db.Column(db.Integer, db.ForeignKey("breeds_species.id"), nullable=True)
+    species_breed_id = db.Column(
+        db.Integer, db.ForeignKey("breeds_species.id"), nullable=True
+    )
     center_number = db.Column(db.Integer)
     breed_number = db.Column(db.Integer)
     name = db.Column(db.String())
@@ -90,6 +92,7 @@ class AdoptionCenter(db.Model):
     services = db.Column(db.String)
     type = db.Column(db.String)
 
+
 # def __repr__(self) :
 #   return "<Adoption Center %s %s>" % (self.type_name, self.number)
 
@@ -101,7 +104,7 @@ class BreedsSpecies(db.Model):
         "AdoptionCenter",
         secondary=link_species_centers,
         lazy="subquery",
-        backref=db.backref("species", lazy=True)
+        backref=db.backref("species", lazy=True),
     )
     # All associated pets, one-to-many relationship
     pets = db.relationship("AdoptablePet", backref="species_breed")
@@ -111,13 +114,13 @@ class BreedsSpecies(db.Model):
     breed_name = db.Column(db.String, nullable=False)
     youth_name = db.Column(db.String())
     temperament = db.Column(db.String)
-    life_span = db.Column(db.String)      # in years
+    life_span = db.Column(db.String)  # in years
     life_span_min = db.Column(db.Integer)
     life_span_max = db.Column(db.Integer)
     alt_names = db.Column(db.String)
     wikipedia_url = db.Column(db.String)
     origin = db.Column(db.String)
-    weight = db.Column(db.String)       # in pounds
+    weight = db.Column(db.String)  # in pounds
     weight_min = db.Column(db.Integer)
     weight_max = db.Column(db.Integer)
     country_code = db.Column(db.String)
@@ -165,6 +168,7 @@ class BaseSchema(ma.Schema):
         return {
             key: value for key, value in data.items() if value not in self.SKIP_VALUES
         }
+
 
 class AdoptablePetSchema(BaseSchema):
     id = fields.Int(required=True)
@@ -237,7 +241,7 @@ class BreedsSpeciesSchema(BaseSchema):
         only=("id", "api_id", "name"),
         required=True,
         attribute="center",
-        many=True
+        many=True,
     )
     pets = fields.Nested(
         "AdoptablePetSchema", only=("id", "api_id", "name"), required=True, many=True
