@@ -112,11 +112,11 @@ def search_centers(q, center_query) :
 
   searches = []
   for term in terms:
-    searches.append(AdoptionCenter.name.contains(term))
-    searches.append(AdoptionCenter.city.contains(term))
-    searches.append(AdoptionCenter.state.contains(term))
-    searches.append(AdoptionCenter.zipcode.contains(term))
-    searches.append(AdoptionCenter.type.contains(term))
+    searches.append(func.lower(AdoptionCenter.name).contains(func.lower(term)))
+    searches.append(func.lower(AdoptionCenter.city).contains(func.lower(term)))
+    searches.append(func.lower(AdoptionCenter.state).contains(func.lower(term)))
+    searches.append(func.lower(AdoptionCenter.zipcode).contains(func.lower(term)))
+    searches.append(func.lower(AdoptionCenter.type).contains(func.lower(term)))
 
   center_query = center_query.filter(or_(*tuple(searches)))
 
