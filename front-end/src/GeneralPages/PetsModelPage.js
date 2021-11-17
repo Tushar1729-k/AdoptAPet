@@ -3,10 +3,11 @@ import {  useState, useEffect } from 'react'
 import { Row, Col, Card, ListGroup, Tabs, Tab, Form, Button } from 'react-bootstrap'
 import Select from 'react-select'
 import Highlighter from "react-highlight-words"
-import { Link } from "react-router-dom"
+import { Link, useHistory, useParams } from "react-router-dom"
 import Paginate from '../Components/Pagination'
 import axios from 'axios'
 import PropTypes from 'prop-types'
+import '../index.css'
 
 const PetsModelPage = ({fetchPage}) => {
     const [allPets, setAllPets] = useState([])
@@ -17,6 +18,7 @@ const PetsModelPage = ({fetchPage}) => {
     const [queryString, setQueryString] = useState("")
     const [options, setOptions] = useState([])
     const [searchQuery, setSearchQuery] = useState("")
+    let history = useHistory()
 
     const fetchPets = async (query) => {
         setIsLoading(true)
@@ -51,6 +53,17 @@ const PetsModelPage = ({fetchPage}) => {
         fetchPets(`page=1`)
         fetchOptions()
     }, [])
+
+    useEffect(() => {
+        const params = new URLSearchParams()
+        if (searchQuery) {
+          params.append("name", searchQuery)
+        } else {
+          params.delete("name")
+        }
+        history.push({search: params.toString()})
+      }, [searchQuery, history])
+
     const paginate = (num) => {
         setCurrentPage(num)
         console.log(queryString)
@@ -111,6 +124,11 @@ const PetsModelPage = ({fetchPage}) => {
     }
     const fetchSearchResults = () => {
         fetchPets(`q=${searchQuery}`)
+    }
+    const handleKeyDown = (event) => {
+        if (event.key == "Enter") {
+            fetchSearchResults()
+        }
     }
     return (
         <div style={{padding: '4vw'}}>
@@ -173,14 +191,12 @@ const PetsModelPage = ({fetchPage}) => {
                     </Row>
                 </Tab>
                 <Tab eventKey="search" title="Search">
-                <Form>
-                    <Form.Group className="mb-3" controlId="formBasicSearch">
-                        <Form.Label>Adoption Centers Search</Form.Label>
-                        <Form.Control type="search" placeholder="Enter query"
-                            onChange={e => setSearchQuery(e.target.value)}
+                    <div style={{width: "50vw"}}>
+                        <h3>Pet Search</h3>
+                        <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown} 
+                            placeholder="Enter query"
                         />
-                    </Form.Group>
-                </Form>
+                    </div>
                     <div style={{paddingTop: '2vh'}}>
                         <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
                             Submit

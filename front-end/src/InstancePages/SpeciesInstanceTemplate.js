@@ -24,15 +24,8 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
     }
 
     useEffect(() => {
-        window.addEventListener("beforeunload", alertUser);
-        return () => {
-          window.removeEventListener("beforeunload", alertUser);
-        };
-      }, []);
-      const alertUser = (e) => {
-        e.preventDefault();
-        e.returnValue = "";
-      }
+        fetchCoords()
+    }, [])
     return (
         <div>
             <div style={{paddingLeft: "15vw", paddingRight: "15vw", paddingTop: "4vh"}}>
@@ -73,9 +66,6 @@ const SpeciesInstanceTemplate = ({attributes, fetchPage}) => {
                 </Card.Text>
                 <Row>
                     <h4>Country of Origin: {attributes.origin}</h4>
-                    <div style={{paddingLeft: "27.5vw"}}>
-                        <Button onClick={() => fetchCoords()}>Click to see Origin Country</Button>
-                    </div>
                     <div style={{width: '100vw', height: '100vh'}}>
                     <CustomMap googleMapURL={`https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=
                                               AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM`}

@@ -14,29 +14,34 @@ const SearchResultsPage = ({fetchPage}) => {
     const [searchResults, setSearchResults] = useState({pets: PetsSearch, breeds: BreedsSearch, centers: CentersSearch})
     const [searchQuery, setSearchQuery] = useState("")
     const fetchSearchResults = async () => {
+        setIsLoading(true)
         const res = await axios.get(`https://api.adoptapet.me/search?q=${searchQuery}`)
+        setIsLoading(false)
         setSearchResults(res.data)
     }
+    const handleKeyDown = (event) => {
+        if (event.key == "Enter") {
+            fetchSearchResults()
+        }
+    }
+    const [isLoading, setIsLoading] = useState(false)
     return (
         <div style={{padding: '4vw'}}>
             <Row>
                 <h1>Results for: {searchQuery}</h1>
+                {isLoading && <h4>Loading...</h4>}
             </Row>
             <Row>
-            <Form className="d-flex">
-                <FormControl
-                type="search"
-                placeholder="Search"
-                className="me-2"
-                aria-label="Search"
-                onChange={e => setSearchQuery(e.target.value)}
+                <div style={{width: "50vw"}}>
+                <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown} 
+                    placeholder="Enter query"
                 />
-            </Form>
-            <div style={{paddingTop: '2vh'}}>
-                <Button variant="outline-primary" type="submit" onClick={() => fetchSearchResults()}>
-                    Submit
-                </Button>
-            </div>
+                </div>
+                <div style={{paddingTop: '2vh'}}>
+                    <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
+                        Submit
+                    </Button>
+                </div>
             </Row>
             <Row style={{paddingTop: '4vh'}}>
                 <h2>Breeds Results</h2>
