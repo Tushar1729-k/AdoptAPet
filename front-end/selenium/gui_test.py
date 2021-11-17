@@ -222,7 +222,7 @@ def test_ap_search() :
     field.send_keys("female")
     submit = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button")
     submit.click()
-    assert driver.current_url == "https://www.adoptapet.me/apmodel"
+    assert driver.current_url == "https://www.adoptapet.me/apmodel?name=female"
 
 # 19
 def test_ac_search() :
