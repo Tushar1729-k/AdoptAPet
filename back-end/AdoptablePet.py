@@ -134,9 +134,9 @@ def search_adoptablepets(q, pet_query) :
 
   searches = []
   for term in terms:
-    searches.append(AdoptablePet.sex.match(term))
-    searches.append(AdoptablePet.age.match(term))
-    searches.append(AdoptablePet.size_group.match(term))
+    searches.append(AdoptablePet.sex.contains(term))
+    searches.append(AdoptablePet.age.contains(term))
+    searches.append(AdoptablePet.size_group.contains(term))
     # searches.append(pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==term))
     # searches.append(
     #   AdoptablePet.center.has(
@@ -148,10 +148,14 @@ def search_adoptablepets(q, pet_query) :
     #   ))
     print(len(searches))
     # print('tuple', *tuple(searches))
-    searches.append(AdoptablePet.color.match(term))
+    searches.append(AdoptablePet.color.contains(term))
+    # print(searches)
     # try:
     #   searches.append(AdoptablePet.age.in_)
-  
+    # joined_table = pet_query.join(BreedsSpecies)
+    # print(BreedsSpecies.breed_name.contains(term))
+    # searches.append(pet_query.join(BreedsSpecies).sp .contains(term))
+
   pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches), *tuple([BreedsSpecies.breed_name==term for term in terms])))
   # print(terms)
   # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))
