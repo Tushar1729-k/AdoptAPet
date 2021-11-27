@@ -1,7 +1,6 @@
 import React from 'react'
-import { useState, useEffect } from 'react'
-import { Container, Row, Col, Card, Modal, Button, ListGroup, Image } from 'react-bootstrap'
-import { Link, BrowserRouter as Router, useHistory } from "react-router-dom";
+import { Container, Row, Col, Card, Button, ListGroup, Image } from 'react-bootstrap'
+import { useHistory } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 

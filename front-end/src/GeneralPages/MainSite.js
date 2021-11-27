@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Navbar, Container, Nav, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus, FaSearch } from "react-icons/fa"
 import HomePage from "./HomePage"
@@ -125,10 +125,6 @@ const MainSite = () => {
         id = id.toString()
         console.log(type, id)
         fetchData(type, id)
-    }
-
-    const selectedPage = (num) => {
-        fetchData(num)
     }
 
     useEffect(() => {

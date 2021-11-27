@@ -1,7 +1,6 @@
 import React from 'react'
-import { useEffect } from 'react'
 import { Container, Row, Col, Card, Badge, ListGroup, Button } from 'react-bootstrap'
-import { Link, BrowserRouter as Router, Switch, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import CustomMap from '../GeneralPages/GoogleMap';
 import PropTypes from 'prop-types'
 import { InfoCircleFill, PatchPlusFill } from 'react-bootstrap-icons';

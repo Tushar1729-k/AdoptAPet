@@ -1,10 +1,10 @@
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import { GoogleMap, withGoogleMap, withScriptjs, Marker, InfoWindow } from 'react-google-maps';
 import PropTypes from 'prop-types'
 
-const CustomMap = withScriptjs(withGoogleMap(({lat, lng, zoom}) => {
+const CustomMap = withScriptjs(withGoogleMap(({ lat, lng, zoom }) => {
 
-    const mapStyles = {        
+    const mapStyles = {
         height: "100vh",
         width: "100%"
     }
@@ -15,16 +15,16 @@ const CustomMap = withScriptjs(withGoogleMap(({lat, lng, zoom}) => {
     return (
         <div>
             <GoogleMap
-            mapContainerStyle={mapStyles}
-            zoom={zoom}
-            center={defaultCenter}
+                mapContainerStyle={mapStyles}
+                zoom={zoom}
+                center={defaultCenter}
             >
-                <Marker position={defaultCenter} onClick={() => {setSelected(true)}}/>
-                {selected && <InfoWindow position={defaultCenter} onCloseClick={() => {setSelected(null)}}>
-                                <div>
-                                    <h5>Adoption Center</h5>
-                                </div>
-                            </InfoWindow>}
+                <Marker position={defaultCenter} onClick={() => { setSelected(true) }} />
+                {selected && <InfoWindow position={defaultCenter} onCloseClick={() => { setSelected(null) }}>
+                    <div>
+                        <h5>Adoption Center</h5>
+                    </div>
+                </InfoWindow>}
             </GoogleMap>
         </div>
     )
@@ -38,7 +38,7 @@ CustomMap.defaultProps = {
 }
 // Set type of the prop here.
 CustomMap.propTypes = {
-	lat: PropTypes.number,
+    lat: PropTypes.number,
     lng: PropTypes.number,
     zoom: PropTypes.number
 }

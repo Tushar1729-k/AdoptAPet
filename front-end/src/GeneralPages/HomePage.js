@@ -1,6 +1,5 @@
 import React from 'react'
-import { Card, Row, Col, CardGroup } from 'react-bootstrap'
-import DogHomePage from "../Images/dog_home_page.jpg"
+import { Card, CardGroup } from 'react-bootstrap'
 import SpeciesBreedHomePage from "../Images/species_breeds_home.jpg"
 import AdoptableHomePage from "../Images/adoptable_model_home.jpg"
 import AdoptionCenterHomePage from "../Images/adoption_center_model_home.jpg"
@@ -13,41 +12,41 @@ const HomePage = () => {
             <div>
                 <CarouselHomePage />
             </div>
-            <div style={{paddingTop: "4vh", paddingLeft: "4vw", paddingRight: "4vw"}}>
-            <CardGroup>
-                <Card>
-                    <Link to="/sbmodel" style={{ textDecoration: 'none'}}>
-                        <Card.Img variant="top" src={SpeciesBreedHomePage} />
-                        <Card.Body>
-                        <Card.Title><h2>Species</h2></Card.Title>
-                        <Card.Text>
-                            Look through different species of pets
-                        </Card.Text>
-                        </Card.Body>
-                    </Link>
-                </Card>
-                <Card>
-                    <Link to="/apmodel" style={{ textDecoration: 'none'}}>
-                        <Card.Img variant="top" src={AdoptableHomePage} />
-                        <Card.Body>
-                        <Card.Title><h2>Adoptable Pets</h2></Card.Title>
-                        <Card.Text>
-                            Find out which pets are adoptable
-                        </Card.Text>
-                        </Card.Body>
-                    </Link>
-                </Card>
-                <Card>
-                    <Link to="acmodel" style={{ textDecoration: 'none'}}>
-                        <Card.Img variant="top" src={AdoptionCenterHomePage} />
-                        <Card.Body>
-                        <Card.Title><h2>Adoption Centers</h2></Card.Title>
-                        <Card.Text>
-                            Find an adoption center to give a home
-                        </Card.Text>
-                        </Card.Body>
-                    </Link>
-                </Card>
+            <div style={{ paddingTop: "4vh", paddingLeft: "4vw", paddingRight: "4vw" }}>
+                <CardGroup>
+                    <Card>
+                        <Link to="/sbmodel" style={{ textDecoration: 'none' }}>
+                            <Card.Img variant="top" src={SpeciesBreedHomePage} />
+                            <Card.Body>
+                                <Card.Title><h2>Species</h2></Card.Title>
+                                <Card.Text>
+                                    Look through different species of pets
+                                </Card.Text>
+                            </Card.Body>
+                        </Link>
+                    </Card>
+                    <Card>
+                        <Link to="/apmodel" style={{ textDecoration: 'none' }}>
+                            <Card.Img variant="top" src={AdoptableHomePage} />
+                            <Card.Body>
+                                <Card.Title><h2>Adoptable Pets</h2></Card.Title>
+                                <Card.Text>
+                                    Find out which pets are adoptable
+                                </Card.Text>
+                            </Card.Body>
+                        </Link>
+                    </Card>
+                    <Card>
+                        <Link to="acmodel" style={{ textDecoration: 'none' }}>
+                            <Card.Img variant="top" src={AdoptionCenterHomePage} />
+                            <Card.Body>
+                                <Card.Title><h2>Adoption Centers</h2></Card.Title>
+                                <Card.Text>
+                                    Find an adoption center to give a home
+                                </Card.Text>
+                            </Card.Body>
+                        </Link>
+                    </Card>
                 </CardGroup>
             </div>
 
