@@ -1,0 +1,488 @@
+{
+  "count": 2,
+  "page": [
+    {
+      "id": 1,
+      "name": "Abel Herrero",
+      "incumbent": true,
+      "party": "D",
+      "current": "tx_house",
+      "image": "http://www.house.state.tx.us/photos/members/3140.jpg",
+      "contact": {
+        "website": "https://house.texas.gov/members/member-page/?district=34",
+        "social_media": [
+          {
+            "type": "facebook",
+            "id": "abelherrero34"
+          },
+          {
+            "type": "twitter",
+            "id": "RepAbelHerrero"
+          }
+        ],
+        "phone": "(361) 884-2277)"
+      },
+      "district": {
+        "id": 79,
+        "ocd_id": "ocd-division/country:us/state:tx/sldl:34",
+        "type": "tx_house",
+        "number": 34,
+        "party": "D",
+        "counties": [
+          "Nueces"
+        ]
+      },
+      "election": {
+        "id": 79,
+        "type": {
+          "class": "general"
+        },
+        "office": "tx_house",
+        "district": {
+          "number": 34,
+          "type": "tx_house"
+        },
+        "dates": {
+          "election_day": "2020-11-03T06:00:00.000Z",
+          "early_start": "2020-10-13T06:00:00.000Z",
+          "early_end": "2020-10-30T06:00:00.000Z"
+        }
+      }
+    },
+    {
+      "contact": {
+        "phone": "(202) 224-2934",
+        "social_media": [
+          {
+            "id": "Sen.JohnCornyn",
+            "type": "facebook"
+          },
+          {
+            "id": "JohnCornyn",
+            "type": "twitter"
+          },
+          {
+            "id": "SenJohnCornyn",
+            "type": "youtube"
+          }
+        ],
+        "website": "https://www.cornyn.senate.gov/"
+      },
+      "current": "us_senate",
+      "district": {
+        "counties": [
+          "Bowie",
+          "Franklin",
+          "Red River",
+          "Lamar",
+          "Henderson",
+          "Ellis",
+          "Dallas",
+          "Tarrant",
+          "Denton",
+          "Rusk",
+          "Nacogdoches",
+          "Cherokee",
+          "Bexar",
+          "Falls",
+          "Limestone",
+          "Roberts",
+          "McLennan",
+          "Robertson",
+          "Brazos",
+          "Harris",
+          "Colorado",
+          "Fayette",
+          "Burleson",
+          "Lavaca",
+          "Grimes",
+          "Washington",
+          "Austin",
+          "Williamson",
+          "Montgomery",
+          "Karnes",
+          "Caldwell",
+          "Lee",
+          "Gonzales",
+          "Bastrop",
+          "Walker",
+          "San Jacinto",
+          "Liberty",
+          "Newton",
+          "Polk",
+          "Hardin",
+          "Tyler",
+          "Jasper",
+          "Van Zandt",
+          "Hopkins",
+          "Hunt",
+          "Milam",
+          "Burnet",
+          "Orange",
+          "Jefferson",
+          "Galveston",
+          "Chambers",
+          "Brazoria",
+          "Matagorda",
+          "Fort Bend",
+          "Waller",
+          "Goliad",
+          "Calhoun",
+          "Aransas",
+          "Refugio",
+          "Victoria",
+          "Willacy",
+          "McMullen",
+          "Atascosa",
+          "Duval",
+          "Brooks",
+          "La Salle",
+          "Kenedy",
+          "Live Oak",
+          "Starr",
+          "Jim Hogg",
+          "Nueces",
+          "Collin",
+          "Rockwall",
+          "Hidalgo",
+          "Cameron",
+          "Kaufman",
+          "Webb",
+          "Jim Wells",
+          "Bee",
+          "Kleberg",
+          "San Patricio",
+          "Guadalupe",
+          "Wilson",
+          "Blanco",
+          "Hays",
+          "Travis",
+          "Camp",
+          "Rains",
+          "Wood",
+          "Titus",
+          "Morris",
+          "Smith",
+          "Crockett",
+          "Bandera",
+          "Real",
+          "Schleicher",
+          "Llano",
+          "Mason",
+          "Edwards",
+          "Kerr",
+          "Menard",
+          "Kimble",
+          "Medina",
+          "Sutton",
+          "Lampasas",
+          "Bell",
+          "Madison",
+          "San Augustine",
+          "Trinity",
+          "Leon",
+          "Houston",
+          "Angelina",
+          "Bosque",
+          "Johnson",
+          "Coryell",
+          "Comanche",
+          "McCulloch",
+          "Mills",
+          "Somervell",
+          "Erath",
+          "Hamilton",
+          "San Saba",
+          "Brown",
+          "Shackelford",
+          "Coleman",
+          "Callahan",
+          "Stephens",
+          "Hood",
+          "Eastland",
+          "Palo Pinto",
+          "Parker",
+          "Wise",
+          "Delta",
+          "Fannin",
+          "Grayson",
+          "Gray",
+          "Collingsworth",
+          "Fisher",
+          "Young",
+          "Crosby",
+          "Wheeler",
+          "Jack",
+          "Throckmorton",
+          "Motley",
+          "Montague",
+          "Cooke",
+          "Garza",
+          "Kent",
+          "Floyd",
+          "Wilbarger",
+          "Haskell",
+          "Cottle",
+          "Stonewall",
+          "King",
+          "Hall",
+          "Hardeman",
+          "Dickens",
+          "Childress",
+          "Clay",
+          "Foard",
+          "Baylor",
+          "Archer",
+          "Wichita",
+          "Knox",
+          "Upshur",
+          "Gregg",
+          "Jones",
+          "Nolan",
+          "Taylor",
+          "Sterling",
+          "Runnels",
+          "Reagan",
+          "Concho",
+          "Howard",
+          "Tom Green",
+          "Irion",
+          "Coke",
+          "Glasscock",
+          "Gillespie",
+          "Comal",
+          "Kendall",
+          "Val Verde",
+          "Kinney",
+          "Terrell",
+          "Culberson",
+          "Jeff Davis",
+          "Loving",
+          "Maverick",
+          "Reeves",
+          "Pecos",
+          "Presidio",
+          "Hudspeth",
+          "Brewster",
+          "El Paso",
+          "Anderson",
+          "Freestone",
+          "Hill",
+          "Navarro",
+          "Dimmit",
+          "Zavala",
+          "Frio",
+          "Zapata",
+          "Uvalde",
+          "Ward",
+          "Andrews",
+          "Winkler",
+          "Ector",
+          "Dawson",
+          "Midland",
+          "Upton",
+          "Crane",
+          "Martin",
+          "Lubbock",
+          "Lynn",
+          "Borden",
+          "Scurry",
+          "Gaines",
+          "Terry",
+          "Mitchell",
+          "Jackson",
+          "Wharton",
+          "Randall",
+          "Oldham",
+          "Dallam",
+          "Parmer",
+          "Deaf Smith",
+          "Hartley",
+          "Hutchinson",
+          "Carson",
+          "Moore",
+          "Sherman",
+          "Potter",
+          "Briscoe",
+          "Ochiltree",
+          "Cochran",
+          "Castro",
+          "Lamb",
+          "Hansford",
+          "Donley",
+          "Hemphill",
+          "Bailey",
+          "Lipscomb",
+          "Hale",
+          "Yoakum",
+          "Hockley",
+          "Swisher",
+          "Armstrong",
+          "Shelby",
+          "Harrison",
+          "Cass",
+          "Panola",
+          "Sabine",
+          "Marion",
+          "DeWitt"
+        ],
+        "id": 218,
+        "number": -1,
+        "ocd_id": "ocd-division/country:us/state:tx",
+        "party": "R",
+        "type": "us_senate"
+      },
+      "election": {
+        "dates": {
+          "early_end": "2020-10-30T06:00:00.000Z",
+          "early_start": "2020-10-13T06:00:00.000Z",
+          "election_day": "2020-11-03T06:00:00.000Z"
+        },
+        "district": {
+          "number": -1,
+          "type": "us_senate"
+        },
+        "id": 203,
+        "office": "us_senate",
+        "type": {
+          "class": "general"
+        }
+      },
+      "fundraising": {
+        "contributors": [
+          {
+            "individual": 110450,
+            "name": "Apollo Global Management",
+            "pacs": 2500,
+            "total": 112950
+          },
+          {
+            "individual": 93475,
+            "name": "KKR & Co",
+            "pacs": 1000,
+            "total": 94475
+          },
+          {
+            "individual": 41887,
+            "name": "United Airlines Holdings",
+            "pacs": 6000,
+            "total": 47887
+          },
+          {
+            "individual": 39175,
+            "name": "SoftBank Corp",
+            "pacs": 0,
+            "total": 39175
+          },
+          {
+            "individual": 32165,
+            "name": "Berkshire Hathaway",
+            "pacs": 5000,
+            "total": 37165
+          },
+          {
+            "individual": 34600,
+            "name": "Citizens for Prosperity in America Today",
+            "pacs": 0,
+            "total": 34600
+          },
+          {
+            "individual": 23675,
+            "name": "FMR Corp",
+            "pacs": 10000,
+            "total": 33675
+          },
+          {
+            "individual": 33600,
+            "name": "Duty Free Americas",
+            "pacs": 0,
+            "total": 33600
+          },
+          {
+            "individual": 28600,
+            "name": "GEO Group",
+            "pacs": 5000,
+            "total": 33600
+          },
+          {
+            "individual": 33205,
+            "name": "Blackstone Group",
+            "pacs": 0,
+            "total": 33205
+          }
+        ],
+        "debt": 0,
+        "industries": [
+          {
+            "individual": 3378278,
+            "pacs": 0,
+            "total": 3378278,
+            "type": "Retired"
+          },
+          {
+            "individual": 1235235,
+            "pacs": 122250,
+            "total": 1357485,
+            "type": "Securities & Investment"
+          },
+          {
+            "individual": 910294,
+            "pacs": 224600,
+            "total": 1134894,
+            "type": "Oil & Gas"
+          },
+          {
+            "individual": 1003019,
+            "pacs": 72000,
+            "total": 1075019,
+            "type": "Real Estate"
+          },
+          {
+            "individual": 844557,
+            "pacs": 133638,
+            "total": 978195,
+            "type": "Lawyers/Law Firms"
+          },
+          {
+            "individual": 649961,
+            "pacs": 60200,
+            "total": 710161,
+            "type": "Misc Finance"
+          },
+          {
+            "individual": 445924,
+            "pacs": 116403,
+            "total": 562327,
+            "type": "Health Professionals"
+          },
+          {
+            "individual": 270290,
+            "pacs": 240500,
+            "total": 510790,
+            "type": "Insurance"
+          },
+          {
+            "individual": 35167,
+            "pacs": 431900,
+            "total": 467067,
+            "type": "Leadership PACs"
+          },
+          {
+            "individual": 368119,
+            "pacs": 11600,
+            "total": 379719,
+            "type": "Republican/Conservative"
+          }
+        ],
+        "raised": 22246647,
+        "remaining_cash": 14510320,
+        "spent": 10648108
+      },
+      "id": 203,
+      "image": "http://bioguide.congress.gov/bioguide/photo/C/C001056.jpg",
+      "incumbent": true,
+      "name": "John Cornyn",
+      "party": "R"
+    }
+  ]
+}

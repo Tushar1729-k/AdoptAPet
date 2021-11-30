@@ -1,13 +1,6 @@
 import React from 'react'
-
 import { Row, Col, Tabs, Tab } from 'react-bootstrap'
-
-
-
-
-
-
-
+import PetsChart from './OurViz'
 import PropTypes from 'prop-types'
 
 const VizPage = ({ fetchPage }) => {
@@ -23,9 +16,11 @@ const VizPage = ({ fetchPage }) => {
         <Tabs defaultActiveKey="our-viz" id="uncontrolled-tab-example" className="mb-3">
           <Tab eventKey="our-viz" title="Our visualizations">
 
+            <PetsChart />
+
           </Tab>
           <Tab eventKey="provider-viz" title="Provider visualizations">
-            
+
           </Tab>
         </Tabs>
       </Row>
