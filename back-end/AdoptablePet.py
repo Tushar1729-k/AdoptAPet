@@ -1,13 +1,3 @@
-# from models import (
-#   AdoptablePet,
-#   AdoptionCenter,
-#   BreedsSpecies,
-#   db,
-#   app,
-#   adoptable_pet_schema,
-#   adoption_center_schema,
-#   breeds_species_schema
-# )
 from models import *
 
 from sqlalchemy import and_, or_, func, any_, case, nullslast
@@ -21,20 +11,12 @@ def filter_adoptablepet_by(pet_query, filtering, what):
         pet_query = pet_query.filter(func.lower(AdoptablePet.sex).in_(what))
     elif filtering == "age":
         pet_query = pet_query.filter(func.lower(AdoptablePet.age).in_(what))
-        # print(pet_query)
     elif filtering == "breeds":
         filters = []
         for breed in what:
-            # print(breed)
-            # filters.append(AdoptionCenter.species_breeds.any(BreedsSpecies.breed_name==breed))
-            # pet_query = pet_query.filter(AdoptablePet.breed_number==BreedsSpecies.api_id)
             pet_query = pet_query.join(BreedsSpecies).filter(
                 func.lower(BreedsSpecies.breed_name) == func.lower(breed)
             )
-            # print(len(filters))
-        # print('tuple', *tuple(filters))
-        # pet_query = pet_query.join(AdoptionCenter).filter(or_(*tuple(filters)))
-        # print(pet_query)
     elif filtering == "color":
         pet_query = pet_query.filter(func.lower(AdoptablePet.color).in_(what))
     elif filtering == "size":
@@ -46,13 +28,10 @@ def filter_adoptablepet_by(pet_query, filtering, what):
 # filters adoptable pets for all five supported attributes
 def filter_adoptablepets(pet_query, queries):
     sex = get_query("sex", queries)
-    # print(sex)
     age = get_query("age", queries)
     breeds = get_query("breeds", queries)
     color = get_query("color", queries)
     size = get_query("size", queries)
-    # print('here')
-    # print(breeds)
 
     if sex != None:
         pet_query = filter_adoptablepet_by(pet_query, "sex", sex)
@@ -69,7 +48,6 @@ def filter_adoptablepets(pet_query, queries):
 
 
 def return_all_breeds(pet_query, queries):
-    # return pet_query.with_entities(AdoptablePet.species_breed)
     return pet_query.join(BreedsSpecies).with_entities(BreedsSpecies.breed_name)
 
 
@@ -139,7 +117,6 @@ def search_adoptablepets(q, pet_query):
         q = q[0].strip()
 
     terms = q.split()
-    # terms = [w.lower() for w in terms]
 
     searches = []
     for term in terms:
@@ -155,30 +132,3 @@ def search_adoptablepets(q, pet_query):
     )
 
     return pet_query
-
-    # searches.append(pet_query.join(BreedsSpecies).filter(BreedsSpecies.breed_name==term))
-    # searches.append(
-    #   AdoptablePet.center.has(
-    #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
-    #   )
-    # )
-    # print(AdoptablePet.center.has(
-    #     AdoptionCenter.species_breeds.any(func.lower(BreedsSpecies.breed_name).contains(term.lower()))
-    #   ))
-    # print(len(searches))
-    # print('tuple', *tuple(searches))
-
-    # print(searches)
-    # try:
-    #   searches.append(AdoptablePet.age.in_)
-    # joined_table = pet_query.join(BreedsSpecies)
-    # print(BreedsSpecies.breed_name.contains(term))
-    # searches.append(pet_query.join(BreedsSpecies).sp .contains(term))
-    # searches.append(
-    #     AdoptablePet.species_breed.has(BreedsSpecies.breed_name.contains(term))
-    # )
-
-    # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple(searches)))
-
-    # print(terms)
-    # pet_query = pet_query.join(BreedsSpecies).filter(or_(*tuple([BreedsSpecies.breed_name==term for term in terms])))
