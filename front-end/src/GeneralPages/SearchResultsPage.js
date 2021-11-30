@@ -27,21 +27,23 @@ const SearchResultsPage = ({ fetchPage }) => {
     const [isLoading, setIsLoading] = useState(false)
     return (
         <div style={{ padding: '4vw' }}>
-            <Row>
+            <Row style={{ color: '#00008b' }}>
                 <h1>Results for: {searchQuery}</h1>
                 {isLoading && <h4>Loading...</h4>}
-            </Row>
-            <Row>
-                <div style={{ width: "50vw" }}>
-                    <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
-                        placeholder="Enter query"
-                    />
-                </div>
-                <div style={{ paddingTop: '2vh' }}>
-                    <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
-                        Submit
-                    </Button>
-                </div>
+                <Col md={7}>
+                    <div>
+                        <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
+                            placeholder="Enter query"
+                        />
+                    </div>
+                </Col>
+                <Col md={5}>
+                    <div style={{ paddingTop: '2vh' }}>
+                        <Button style={{ backgroundColor: '#00008b' }} variant="primary" type="submit" onClick={() => fetchSearchResults()}>
+                            Submit
+                        </Button>
+                    </div>
+                </Col>
             </Row>
             <Row style={{ paddingTop: '4vh' }}>
                 <h2>Breeds Results</h2>

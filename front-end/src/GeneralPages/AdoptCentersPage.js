@@ -92,7 +92,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
             <Row style={{ paddingBottom: '2vh' }}>
                 <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
                     <Tab eventKey="sort" title="Sort">
-                        <Row>
+                        <Row style={{ color: '#00008b' }}>
                             {Array.from({ length: 3 }).map((_, idx) => (
                                 <Col key={idx}>
                                     <h6>{optionLabels[idx]}</h6>
@@ -103,7 +103,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
                                 </Col>
                             ))}
                             <Col>
-                                <h6>Center Type</h6>
+                                <h6 >Center Type</h6>
                                 <Select options={[{ value: 'type1', label: 'None', type: 'type' }, { value: 'type2', label: 'Rescue', type: 'type' }, { value: 'type3', label: 'Shelter', type: 'type' }]}
                                     isSearchable={true}
                                     isClearable={true}
@@ -121,24 +121,30 @@ const AdoptCentersPage = ({ fetchPage }) => {
                         </Row>
                     </Tab>
                     <Tab eventKey="search" title="Search">
-                        <div style={{ width: "50vw" }}>
+                        <Row style={{ color: '#00008b' }}>
                             <h3>Adoption Center Search</h3>
-                            <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
-                                placeholder="Enter query"
-                            />
-                        </div>
-                        <div style={{ paddingTop: '2vh' }}>
-                            <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
-                                Submit
-                            </Button>
-                        </div>
+                            <Col md={7}>
+                                <div>
+                                    <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
+                                        placeholder="Enter query"
+                                    />
+                                </div>
+                            </Col>
+                            <Col md={5}>
+                                <div style={{ paddingTop: '2vh' }}>
+                                    <Button style={{ backgroundColor: '#00008b' }} variant="primary" type="submit" onClick={() => fetchSearchResults()}>
+                                        Submit
+                                    </Button>
+                                </div>
+                            </Col>
+                        </Row>
                     </Tab>
                 </Tabs>
             </Row>
             <div style={{ paddingTop: '2vh' }}>
-                <Table striped bordered hover size="sm" responsive>
+                <Table bordered hover size="md" responsive style={{ color: "#00008b" }}>
                     <thead>
-                        <tr>
+                        <tr style={{ color: "white", backgroundColor: "#00008b" }}>
                             <th>Name</th>
                             <th>City</th>
                             <th>State</th>
@@ -149,7 +155,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
                     <tbody>
                         {allCenters.map((center, index) => (
                             <tr key={index}>
-                                <Link to={`/acmodel/${center.api_id}`} style={{ textDecoration: 'none' }} onClick={() => whichCenterPage("ac", center.api_id)}>
+                                <Link to={`/acmodel/${center.api_id}`} style={{ color: '#00008b' }} onClick={() => whichCenterPage("ac", center.api_id)}>
                                     <td>
                                         <Highlighter
                                             searchWords={[searchQuery]}

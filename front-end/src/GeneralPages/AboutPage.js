@@ -65,7 +65,7 @@ const teamContribution = [
 			  I like youtube, working out, supporting the 49ers and Warriors, and binge watching/reading.`,
 		commits: 0,
 		issues: 0,
-		tests: 0,
+		tests: 13,
 	}
 ]
 
@@ -189,7 +189,7 @@ const About = () => {
 							<Col key={teamMember}>
 								<Card>
 									<Card.Img variant="top" src={picture} style={{ width: '100%', height: '100%' }} />
-									<Card.Body>
+									<Card.Body style={{ backgroundColor: "#00008b", color: "white" }}>
 										<Card.Title style={{ fontSize: '4vh' }}>{name}</Card.Title>
 										<Card.Subtitle style={{ fontSize: '2vh' }} className="mb-2 text-muted">{role}</Card.Subtitle>
 										<ListGroup>

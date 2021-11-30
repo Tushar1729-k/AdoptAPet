@@ -92,7 +92,7 @@ const SpeciesModelPage = ({ fetchPage }) => {
             <Row style={{ paddingBottom: '2vh' }}>
                 <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
                     <Tab eventKey="sort" title="Sort">
-                        <Row>
+                        <Row style={{ color: '#00008b' }}>
                             {Array.from({ length: 3 }).map((_, idx) => (
                                 <Col key={idx}>
                                     <h6>{optionLabels[idx]}</h6>
@@ -121,24 +121,30 @@ const SpeciesModelPage = ({ fetchPage }) => {
                         </Row>
                     </Tab>
                     <Tab eventKey="search" title="Search">
-                        <div style={{ width: "50vw" }}>
+                        <Row style={{ color: '#00008b' }}>
                             <h3>Breeds Search</h3>
-                            <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
-                                placeholder="Enter query"
-                            />
-                        </div>
-                        <div style={{ paddingTop: '2vh' }}>
-                            <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
-                                Submit
-                            </Button>
-                        </div>
+                            <Col md={7} >
+                                <div>
+                                    <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
+                                        placeholder="Enter query"
+                                    />
+                                </div>
+                            </Col>
+                            <Col md={5}>
+                                <div style={{ paddingTop: '2vh' }}>
+                                    <Button variant="primary" type="submit" onClick={() => fetchSearchResults()} style={{ backgroundColor: "#00008b" }}>
+                                        Submit
+                                    </Button>
+                                </div>
+                            </Col>
+                        </Row>
                     </Tab>
                 </Tabs>
             </Row>
             <div style={{ paddingTop: '2vh' }}>
-                <Table striped bordered hover size="sm" responsive>
+                <Table bordered hover size="md" responsive style={{ color: "#00008b" }}>
                     <thead>
-                        <tr>
+                        <tr style={{ color: "white", backgroundColor: "#00008b" }}>
                             <th>Species</th>
                             <th>Breeds</th>
                             <th>Life Expectancy</th>
@@ -156,7 +162,7 @@ const SpeciesModelPage = ({ fetchPage }) => {
                                         textToHighlight={breed.species_name}
                                     />
                                 </td>
-                                <Link to={`/sbmodel/${breed.api_id}`} style={{ textDecoration: 'none' }} onClick={() => fetchPage("sb", breed.api_id)}>
+                                <Link to={`/sbmodel/${breed.api_id}`} style={{ color: "#00008b" }} onClick={() => fetchPage("sb", breed.api_id)}>
                                     <td>
                                         <Highlighter
                                             searchWords={[searchQuery]}

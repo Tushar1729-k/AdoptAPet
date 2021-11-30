@@ -8,7 +8,6 @@ import { Link, useHistory } from "react-router-dom"
 import Paginate from '../Components/Pagination'
 import axios from 'axios'
 import PropTypes from 'prop-types'
-import '../index.css'
 
 const PetsModelPage = ({ fetchPage }) => {
     const [allPets, setAllPets] = useState([])
@@ -95,7 +94,7 @@ const PetsModelPage = ({ fetchPage }) => {
                     <Paginate totalItems={numOfPets} itemsPerPage={20} paginate={paginate} />
                 </Col>
             </Row>
-            <Row style={{ paddingBottom: '2vh' }}>
+            <Row style={{ paddingBottom: '2vh', color: '#00008b' }}>
                 <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
                     <Tab eventKey="sort" title="Sort">
                         <Row>
@@ -144,17 +143,23 @@ const PetsModelPage = ({ fetchPage }) => {
                         </Row>
                     </Tab>
                     <Tab eventKey="search" title="Search">
-                        <div style={{ width: "50vw" }}>
+                        <Row style={{ color: '#00008b' }}>
                             <h3>Pet Search</h3>
-                            <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
-                                placeholder="Enter query"
-                            />
-                        </div>
-                        <div style={{ paddingTop: '2vh' }}>
-                            <Button variant="primary" type="submit" onClick={() => fetchSearchResults()}>
-                                Submit
-                            </Button>
-                        </div>
+                            <Col md={7}>
+                                <div>
+                                    <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
+                                        placeholder="Enter query"
+                                    />
+                                </div>
+                            </Col>
+                            <Col md={5}>
+                                <div style={{ paddingTop: '2vh' }}>
+                                    <Button style={{ backgroundColor: '#00008b' }} variant="primary" type="submit" onClick={() => fetchSearchResults()}>
+                                        Submit
+                                    </Button>
+                                </div>
+                            </Col>
+                        </Row>
                     </Tab>
                 </Tabs>
             </Row>
