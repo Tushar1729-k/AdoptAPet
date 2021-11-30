@@ -23,8 +23,6 @@ def filter_center_by(center_query, filtering, what):
     elif filtering == "zip":
         center_query = center_query.filter(func.lower(AdoptionCenter.zipcode).in_(what))
     elif filtering == "services":
-        # if AdoptionCenter.services != None:
-        # print(what)
         center_query = center_query.filter(
             func.lower(AdoptionCenter.services).contains(what[0])
         )
