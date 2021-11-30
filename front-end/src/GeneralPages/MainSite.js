@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react'
 import axios from 'axios'
 import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
-import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus, FaSearch } from "react-icons/fa"
+import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus, FaSearch, FaChartPie } from "react-icons/fa"
 import HomePage from "./HomePage"
 import InstancePage from "../InstancePages/PetsInstanceTemplate"
 import AdoptInstanceTemplate from '../InstancePages/AdoptInstanceTemplate'
@@ -11,8 +11,10 @@ import SpeciesInstanceTemplate from '../InstancePages/SpeciesInstanceTemplate'
 import SpeciesModelPage from './SpeciesModelPage'
 import PetsModelPage from './PetsModelPage'
 import AdoptCentersPage from './AdoptCentersPage'
+import VizPage from './VizPage'
 import AboutPage from "./AboutPage"
 import SearchResultsPage from './SearchResultsPage'
+
 const MainSite = () => {
     const [petsData, setPetsData] = useState([])
     const [searchQuery, setSearchQuery] = useState("")
@@ -88,6 +90,7 @@ const MainSite = () => {
                 <Nav.Link href="/sbmodel"><FaCat/> Species</Nav.Link>
                 <Nav.Link href="/apmodel"><FaPaw/> Pets</Nav.Link>
                 <Nav.Link href="/acmodel"><FaCartPlus/> Adoption Centers</Nav.Link>
+                <Nav.Link href="/visualizations"><FaChartPie/> Visualizations</Nav.Link>
                 <Nav.Link href="/search">
                     <FaSearch />Search
                 </Nav.Link>
@@ -111,6 +114,9 @@ const MainSite = () => {
                     </Route>
                     <Route exact path="/acmodel">
                         <AdoptCentersPage fetchPage={fetchPage}/>
+                    </Route>
+                    <Route exact path="/visualizations">
+                        <VizPage fetchPage={fetchPage}/>
                     </Route>
                     <Route exact path="/search">
                         <SearchResultsPage searchQuery={searchQuery} fetchPage={fetchPage} />
