@@ -1,13 +1,13 @@
 import React from 'react'
 import { Row, Col, Tabs, Tab } from 'react-bootstrap'
-import PetsChart from './OurViz'
+import PetsChart from '../Components/OurViz'
 import PropTypes from 'prop-types'
 
 const VizPage = ({ fetchPage }) => {
 
   return (
     <div style={{ padding: '4vw' }}>
-      {/* <Row xs={1}>
+      <Row xs={1}>
         <Col>
           <h2>Visualizations</h2>
         </Col>
@@ -23,8 +23,8 @@ const VizPage = ({ fetchPage }) => {
 
           </Tab>
         </Tabs>
-      </Row> */}
-      <PetsChart />
+      </Row>
+      {/* <PetsChart /> */}
 
     </div>
   );

@@ -25,7 +25,7 @@ const PetsChart = () => {
           list.push(obj)
         })
         console.log(JSON.stringify(list))
-        return JSON.stringify(list)
+        return list
       }
 
     const getData = async () => {
