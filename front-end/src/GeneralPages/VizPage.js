@@ -7,7 +7,7 @@ const VizPage = ({ fetchPage }) => {
 
   return (
     <div style={{ padding: '4vw' }}>
-      <Row xs={1}>
+      {/* <Row xs={1}>
         <Col>
           <h2>Visualizations</h2>
         </Col>
@@ -23,12 +23,11 @@ const VizPage = ({ fetchPage }) => {
 
           </Tab>
         </Tabs>
-      </Row>
-
+      </Row> */}
+      <PetsChart />
 
     </div>
-  )
-
+  );
 
 }
 
