@@ -1,6 +1,6 @@
 import React from 'react'
 import { Row, Col, Tabs, Tab } from 'react-bootstrap'
-import PetsChart from './OurViz'
+import PetsChart from '../Components/OurViz'
 import PropTypes from 'prop-types'
 
 const VizPage = ({ fetchPage }) => {
@@ -24,11 +24,10 @@ const VizPage = ({ fetchPage }) => {
           </Tab>
         </Tabs>
       </Row>
-
+      {/* <PetsChart /> */}
 
     </div>
-  )
-
+  );
 
 }
 

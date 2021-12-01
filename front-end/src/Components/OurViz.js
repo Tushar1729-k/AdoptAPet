@@ -4,8 +4,9 @@ import BubbleChart from '@weknow/react-bubble-chart-d3'
 
 const PetsChart = () => {
   const [data, setData] = useState([])
+  const [loading, setLoading] = useState(false)
 
-  // useEffect(() => {
+  useEffect(() => {
     /**
      * Parses API data and returns formatted data for visualization
      * @param {List[AdoptablePets]} data
@@ -24,7 +25,7 @@ const PetsChart = () => {
           list.push(obj)
         })
         console.log(JSON.stringify(list))
-        return JSON.stringify(list)
+        return list
       }
 
     const getData = async () => {
@@ -42,40 +43,41 @@ const PetsChart = () => {
       setData(parsedData)
     }
     getData()
-  // })
+  }, [])
 
-  return (
-    <div>
-      <h2>Pet breed counts</h2>
+  // render() {
+    return (
       <div>
-        <BubbleChart
-          graph={{
-            zoom: 0.7,
-            offsetX: 0.0,
-            offsetY: 0.0
-          }}
-          showLegend={false}
-          width={1000}
-          height={800}
-          valueFont={{
-            family: "Arial",
-            size: 12,
-            color: "#fff",
-            weight: "bold"
-          }}
-          labelFont={{
-            family: "Arial",
-            size: 16,
-            color: "#fff",
-            weight: "bold"
-          }}
-          data={data}
-        />
-        {/* <BubbleChart/> */}
+        <h2>Pet breed counts</h2>
+        <div>
+          <BubbleChart
+            graph={{
+              zoom: 0.7,
+              offsetX: 0.0,
+              offsetY: 0.0
+            }}
+            showLegend={false}
+            width={1000}
+            height={800}
+            valueFont={{
+              family: "Arial",
+              size: 12,
+              color: "#fff",
+              weight: "bold"
+            }}
+            labelFont={{
+              family: "Arial",
+              size: 16,
+              color: "#fff",
+              weight: "bold"
+            }}
+            data={data}
+          />
+          {/* <BubbleChart/> */}
+        </div>
       </div>
-    </div>
-  )
-
+    )
+  // }
 }
 
 export default PetsChart
