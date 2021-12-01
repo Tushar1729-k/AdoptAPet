@@ -2,11 +2,10 @@ import axios from "axios"
 import React, { useEffect, useState } from "react"
 import BubbleChart from '@weknow/react-bubble-chart-d3'
 
-
 const PetsChart = () => {
   const [data, setData] = useState([])
 
-  useEffect(() => {
+  // useEffect(() => {
     /**
      * Parses API data and returns formatted data for visualization
      * @param {List[AdoptablePets]} data
@@ -43,13 +42,13 @@ const PetsChart = () => {
       setData(parsedData)
     }
     getData()
-  })
+  // })
 
   return (
-    <>
+    <div>
       <h2>Pet breed counts</h2>
       <div>
-        {/* <BubbleChart
+        <BubbleChart
           graph={{
             zoom: 0.7,
             offsetX: 0.0,
@@ -71,10 +70,10 @@ const PetsChart = () => {
             weight: "bold"
           }}
           data={data}
-        /> */}
+        />
         {/* <BubbleChart/> */}
       </div>
-    </>
+    </div>
   )
 
 }
