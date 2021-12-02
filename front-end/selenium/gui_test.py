@@ -61,65 +61,65 @@ def test_navbar_about():
 
 
 # 4
-# def test_navbar_species():
-#     print("starting test_navbar_sbmodel")
-#     species = driver.find_element(By.LINK_TEXT, " Species")
-#     species.click()
-#     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+def test_navbar_species():
+    print("starting test_navbar_sbmodel")
+    species = driver.find_element(By.LINK_TEXT, "Species")
+    species.click()
+    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
 
 
 # 5
-# def test_navbar_pets():
-#     print("starting test_navbar_apmodel")
-#     pets = driver.find_element(By.LINK_TEXT, " Pets")
-#     pets.click()
-#     assert driver.current_url == "https://www.adoptapet.me/apmodel"
+def test_navbar_pets():
+    print("starting test_navbar_apmodel")
+    pets = driver.find_element(By.LINK_TEXT, " Pets")
+    pets.click()
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
 
 
 # 6
-# def test_navbar_adoption_centers():
-#     print("starting test_navbar_adoption_centers")
-#     centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
-#     centers.click()
-#     assert driver.current_url == "https://www.adoptapet.me/acmodel"
+def test_navbar_adoption_centers():
+    print("starting test_navbar_adoption_centers")
+    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers.click()
+    assert driver.current_url == "https://www.adoptapet.me/acmodel"
 
 
 # 7
-# def test_navbar_logo():
-#     print("starting test_navbar_logo")
-#     logo = driver.find_element(By.LINK_TEXT, "Adopt A Pet")
-#     logo.click()
-#     assert driver.current_url == "https://www.adoptapet.me/"
+def test_navbar_logo():
+    print("starting test_navbar_logo")
+    logo = driver.find_element(By.LINK_TEXT, "Adopt A Pet")
+    logo.click()
+    assert driver.current_url == "https://www.adoptapet.me/"
 
 
 # 8
-# def test_navbar_about_back():
-#     print("starting test_navbar_about_back")
-#     about = driver.find_element(By.LINK_TEXT, "About")
-#     about.click()
-#     assert driver.current_url == "https://www.adoptapet.me/about"
-#     driver.back()
-#     assert driver.current_url == "https://www.adoptapet.me/"
+def test_navbar_about_back():
+    print("starting test_navbar_about_back")
+    about = driver.find_element(By.LINK_TEXT, "About")
+    about.click()
+    assert driver.current_url == "https://www.adoptapet.me/about"
+    driver.back()
+    assert driver.current_url == "https://www.adoptapet.me/"
 
 
 # 9
-# def test_navbar_adoption_centers_back():
-#     print("starting test_navbar_adoption_centers_back")
-#     centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
-#     centers.click()
-#     assert driver.current_url == "https://www.adoptapet.me/acmodel"
-#     driver.back()
-#     assert driver.current_url == "https://www.adoptapet.me/"
+def test_navbar_adoption_centers_back():
+    print("starting test_navbar_adoption_centers_back")
+    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers.click()
+    assert driver.current_url == "https://www.adoptapet.me/acmodel"
+    driver.back()
+    assert driver.current_url == "https://www.adoptapet.me/"
 
 
 # 10
-# def test_navbar_species_back():
-#     print("starting test_navbar_sbmodel_back")
-#     species = driver.find_element(By.LINK_TEXT, "Species")
-#     species.click()
-#     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
-#     driver.back()
-#     assert driver.current_url == "https://www.adoptapet.me/"
+def test_navbar_species_back():
+    print("starting test_navbar_sbmodel_back")
+    species = driver.find_element(By.LINK_TEXT, "Species")
+    species.click()
+    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+    driver.back()
+    assert driver.current_url == "https://www.adoptapet.me/"
 
 
 # 11
