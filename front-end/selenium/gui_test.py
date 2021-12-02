@@ -62,7 +62,7 @@ def test_navbar_about():
 # 4
 def test_navbar_species():
     print("starting test_navbar_sbmodel")
-    species = driver.find_element(By.PARTIAL_PARTIAL_LINK_TEXT, "Species")
+    species = driver.find_element(By.PARTIAL_LINK_TEXT, "Species")
     species.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
 
