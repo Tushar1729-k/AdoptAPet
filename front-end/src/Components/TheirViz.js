@@ -2,42 +2,33 @@ import axios from "axios"
 import React, { useEffect, useState } from "react"
 import BubbleChart from '@weknow/react-bubble-chart-d3'
 import { PieChart, Pie, Cell, Tooltip, Funnel, FunnelChart, LabelList } from "recharts"
-import { parseVisData } from '../Components/Filtering'
+import { parseVisData} from '../Components/Filtering'
 
 const PetsChart = () => {
-  const [data, setData] = useState([])
-  const [originData, setOriginData] = useState([])
+  const [genresData, setGenresData] = useState([])
+  const [nationsData, setNationsData] = useState([])
   const [statesData, setStatesData] = useState([])
 
   useEffect(() => {
-    /**
-     * Parses API data and returns formatted data for visualization
-     * @param {List[AdoptablePets]} data
-     * @return {
-     *    breed_name: String (Pet breed)
-     *    value: <Value> (number of breed)
-     * }
-     */
-
     const getData = async () => {
-      const breeds = await axios.get(`https://api.adoptapet.me/ap?breednames&page=-1`)
-      const origins = await axios.get(`https://api.adoptapet.me/sb?origins&page=-1`)
-      const states = await axios.get(`https://api.adoptapet.me/ac?states&page=-1`)
-      let tempBreeds = breeds.data.page.map((el) => el.breed_name)
-      let tempOrigins = origins.data.page.map((el) => el.origin)
-      let tempStates = states.data.page.map((el) => el.state)
-      const parsedData = parseVisData(tempBreeds, true)
-      const originsParsedData = parseVisData(tempOrigins, false)
-      const statesParsedData = parseVisData(tempStates, false)
-      setData(parsedData)
-      setOriginData(originsParsedData)
-      setStatesData(statesParsedData)
+      const genres = await axios.get(`https://api.gallerygaze.me/search?model=artwork`)
+      const nationalities = await axios.get(`https://api.gallerygaze.me/search?model=artist`)
+      const countries = await axios.get(`https://api.gallerygaze.me/search?model=museum`)
+      let tempGenres = genres.data["query results"].map((el) => el.genre)
+      let tempNations = nationalities.data["query results"].map((el) => el.nationality)
+      let tempCountries = countries.data["query results"].map((el) => el.country)
+      const parsedDates = parseVisData(tempGenres, true)
+      const nationsParsedData = parseVisData(tempNations, false)
+      const countriesParsedData = parseVisData(tempCountries, false)
+      setGenresData(parsedDates)
+      setNationsData(nationsParsedData)
+      setStatesData(countriesParsedData)
     }
     getData()
   }, [])
     return (
       <div>
-        <h2>Pet breed counts</h2>
+        <h2>Artwork Genres</h2>
         <div>
           <BubbleChart
             graph={{
@@ -60,15 +51,15 @@ const PetsChart = () => {
               color: "#fff",
               weight: "bold"
             }}
-            data={data}
+            data={genresData}
           />
         </div>
         <div>
-        <h2>Species Origin Counts</h2>
+        <h2>Artist Nationalities</h2>
         <PieChart width={1000} height={1000}>
-              <Pie data={originData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={400} label labelLine>
+              <Pie data={nationsData} dataKey="value" nameKey="name" cx="50%" cy="50%" outerRadius={400} label labelLine>
               {
-                originData.map((entry, index) => (
+                nationsData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.fill}>
                   </Cell>
                 ))
@@ -78,7 +69,7 @@ const PetsChart = () => {
         </PieChart>
         </div>
         <div>
-        <h2>Adoption Center State Counts</h2>
+        <h2>Museum Countries</h2>
         <FunnelChart width={1000} height={1000}>
           <Tooltip />
           <Funnel
@@ -92,7 +83,6 @@ const PetsChart = () => {
         </div>
       </div>
     )
-  // }
 }
 
 export default PetsChart

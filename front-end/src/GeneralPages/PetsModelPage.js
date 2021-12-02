@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import { Row, Col, Card, ListGroup, Tabs, Tab, Button } from 'react-bootstrap'
-import { filterOptions, getFilterQueries } from './Filtering'
+import { filterOptions, getFilterQueries } from '../Components/Filtering'
 import Select from 'react-select'
 import Highlighter from "react-highlight-words"
 import { Link, useHistory } from "react-router-dom"

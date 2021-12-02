@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col, Tabs, Tab } from 'react-bootstrap'
 import PetsChart from '../Components/OurViz'
+import TheirViz from '../Components/TheirViz'
 import PropTypes from 'prop-types'
 
 const VizPage = ({ fetchPage }) => {
@@ -20,7 +21,7 @@ const VizPage = ({ fetchPage }) => {
 
           </Tab>
           <Tab eventKey="provider-viz" title="Provider visualizations">
-
+            <TheirViz />
           </Tab>
         </Tabs>
       </Row>

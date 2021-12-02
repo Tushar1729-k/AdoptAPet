@@ -1,7 +1,7 @@
 import React from 'react'
 import { Row, Table, Col, Button, Tabs, Tab } from 'react-bootstrap'
 import { useState, useEffect } from 'react'
-import { filterOptions, getFilterQueries } from './Filtering'
+import { filterOptions, getFilterQueries } from '../Components/Filtering'
 import Highlighter from "react-highlight-words"
 import Select from 'react-select'
 import Paginate from '../Components/Pagination'

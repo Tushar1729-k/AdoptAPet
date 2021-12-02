@@ -1,4 +1,5 @@
 import React from 'react'
+import randomColor from "randomcolor"
 
 export const filterOptions = (arr, val) => {
     let temp = [...new Set(arr)]
@@ -55,3 +56,27 @@ export const getFilterQueries = (filter, option, filterQueries) => {
         }
     }
 }
+
+export const parseVisData = (data, d3) => {
+    const list = [];
+    let tempMap = new Map()
+    for (var key in data) {
+      tempMap.set(data[key], typeof tempMap.get(data[key]) !== 'undefined' ? tempMap.get(data[key])+1 : 1)
+    }
+
+    tempMap.forEach((value, key) => {
+      const obj = {};
+      console.log(key)
+      if (key !== undefined) {
+        if (d3) {
+          obj["label"] = key
+        } else {
+          obj["name"] = key
+        }
+        obj["value"] = value
+        obj["fill"] = randomColor()
+        list.push(obj)
+      }
+    })
+    return list
+  }
