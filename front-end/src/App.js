@@ -1,6 +1,5 @@
 import React from 'react';
 import MainSite from "./GeneralPages/MainSite";
-import {BrowserRouter as Router} from 'react-router-dom'
 
 function App() {
   return (
