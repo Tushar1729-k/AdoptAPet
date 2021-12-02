@@ -34,7 +34,7 @@ def setup_module(module):
 
 def teardown_module(module):
     print("starting teardown_module")
-    driver.quit()
+    driver.close()
 
 
 # 1
