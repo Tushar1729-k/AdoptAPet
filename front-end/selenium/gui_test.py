@@ -62,7 +62,7 @@ def test_navbar_about():
 # 4
 def test_navbar_species():
     print("starting test_navbar_sbmodel")
-    species = driver.find_element(By.LINK_TEXT, "Species")
+    species = driver.find_element(By.LINK_TEXT, " Species")
     species.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
 
@@ -70,7 +70,7 @@ def test_navbar_species():
 # 5
 def test_navbar_pets():
     print("starting test_navbar_apmodel")
-    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets = driver.find_element(By.LINK_TEXT, " Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
 
@@ -78,7 +78,7 @@ def test_navbar_pets():
 # 6
 def test_navbar_adoption_centers():
     print("starting test_navbar_adoption_centers")
-    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers = driver.find_element(By.LINK_TEXT, " Adoption Centers")
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
 
@@ -86,7 +86,7 @@ def test_navbar_adoption_centers():
 # 7
 def test_navbar_logo():
     print("starting test_navbar_logo")
-    logo = driver.find_element(By.LINK_TEXT, "Adopt A Pet")
+    logo = driver.find_element(By.LINK_TEXT, " Adopt A Pet")
     logo.click()
     assert driver.current_url == "https://www.adoptapet.me/"
 
@@ -94,7 +94,7 @@ def test_navbar_logo():
 # 8
 def test_navbar_about_back():
     print("starting test_navbar_about_back")
-    about = driver.find_element(By.LINK_TEXT, "About")
+    about = driver.find_element(By.LINK_TEXT, " About")
     about.click()
     assert driver.current_url == "https://www.adoptapet.me/about"
     driver.back()
@@ -104,7 +104,7 @@ def test_navbar_about_back():
 # 9
 def test_navbar_adoption_centers_back():
     print("starting test_navbar_adoption_centers_back")
-    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers = driver.find_element(By.LINK_TEXT, " Adoption Centers")
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
     driver.back()
@@ -114,7 +114,7 @@ def test_navbar_adoption_centers_back():
 # 10
 def test_navbar_species_back():
     print("starting test_navbar_sbmodel_back")
-    species = driver.find_element(By.LINK_TEXT, "Species")
+    species = driver.find_element(By.LINK_TEXT, " Species")
     species.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
     driver.back()
@@ -124,16 +124,8 @@ def test_navbar_species_back():
 # 11
 def test_ap_filter():
     print("starting test_ap_filter")
-    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets = driver.find_element(By.LINK_TEXT, " Pets")
     pets.click()
-    # assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    # field = driver.find_element(By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]")
-    # driver.execute_script("arguments[0].click();", field)
-    # assert driver.current_url == "https://www.adoptapet.me/apmodel"
-    # driver.find_element_by_css_selector('.Select--single .Select-value').click()
-    # beagle = wait.until(EC.visibility_of_all_elements_located((By.CSS_SELECTOR, '.Select-option#react-select-2--option-1')))
-
-    # beagle.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     # field = driver.find_element(By.XPATH, "//input[0]")
     field = driver.find_element(
@@ -150,7 +142,7 @@ def test_ap_filter():
 # 12
 def test_ap_filter_2():
     print("starting test_ap_filter_2")
-    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets = driver.find_element(By.LINK_TEXT, " Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field = driver.find_element(
@@ -165,14 +157,14 @@ def test_ap_filter_2():
 # 13
 def test_ac_filter():
     print("starting test_ac_filter")
-    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers = driver.find_element(By.LINK_TEXT, " Adoption Centers")
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
     field = driver.find_element(
         By.XPATH,
         "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input",
     )
-    field.send_keys("Albany")
+    field.send_keys(" Albany")
     field.send_keys(Keys.RETURN)
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
 
@@ -180,7 +172,7 @@ def test_ac_filter():
 # 14
 def test_sb_filter():
     print("starting test_sb_filter")
-    breeds = driver.find_element(By.LINK_TEXT, "Species")
+    breeds = driver.find_element(By.LINK_TEXT, " Species")
     breeds.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
     field = driver.find_element(
@@ -195,7 +187,7 @@ def test_sb_filter():
 # 15
 def test_ap_sort():
     print("starting test_ap_sort")
-    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets = driver.find_element(By.LINK_TEXT, " Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field = driver.find_element(
@@ -210,7 +202,7 @@ def test_ap_sort():
 # 16
 def test_ac_sort():
     print("starting test_ap_sort")
-    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers = driver.find_element(By.LINK_TEXT, " Adoption Centers")
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
     field = driver.find_element(
@@ -225,7 +217,7 @@ def test_ac_sort():
 # 17
 def test_sb_sort():
     print("starting test_sb_sort")
-    breeds = driver.find_element(By.LINK_TEXT, "Species")
+    breeds = driver.find_element(By.LINK_TEXT, " Species")
     breeds.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
     field = driver.find_element(
@@ -240,7 +232,7 @@ def test_sb_sort():
 # 18
 def test_ap_search():
     print("starting test_ap_search")
-    pets = driver.find_element(By.LINK_TEXT, "Pets")
+    pets = driver.find_element(By.LINK_TEXT, " Pets")
     pets.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     # field = driver.find_element()
@@ -263,7 +255,7 @@ def test_ap_search():
 # 19
 def test_ac_search():
     print("starting test_ac_search")
-    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+    centers = driver.find_element(By.LINK_TEXT, " Adoption Centers")
     centers.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
     search_btn = driver.find_element(
@@ -285,7 +277,7 @@ def test_ac_search():
 # 20
 def test_sb_search():
     print("starting test_sb_search")
-    breeds = driver.find_element(By.LINK_TEXT, "Species")
+    breeds = driver.find_element(By.LINK_TEXT, " Species")
     breeds.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
     search_btn = driver.find_element(
