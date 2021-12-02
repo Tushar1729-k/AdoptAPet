@@ -46,7 +46,7 @@ def test_title():
 # 2
 def test_navbar_home():
     print("starting test_navbar_home")
-    home = driver.find_element(By.LINK_TEXT, " Home")
+    home = driver.find_element(By.LINK_TEXT, "Home")
     home.click()
     assert driver.current_url == "https://www.adoptapet.me/"
 
