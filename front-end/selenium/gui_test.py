@@ -23,6 +23,7 @@ def setup_module(module):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
     driver = Remote(
         "http://selenium__standalone-chrome:4444/wd/hub",
         desired_capabilities=chrome_options.to_capabilities(),
