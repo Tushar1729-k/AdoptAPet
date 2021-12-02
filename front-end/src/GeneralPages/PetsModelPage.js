@@ -19,7 +19,7 @@ const PetsModelPage = ({ fetchPage }) => {
   const [options, setOptions] = useState([])
   const [searchQuery, setSearchQuery] = useState("")
   let history = useHistory()
-
+  // Fetch pets data from the pets endpoint, depending on the query.
   const fetchPets = async (query) => {
     setIsLoading(true)
     const res = await axios.get(`https://api.adoptapet.me/ap?${query}`)
@@ -27,6 +27,7 @@ const PetsModelPage = ({ fetchPage }) => {
     setNumOfPets(res.data.count)
     setIsLoading(false)
   }
+  // Fetching 2 of the filter/sort options from the adoption center endpoint.
   const fetchOptions = async () => {
     const colors = await axios.get(`https://api.adoptapet.me/ap?colors`)
     const breeds = await axios.get(`https://api.adoptapet.me/ap?breednames`)
@@ -53,27 +54,28 @@ const PetsModelPage = ({ fetchPage }) => {
     }
     history.push({ search: params.toString() })
   }, [searchQuery, history])
-
+  // Depending on which page is clicked on, the corresponding data is pulled from the DB.
   const paginate = (num) => {
     setCurrentPage(num)
-    console.log(queryString)
     if (queryString) {
       fetchPets(`page=${num}&${queryString}`)
     } else {
       fetchPets(`page=${num}`)
     }
   }
-
+  // Function to set the filter query depending on which filters are selected.
   const fetchFilteredResults = (filter, option) => {
     let res = getFilterQueries(filter, option, filterQueries)
     setQueryString(res.query)
     setFilterQueries([...res.filters])
+    // If no filters are selected, the data for the current page in pagination is fetched.
     if (res.query === "") {
       fetchPets(`page=${currentPage}`)
     } else {
       fetchPets(res.query)
     }
   }
+  // Function specifically to call fetchPets for any search queries in search bar.
   const fetchSearchResults = () => {
     fetchPets(`q=${searchQuery}`)
   }
@@ -95,9 +97,11 @@ const PetsModelPage = ({ fetchPage }) => {
         </Col>
       </Row>
       <Row style={{ paddingBottom: '2vh', color: '#00008b' }}>
+        {/* One tab has the filters, and the other tab has the search functionality. */}
         <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
           <Tab eventKey="sort" title="Sort">
             <Row>
+              {/* First two filters */}
               {Array.from({ length: 2 }).map((_, idx) => (
                 <Col key={idx}>
                   <h6>{optionLabels[idx]}</h6>
@@ -107,6 +111,7 @@ const PetsModelPage = ({ fetchPage }) => {
                   />
                 </Col>
               ))}
+              {/* Hard coding the other four filters/sort since the options are limited. */}
               <Col>
                 <h6>Sex</h6>
                 <Select options={[{ value: 'sex1', label: 'None', type: 'sex' }, { value: 'sex2', label: 'Male', type: 'sex' }, { value: 'sex3', label: 'Female', type: 'sex' }]}
@@ -145,6 +150,7 @@ const PetsModelPage = ({ fetchPage }) => {
           <Tab eventKey="search" title="Search">
             <Row style={{ color: '#00008b' }}>
               <h3>Pet Search</h3>
+              {/* This column holds the actual text box to enter a search query. */}
               <Col md={7}>
                 <div>
                   <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
@@ -164,11 +170,14 @@ const PetsModelPage = ({ fetchPage }) => {
         </Tabs>
       </Row>
       <Row xs={1} md={4} className="g-4">
+        {/* Rows of 4 cards are used to display pet options for the model page */}
         {allPets.map((pet, idx) => (
+          // Each card is wrapped in a link, so clicking anywhere will take user to instance page.
           <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none' }} onClick={() => fetchPage("ap", pet.api_id)}>
             <Col>
               <Card>
                 <img variant="top" src={pet.pic_url} style={{ width: '100%', height: '400px' }} />
+                {/* Highlighter component wraps each piece of info so that they are highlighted if they match a search query */}
                 <Card.Body style={{ backgroundColor: "#00008b", color: "white" }}>
                   <Card.Title style={{ fontSize: '4vh' }}>
                     <Highlighter

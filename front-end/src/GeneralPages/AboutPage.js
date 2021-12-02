@@ -143,6 +143,7 @@ const About = () => {
 	const [fetchedData, setFetchedData] = useState(false)
 
 	useEffect(() => {
+		// Getting info from gitlab api on component load to have most up to date data.
 		const fetchData = async () => {
 			if (groupMemberList === undefined || groupMemberList.length === 0) {
 				const gitlabApiInfo = await fetchGitLabApiInfo()

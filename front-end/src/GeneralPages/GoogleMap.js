@@ -8,12 +8,15 @@ const CustomMap = withScriptjs(withGoogleMap(({ lat, lng, zoom }) => {
         height: "100vh",
         width: "100%"
     }
+    // Google map component needs the latitude and longtitude to return location.
     const defaultCenter = {
         lat: lat, lng: lng
     }
     const [selected, setSelected] = useState(null)
     return (
         <div>
+            {/* Passing in required props for the GoodgleMap component, and any other component
+                from react-google-maps library. */}
             <GoogleMap
                 mapContainerStyle={mapStyles}
                 zoom={zoom}

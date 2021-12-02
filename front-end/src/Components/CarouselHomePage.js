@@ -7,6 +7,7 @@ import DomesticShortHair from "../Images/domestic_short_hair_2.jpg"
 const CarouselHomePage = () => {
     return (
         <div>
+            {/* Using Carousel component from react bootstrap to display three pet images for home page. */}
             <Carousel fade>
                 <Carousel.Item>
                     <img

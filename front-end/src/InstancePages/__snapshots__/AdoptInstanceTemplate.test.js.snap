@@ -15,6 +15,8 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
       className="card"
       style={
         Object {
+          "backgroundColor": "#00008b",
+          "color": "white",
           "width": "70vw",
         }
       }
@@ -53,14 +55,6 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
                 className="list-group list-group-flush"
                 onKeyDown={[Function]}
               >
-                <div
-                  className="list-group-item"
-                  data-rr-ui-event-key={null}
-                  onClick={[Function]}
-                >
-                  Species Available : 
-                  Dogs, Cats
-                </div>
                 <div
                   className="list-group-item"
                   data-rr-ui-event-key={null}
@@ -234,6 +228,7 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -254,6 +249,7 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -270,6 +266,7 @@ exports[`Adoption Center Instance Page Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -303,6 +300,8 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
       className="card"
       style={
         Object {
+          "backgroundColor": "#00008b",
+          "color": "white",
           "width": "70vw",
         }
       }
@@ -341,14 +340,6 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
                 className="list-group list-group-flush"
                 onKeyDown={[Function]}
               >
-                <div
-                  className="list-group-item"
-                  data-rr-ui-event-key={null}
-                  onClick={[Function]}
-                >
-                  Species Available : 
-                  Dogs, Cats
-                </div>
                 <div
                   className="list-group-item"
                   data-rr-ui-event-key={null}
@@ -522,6 +513,7 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -542,6 +534,7 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -558,6 +551,7 @@ exports[`Adoption Center Instance Page Properly Rendered With Image 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }

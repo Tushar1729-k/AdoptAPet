@@ -24,6 +24,9 @@ const SearchResultsPage = ({ fetchPage }) => {
             fetchSearchResults()
         }
     }
+    // General search page that returns results for all model pages.
+    /* Search functionality works the same as in the model pages, except now results for all
+       model pages are shown for a given query. */
     const [isLoading, setIsLoading] = useState(false)
     return (
         <div style={{ padding: '4vw' }}>

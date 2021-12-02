@@ -14,6 +14,7 @@ const HomePage = () => {
     return (
         <div>
             <CarouselHomePage />
+            {/* Using Parrallax component to have cool scroll effect for images on home page. */}
             <Parallax blur={1} bgImage={beagle_3} bgImageAlt="the cat" strength={300}>
                 <div style={{ height: '90vh'}}>
                 </div>
@@ -27,6 +28,7 @@ const HomePage = () => {
                 </div>
             </Parallax>
             <div style={{ paddingTop: "4vh", paddingLeft: "4vw", paddingRight: "4vw" }}>
+                {/* The cards in this card group provide the links to the different model pages */}
                 <CardGroup>
                     <Card>
                         <Link to="/sbmodel" style={{ textDecoration: 'none' }}>

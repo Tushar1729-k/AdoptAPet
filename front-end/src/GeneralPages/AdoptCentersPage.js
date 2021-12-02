@@ -11,20 +11,23 @@ import PropTypes from 'prop-types'
 
 const AdoptCentersPage = ({ fetchPage }) => {
     const [allCenters, setAllCenters] = useState([])
+    // Stores selected filter options.
     const [filterQueries, setFilterQueries] = useState([])
     const [queryString, setQueryString] = useState("")
+    // Default page in model page is the first one.
     const [currentPage, setCurrentPage] = useState(1)
     const [isLoading, setIsLoading] = useState(false)
+    // Contains the fetched filter options.
     const [options, setOptions] = useState([])
     const [searchQuery, setSearchQuery] = useState("")
-
+    // Fetch adoption centers data from the adoption center endpoint, depending on the query.
     const fetchCenters = async (query) => {
         setIsLoading(true)
         const res = await axios.get(`https://api.adoptapet.me/ac?${query}`)
         setAllCenters(res.data.page)
         setIsLoading(false)
     }
-
+    // Fetching 3 of the filter/sort options from the adoption center endpoint.
     const fetchOptions = async () => {
         const states = await axios.get(`https://api.adoptapet.me/ac?states&page=-1`)
         const cities = await axios.get(`https://api.adoptapet.me/ac?cities&page=-1`)
@@ -36,17 +39,16 @@ const AdoptCentersPage = ({ fetchPage }) => {
         let tempZips = zips.data.page.map((el) => el.zipcode)
         tempZips.sort()
         let stateOptions = filterOptions(tempStates, "state")
-        console.log("state", stateOptions)
         let cityOptions = filterOptions(tempCities, "city")
-        console.log("city", cityOptions)
         let zipsOptions = filterOptions(tempZips, "zip")
         setOptions([cityOptions, stateOptions, zipsOptions])
     }
-
+    // Fetching centers and options data on component load.
     useEffect(() => {
         fetchCenters(1)
         fetchOptions()
     }, [])
+    // Depending on which page is clicked on, the corresponding data is pulled from the DB.
     const paginate = (num) => {
         setCurrentPage(num)
         if (queryString) {
@@ -55,20 +57,25 @@ const AdoptCentersPage = ({ fetchPage }) => {
             fetchCenters(`page=${num}`)
         }
     }
+    // Depending on which link is clicked in model page, the corresponding instance page is pulled in main site using the fetch page prop.
     const whichCenterPage = (type, num) => {
         fetchPage(type, num)
     }
+    // Labels for filters.
     const optionLabels = ['City', 'State', 'Zipcode']
+    // Function to set the filter query depending on which filters are selected.
     const fetchFilteredResults = (filter, option) => {
         let res = getFilterQueries(filter, option, filterQueries)
         setQueryString(res.query)
         setFilterQueries([...res.filters])
+        // If no filters are selected, the data for the current page in pagination is fetched.
         if (res.query === "") {
             fetchCenters(`page=${currentPage}`)
         } else {
             fetchCenters(res.query)
         }
     }
+    // Function specifically to call fetchCenters for any search queries in search bar.
     const fetchSearchResults = () => {
         fetchCenters(`q=${searchQuery}`)
     }
@@ -90,9 +97,11 @@ const AdoptCentersPage = ({ fetchPage }) => {
                 </Col>
             </Row>
             <Row style={{ paddingBottom: '2vh' }}>
+                {/* One tab has the filters, and the other tab has the search functionality. */}
                 <Tabs defaultActiveKey="sort" id="uncontrolled-tab-example" className="mb-3">
                     <Tab eventKey="sort" title="Sort">
                         <Row style={{ color: '#00008b' }}>
+                            {/* First three filters */}
                             {Array.from({ length: 3 }).map((_, idx) => (
                                 <Col key={idx}>
                                     <h6>{optionLabels[idx]}</h6>
@@ -102,6 +111,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
                                     />
                                 </Col>
                             ))}
+                            {/* Hard coding the other two filters/sort since the options are limited. */}
                             <Col>
                                 <h6 >Center Type</h6>
                                 <Select options={[{ value: 'type1', label: 'None', type: 'type' }, { value: 'type2', label: 'Rescue', type: 'type' }, { value: 'type3', label: 'Shelter', type: 'type' }]}
@@ -123,6 +133,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
                     <Tab eventKey="search" title="Search">
                         <Row style={{ color: '#00008b' }}>
                             <h3>Adoption Center Search</h3>
+                            {/* This column holds the actual text box to enter a search query. */}
                             <Col md={7}>
                                 <div>
                                     <input type="text" onChange={e => setSearchQuery(e.target.value)} onKeyPress={handleKeyDown}
@@ -155,6 +166,8 @@ const AdoptCentersPage = ({ fetchPage }) => {
                     <tbody>
                         {allCenters.map((center, index) => (
                             <tr key={index}>
+                                {/* Center name provides the link to each adoption center instance page */}
+                                {/* Highlighter component wraps each piece of info so that they are highlighted if they match a search query */}
                                 <Link to={`/acmodel/${center.api_id}`} style={{ color: '#00008b' }} onClick={() => whichCenterPage("ac", center.api_id)}>
                                     <td>
                                         <Highlighter

@@ -1,12 +1,13 @@
 import React from 'react'
 import { Row, Col, Tabs, Tab } from 'react-bootstrap'
-import PetsChart from '../Components/OurViz'
-import TheirViz from '../Components/TheirViz'
-import PropTypes from 'prop-types'
+import Vizualizations from '../Components/Visualizations'
+import ProviderViz from '../Components/ProviderViz'
+import Visualizations from '../Components/Visualizations'
 
-const VizPage = ({ fetchPage }) => {
+const VizPage = () => {
 
   return (
+    // Importing the visualizations and displaying them in this page.
     <div style={{ padding: '4vw' }}>
       <Row xs={1}>
         <Col>
@@ -16,24 +17,17 @@ const VizPage = ({ fetchPage }) => {
       <Row style={{ paddingBottom: '2vh', color: '#00008b' }}>
         <Tabs defaultActiveKey="our-viz" id="uncontrolled-tab-example" className="mb-3">
           <Tab eventKey="our-viz" title="Our visualizations">
-
-            <PetsChart />
-
+            <Visualizations />
           </Tab>
           <Tab eventKey="provider-viz" title="Provider visualizations">
-            <TheirViz />
+            <ProviderViz />
           </Tab>
         </Tabs>
       </Row>
-      {/* <PetsChart /> */}
 
     </div>
   );
 
-}
-
-VizPage.propTypes = {
-  fetchPage: PropTypes.func
 }
 
 export default VizPage

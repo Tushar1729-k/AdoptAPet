@@ -10,6 +10,8 @@ import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const SpeciesModelPage = ({ fetchPage }) => {
+    // The species model page works exactly the same as the adoption centers model page.
+    // Refer to AdoptCentersPage.js for comments on certain functionality.
     const [allBreeds, setAllBreeds] = useState([])
     const [numOfBreeds, setNumOfBreeds] = useState(368)
     const [filterQueries, setFilterQueries] = useState([])

@@ -18,7 +18,6 @@ import SearchResultsPage from './SearchResultsPage'
 const MainSite = () => {
     const [petsData, setPetsData] = useState([])
     const [searchQuery, setSearchQuery] = useState("")
-    console.log(searchQuery)
     const [centersData, setCentersData] = useState([
     ])
     const [breedsData, setBreedsData] = useState([
@@ -40,7 +39,6 @@ const MainSite = () => {
 
     const fetchPage = (type, id) => {
         id = id.toString()
-        console.log(type, id)
         fetchData(type, id)
     }
 
@@ -59,16 +57,11 @@ const MainSite = () => {
             setBreedsData([localBD])
         }
         if (performance.getEntriesByType("navigation")) {
-            console.log("This page is reloaded");
             fetchData
           } else {
             console.log("This page is not reloaded");
           }
       }, [])
-
-    const setQuery = (query) => {
-        setSearchQuery(query)
-    }
     return (
         <div>
             <div style={{paddingBottom: '7vh'}}>
@@ -79,10 +72,12 @@ const MainSite = () => {
                         <Col>
                             <FaDog/> 
                         </Col>
+                        {/* Website title */}
                         <Col>
                             Adopt A Pet
                         </Col>
                     </Row>
+                {/* These are links in the nav bar that take you to the different pages */}
                 </Navbar.Brand>
                 <Nav className="me-auto">
                 <Nav.Link href="/"><FaHome/> Home</Nav.Link>
@@ -98,6 +93,7 @@ const MainSite = () => {
                 </Container>
             </Navbar>
             </div>
+            {/* Main router that contains all the routes to the different pages. */}
             <Router>
                 <Switch>
                     <Route exact path="/">
@@ -121,6 +117,11 @@ const MainSite = () => {
                     <Route exact path="/search">
                         <SearchResultsPage searchQuery={searchQuery} fetchPage={fetchPage} />
                     </Route>
+                    {/* The next three routes are for the three different kinds of instance pages
+                        for our three model are rendered dynamically depending on what the user chooses
+                        in the model pages, or in the links provided in each instance page */}
+                    {/* This is done for efficiency purposes as otherwise pulling all the data at
+                        once for all instance pages will be incredibly slow and might overload react. */}
                     {petsData.map((pet, idx) => (
                         <Route key={idx} exact path={`/apmodel/${pet.api_id}`}>
                             <InstancePage 
