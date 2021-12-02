@@ -52,11 +52,11 @@ def test_navbar_home():
 
 
 # 3
-# def test_navbar_about():
-#     print("starting test_navbar_about")
-#     about = driver.find_element(By.LINK_TEXT, " About")
-#     about.click()
-#     assert driver.current_url == "https://www.adoptapet.me/about"
+def test_navbar_about():
+    print("starting test_navbar_about")
+    about = driver.find_element(By.LINK_TEXT, " About")
+    about.click()
+    assert driver.current_url == "https://www.adoptapet.me/about"
 
 
 # 4
