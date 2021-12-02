@@ -264,47 +264,47 @@ def test_ap_search():
 
 
 # 19
-def test_ac_search():
-    print("starting test_ac_search")
-    centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
-    centers.click()
-    assert driver.current_url == "https://www.adoptapet.me/acmodel"
-    search_btn = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button"
-    )
-    search_btn.click()
-    assert driver.current_url == "https://www.adoptapet.me/acmodel"
-    field = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
-    )
-    field.send_keys("Animal")
-    submit = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
-    )
-    submit.click()
-    assert driver.current_url == "https://www.adoptapet.me/acmodel"
+# def test_ac_search():
+#     print("starting test_ac_search")
+#     centers = driver.find_element(By.LINK_TEXT, "Adoption Centers")
+#     centers.click()
+#     assert driver.current_url == "https://www.adoptapet.me/acmodel"
+#     search_btn = driver.find_element(
+#         By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button"
+#     )
+#     search_btn.click()
+#     assert driver.current_url == "https://www.adoptapet.me/acmodel"
+#     field = driver.find_element(
+#         By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
+#     )
+#     field.send_keys("Animal")
+#     submit = driver.find_element(
+#         By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
+#     )
+#     submit.click()
+#     assert driver.current_url == "https://www.adoptapet.me/acmodel"
 
 
 # 20
-def test_sb_search():
-    print("starting test_sb_search")
-    breeds = driver.find_element(By.LINK_TEXT, "Species")
-    breeds.click()
-    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
-    search_btn = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button"
-    )
-    search_btn.click()
-    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
-    field = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
-    )
-    field.send_keys("Calico")
-    submit = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
-    )
-    submit.click()
-    assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+# def test_sb_search():
+#     print("starting test_sb_search")
+#     breeds = driver.find_element(By.LINK_TEXT, "Species")
+#     breeds.click()
+#     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+#     search_btn = driver.find_element(
+#         By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/ul/li[2]/button"
+#     )
+#     search_btn.click()
+#     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
+#     field = driver.find_element(
+#         By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
+#     )
+#     field.send_keys("Calico")
+#     submit = driver.find_element(
+#         By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
+#     )
+#     submit.click()
+#     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
 
 
 # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]
