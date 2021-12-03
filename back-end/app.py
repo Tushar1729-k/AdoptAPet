@@ -15,7 +15,6 @@ from models import (
 )
 
 from flask import Flask, request, make_response, jsonify, send_from_directory
-from format import *
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy import create_engine, Column, String, Integer
 import urllib
