@@ -136,7 +136,7 @@ class BaseSchema(ma.Schema):
             key: value for key, value in data.items() if value not in self.SKIP_VALUES
         }
 
-
+# schema controls what fields are in the json response of the model instances
 class AdoptablePetSchema(BaseSchema):
     id = fields.Int(required=True)
     api_id = fields.Int(required=True)
