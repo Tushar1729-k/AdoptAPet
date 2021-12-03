@@ -2,7 +2,6 @@
 # and Burnin' Up https://gitlab.com/caitlinlien/cs373-sustainability/-/blob/master/backend/main.py
 # for overall structure of file
 
-# from typing import get_args
 from sqlalchemy.sql.functions import count
 from models import (
     AdoptablePet,
@@ -14,8 +13,6 @@ from models import (
     adoption_center_schema,
     breeds_species_schema,
 )
-
-# from models import *
 
 from flask import Flask, request, make_response, jsonify, send_from_directory
 from format import *
@@ -31,19 +28,6 @@ from AdoptionCenter import *
 from SpeciesBreed import *
 
 from query_helpers import *
-
-# app = Flask(__name__)
-# app.debug = True
-# app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-# Schema: "postgres+psycopg2://<USERNAME>:<PASSWORD>@<IP_ADDRESS>:<PORT>/<DATABASE_NAME>"
-# load_dotenv()
-# print(os.getenv("AWS_DB_KEY"))
-# app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("AWS_DB_KEY")
-# db = SQLAlchemy(app)
-# print(db)
-
-# returning json not html, within function u interface with db
-# earlier u had a one off script that populates db
 
 # base url: api.adoptapet.me
 
@@ -127,9 +111,6 @@ def pets():
     else:
         result = adoptable_pet_schema.dump(pet_query, many=True)
 
-    # for r in result:
-    # 	format_adoptable_pet(r)
-
     return {"page": result, "count": count}
 
 
@@ -153,7 +134,7 @@ def centers():
     if page == None:
         page = 1
     else:
-        # Conver the given page number into an int
+        # Convert the given page number into an int
         page = int(page[0])
 
     cities = get_query("cities", queries)
@@ -192,9 +173,6 @@ def centers():
     else:
         result = adoption_center_schema.dump(center_query, many=True)
 
-    # for r in result:
-    # 	format_center(r)
-
     return {"page": result, "count": count}
 
 
@@ -202,7 +180,6 @@ def centers():
 def center_id(api_id):
     center = db.session.query(AdoptionCenter).filter_by(api_id=api_id)
     center = adoption_center_schema.dump(center, many=True)[0]
-    # format_center(center)
     return center
 
 
@@ -256,9 +233,6 @@ def species_breeds():
     else:
         result = breeds_species_schema.dump(sb_query, many=True)
 
-    # for r in results:
-    # 	format_sb(r)
-
     return {"page": result, "count": count}
 
 
@@ -266,7 +240,6 @@ def species_breeds():
 def sb_id(api_id):
     sb = db.session.query(BreedsSpecies).filter_by(api_id=api_id)
     sb = breeds_species_schema.dump(sb, many=True)[0]
-    # format_sb(sb)
     return sb
 
 
@@ -277,11 +250,9 @@ def hello_world():
 
 @app.route("/favicon.ico")
 def favicon():
-    # return "<p>Hello</p>"
     return send_from_directory(
         os.path.join(app.root_path, "static"),
-        "icon.ico",
-        # mimetype="image/vnd.microsoft.icon"
+        "icon.ico"
     )
 
 

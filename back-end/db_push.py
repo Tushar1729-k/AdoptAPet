@@ -1,10 +1,8 @@
 from os import name
 from app import db
 
-# import os
 import json
 
-# import csv
 from models import *
 import urllib
 import requests
@@ -364,7 +362,6 @@ def link_species_breeds_centers():
 
 
 def reset_db():
-    # db.session.remove()
     db.drop_all()
     db.create_all()
 
