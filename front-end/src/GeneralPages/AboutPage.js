@@ -272,7 +272,9 @@ const About = () => {
 				<li><a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer">Selenium</a> - used to automate testing of the website GUI</li>
 				<li><a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">Jest</a> - used as a JavaScript Testing Framework</li>
 				<li><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank" rel="noopener noreferrer">Flask</a> - used as a python web framework primarly to expose the backend REST API</li>
-				<li><a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener noreferrer">SQL ALchemy</a> - used as a python SQL toolkit and Object Relational Mapper to build and manage our SQL database</li>
+				<li><a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener noreferrer">SQL Alchemy</a> - used as a python SQL toolkit and Object Relational Mapper to build and manage our SQL database</li>
+				<li><a href="https://d3js.org" target="_blank" rel="noopener noreferrer">D3</a> - used to build a bubble chart visualization for pet breed counts and artwork genres</li>
+				<li><a href="https://recharts.org" target="_blank" rel="noopener noreferrer">Recharts</a> - used to build pie chart and funnel charts for our data and our provider&apos;s-Gallery Gaze&apos;s data</li>
 			</ul>
 								<p><a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>: Provides aggregated data for Adoption Centers</p>
 
