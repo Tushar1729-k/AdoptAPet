@@ -232,56 +232,15 @@ const About = () => {
 						<Tabs defaultActiveKey="api" id="uncontrolled-tab-example" className="mb-3">
 							<Tab eventKey="api" title="APIs Used">
 								<p><a href="https://gitlab.com/api/v4/projects/29831002/repository/contributors" target="_blank" rel="noopener noreferrer">Git Repo Contributor API</a>: Provides team contribution info for the About page</p>
-
-			<h1>Gitlab Combined Data</h1>
-			<p>Total Commits: {groupCommits}</p>
-			<p>Total Issues: {groupIssues}</p>
-			<p>Total Tests: {groupTests}</p>
-			{/* <br /> */}
-			<a href="https://gitlab.com/10am-group-8/adopt-a-pet" target="_blank" rel="noopener noreferrer"><h1>GitLab Repo</h1></a>
-			<br></br>
-			<a href="https://documenter.getpostman.com/view/17710041/UUy38kte" target="_blank" rel="noopener noreferrer"><h1>API Documentation</h1></a>
-			<br />
-
-			<h1>APIs Used</h1>
-			<p><a href="https://gitlab.com/api/v4/projects/29831002/repository/contributors" target="_blank" rel="noopener noreferrer">Git Repo Contributor API</a>: Provides team contribution info for the About page</p>
-			{/* <br /> */}
-			<p><a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>: Provides aggregated data for Adoption Centers, Adoptable Pets, and Different Breeds. This API
-			was used by querying for all organizations (Adoption Centers) and all of the different Breeds. Then we used an endpoint under organizations to get all of the Adoptable Pets that were available at a given
-			adoption center.</p>
-			{/* <br /> */}
-			<p><a href="https://docs.thecatapi.com/" target="_blank" rel="noopener noreferrer">The Cat API</a>: Provides generic information about cat breeds. This APi was used by searching for a specific breed name,
-			if the breed was found in the API details were provided on the breeds life expectancy, average weight, friendlines, energy level, temperament and other information to help determine if a pet fits your lifestyle.</p>
-			{/* <br /> */}
-			<p><a href="https://docs.thedogapi.com/" target="_blank" rel="noopener noreferrer">The Dog API</a>: Provides generic information about dog breeds. This APi was used by searching for a specific breed name,
-			if the breed was found in the API details were provided on the breeds life expectancy, average weight, friendlines, energy level, temperament and other information to help determine if a pet fits your lifestyle.</p>
-			{/* <br /> */}
-			<p><a href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps API</a>: Provides information and graphics for provided locations (e.g. adoption centers). Adoption Center
-			coordinates were provided by the Rescue Groups API and were leveraged here to provide embeded google map pages to help you locate how far away a given adoption center might be from you and how to get there.</p>
-
-			<h1>Tools Used</h1>
-			<ul>
-				<li><a href="https://reactjs.org/" target="_blank" rel="noopener noreferrer">React</a> - front-end framework by Facebook to design and update simple views</li>
-				<li><a href="https://getbootstrap.com/" target="_blank" rel="noopener noreferrer">React Bootstrap</a> - used for its prebuilt components like Card and Navbar</li>
-				<li><a href="https://aws.amazon.com/amplify/" target="_blank" rel="noopener noreferrer">AWS Amplify</a> - used to deploy our website and connect to GitLab repository</li>
-				<li><a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a> - used to mock up api requests and to document our api</li>
-				<li><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a> - used to host our code in a version control system</li>
-				<li><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">NameCheap</a> - used to purchase the domain and manage DNS records</li>
-				<li><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html" target="_blank" rel="noopener noreferrer">Elastic Beanstalk</a> - used to quickly deploy and manage applications in the AWS Cloud</li>
-				<li><a href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreferrer">Amazon Relational Database Service</a> - used to easily set up, operate, and scale a relational database in the cloud</li>
-				<li><a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer">Selenium</a> - used to automate testing of the website GUI</li>
-				<li><a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">Jest</a> - used as a JavaScript Testing Framework</li>
-				<li><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank" rel="noopener noreferrer">Flask</a> - used as a python web framework primarly to expose the backend REST API</li>
-				<li><a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener noreferrer">SQL Alchemy</a> - used as a python SQL toolkit and Object Relational Mapper to build and manage our SQL database</li>
-				<li><a href="https://d3js.org" target="_blank" rel="noopener noreferrer">D3</a> - used to build a bubble chart visualization for pet breed counts and artwork genres</li>
-				<li><a href="https://recharts.org" target="_blank" rel="noopener noreferrer">Recharts</a> - used to build pie chart and funnel charts for our data and our provider&apos;s-Gallery Gaze&apos;s data</li>
-			</ul>
-								<p><a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>: Provides aggregated data for Adoption Centers</p>
-
-								<p><a href="https://docs.thecatapi.com/" target="_blank" rel="noopener noreferrer">The Cat API</a>: Provides generic information about cat breeds</p>
-
-								<p><a href="https://docs.thedogapi.com/" target="_blank" rel="noopener noreferrer">The Dog API</a>: Provides generic information about dog breeds</p>
-								<p><a href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps API</a>: Provides information and graphics for provided locations (e.g. adoption centers)</p>
+								<p><a href="https://api.rescuegroups.org/v5/" target="_blank" rel="noopener noreferrer">Rescue Groups API</a>: Provides aggregated data for Adoption Centers, Adoptable Pets, and Different Breeds. This API
+								was used by querying for all organizations (Adoption Centers) and all of the different Breeds. Then we used an endpoint under organizations to get all of the Adoptable Pets that were available at a given
+								adoption center.</p>
+								<p><a href="https://docs.thecatapi.com/" target="_blank" rel="noopener noreferrer">The Cat API</a>: Provides generic information about cat breeds. This API was used by searching for a specific breed name,
+								if the breed was found in the API details were provided on the breeds life expectancy, average weight, friendlines, energy level, temperament and other information to help determine if a pet fits your lifestyle.</p>
+								<p><a href="https://docs.thedogapi.com/" target="_blank" rel="noopener noreferrer">The Dog API</a>: Provides generic information about dog breeds. This API was used by searching for a specific breed name,
+								if the breed was found in the API details were provided on the breeds life expectancy, average weight, friendlines, energy level, temperament and other information to help determine if a pet fits your lifestyle.</p>
+								<p><a href="https://developers.google.com/maps" target="_blank" rel="noopener noreferrer">Google Maps API</a>: Provides information and graphics for provided locations (e.g. adoption centers). Adoption Center
+								coordinates were provided by the Rescue Groups API and were leveraged here to provide embeded google map pages to help you locate how far away a given adoption center might be from you and how to get there.</p>
 							</Tab>
 							<Tab eventKey="tool" title="Tools Used">
 								<ul>
@@ -291,6 +250,14 @@ const About = () => {
 									<li><a href="https://www.postman.com/" target="_blank" rel="noopener noreferrer">Postman</a> - used to mock up api requests and to document our api</li>
 									<li><a href="https://gitlab.com" target="_blank" rel="noopener noreferrer">GitLab</a> - used to host our code in a version control system</li>
 									<li><a href="https://www.namecheap.com/" target="_blank" rel="noopener noreferrer">NameCheap</a> - used to purchase the domain and manage DNS records</li>
+									<li><a href="https://docs.aws.amazon.com/elasticbeanstalk/latest/dg/Welcome.html" target="_blank" rel="noopener noreferrer">Elastic Beanstalk</a> - used to quickly deploy and manage applications in the AWS Cloud</li>
+									<li><a href="https://aws.amazon.com/rds/" target="_blank" rel="noopener noreferrer">Amazon Relational Database Service</a> - used to easily set up, operate, and scale a relational database in the cloud</li>
+									<li><a href="https://www.selenium.dev/" target="_blank" rel="noopener noreferrer">Selenium</a> - used to automate testing of the website GUI</li>
+									<li><a href="https://jestjs.io/" target="_blank" rel="noopener noreferrer">Jest</a> - used as a JavaScript Testing Framework</li>
+									<li><a href="https://flask.palletsprojects.com/en/2.0.x/" target="_blank" rel="noopener noreferrer">Flask</a> - used as a python web framework primarly to expose the backend REST API</li>
+									<li><a href="https://www.sqlalchemy.org/" target="_blank" rel="noopener noreferrer">SQL Alchemy</a> - used as a python SQL toolkit and Object Relational Mapper to build and manage our SQL database</li>
+									<li><a href="https://d3js.org" target="_blank" rel="noopener noreferrer">D3</a> - used to build a bubble chart visualization for pet breed counts and artwork genres</li>
+									<li><a href="https://recharts.org" target="_blank" rel="noopener noreferrer">Recharts</a> - used to build pie chart and funnel charts for our data and our provider&apos;s-Gallery Gaze&apos;s data</li>
 								</ul>
 							</Tab>
 							<Tab eventKey="link" title="Links">
