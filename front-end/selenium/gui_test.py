@@ -23,6 +23,7 @@ def setup_module(module):
     chrome_options = Options()
     chrome_options.add_argument("--headless")
     chrome_options.add_argument("--no-sandbox")
+    chrome_options.add_argument("--disable-dev-shm-usage")
     driver = Remote(
         "http://selenium__standalone-chrome:4444/wd/hub",
         desired_capabilities=chrome_options.to_capabilities(),
@@ -34,7 +35,7 @@ def setup_module(module):
 
 def teardown_module(module):
     print("starting teardown_module")
-    driver.close()
+    driver.quit()
 
 
 # 1
@@ -138,9 +139,9 @@ def test_ap_filter():
     # field = driver.find_element(By.XPATH, "//input[0]")
     field = driver.find_element(
         By.XPATH,
-        "/html/body/div/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input",
+        "/html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input",
     )
-
+    # /html/body/div[1]/div/div/div[2]/div[2]/div/div[1]/div/div[1]/div/div/div[1]/div[2]/input
     field.send_keys("Beagle")
     field.send_keys(Keys.RETURN)
     # field.submit()
@@ -250,12 +251,14 @@ def test_ap_search():
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
+        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input"
     )
+    assert driver.current_url == "https://www.adoptapet.me/apmodel"
     field.send_keys("female")
     submit = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
+        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/button"
     )
+    # /html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/button
     submit.click()
     assert driver.current_url == "https://www.adoptapet.me/apmodel?name=female"
 
@@ -272,11 +275,11 @@ def test_ac_search():
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
     field = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
+        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input"
     )
     field.send_keys("Animal")
     submit = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
+        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/button"
     )
     submit.click()
     assert driver.current_url == "https://www.adoptapet.me/acmodel"
@@ -294,11 +297,11 @@ def test_sb_search():
     search_btn.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
     field = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div[1]/input"
+        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[1]/div/input"
     )
     field.send_keys("Calico")
     submit = driver.find_element(
-        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/button"
+        By.XPATH, "/html/body/div[1]/div/div/div[2]/div[2]/div/div[2]/div/div[2]/div/button"
     )
     submit.click()
     assert driver.current_url == "https://www.adoptapet.me/sbmodel"
