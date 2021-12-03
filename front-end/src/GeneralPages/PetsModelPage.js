@@ -89,7 +89,7 @@ const PetsModelPage = ({ fetchPage }) => {
       <Row xs={1}>
         <Col>
           <h2>Adoptable Pets</h2>
-          <h5>20 pets, page {currentPage}/107</h5>
+          <h5>430 pets, page {currentPage}/107</h5>
           {isLoading && <h4>Loading...</h4>}
         </Col>
         <Col>
@@ -171,7 +171,7 @@ const PetsModelPage = ({ fetchPage }) => {
       </Row>
       <Row xs={1} md={4} className="g-4">
         {/* Rows of 4 cards are used to display pet options for the model page */}
-        {allPets.map((pet, idx) => (
+        {!isLoading && allPets.map((pet, idx) => (
           // Each card is wrapped in a link, so clicking anywhere will take user to instance page.
           <Link key={idx} to={`/apmodel/${pet.api_id}`} style={{ textDecoration: 'none' }} onClick={() => fetchPage("ap", pet.api_id)}>
             <Col>

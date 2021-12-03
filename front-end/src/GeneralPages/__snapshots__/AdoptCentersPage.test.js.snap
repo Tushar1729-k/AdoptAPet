@@ -19,7 +19,7 @@ exports[`Pets Model Page Properly Rendered 1`] = `
         Adoption Centers
       </h2>
       <h6>
-        20 adoption centers, page 
+        100 adoption centers, page 
         1
         /5
       </h6>
