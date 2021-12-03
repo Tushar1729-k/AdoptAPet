@@ -46,23 +46,12 @@ class AdoptablePet(db.Model):
     center_number = db.Column(db.Integer)
     breed_number = db.Column(db.Integer)
     name = db.Column(db.String())
-    # breed = db.Column(db.String())
     sex = db.Column(db.String())
     age = db.Column(db.String())
     color = db.Column(db.String())
     desc = db.Column(db.String())
     pic_url = db.Column(db.String)
     size_group = db.Column(db.String)
-
-    # pet_allergies = db.Column(db.String())
-    # pet_diet = db.Column(db.String())
-    # pet_issues = db.Column(db.String())
-    # pet_hearing = db.Column(db.String())
-    # pet_sight = db.Column(db.String())
-
-
-# def __repr__(self) :
-#   return "<AdoptablePet %s>" % self.name
 
 
 class AdoptionCenter(db.Model):
@@ -82,19 +71,13 @@ class AdoptionCenter(db.Model):
     city = db.Column(db.String())
     state = db.Column(db.String())
     zipcode = db.Column(db.String())
-    # country = db.Column(db.String)
     email = db.Column(db.String)
-    # url = db.Column(db.String)
-    # facebookUrl = db.Column(db.String)
     phone = db.Column(db.String)
     lat = db.Column(db.Float)
     lon = db.Column(db.Float)
     services = db.Column(db.String)
     type = db.Column(db.String)
 
-
-# def __repr__(self) :
-#   return "<Adoption Center %s %s>" % (self.type_name, self.number)
 
 # Breeds/Species Model
 class BreedsSpecies(db.Model):
@@ -143,22 +126,6 @@ class BreedsSpecies(db.Model):
     stranger_friendly = db.Column(db.Integer)
     vocalization = db.Column(db.Integer)
 
-    # get other fields from another api or db
-    # lifeexp = db.Column(db.String())
-    # size = db.Column(db.String())
-    # issues = db.Column(db.String())
-    # color = db.Column(db.String())
-    # patterns = db.Column(db.String())
-
-
-# def __init__(self, species="NaN", breed="NaN", youth_name="NaN") :
-# 	self.species = species
-# 	self.breed = breed
-# 	self.youth_name = youth_name
-
-# def __repr__(self) :
-#   return "<Breeds %s>" % self.name
-
 
 class BaseSchema(ma.Schema):
     SKIP_VALUES = [None]
@@ -200,7 +167,6 @@ class AdoptablePetSchema(BaseSchema):
     desc = fields.Str(required=True)
     pic_url = fields.Str(required=True)
     size_group = fields.Str(required=True)
-    # breed_number = fields.Int(required=True)
     breed_name = fields.Str(required=True)
 
 
