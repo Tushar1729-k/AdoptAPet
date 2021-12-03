@@ -11,6 +11,7 @@ const InstancePageTemplate = ({ attributes, fetchPage }) => {
         fetchPage(type, num)
         history.push(path)
     }
+    console.log(attributes)
     return (
         <div>
             <div style={{ paddingLeft: "20vw", paddingRight: "20vw" }}>
@@ -22,7 +23,7 @@ const InstancePageTemplate = ({ attributes, fetchPage }) => {
             <div style={{ paddingLeft: "20vw", paddingRight: "20vw", paddingTop: "4vh" }}>
                 <Card style={{ width: '60vw', backgroundColor: '#00008b', color: 'white' }}>
                     <Card.Body>
-                        <Card.Title style={{ fontSize: '8vh' }}>{attributes.breed}</Card.Title>
+                        <Card.Title style={{ fontSize: '8vh' }}>{attributes.speciesBreeds.breed_name}</Card.Title>
                         <Card.Subtitle style={{ fontSize: '4vh' }} className="mb-2 text-muted">{attributes.name}</Card.Subtitle>
                         <Card.Text>
                             <Container>

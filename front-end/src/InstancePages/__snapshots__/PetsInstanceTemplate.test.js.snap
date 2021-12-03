@@ -54,9 +54,7 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
               "fontSize": "8vh",
             }
           }
-        >
-          German Sheperd
-        </div>
+        />
         <div
           className="mb-2 text-muted card-subtitle h6"
           style={
@@ -262,9 +260,7 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
               "fontSize": "8vh",
             }
           }
-        >
-          German Sheperd
-        </div>
+        />
         <div
           className="mb-2 text-muted card-subtitle h6"
           style={
