@@ -89,7 +89,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
             <Row xs={1}>
                 <Col>
                     <h2>Adoption Centers</h2>
-                    <h6>20 adoption centers, page {currentPage}/5</h6>
+                    <h6>100 adoption centers, page {currentPage}/5</h6>
                     {isLoading && <h4>Loading...</h4>}
                 </Col>
                 <Col>
@@ -153,6 +153,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
                 </Tabs>
             </Row>
             <div style={{ paddingTop: '2vh' }}>
+            {!isLoading &&
                 <Table bordered hover size="md" responsive style={{ color: "#00008b" }}>
                     <thead>
                         <tr style={{ color: "white", backgroundColor: "#00008b" }}>
@@ -208,7 +209,7 @@ const AdoptCentersPage = ({ fetchPage }) => {
                             </tr>
                         ))}
                     </tbody>
-                </Table>
+                </Table>}
             </div>
         </div>
     )

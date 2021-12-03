@@ -1,6 +1,5 @@
 import React from 'react'
 import { Row, Col, Tabs, Tab } from 'react-bootstrap'
-import Vizualizations from '../Components/Visualizations'
 import ProviderViz from '../Components/ProviderViz'
 import Visualizations from '../Components/Visualizations'
 

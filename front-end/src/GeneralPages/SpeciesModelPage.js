@@ -84,7 +84,7 @@ const SpeciesModelPage = ({ fetchPage }) => {
             <Row xs={1}>
                 <Col>
                     <h2>Species</h2>
-                    <h5>20 species, page {currentPage}/19</h5>
+                    <h5>{numOfBreeds} species, page {currentPage}/19</h5>
                     {isLoading && <h4>Loading...</h4>}
                 </Col>
                 <Col>
@@ -144,6 +144,7 @@ const SpeciesModelPage = ({ fetchPage }) => {
                 </Tabs>
             </Row>
             <div style={{ paddingTop: '2vh' }}>
+            {!isLoading &&
                 <Table bordered hover size="md" responsive style={{ color: "#00008b" }}>
                     <thead>
                         <tr style={{ color: "white", backgroundColor: "#00008b" }}>
@@ -197,7 +198,7 @@ const SpeciesModelPage = ({ fetchPage }) => {
                             </tr>
                         ))}
                     </tbody>
-                </Table>
+                </Table>}
             </div>
         </div>
     )

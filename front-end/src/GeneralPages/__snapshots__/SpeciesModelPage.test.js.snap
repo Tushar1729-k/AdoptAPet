@@ -19,7 +19,8 @@ exports[`Pets Model Page Properly Rendered 1`] = `
         Species
       </h2>
       <h5>
-        20 species, page 
+        368
+         species, page 
         1
         /19
       </h5>
