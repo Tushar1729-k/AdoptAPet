@@ -1,9 +1,9 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import axios from 'axios'
-import { Navbar, Container, Nav, Row, Col, Form, FormControl, Button } from 'react-bootstrap'
+import { Navbar, Container, Nav, Row, Col } from 'react-bootstrap'
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
-import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus, FaSearch } from "react-icons/fa"
+import { FaDog, FaHome, FaInfoCircle, FaPaw, FaCat, FaCartPlus, FaSearch, FaChartPie } from "react-icons/fa"
 import HomePage from "./HomePage"
 import InstancePage from "../InstancePages/PetsInstanceTemplate"
 import AdoptInstanceTemplate from '../InstancePages/AdoptInstanceTemplate'
@@ -11,100 +11,16 @@ import SpeciesInstanceTemplate from '../InstancePages/SpeciesInstanceTemplate'
 import SpeciesModelPage from './SpeciesModelPage'
 import PetsModelPage from './PetsModelPage'
 import AdoptCentersPage from './AdoptCentersPage'
+import VizPage from './VizPage'
 import AboutPage from "./AboutPage"
 import SearchResultsPage from './SearchResultsPage'
+
 const MainSite = () => {
     const [petsData, setPetsData] = useState([])
     const [searchQuery, setSearchQuery] = useState("")
-    console.log(searchQuery)
     const [centersData, setCentersData] = useState([
-        {
-            api_id: 12,
-            city: "Baltimore",
-            email: "catrescueofmd@mindspring.com",
-            id: 1,
-            lat: 39.26750183105469,
-            lon: -76.74459838867188,
-            name: "Cat Rescue of Maryland, Inc.",
-            pets: [],
-            services: "",
-            species_breed: [],
-            state: "MD",
-            zipcode: "21228"
-        }
     ])
     const [breedsData, setBreedsData] = useState([
-        {
-            "adaptability": 5,
-            "affection_level": 5,
-            "alt_names": "",
-            "api_id": 1,
-            "breed_name": "Abyssinian",
-            "centers": [
-              {
-                "api_id": 12,
-                "id": 1,
-                "name": "Cat Rescue of Maryland, Inc."
-              },
-              {
-                "api_id": 13,
-                "id": 2,
-                "name": "Prince Georges Feral Friends, SPCA, Inc."
-              },
-              {
-                "api_id": 16,
-                "id": 3,
-                "name": "Animal Relief Fund"
-              },
-              {
-                "api_id": 22,
-                "id": 4,
-                "name": "LNF Dog Rescue Adoption Center"
-              },
-              {
-                "api_id": 23,
-                "id": 5,
-                "name": "The Feline Foundation of Greater Washington, Inc."
-              }
-            ],
-            "child_friendly": 3,
-            "country_code": "EG",
-            "dog_friendly": 4,
-            "energy_level": 5,
-            "grooming": 1,
-            "hairless": 0,
-            "health_issues": 2,
-            "hypoallergenic": 0,
-            "id": 1,
-            "intelligence": 5,
-            "life_span": "14 - 15",
-            "natural": 1,
-            "origin": "Egypt",
-            "pets": [
-              {
-                "api_id": 11034,
-                "id": 566,
-                "name": "Sparkle"
-              },
-              {
-                "api_id": 10035302,
-                "id": 1384,
-                "name": "Moja"
-              }
-            ],
-            "shedding_level": 2,
-            "short_legs": 0,
-            "social_needs": 5,
-            "species_id": 3,
-            "species_name": "Cat",
-            "stranger_friendly": 5,
-            "suppressed_tail": 0,
-            "temperament": "Active, Energetic, Independent, Intelligent, Gentle",
-            "vocalization": 1,
-            "weight": "7  -  10",
-            "wikipedia_url": "https://en.wikipedia.org/wiki/Abyssinian_(cat)",
-            "youth_name": "Kitten"
-          }
     ])
 
     const fetchData = async (type, id) => {
@@ -123,12 +39,7 @@ const MainSite = () => {
 
     const fetchPage = (type, id) => {
         id = id.toString()
-        console.log(type, id)
         fetchData(type, id)
-    }
-
-    const selectedPage = (num) => {
-        fetchData(num)
     }
 
     useEffect(() => {
@@ -145,14 +56,15 @@ const MainSite = () => {
         if (localBD) {
             setBreedsData([localBD])
         }
+        if (performance.getEntriesByType("navigation")) {
+            fetchData
+          } else {
+            console.log("This page is not reloaded");
+          }
       }, [])
-
-    const setQuery = (query) => {
-        setSearchQuery(query)
-    }
     return (
         <div>
-            <div style={{paddingBottom: '10vh'}}>
+            <div style={{paddingBottom: '7vh'}}>
             <Navbar variant="dark" fixed="top" style={{backgroundColor: "#00008b"}}>
                 <Container>
                 <Navbar.Brand href="/">
@@ -160,10 +72,12 @@ const MainSite = () => {
                         <Col>
                             <FaDog/> 
                         </Col>
+                        {/* Website title */}
                         <Col>
                             Adopt A Pet
                         </Col>
                     </Row>
+                {/* These are links in the nav bar that take you to the different pages */}
                 </Navbar.Brand>
                 <Nav className="me-auto">
                 <Nav.Link href="/"><FaHome/> Home</Nav.Link>
@@ -171,6 +85,7 @@ const MainSite = () => {
                 <Nav.Link href="/sbmodel"><FaCat/> Species</Nav.Link>
                 <Nav.Link href="/apmodel"><FaPaw/> Pets</Nav.Link>
                 <Nav.Link href="/acmodel"><FaCartPlus/> Adoption Centers</Nav.Link>
+                <Nav.Link href="/visualizations"><FaChartPie/> Visualizations</Nav.Link>
                 <Nav.Link href="/search">
                     <FaSearch />Search
                 </Nav.Link>
@@ -178,6 +93,7 @@ const MainSite = () => {
                 </Container>
             </Navbar>
             </div>
+            {/* Main router that contains all the routes to the different pages. */}
             <Router>
                 <Switch>
                     <Route exact path="/">
@@ -195,9 +111,17 @@ const MainSite = () => {
                     <Route exact path="/acmodel">
                         <AdoptCentersPage fetchPage={fetchPage}/>
                     </Route>
+                    <Route exact path="/visualizations">
+                        <VizPage fetchPage={fetchPage}/>
+                    </Route>
                     <Route exact path="/search">
                         <SearchResultsPage searchQuery={searchQuery} fetchPage={fetchPage} />
                     </Route>
+                    {/* The next three routes are for the three different kinds of instance pages
+                        for our three model are rendered dynamically depending on what the user chooses
+                        in the model pages, or in the links provided in each instance page */}
+                    {/* This is done for efficiency purposes as otherwise pulling all the data at
+                        once for all instance pages will be incredibly slow and might overload react. */}
                     {petsData.map((pet, idx) => (
                         <Route key={idx} exact path={`/apmodel/${pet.api_id}`}>
                             <InstancePage 

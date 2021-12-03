@@ -1,6 +1,12 @@
 # AdoptAPet
 
-**NOTE:** .gitignore file is in the front-end folder
+**NOTES:**
+
+* reload is not fixed yet
+* search is a little wonky, only works for certain fields on the page (such age)
+* search sometimes only works for exact matches
+* can only press the Submit button to initiate search, cannot yet press Enter
+* general search page is wonky after the first result
 
 ## Authors
 
@@ -16,7 +22,7 @@
 
 ## Git SHA
 
-57d290bc3ed9bcf463715d679d0e498191a33977
+68099df823c3af81f3b53a1faa0b1864ad0598ad
 
 ## Project Leader
 
@@ -32,11 +38,13 @@
 * review merge requests
 * Phase 1: Lead deployment
 * Phase 2: Lead backend
+* Phase 3: Lead frontend
 
 ### Phase Leaders
 
 * Phase 1: Sean-Matthew Aujong
 * Phase 2: Tushar Kohli
+* Phase 3: Nandu Vudumula
 
 ## GitLab Pipelines
 
@@ -72,6 +80,18 @@ https://adoptapet.me
 
 * Sohum Kapoor: 16 hours
 
+### Phase 3
+
+* Sean-Matthew Aujong: 16 hours
+
+* Tushar Kohli: 20 hours
+
+* Nandu Vudumula: 20 hours
+
+* Edward Chamblee: 13 hours
+
+* Sohum Kapoor: 16 hours
+
 ## Actual Completion Time for Each Member
 
 ### Phase 1
@@ -95,6 +115,18 @@ https://adoptapet.me
 * Nandu Vudumula: 20 hours
 
 * Edward Chamblee: 18 hours
+
+* Sohum Kapoor: 16 hours
+
+### Phase 3
+
+* Sean-Matthew Aujong: 16 hours
+
+* Tushar Kohli: 20 hours
+
+* Nandu Vudumula: 20 hours
+
+* Edward Chamblee: 13 hours
 
 * Sohum Kapoor: 16 hours
 

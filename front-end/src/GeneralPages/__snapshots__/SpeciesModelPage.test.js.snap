@@ -19,7 +19,8 @@ exports[`Pets Model Page Properly Rendered 1`] = `
         Species
       </h2>
       <h5>
-        20 species, page 
+        368
+         species, page 
         1
         /19
       </h5>
@@ -411,6 +412,11 @@ exports[`Pets Model Page Properly Rendered 1`] = `
       >
         <div
           className="row"
+          style={
+            Object {
+              "color": "#00008b",
+            }
+          }
         >
           <div
             className="col"
@@ -954,42 +960,54 @@ exports[`Pets Model Page Properly Rendered 1`] = `
         className="tab-pane"
         id="uncontrolled-tab-example-tabpane-search"
       >
-        <form
-          className=""
-        >
-          <div
-            className="mb-3"
-          >
-            <label
-              className="form-label"
-              htmlFor="formBasicSearch"
-            >
-               Species Search
-            </label>
-            <input
-              className="form-control"
-              id="formBasicSearch"
-              onChange={[Function]}
-              placeholder="Enter query"
-              type="search"
-            />
-          </div>
-        </form>
         <div
+          className="row"
           style={
             Object {
-              "paddingTop": "2vh",
+              "color": "#00008b",
             }
           }
         >
-          <button
-            className="btn btn-primary"
-            disabled={false}
-            onClick={[Function]}
-            type="submit"
+          <h3>
+            Breeds Search
+          </h3>
+          <div
+            className="col-md-7"
           >
-            Submit
-          </button>
+            <div>
+              <input
+                onChange={[Function]}
+                onKeyPress={[Function]}
+                placeholder="Enter query"
+                type="text"
+              />
+            </div>
+          </div>
+          <div
+            className="col-md-5"
+          >
+            <div
+              style={
+                Object {
+                  "paddingTop": "2vh",
+                }
+              }
+            >
+              <button
+                className="btn btn-primary"
+                disabled={false}
+                onClick={[Function]}
+                style={
+                  Object {
+                    "backgroundColor": "#00008b",
+                  }
+                }
+                type="submit"
+              >
+                Submit
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -1005,10 +1023,22 @@ exports[`Pets Model Page Properly Rendered 1`] = `
       className="table-responsive"
     >
       <table
-        className="table table-sm table-striped table-bordered table-hover"
+        className="table table-md table-bordered table-hover"
+        style={
+          Object {
+            "color": "#00008b",
+          }
+        }
       >
         <thead>
-          <tr>
+          <tr
+            style={
+              Object {
+                "backgroundColor": "#00008b",
+                "color": "white",
+              }
+            }
+          >
             <th>
               Species
             </th>

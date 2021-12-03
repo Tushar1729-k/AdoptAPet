@@ -15,6 +15,8 @@ exports[`Species Instance Page Properly Rendered 1`] = `
       className="card"
       style={
         Object {
+          "backgroundColor": "#00008b",
+          "color": "white",
           "width": "70vw",
         }
       }
@@ -183,22 +185,6 @@ exports[`Species Instance Page Properly Rendered 1`] = `
           <div
             style={
               Object {
-                "paddingLeft": "27.5vw",
-              }
-            }
-          >
-            <button
-              className="btn btn-primary"
-              disabled={false}
-              onClick={[Function]}
-              type="button"
-            >
-              Click to see Origin Country
-            </button>
-          </div>
-          <div
-            style={
-              Object {
                 "height": "100vh",
                 "width": "100vw",
               }
@@ -293,6 +279,7 @@ exports[`Species Instance Page Properly Rendered 1`] = `
                 onClick={[Function]}
                 style={
                   Object {
+                    "color": "#add8e6",
                     "textDecoration": "none",
                   }
                 }
@@ -309,6 +296,7 @@ exports[`Species Instance Page Properly Rendered 1`] = `
                 onClick={[Function]}
                 style={
                   Object {
+                    "color": "#add8e6",
                     "textDecoration": "none",
                   }
                 }
@@ -334,6 +322,7 @@ exports[`Species Instance Page Properly Rendered 1`] = `
                 onClick={[Function]}
                 style={
                   Object {
+                    "color": "#add8e6",
                     "textDecoration": "none",
                   }
                 }

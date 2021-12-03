@@ -1,6 +1,6 @@
 import React from 'react'
 import axios from 'axios'
-
+// Personal API key for using Google APIs.
 const apiKey = "AIzaSyCD6X1ARbFEh9eXKDW4EbN-kNIHz-_dlaM"
 
 

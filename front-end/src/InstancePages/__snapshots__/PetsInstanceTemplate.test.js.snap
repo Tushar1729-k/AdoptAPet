@@ -38,6 +38,8 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
       className="card"
       style={
         Object {
+          "backgroundColor": "#00008b",
+          "color": "white",
           "width": "60vw",
         }
       }
@@ -52,9 +54,7 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
               "fontSize": "8vh",
             }
           }
-        >
-          German Sheperd
-        </div>
+        />
         <div
           className="mb-2 text-muted card-subtitle h6"
           style={
@@ -167,6 +167,7 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -186,6 +187,7 @@ exports[`Pet Instance Page Text Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -242,6 +244,8 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
       className="card"
       style={
         Object {
+          "backgroundColor": "#00008b",
+          "color": "white",
           "width": "60vw",
         }
       }
@@ -256,9 +260,7 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
               "fontSize": "8vh",
             }
           }
-        >
-          German Sheperd
-        </div>
+        />
         <div
           className="mb-2 text-muted card-subtitle h6"
           style={
@@ -371,6 +373,7 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
@@ -390,6 +393,7 @@ exports[`Pet Instance Page Text and Image Properly Rendered 1`] = `
               onClick={[Function]}
               style={
                 Object {
+                  "color": "#add8e6",
                   "textDecoration": "none",
                 }
               }
