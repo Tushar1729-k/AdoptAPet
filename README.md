@@ -2,9 +2,9 @@
 
 ## Authors
 
-* Sean-Matthew Aujong, sha567, seanaujong
-
 * Tushar Kohli, tk22994, tkohli
+
+* Sean-Matthew Aujong, sha567, seanaujong
 
 * Nandu Vudumula, nrv379, nandukrv
 
